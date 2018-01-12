@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "preserveConstEnums": true,
+        "strictNullChecks": true,
+        "sourceMap": true,
+        "target": "es5",
+        "outDir": "dist",
+        "moduleResolution": "node",
+        "lib": [
+            "es2015",
+            "esnext.asynciterable"
+        ],
+        "rootDir": "./",
+        "noImplicitAny": true,
+        "typeRoots": [
+            "./node_modules/@types",
+            "./script/@types"
+        ],
+        "types": [
+            "node",
+            "beautifier-prettydiff"
+        ],
+        "module": "commonjs",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "declaration": true
+    }
+}

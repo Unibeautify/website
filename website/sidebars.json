@@ -1,10 +1,48 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "Docusaurus": [
+      "doc1"
+    ],
+    "First Category": [
+      "doc2"
+    ],
+    "Second Category": [
+      "doc3"
+    ],
+    "Beautifiers": [
+      "beautifier-prettier",
+      "beautifier-pretty-diff"
+    ],
+    "Languages": [
+      "language-c%23",
+      "language-css",
+      "language-csv",
+      "language-ejs",
+      "language-graphql",
+      "language-handlebars",
+      "language-html",
+      "language-java",
+      "language-javascript",
+      "language-json",
+      "language-jsx",
+      "language-less",
+      "language-markdown",
+      "language-sass",
+      "language-scss",
+      "language-spacebars",
+      "language-svg",
+      "language-swig",
+      "language-twig",
+      "language-typescript",
+      "language-visualforce",
+      "language-xml",
+      "language-xtemplate"
+    ]
   },
   "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "First Category": [
+      "doc4",
+      "doc5"
+    ]
   }
 }

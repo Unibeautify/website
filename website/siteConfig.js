@@ -16,8 +16,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Test Site' /* title for your website */,
-  tagline: 'A website for testing',
+  title: 'Unibeautify' /* title for your website */,
+  tagline: 'The one beautifier to rule them all',
   url: 'https://unibeautify.github.io/' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   projectName: 'unibeautify.github.io',
@@ -41,7 +41,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Your Name or Your Company Name',
+    ' Glavin Wiechert',
   organizationName: 'unibeautify', // or set an env variable ORGANIZATION_NAME
   projectName: 'unibeautify.github.io', // or set an env variable PROJECT_NAME
   highlight: {
@@ -50,7 +50,7 @@ const siteConfig = {
   },
   scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.
-  repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: 'https://github.com/unibeautify/unibeautify',
 };
 
 module.exports = siteConfig;

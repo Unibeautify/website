@@ -1,0 +1,37 @@
+{
+  "name": "unibeautify.github.io",
+  "version": "1.0.0",
+  "description": "Webpage for Unibeautifier",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs": "npm run rm-languages && npm run rm-beautifiers && npm run generate-docs",
+    "rm-beautifiers": "rimraf 'docs/beautifier-*'",
+    "rm-languages": "rimraf 'docs/language-*'",
+    "generate-docs": "ts-node scripts/generate-docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unibeautify/unibeautify.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Unibeautify/unibeautify.github.io/issues"
+  },
+  "homepage": "https://github.com/Unibeautify/unibeautify.github.io#readme",
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.0",
+    "@unibeautify/beautifier-prettier": "^0.1.2",
+    "beautifier-prettydiff": "^0.1.2",
+    "fs-extra": "^5.0.0",
+    "rimraf": "^2.6.2",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.6.2",
+    "unibeautify": "^0.2.0"
+  }
+}
