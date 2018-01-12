@@ -1,5 +1,5 @@
 ---
-id: language-c%23
+id: language-csharp
 title: C#
 ---
 ## Beautifiers

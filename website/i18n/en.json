@@ -12,7 +12,7 @@
     "doc3": "This is document number 3",
     "doc4": "Other Document",
     "doc5": "Fifth Document",
-    "language-c%23": "C#",
+    "language-csharp": "C#",
     "language-css": "CSS",
     "language-csv": "CSV",
     "language-ejs": "EJS",

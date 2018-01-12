@@ -3,7 +3,7 @@ id: beautifier-pretty-diff
 title: Pretty Diff
 ---
 ## Languages
-- [C#](/docs/language-c%23.html)
+- [C#](/docs/language-csharp.html)
 - [CSS](/docs/language-css.html)
 - [CSV](/docs/language-csv.html)
 - [EJS](/docs/language-ejs.html)

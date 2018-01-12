@@ -1,5 +1,4 @@
 export default abstract class Doc {
-
   protected get id(): string {
     return `${this.prefix}${this.slug}`;
   }
@@ -16,7 +15,12 @@ export default abstract class Doc {
   }
 
   protected slugify(title: string): string {
-    return encodeURIComponent(title.toLowerCase().replace(" ", "-"));    
+    return encodeURIComponent(
+      title
+        .toLowerCase()
+        .replace(" ", "-")
+        .replace("#", "sharp")
+    );
   }
 
   protected abstract get title(): string;

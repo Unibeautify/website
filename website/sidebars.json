@@ -14,7 +14,7 @@
       "beautifier-pretty-diff"
     ],
     "Languages": [
-      "language-c%23",
+      "language-csharp",
       "language-css",
       "language-csv",
       "language-ejs",
