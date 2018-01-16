@@ -8,13 +8,11 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs":
-      "npm run rm-languages && npm run rm-beautifiers && npm run generate-docs",
+    "docs": "npm run rm-languages && npm run rm-beautifiers && npm run generate-docs",
     "rm-beautifiers": "rimraf 'docs/beautifier-*'",
     "rm-languages": "rimraf 'docs/language-*'",
     "generate-docs": "ts-node scripts/generate-docs",
-    "publish-gh-pages":
-      "cd website && GIT_USER=Glavin001 USE_SSH=true yarn run publish-gh-pages",
+    "publish-gh-pages": "cd website && GIT_USER=Glavin001 USE_SSH=true yarn run publish-gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,9 +28,11 @@
   "homepage": "https://github.com/Unibeautify/unibeautify.github.io#readme",
   "devDependencies": {
     "@types/fs-extra": "^5.0.0",
-    "@unibeautify/beautifier-prettier": "^0.1.2",
+    "@types/lodash": "^4.14.92",
+    "@unibeautify/beautifier-prettier": "^0.2.0",
     "beautifier-prettydiff": "^0.1.2",
     "fs-extra": "^5.0.0",
+    "lodash": "^4.17.4",
     "rimraf": "^2.6.2",
     "ts-node": "^4.1.0",
     "typescript": "^2.6.2",
