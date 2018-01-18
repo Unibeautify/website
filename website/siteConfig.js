@@ -21,6 +21,7 @@ const siteConfig = {
   url: 'https://unibeautify.github.io/' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   projectName: 'unibeautify.github.io',
+  gaTrackingId: "UA-112681254-1",
   headerLinks: [
     {doc: 'doc1', label: 'Docs'},
     {doc: 'doc4', label: 'API'},
