@@ -35,6 +35,7 @@
     "language-visualforce": "Visualforce",
     "language-xml": "XML",
     "language-xtemplate": "XTemplate",
+    "options": "Options",
     "Docs": "Docs",
     "API": "API",
     "Help": "Help",
@@ -43,7 +44,8 @@
     "First Category": "First Category",
     "Second Category": "Second Category",
     "Beautifiers": "Beautifiers",
-    "Languages": "Languages"
+    "Languages": "Languages",
+    "Options": "Options"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

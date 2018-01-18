@@ -37,7 +37,8 @@
       "language-visualforce",
       "language-xml",
       "language-xtemplate"
-    ]
+    ],
+    "Options": "options"
   },
   "docs-other": {
     "First Category": [
