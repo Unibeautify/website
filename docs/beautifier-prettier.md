@@ -4,41 +4,41 @@ title: Prettier
 ---
 ## CSS
 For more information click [CSS](/docs/language-css.html)
-### Indent With Tabs
-**Key**: `indent_with_tabs`
+### Arrow Parens
+**Key**: `arrow_parens`
+
+**Type**: `string`
+
+**Default**: `"always"`
+
+**Description**: Require parenthesis in arrow function arguments
+
+### Object Curly Spacing
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
 **Default**: `true`
 
-**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+**Description**: Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers
 
-### Indent Char
-**Key**: `indent_char`
+### Pragma Insert
+**Key**: `pragma_insert`
 
-**Type**: `string`
+**Type**: `boolean`
 
-**Default**: `" "`
+**Default**: `false`
 
-**Description**: Indentation character
+**Description**: Insert a marker at the top of a file specifying the file has been beautified
 
-### Indent Size
-**Key**: `indent_size`
+### Jsx Brackets
+**Key**: `jsx_brackets`
 
-**Type**: `integer`
+**Type**: `boolean`
 
-**Default**: `4`
+**Default**: `false`
 
-**Description**: Indentation size/length
-
-### Convert Quotes
-**Key**: `convert_quotes`
-
-**Type**: `string`
-
-**Default**: `"none"`
-
-**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+**Description**: Put the > of a multi-line JSX element at the end of the last line
 
 ### Wrap Line Length
 **Key**: `wrap_line_length`
@@ -49,6 +49,60 @@ For more information click [CSS](/docs/language-css.html)
 
 **Description**: Wrap lines at next opportunity after N characters
 
+### Pragma Require
+**Key**: `pragma_require`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Restrict beautifying files to only those with a pragma at the top
+
+### End With Semicolon
+**Key**: `end_with_semicolon`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Insert a semicolon at the end of statements
+
+### Convert Quotes
+**Key**: `convert_quotes`
+
+**Type**: `string`
+
+**Default**: `"none"`
+
+**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+
+### Indent With Tabs
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Default**: `true`
+
+**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+
+### Indent Size
+**Key**: `indent_size`
+
+**Type**: `integer`
+
+**Default**: `4`
+
+**Description**: Indentation size/length
+
+### Indent Char
+**Key**: `indent_char`
+
+**Type**: `string`
+
+**Default**: `" "`
+
+**Description**: Indentation character
+
 ### End With Comma
 **Key**: `end_with_comma`
 
@@ -57,44 +111,53 @@ For more information click [CSS](/docs/language-css.html)
 **Default**: `false`
 
 **Description**: If a terminating comma should be inserted into arrays, object literals, and destructured objects.
+
+### Wrap Prose
+**Key**: `wrap_prose`
+
+**Type**: `string`
+
+**Default**: `"preserve"`
+
+**Description**: Wrap markdown text to new lines
 
 ## GraphQL
 For more information click [GraphQL](/docs/language-graphql.html)
-### Indent With Tabs
-**Key**: `indent_with_tabs`
+### Arrow Parens
+**Key**: `arrow_parens`
+
+**Type**: `string`
+
+**Default**: `"always"`
+
+**Description**: Require parenthesis in arrow function arguments
+
+### Object Curly Spacing
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
 **Default**: `true`
 
-**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+**Description**: Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers
 
-### Indent Char
-**Key**: `indent_char`
+### Pragma Insert
+**Key**: `pragma_insert`
 
-**Type**: `string`
+**Type**: `boolean`
 
-**Default**: `" "`
+**Default**: `false`
 
-**Description**: Indentation character
+**Description**: Insert a marker at the top of a file specifying the file has been beautified
 
-### Indent Size
-**Key**: `indent_size`
+### Jsx Brackets
+**Key**: `jsx_brackets`
 
-**Type**: `integer`
+**Type**: `boolean`
 
-**Default**: `4`
+**Default**: `false`
 
-**Description**: Indentation size/length
-
-### Convert Quotes
-**Key**: `convert_quotes`
-
-**Type**: `string`
-
-**Default**: `"none"`
-
-**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+**Description**: Put the > of a multi-line JSX element at the end of the last line
 
 ### Wrap Line Length
 **Key**: `wrap_line_length`
@@ -105,6 +168,60 @@ For more information click [GraphQL](/docs/language-graphql.html)
 
 **Description**: Wrap lines at next opportunity after N characters
 
+### Pragma Require
+**Key**: `pragma_require`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Restrict beautifying files to only those with a pragma at the top
+
+### End With Semicolon
+**Key**: `end_with_semicolon`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Insert a semicolon at the end of statements
+
+### Convert Quotes
+**Key**: `convert_quotes`
+
+**Type**: `string`
+
+**Default**: `"none"`
+
+**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+
+### Indent With Tabs
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Default**: `true`
+
+**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+
+### Indent Size
+**Key**: `indent_size`
+
+**Type**: `integer`
+
+**Default**: `4`
+
+**Description**: Indentation size/length
+
+### Indent Char
+**Key**: `indent_char`
+
+**Type**: `string`
+
+**Default**: `" "`
+
+**Description**: Indentation character
+
 ### End With Comma
 **Key**: `end_with_comma`
 
@@ -113,44 +230,53 @@ For more information click [GraphQL](/docs/language-graphql.html)
 **Default**: `false`
 
 **Description**: If a terminating comma should be inserted into arrays, object literals, and destructured objects.
+
+### Wrap Prose
+**Key**: `wrap_prose`
+
+**Type**: `string`
+
+**Default**: `"preserve"`
+
+**Description**: Wrap markdown text to new lines
 
 ## JSON
 For more information click [JSON](/docs/language-json.html)
-### Indent With Tabs
-**Key**: `indent_with_tabs`
+### Arrow Parens
+**Key**: `arrow_parens`
+
+**Type**: `string`
+
+**Default**: `"always"`
+
+**Description**: Require parenthesis in arrow function arguments
+
+### Object Curly Spacing
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
 **Default**: `true`
 
-**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+**Description**: Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers
 
-### Indent Char
-**Key**: `indent_char`
+### Pragma Insert
+**Key**: `pragma_insert`
 
-**Type**: `string`
+**Type**: `boolean`
 
-**Default**: `" "`
+**Default**: `false`
 
-**Description**: Indentation character
+**Description**: Insert a marker at the top of a file specifying the file has been beautified
 
-### Indent Size
-**Key**: `indent_size`
+### Jsx Brackets
+**Key**: `jsx_brackets`
 
-**Type**: `integer`
+**Type**: `boolean`
 
-**Default**: `4`
+**Default**: `false`
 
-**Description**: Indentation size/length
-
-### Convert Quotes
-**Key**: `convert_quotes`
-
-**Type**: `string`
-
-**Default**: `"none"`
-
-**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+**Description**: Put the > of a multi-line JSX element at the end of the last line
 
 ### Wrap Line Length
 **Key**: `wrap_line_length`
@@ -161,6 +287,60 @@ For more information click [JSON](/docs/language-json.html)
 
 **Description**: Wrap lines at next opportunity after N characters
 
+### Pragma Require
+**Key**: `pragma_require`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Restrict beautifying files to only those with a pragma at the top
+
+### End With Semicolon
+**Key**: `end_with_semicolon`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Insert a semicolon at the end of statements
+
+### Convert Quotes
+**Key**: `convert_quotes`
+
+**Type**: `string`
+
+**Default**: `"none"`
+
+**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+
+### Indent With Tabs
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Default**: `true`
+
+**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+
+### Indent Size
+**Key**: `indent_size`
+
+**Type**: `integer`
+
+**Default**: `4`
+
+**Description**: Indentation size/length
+
+### Indent Char
+**Key**: `indent_char`
+
+**Type**: `string`
+
+**Default**: `" "`
+
+**Description**: Indentation character
+
 ### End With Comma
 **Key**: `end_with_comma`
 
@@ -169,44 +349,53 @@ For more information click [JSON](/docs/language-json.html)
 **Default**: `false`
 
 **Description**: If a terminating comma should be inserted into arrays, object literals, and destructured objects.
+
+### Wrap Prose
+**Key**: `wrap_prose`
+
+**Type**: `string`
+
+**Default**: `"preserve"`
+
+**Description**: Wrap markdown text to new lines
 
 ## JSX
 For more information click [JSX](/docs/language-jsx.html)
-### Indent With Tabs
-**Key**: `indent_with_tabs`
+### Arrow Parens
+**Key**: `arrow_parens`
+
+**Type**: `string`
+
+**Default**: `"always"`
+
+**Description**: Require parenthesis in arrow function arguments
+
+### Object Curly Spacing
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
 **Default**: `true`
 
-**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+**Description**: Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers
 
-### Indent Char
-**Key**: `indent_char`
+### Pragma Insert
+**Key**: `pragma_insert`
 
-**Type**: `string`
+**Type**: `boolean`
 
-**Default**: `" "`
+**Default**: `false`
 
-**Description**: Indentation character
+**Description**: Insert a marker at the top of a file specifying the file has been beautified
 
-### Indent Size
-**Key**: `indent_size`
+### Jsx Brackets
+**Key**: `jsx_brackets`
 
-**Type**: `integer`
+**Type**: `boolean`
 
-**Default**: `4`
+**Default**: `false`
 
-**Description**: Indentation size/length
-
-### Convert Quotes
-**Key**: `convert_quotes`
-
-**Type**: `string`
-
-**Default**: `"none"`
-
-**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+**Description**: Put the > of a multi-line JSX element at the end of the last line
 
 ### Wrap Line Length
 **Key**: `wrap_line_length`
@@ -217,6 +406,60 @@ For more information click [JSX](/docs/language-jsx.html)
 
 **Description**: Wrap lines at next opportunity after N characters
 
+### Pragma Require
+**Key**: `pragma_require`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Restrict beautifying files to only those with a pragma at the top
+
+### End With Semicolon
+**Key**: `end_with_semicolon`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Insert a semicolon at the end of statements
+
+### Convert Quotes
+**Key**: `convert_quotes`
+
+**Type**: `string`
+
+**Default**: `"none"`
+
+**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+
+### Indent With Tabs
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Default**: `true`
+
+**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+
+### Indent Size
+**Key**: `indent_size`
+
+**Type**: `integer`
+
+**Default**: `4`
+
+**Description**: Indentation size/length
+
+### Indent Char
+**Key**: `indent_char`
+
+**Type**: `string`
+
+**Default**: `" "`
+
+**Description**: Indentation character
+
 ### End With Comma
 **Key**: `end_with_comma`
 
@@ -225,44 +468,53 @@ For more information click [JSX](/docs/language-jsx.html)
 **Default**: `false`
 
 **Description**: If a terminating comma should be inserted into arrays, object literals, and destructured objects.
+
+### Wrap Prose
+**Key**: `wrap_prose`
+
+**Type**: `string`
+
+**Default**: `"preserve"`
+
+**Description**: Wrap markdown text to new lines
 
 ## JavaScript
 For more information click [JavaScript](/docs/language-javascript.html)
-### Indent With Tabs
-**Key**: `indent_with_tabs`
+### Arrow Parens
+**Key**: `arrow_parens`
+
+**Type**: `string`
+
+**Default**: `"always"`
+
+**Description**: Require parenthesis in arrow function arguments
+
+### Object Curly Spacing
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
 **Default**: `true`
 
-**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+**Description**: Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers
 
-### Indent Char
-**Key**: `indent_char`
+### Pragma Insert
+**Key**: `pragma_insert`
 
-**Type**: `string`
+**Type**: `boolean`
 
-**Default**: `" "`
+**Default**: `false`
 
-**Description**: Indentation character
+**Description**: Insert a marker at the top of a file specifying the file has been beautified
 
-### Indent Size
-**Key**: `indent_size`
+### Jsx Brackets
+**Key**: `jsx_brackets`
 
-**Type**: `integer`
+**Type**: `boolean`
 
-**Default**: `4`
+**Default**: `false`
 
-**Description**: Indentation size/length
-
-### Convert Quotes
-**Key**: `convert_quotes`
-
-**Type**: `string`
-
-**Default**: `"none"`
-
-**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+**Description**: Put the > of a multi-line JSX element at the end of the last line
 
 ### Wrap Line Length
 **Key**: `wrap_line_length`
@@ -273,6 +525,60 @@ For more information click [JavaScript](/docs/language-javascript.html)
 
 **Description**: Wrap lines at next opportunity after N characters
 
+### Pragma Require
+**Key**: `pragma_require`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Restrict beautifying files to only those with a pragma at the top
+
+### End With Semicolon
+**Key**: `end_with_semicolon`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Insert a semicolon at the end of statements
+
+### Convert Quotes
+**Key**: `convert_quotes`
+
+**Type**: `string`
+
+**Default**: `"none"`
+
+**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+
+### Indent With Tabs
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Default**: `true`
+
+**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+
+### Indent Size
+**Key**: `indent_size`
+
+**Type**: `integer`
+
+**Default**: `4`
+
+**Description**: Indentation size/length
+
+### Indent Char
+**Key**: `indent_char`
+
+**Type**: `string`
+
+**Default**: `" "`
+
+**Description**: Indentation character
+
 ### End With Comma
 **Key**: `end_with_comma`
 
@@ -281,44 +587,53 @@ For more information click [JavaScript](/docs/language-javascript.html)
 **Default**: `false`
 
 **Description**: If a terminating comma should be inserted into arrays, object literals, and destructured objects.
+
+### Wrap Prose
+**Key**: `wrap_prose`
+
+**Type**: `string`
+
+**Default**: `"preserve"`
+
+**Description**: Wrap markdown text to new lines
 
 ## Less
 For more information click [Less](/docs/language-less.html)
-### Indent With Tabs
-**Key**: `indent_with_tabs`
+### Arrow Parens
+**Key**: `arrow_parens`
+
+**Type**: `string`
+
+**Default**: `"always"`
+
+**Description**: Require parenthesis in arrow function arguments
+
+### Object Curly Spacing
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
 **Default**: `true`
 
-**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+**Description**: Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers
 
-### Indent Char
-**Key**: `indent_char`
+### Pragma Insert
+**Key**: `pragma_insert`
 
-**Type**: `string`
+**Type**: `boolean`
 
-**Default**: `" "`
+**Default**: `false`
 
-**Description**: Indentation character
+**Description**: Insert a marker at the top of a file specifying the file has been beautified
 
-### Indent Size
-**Key**: `indent_size`
+### Jsx Brackets
+**Key**: `jsx_brackets`
 
-**Type**: `integer`
+**Type**: `boolean`
 
-**Default**: `4`
+**Default**: `false`
 
-**Description**: Indentation size/length
-
-### Convert Quotes
-**Key**: `convert_quotes`
-
-**Type**: `string`
-
-**Default**: `"none"`
-
-**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+**Description**: Put the > of a multi-line JSX element at the end of the last line
 
 ### Wrap Line Length
 **Key**: `wrap_line_length`
@@ -329,6 +644,60 @@ For more information click [Less](/docs/language-less.html)
 
 **Description**: Wrap lines at next opportunity after N characters
 
+### Pragma Require
+**Key**: `pragma_require`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Restrict beautifying files to only those with a pragma at the top
+
+### End With Semicolon
+**Key**: `end_with_semicolon`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Insert a semicolon at the end of statements
+
+### Convert Quotes
+**Key**: `convert_quotes`
+
+**Type**: `string`
+
+**Default**: `"none"`
+
+**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+
+### Indent With Tabs
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Default**: `true`
+
+**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+
+### Indent Size
+**Key**: `indent_size`
+
+**Type**: `integer`
+
+**Default**: `4`
+
+**Description**: Indentation size/length
+
+### Indent Char
+**Key**: `indent_char`
+
+**Type**: `string`
+
+**Default**: `" "`
+
+**Description**: Indentation character
+
 ### End With Comma
 **Key**: `end_with_comma`
 
@@ -337,44 +706,53 @@ For more information click [Less](/docs/language-less.html)
 **Default**: `false`
 
 **Description**: If a terminating comma should be inserted into arrays, object literals, and destructured objects.
+
+### Wrap Prose
+**Key**: `wrap_prose`
+
+**Type**: `string`
+
+**Default**: `"preserve"`
+
+**Description**: Wrap markdown text to new lines
 
 ## Markdown
 For more information click [Markdown](/docs/language-markdown.html)
-### Indent With Tabs
-**Key**: `indent_with_tabs`
+### Arrow Parens
+**Key**: `arrow_parens`
+
+**Type**: `string`
+
+**Default**: `"always"`
+
+**Description**: Require parenthesis in arrow function arguments
+
+### Object Curly Spacing
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
 **Default**: `true`
 
-**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+**Description**: Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers
 
-### Indent Char
-**Key**: `indent_char`
+### Pragma Insert
+**Key**: `pragma_insert`
 
-**Type**: `string`
+**Type**: `boolean`
 
-**Default**: `" "`
+**Default**: `false`
 
-**Description**: Indentation character
+**Description**: Insert a marker at the top of a file specifying the file has been beautified
 
-### Indent Size
-**Key**: `indent_size`
+### Jsx Brackets
+**Key**: `jsx_brackets`
 
-**Type**: `integer`
+**Type**: `boolean`
 
-**Default**: `4`
+**Default**: `false`
 
-**Description**: Indentation size/length
-
-### Convert Quotes
-**Key**: `convert_quotes`
-
-**Type**: `string`
-
-**Default**: `"none"`
-
-**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+**Description**: Put the > of a multi-line JSX element at the end of the last line
 
 ### Wrap Line Length
 **Key**: `wrap_line_length`
@@ -385,6 +763,60 @@ For more information click [Markdown](/docs/language-markdown.html)
 
 **Description**: Wrap lines at next opportunity after N characters
 
+### Pragma Require
+**Key**: `pragma_require`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Restrict beautifying files to only those with a pragma at the top
+
+### End With Semicolon
+**Key**: `end_with_semicolon`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Insert a semicolon at the end of statements
+
+### Convert Quotes
+**Key**: `convert_quotes`
+
+**Type**: `string`
+
+**Default**: `"none"`
+
+**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+
+### Indent With Tabs
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Default**: `true`
+
+**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+
+### Indent Size
+**Key**: `indent_size`
+
+**Type**: `integer`
+
+**Default**: `4`
+
+**Description**: Indentation size/length
+
+### Indent Char
+**Key**: `indent_char`
+
+**Type**: `string`
+
+**Default**: `" "`
+
+**Description**: Indentation character
+
 ### End With Comma
 **Key**: `end_with_comma`
 
@@ -393,44 +825,53 @@ For more information click [Markdown](/docs/language-markdown.html)
 **Default**: `false`
 
 **Description**: If a terminating comma should be inserted into arrays, object literals, and destructured objects.
+
+### Wrap Prose
+**Key**: `wrap_prose`
+
+**Type**: `string`
+
+**Default**: `"preserve"`
+
+**Description**: Wrap markdown text to new lines
 
 ## SCSS
 For more information click [SCSS](/docs/language-scss.html)
-### Indent With Tabs
-**Key**: `indent_with_tabs`
+### Arrow Parens
+**Key**: `arrow_parens`
+
+**Type**: `string`
+
+**Default**: `"always"`
+
+**Description**: Require parenthesis in arrow function arguments
+
+### Object Curly Spacing
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
 **Default**: `true`
 
-**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+**Description**: Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers
 
-### Indent Char
-**Key**: `indent_char`
+### Pragma Insert
+**Key**: `pragma_insert`
 
-**Type**: `string`
+**Type**: `boolean`
 
-**Default**: `" "`
+**Default**: `false`
 
-**Description**: Indentation character
+**Description**: Insert a marker at the top of a file specifying the file has been beautified
 
-### Indent Size
-**Key**: `indent_size`
+### Jsx Brackets
+**Key**: `jsx_brackets`
 
-**Type**: `integer`
+**Type**: `boolean`
 
-**Default**: `4`
+**Default**: `false`
 
-**Description**: Indentation size/length
-
-### Convert Quotes
-**Key**: `convert_quotes`
-
-**Type**: `string`
-
-**Default**: `"none"`
-
-**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+**Description**: Put the > of a multi-line JSX element at the end of the last line
 
 ### Wrap Line Length
 **Key**: `wrap_line_length`
@@ -441,6 +882,60 @@ For more information click [SCSS](/docs/language-scss.html)
 
 **Description**: Wrap lines at next opportunity after N characters
 
+### Pragma Require
+**Key**: `pragma_require`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Restrict beautifying files to only those with a pragma at the top
+
+### End With Semicolon
+**Key**: `end_with_semicolon`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Insert a semicolon at the end of statements
+
+### Convert Quotes
+**Key**: `convert_quotes`
+
+**Type**: `string`
+
+**Default**: `"none"`
+
+**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+
+### Indent With Tabs
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Default**: `true`
+
+**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+
+### Indent Size
+**Key**: `indent_size`
+
+**Type**: `integer`
+
+**Default**: `4`
+
+**Description**: Indentation size/length
+
+### Indent Char
+**Key**: `indent_char`
+
+**Type**: `string`
+
+**Default**: `" "`
+
+**Description**: Indentation character
+
 ### End With Comma
 **Key**: `end_with_comma`
 
@@ -449,44 +944,53 @@ For more information click [SCSS](/docs/language-scss.html)
 **Default**: `false`
 
 **Description**: If a terminating comma should be inserted into arrays, object literals, and destructured objects.
+
+### Wrap Prose
+**Key**: `wrap_prose`
+
+**Type**: `string`
+
+**Default**: `"preserve"`
+
+**Description**: Wrap markdown text to new lines
 
 ## TypeScript
 For more information click [TypeScript](/docs/language-typescript.html)
-### Indent With Tabs
-**Key**: `indent_with_tabs`
+### Arrow Parens
+**Key**: `arrow_parens`
+
+**Type**: `string`
+
+**Default**: `"always"`
+
+**Description**: Require parenthesis in arrow function arguments
+
+### Object Curly Spacing
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
 **Default**: `true`
 
-**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+**Description**: Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers
 
-### Indent Char
-**Key**: `indent_char`
+### Pragma Insert
+**Key**: `pragma_insert`
 
-**Type**: `string`
+**Type**: `boolean`
 
-**Default**: `" "`
+**Default**: `false`
 
-**Description**: Indentation character
+**Description**: Insert a marker at the top of a file specifying the file has been beautified
 
-### Indent Size
-**Key**: `indent_size`
+### Jsx Brackets
+**Key**: `jsx_brackets`
 
-**Type**: `integer`
+**Type**: `boolean`
 
-**Default**: `4`
+**Default**: `false`
 
-**Description**: Indentation size/length
-
-### Convert Quotes
-**Key**: `convert_quotes`
-
-**Type**: `string`
-
-**Default**: `"none"`
-
-**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+**Description**: Put the > of a multi-line JSX element at the end of the last line
 
 ### Wrap Line Length
 **Key**: `wrap_line_length`
@@ -497,6 +1001,60 @@ For more information click [TypeScript](/docs/language-typescript.html)
 
 **Description**: Wrap lines at next opportunity after N characters
 
+### Pragma Require
+**Key**: `pragma_require`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Restrict beautifying files to only those with a pragma at the top
+
+### End With Semicolon
+**Key**: `end_with_semicolon`
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+**Description**: Insert a semicolon at the end of statements
+
+### Convert Quotes
+**Key**: `convert_quotes`
+
+**Type**: `string`
+
+**Default**: `"none"`
+
+**Description**: Convert the quote characters delimiting strings from either double or single quotes to the other.
+
+### Indent With Tabs
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Default**: `true`
+
+**Description**: Indentation uses tabs, overrides `Indent Size` and `Indent Char`
+
+### Indent Size
+**Key**: `indent_size`
+
+**Type**: `integer`
+
+**Default**: `4`
+
+**Description**: Indentation size/length
+
+### Indent Char
+**Key**: `indent_char`
+
+**Type**: `string`
+
+**Default**: `" "`
+
+**Description**: Indentation character
+
 ### End With Comma
 **Key**: `end_with_comma`
 
@@ -505,3 +1063,12 @@ For more information click [TypeScript](/docs/language-typescript.html)
 **Default**: `false`
 
 **Description**: If a terminating comma should be inserted into arrays, object literals, and destructured objects.
+
+### Wrap Prose
+**Key**: `wrap_prose`
+
+**Type**: `string`
+
+**Default**: `"preserve"`
+
+**Description**: Wrap markdown text to new lines

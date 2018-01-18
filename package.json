@@ -29,13 +29,13 @@
   "devDependencies": {
     "@types/fs-extra": "^5.0.0",
     "@types/lodash": "^4.14.92",
-    "@unibeautify/beautifier-prettier": "^0.2.0",
+    "@unibeautify/beautifier-prettier": "^0.3.0",
     "beautifier-prettydiff": "^0.1.2",
     "fs-extra": "^5.0.0",
     "lodash": "^4.17.4",
     "rimraf": "^2.6.2",
     "ts-node": "^4.1.0",
     "typescript": "^2.6.2",
-    "unibeautify": "^0.2.0"
+    "unibeautify": "^0.3.0"
   }
 }
