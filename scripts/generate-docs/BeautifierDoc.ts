@@ -22,6 +22,10 @@ export default class BeautifierDoc extends Doc {
     return "beautifier-";
   }
 
+  public get id(): string {
+    return `${this.prefix}${this.slug}`;
+  }
+
   public get title(): string {
     return this.beautifier.name;
   }

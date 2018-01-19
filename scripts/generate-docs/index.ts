@@ -7,6 +7,7 @@ import * as path from "path";
 import Doc from "./Doc";
 import LanguageDoc from "./LanguageDoc";
 import BeautifierDoc from "./BeautifierDoc";
+import OptionsDoc from "./OptionsDoc";
 
 const docsPath = "docs";
 
@@ -16,9 +17,11 @@ Unibeautify.loadBeautifiers(beautifiers);
 const supportedLanguages = Unibeautify.supportedLanguages;
 const languageDocs = docsForLanguages(supportedLanguages);
 const beautifierDocs = docsForBeautifiers(beautifiers);
+const optionsDoc = new OptionsDoc();
 
 languageDocs.map(writeDoc);
 beautifierDocs.map(writeDoc);
+writeDoc(optionsDoc);
 updateSidebars(languageDocs, beautifierDocs);
 
 function docsForLanguages(languages: Language[]): LanguageDoc[] {
@@ -64,7 +67,8 @@ async function updateSidebars(
     docs: {
       ...sidebars.docs,
       Beautifiers: beautifiers.map(beautifier => beautifier.id).sort(),
-      Languages: languages.map(lang => lang.id).sort()
+      Languages: languages.map(lang => lang.id).sort(),
+      Options: "options"
     }
   };
   return await writeFile(sidebarsPath, JSON.stringify(newSidebars, null, 2));

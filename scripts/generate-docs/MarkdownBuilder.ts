@@ -5,8 +5,11 @@ export default class MarkdownBuilder {
     return this.contents.join("\n");
   }
 
-  public header(text: string, level: number = 1): MarkdownBuilder {
+  public header(text: string, level: number = 1, toc: boolean = false): MarkdownBuilder {
     const prefix = "#".repeat(level);
+    if(toc === true) {
+      return this.append(`${prefix} \`${text}\`\n`);
+    }
     return this.append(`${prefix} ${text}`);
   }
 
