@@ -9,6 +9,10 @@
     "Second Category": [
       "doc3"
     ],
+    "Options": [
+      "config-file",
+      "options"
+    ],
     "Beautifiers": [
       "beautifier-prettier",
       "beautifier-pretty-diff"
@@ -37,8 +41,7 @@
       "language-visualforce",
       "language-xml",
       "language-xtemplate"
-    ],
-    "Options": "options"
+    ]
   },
   "docs-other": {
     "First Category": [

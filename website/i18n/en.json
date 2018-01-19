@@ -6,6 +6,7 @@
     "tagline": "The one beautifier to rule them all",
     "beautifier-prettier": "Prettier",
     "beautifier-pretty-diff": "Pretty Diff",
+    "config-file": "Configuration File",
     "doc1": "Latin-ish",
     "Example Page": "Example Page",
     "doc2": "document number 2",
@@ -43,9 +44,9 @@
     "Docusaurus": "Docusaurus",
     "First Category": "First Category",
     "Second Category": "Second Category",
+    "Options": "Options",
     "Beautifiers": "Beautifiers",
-    "Languages": "Languages",
-    "Options": "Options"
+    "Languages": "Languages"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

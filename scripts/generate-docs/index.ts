@@ -60,6 +60,9 @@ async function updateSidebars(
   languages: LanguageDoc[],
   beautifiers: BeautifierDoc[]
 ) {
+  if (!(Array.isArray(languages) && Array.isArray(beautifiers))) {
+    return Promise.reject(new Error("Languages or beautifiers missing."));
+  }
   const sidebarsPath = path.resolve(__dirname, "../../website/sidebars.json");
   const sidebars = require(sidebarsPath);
   const newSidebars = {
@@ -67,8 +70,7 @@ async function updateSidebars(
     docs: {
       ...sidebars.docs,
       Beautifiers: beautifiers.map(beautifier => beautifier.id).sort(),
-      Languages: languages.map(lang => lang.id).sort(),
-      Options: "options"
+      Languages: languages.map(lang => lang.id).sort()
     }
   };
   return await writeFile(sidebarsPath, JSON.stringify(newSidebars, null, 2));
