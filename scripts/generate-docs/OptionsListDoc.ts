@@ -6,7 +6,6 @@ import MarkdownBuilder from "./MarkdownBuilder";
 import { optionKeyToTitle, slugify } from "./utils";
 
 export default class OptionsListDoc extends Doc {
-
   public get title(): string {
     return "Options";
   }
@@ -28,7 +27,10 @@ export default class OptionsListDoc extends Doc {
       }
       const optionId = `option-${slugify(title)}`; //.replace(/_/g, "-"); // `option-${key.replace(/_/g, "-")}`
       let titleLink: string = MarkdownBuilder.createDocLink(title, optionId);
-      let row = `| **${titleLink}** | \`${key}\` | ${option.description.replace(/\|/g, "&#124;")} |`;
+      let row = `| **${titleLink}** | \`${key}\` | ${option.description.replace(
+        /\|/g,
+        "&#124;"
+      )} |`;
       builder.append(row);
     });
     return builder.build();
@@ -37,5 +39,4 @@ export default class OptionsListDoc extends Doc {
   public get allOptions(): OptionsRegistry[] {
     return (Unibeautify as any).options;
   }
-
 }
