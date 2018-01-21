@@ -185,7 +185,6 @@ export default class BeautifierDoc extends Doc {
     const docId = `option-${slugify(title)}`;
     return MarkdownBuilder.createDocLink(title, docId);
   };
-
 }
 
 function isOptionTransformSingleFunction(
