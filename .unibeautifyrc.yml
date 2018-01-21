@@ -5,9 +5,9 @@ _:
 TypeScript:
   indent_char: " "
   indent_size: 2
-JavaScript:
-  indent_char: " "
-  indent_size: 2
+# JavaScript:
+#   indent_char: " "
+#   indent_size: 2
 CSS:
   indent_char: " "
   indent_size: 2
