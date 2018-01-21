@@ -52,6 +52,10 @@ const siteConfig = {
   scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: 'https://github.com/unibeautify/unibeautify',
+  algolia: {
+    apiKey: "f48f239ca346334bd0b61308ab16f524",
+    indexName: "unibeautify"
+  },
 };
 
 module.exports = siteConfig;

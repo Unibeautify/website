@@ -1,3 +1,5 @@
+import { slugify } from "./utils";
+
 export default abstract class Doc {
   protected get id(): string {
     return `${this.prefix}${this.slug}`;
@@ -11,16 +13,7 @@ export default abstract class Doc {
   protected abstract get prefix(): string;
 
   protected get slug(): string {
-    return this.slugify(this.title);
-  }
-
-  protected slugify(title: string): string {
-    return encodeURIComponent(
-      title
-        .toLowerCase()
-        .replace(/ /g, "-")
-        .replace("#", "sharp")
-    );
+    return slugify(this.title);
   }
 
   protected abstract get title(): string;

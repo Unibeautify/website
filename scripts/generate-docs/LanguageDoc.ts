@@ -1,5 +1,6 @@
 import { Language, Beautifier } from "unibeautify";
 
+import { slugify } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 
@@ -28,7 +29,7 @@ export default class LanguageDoc extends Doc {
   }
 
   private linkForBeautifier = (beautifier: Beautifier): string => {
-    const docId = `beautifier-${this.slugify(beautifier.name)}`;
+    const docId = `beautifier-${slugify(beautifier.name)}`;
     return MarkdownBuilder.createDocLink(beautifier.name, docId);
   };
 }

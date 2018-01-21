@@ -10,6 +10,7 @@ import Unibeautify, {
 } from "unibeautify";
 import * as _ from "lodash";
 
+import { slugify } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 
@@ -174,7 +175,7 @@ export default class BeautifierDoc extends Doc {
   }
 
   private linkForLanguage = (language: Language): string => {
-    const docId = `language-${this.slugify(language.name)}`;
+    const docId = `language-${slugify(language.name)}`;
     return MarkdownBuilder.createDocLink(language.name, docId);
   };
 }
