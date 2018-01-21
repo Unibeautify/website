@@ -10,7 +10,7 @@ import Unibeautify, {
 } from "unibeautify";
 import * as _ from "lodash";
 
-import { slugify } from "./utils";
+import { slugify, optionKeyToTitle } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 
@@ -78,7 +78,8 @@ export default class BeautifierDoc extends Doc {
       checkmark: "&#9989;"
     };
     Object.keys(this.allOptions).forEach(optionKey => {
-      let row = `| ${optionKey} |`;
+      const option = this.allOptions[optionKey];
+      let row = `| ${this.linkForOption(optionKey, option)} |`;
       let isSupported = false;
       this.languages.forEach(language => {
         const languageSupportsOption: boolean = _.get(
@@ -170,7 +171,7 @@ export default class BeautifierDoc extends Doc {
     }
   }
 
-  private get allOptions(): OptionsRegistry[] {
+  private get allOptions(): OptionsRegistry {
     return (Unibeautify as any).options;
   }
 
@@ -178,6 +179,13 @@ export default class BeautifierDoc extends Doc {
     const docId = `language-${slugify(language.name)}`;
     return MarkdownBuilder.createDocLink(language.name, docId);
   };
+
+  private linkForOption = (key: string, option: Option): string => {
+    const title: string = optionKeyToTitle(option.title || key);
+    const docId = `option-${slugify(title)}`;
+    return MarkdownBuilder.createDocLink(title, docId);
+  };
+
 }
 
 function isOptionTransformSingleFunction(
