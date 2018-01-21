@@ -4,7 +4,7 @@ export default abstract class Doc {
   }
 
   public get fileName(): string {
-    const title = this.title.toLowerCase().replace(" ", "-");
+    const title = this.title.toLowerCase().replace(/ /g, "-");
     return `${this.prefix}${title}.md`;
   }
 
@@ -18,7 +18,7 @@ export default abstract class Doc {
     return encodeURIComponent(
       title
         .toLowerCase()
-        .replace(" ", "-")
+        .replace(/ /g, "-")
         .replace("#", "sharp")
     );
   }
