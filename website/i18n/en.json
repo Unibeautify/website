@@ -7,10 +7,6 @@
     "beautifier-prettier": "Prettier",
     "beautifier-pretty-diff": "Pretty Diff",
     "config-file": "Configuration File",
-    "doc1": "Latin-ish",
-    "Example Page": "Example Page",
-    "doc2": "document number 2",
-    "doc3": "This is document number 3",
     "doc4": "Other Document",
     "doc5": "Fifth Document",
     "language-csharp": "C#",
@@ -108,9 +104,6 @@
     "API": "API",
     "Help": "Help",
     "Blog": "Blog",
-    "Docusaurus": "Docusaurus",
-    "First Category": "First Category",
-    "Second Category": "Second Category",
     "Options": "Options",
     "Beautifiers": "Beautifiers",
     "Languages": "Languages",
@@ -132,7 +125,8 @@
     "S": "S",
     "U": "U",
     "W": "W",
-    "Y": "Y"
+    "Y": "Y",
+    "First Category": "First Category"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
