@@ -23,7 +23,7 @@ const siteConfig = {
   projectName: 'unibeautify.github.io',
   gaTrackingId: "UA-112681254-1",
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
+    {doc: 'beautifier-prettier', label: 'Docs'},
     {doc: 'doc4', label: 'API'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
