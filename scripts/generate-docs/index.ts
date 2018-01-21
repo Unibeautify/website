@@ -98,5 +98,7 @@ function optionsSidebar(): { [sectionKey: string]: string[] } {
     return `option-${slug}`;
   });
   const firstLetterIndex = 7;
-  return _.groupBy(optionIds, (optionId, index) => optionId[firstLetterIndex].toUpperCase());
+  return _.groupBy(optionIds, (optionId, index) =>
+    optionId[firstLetterIndex].toUpperCase()
+  );
 }
