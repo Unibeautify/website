@@ -7,3 +7,5 @@ title: Multiline Ternary
 **Type**: `string`
 
 **Default**: `"always"`
+
+**Allowed values**: `"always"` or `"always-multiline"` or `"never"`

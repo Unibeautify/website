@@ -4,6 +4,6 @@ title: Ignore
 ---
 **Description**: do not fix these errors/warnings
 
-**Type**: `array`
+**Type**: `array of strings`
 
 **Default**: `["E24"]`

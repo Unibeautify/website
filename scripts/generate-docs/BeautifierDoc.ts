@@ -10,12 +10,15 @@ import Unibeautify, {
 } from "unibeautify";
 import * as _ from "lodash";
 
+import { slugify } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 
 export default class BeautifierDoc extends Doc {
+  private readonly optionsLookup: OptionsLookup;
   constructor(private beautifier: Beautifier, private languages: Language[]) {
     super();
+    this.optionsLookup = this.createOptionsLookup();
   }
 
   public get prefix(): string {
@@ -32,40 +35,89 @@ export default class BeautifierDoc extends Doc {
 
   protected get body(): string {
     const builder = new MarkdownBuilder();
-    // builder
-    //   .header("Languages", 2)
-    //   .list(this.languages.map(this.linkForLanguage));
-    this.languages.forEach(lang => {
-      builder.header(lang.name, 2);
-      builder.append(
-        "For more information click " + this.linkForLanguage(lang)
-      );
-      // builder.header("Options", 3);
-      // builder.append("Lots of options!");
-      const options = this.options(lang);
-      // console.log(options);
-      Object.keys(options).forEach(key => {
-        const option = options[key];
-        let title: string = option.title || "";
-        if (!title) {
-          title = key.split('_').map(_.capitalize).join(' ');
-        }
-        builder.header(title, 3);
-        builder.append(`**Key**: \`${key}\`\n`);
-        builder.append(`**Type**: \`${option.type}\`\n`);
-        builder.append(`**Default**: \`${JSON.stringify(option.default)}\`\n`);
-        builder.append(`**Description**: ${option.description}\n`);
-      });
-    });
+    // this.languages.forEach(lang => {
+    //   builder.header(lang.name, 2);
+    //   builder.append(
+    //     "For more information click " + this.linkForLanguage(lang)
+    //   );
+    //   builder.header("Options", 3);
+    //   builder.append("Lots of options!");
+    //   const options = this.options(lang);
+    //   Object.keys(options).forEach(key => {
+    //     const option = options[key];
+    //     let title: string = option.title || "";
+    //     if (!title) {
+    //       title = key.split('_').map(_.capitalize).join(' ');
+    //     }
+    //     builder.header(title, 3);
+    //     builder.append(`**Key**: \`${key}\`\n`);
+    //     builder.append(`**Type**: \`${option.type}\`\n`);
+    //     builder.append(`**Default**: \`${JSON.stringify(option.default)}\`\n`);
+    //     builder.append(`**Description**: ${option.description}\n`);
+    //   });
+    // });
+    this.appendOptionsTable(builder);
     return builder.build();
+  }
+
+  private appendOptionsTable(builder: MarkdownBuilder): MarkdownBuilder {
+    /*
+    | Option | CSS | Lang 2 |
+    | --- | --- | --- |
+    | Arrow Parens | &#10060; | &#9989; |
+    */
+
+    // console.log(JSON.stringify(this.allOptions, null, 2));
+    builder.append(
+      "| Option |" +
+        this.languages.map(lang => ` ${this.linkForLanguage(lang)} |`).join("")
+    );
+    builder.append("| --- |" + this.languages.map(lang => ` --- |`).join(""));
+    const symbols = {
+      x: "&#10060;",
+      checkmark: "&#9989;"
+    };
+    Object.keys(this.allOptions).forEach(optionKey => {
+      let row = `| ${optionKey} |`;
+      let isSupported = false;
+      this.languages.forEach(language => {
+        const languageSupportsOption: boolean = _.get(
+          this.optionsLookup as any,
+          `${language.name}.${optionKey}`,
+          false
+        );
+        const symbol = languageSupportsOption ? symbols.checkmark : symbols.x;
+        row += ` ${symbol} |`;
+        if (languageSupportsOption) {
+          isSupported = true;
+        }
+      });
+      if (isSupported) {
+        builder.append(row);
+      }
+    });
+
+    return builder;
+  }
+
+  private createOptionsLookup(): OptionsLookup {
+    return this.languages
+      .map(language => ({
+        language,
+        options: this.options(language)
+      }))
+      .reduce(
+        (lookup, { language, options }) => ({
+          ...lookup,
+          [language.name]: options
+        }),
+        {}
+      );
   }
 
   private options(language: Language): OptionsRegistry {
     const keys = this.optionKeys(language);
-    // console.log("Option keys", keys);
     const allOptions = this.allOptions;
-    // return this.allOptions.filter(option => keys.indexOf(option.title) !== -1);
-    // return keys.map(key => allOptions[key]);
     return keys.reduce((options, key) => {
       const option = allOptions[key];
       if (!option) {
@@ -77,23 +129,6 @@ export default class BeautifierDoc extends Doc {
       };
     }, {});
   }
-
-  // private optionKeys(language: Language): string[] {
-  //   // const beautifierOptions = this.beautifier.options;
-  //   // console.log(
-  //   //   "beautifierOptions",
-  //   //   JSON.stringify(beautifierOptions, null, 2)
-  //   // );
-  //   // const defaultOptions = (beautifierOptions as any)["_"] || {};
-  //   // const languageOptions = beautifierOptions[language.name] || {};
-  //   // // const languageOptions = {
-  //   // //   ...((beautifierOptions as any)["_"] || {}),
-  //   // //   ...(beautifierOptions[language.name] || {}),
-  //   // // };
-  //   const languageOptions = this.optionKeys(language);
-  //   console.log("languageOptions", JSON.stringify(languageOptions, null, 2));
-  //   return Object.keys(languageOptions);
-  // }
 
   private optionKeys(language: Language): BeautifierOptionName[] {
     const beautifier = this.beautifier;
@@ -119,26 +154,16 @@ export default class BeautifierDoc extends Doc {
         ];
         if (typeof op === "string") {
           options.push(op);
-          // transformedOptions[fieldKey] = options[op];
         } else if (isOptionTransformSingleFunction(op)) {
           options.push(fieldKey as BeautifierOptionName);
-          // transformedOptions[
-          //   fieldKey
-          // ] = op(options[fieldKey]);
         } else if (typeof op === "boolean") {
           if (op === true) {
             options.push(fieldKey as BeautifierOptionName);
-            // transformedOptions[fieldKey] = options[fieldKey];
           }
         } else if (isOptionTransform(op)) {
-          // const [fields, fn] = op;
-          // const vals = fields.map(field => options[field]);
-          // const obj = _.zipObject(fields, vals);
-          // transformedOptions[fieldKey] = fn(obj);
           options.push(...op[0]);
         }
       });
-      // return transformedOptions;
       return options;
     } else {
       return [];
@@ -150,7 +175,7 @@ export default class BeautifierDoc extends Doc {
   }
 
   private linkForLanguage = (language: Language): string => {
-    const docId = `language-${this.slugify(language.name)}`;
+    const docId = `language-${slugify(language.name)}`;
     return MarkdownBuilder.createDocLink(language.name, docId);
   };
 }
@@ -163,4 +188,8 @@ function isOptionTransformSingleFunction(
 
 function isOptionTransform(option: any): option is BeautifyOptionTransform {
   return Array.isArray(option);
+}
+
+interface OptionsLookup {
+  [languageName: string]: OptionsRegistry;
 }

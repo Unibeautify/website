@@ -1,13 +1,8 @@
 {
   "docs": {
-    "Docusaurus": [
-      "doc1"
-    ],
-    "First Category": [
-      "doc2"
-    ],
-    "Second Category": [
-      "doc3"
+    "Options": [
+      "config-file",
+      "options"
     ],
     "Beautifiers": [
       "beautifier-prettier",
@@ -37,8 +32,114 @@
       "language-visualforce",
       "language-xml",
       "language-xtemplate"
+    ]
+  },
+  "options": {
+    "A": [
+      "option-align-assignments",
+      "option-align-columns-in-environments",
+      "option-always-look-for-split-braces",
+      "option-always-look-for-split-brackets",
+      "option-arrow-parens"
     ],
-    "Options": "options"
+    "B": [
+      "option-brace-style",
+      "option-break-chained-methods"
+    ],
+    "C": [
+      "option-commonmark",
+      "option-config-path",
+      "option-convert-quotes",
+      "option-comb-predefined-config"
+    ],
+    "P": [
+      "option-php-cs-fixer-path",
+      "option-perltidy-profile",
+      "option-phpcbf-path",
+      "option-pragma-insert",
+      "option-pragma-require",
+      "option-preserve-newlines",
+      "option-phpcbf-standard"
+    ],
+    "E": [
+      "option-emacs-path",
+      "option-emacs-script-path",
+      "option-end-with-comma",
+      "option-end-with-newline",
+      "option-end-with-semicolon",
+      "option-eval-code",
+      "option-extra-liners"
+    ],
+    "F": [
+      "option-fixers",
+      "option-force-indentation"
+    ],
+    "G": [
+      "option-gfm"
+    ],
+    "I": [
+      "option-identifiers",
+      "option-ignore",
+      "option-indent-char",
+      "option-indent-comments",
+      "option-indent-inner-html",
+      "option-indent-level",
+      "option-indent-preamble",
+      "option-indent-scripts",
+      "option-indent-size",
+      "option-indent-with-tabs"
+    ],
+    "J": [
+      "option-jslint-happy",
+      "option-jsx-brackets"
+    ],
+    "K": [
+      "option-keep-array-indentation",
+      "option-keep-function-indentation",
+      "option-keywords"
+    ],
+    "L": [
+      "option-level"
+    ],
+    "M": [
+      "option-max-line-length",
+      "option-max-preserve-newlines",
+      "option-multiline-ternary"
+    ],
+    "N": [
+      "option-newline-between-rules",
+      "option-no-lead-zero"
+    ],
+    "O": [
+      "option-object-curly-spacing",
+      "option-omit-div"
+    ],
+    "R": [
+      "option-remove-trailing-whitespace",
+      "option-rubocop-path",
+      "option-rustfmt-path"
+    ],
+    "S": [
+      "option-selector-separator-newline",
+      "option-sort-imports",
+      "option-space-after-anon-function",
+      "option-space-before-conditional",
+      "option-space-in-paren",
+      "option-syntax"
+    ],
+    "U": [
+      "option-unescape-strings",
+      "option-unformatted"
+    ],
+    "W": [
+      "option-wrap-attributes",
+      "option-wrap-attributes-indent-size",
+      "option-wrap-line-length",
+      "option-wrap-prose"
+    ],
+    "Y": [
+      "option-yaml"
+    ]
   },
   "docs-other": {
     "First Category": [

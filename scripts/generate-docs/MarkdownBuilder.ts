@@ -5,9 +5,13 @@ export default class MarkdownBuilder {
     return this.contents.join("\n");
   }
 
-  public header(text: string, level: number = 1, toc: boolean = false): MarkdownBuilder {
+  public header(
+    text: string,
+    level: number = 1,
+    toc: boolean = false
+  ): MarkdownBuilder {
     const prefix = "#".repeat(level);
-    if(toc === true) {
+    if (toc === true) {
       return this.append(`${prefix} \`${text}\`\n`);
     }
     return this.append(`${prefix} ${text}`);
@@ -16,6 +20,10 @@ export default class MarkdownBuilder {
   public list(items: string[]): MarkdownBuilder {
     const text = items.map(item => `- ${item}`).join("\n");
     return this.append(text);
+  }
+
+  public code(code: string, language: string = "") {
+    return this.append("```" + language + "\n" + code + "\n```");
   }
 
   public append(text: string): MarkdownBuilder {

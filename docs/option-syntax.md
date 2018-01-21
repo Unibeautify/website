@@ -7,3 +7,5 @@ title: Syntax
 **Type**: `string`
 
 **Default**: `"html"`
+
+**Allowed values**: `"html"` or `"concise"`

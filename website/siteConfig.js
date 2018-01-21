@@ -23,7 +23,7 @@ const siteConfig = {
   projectName: 'unibeautify.github.io',
   gaTrackingId: "UA-112681254-1",
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
+    {doc: 'config-file', label: 'Docs'},
     {doc: 'doc4', label: 'API'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
@@ -52,6 +52,10 @@ const siteConfig = {
   scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: 'https://github.com/unibeautify/unibeautify',
+  algolia: {
+    apiKey: "f48f239ca346334bd0b61308ab16f524",
+    indexName: "unibeautify"
+  },
 };
 
 module.exports = siteConfig;

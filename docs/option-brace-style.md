@@ -7,3 +7,5 @@ title: Brace Style
 **Type**: `string`
 
 **Default**: `"collapse"`
+
+**Allowed values**: `"collapse"` or `"collapse-preserve-inline"` or `"expand"` or `"end-expand"` or `"none"`

@@ -33,7 +33,7 @@ class Users extends React.Component {
             <div className="logos">{showcase}</div>
             <p>Are you using this project?</p>
             <a
-              href="https://github.com/facebook/docusaurus/edit/master/website/siteConfig.js"
+              href={siteConfig.editUrl.replace("docs/", "website/data/users.yml")}
               className="button">
               Add your company
             </a>

@@ -7,3 +7,5 @@ title: Indent Char
 **Type**: `string`
 
 **Default**: `" "`
+
+**Allowed values**: `" "` or `"\t"`

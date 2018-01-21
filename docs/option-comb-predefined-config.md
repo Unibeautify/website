@@ -7,3 +7,5 @@ title: comb predefined config
 **Type**: `string`
 
 **Default**: `"csscomb"`
+
+**Allowed values**: `"csscomb"` or `"yandex"` or `"zen"`
