@@ -5,6 +5,11 @@ _:
 TypeScript:
   indent_char: " "
   indent_size: 2
+  end_with_comma: true
+  wrap_line_length: 120
+  end_with_semicolon: true
+  arrow_parens: "as-needed"
+  convert_quotes: "double"
 # JavaScript:
 #   indent_char: " "
 #   indent_size: 2
