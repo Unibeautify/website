@@ -7,6 +7,7 @@ import * as path from "path";
 import Doc from "./Doc";
 import LanguageDoc from "./LanguageDoc";
 import BeautifierDoc from "./BeautifierDoc";
+import OptionsListDoc from "./OptionsListDoc";
 import OptionsDoc from "./OptionsDoc";
 
 const docsPath = "docs";
@@ -17,11 +18,13 @@ Unibeautify.loadBeautifiers(beautifiers);
 const supportedLanguages = Unibeautify.supportedLanguages;
 const languageDocs = docsForLanguages(supportedLanguages);
 const beautifierDocs = docsForBeautifiers(beautifiers);
-const optionsDoc = new OptionsDoc();
+const optionsDocs = docsForOptions();
+const optionsListDoc = new OptionsListDoc();
 
 languageDocs.map(writeDoc);
 beautifierDocs.map(writeDoc);
-writeDoc(optionsDoc);
+optionsDocs.map(writeDoc);
+writeDoc(optionsListDoc);
 updateSidebars(languageDocs, beautifierDocs);
 
 function docsForLanguages(languages: Language[]): LanguageDoc[] {
@@ -35,6 +38,14 @@ function docsForBeautifiers(beautifiers: Beautifier[]): BeautifierDoc[] {
   return beautifiers.map(
     beautifier =>
       new BeautifierDoc(beautifier, languagesForBeautifier(beautifier))
+  );
+}
+
+function docsForOptions(): OptionsDoc[] {
+  const optionRegistry = (Unibeautify as any).options;
+  return Object.keys(optionRegistry).map(key => ({ "option": optionRegistry[key], "key": key })).map(
+    ({ option, key }) =>
+      new OptionsDoc(option, key)
   );
 }
 
