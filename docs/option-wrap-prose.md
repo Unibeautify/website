@@ -7,3 +7,5 @@ title: Wrap Prose
 **Type**: `string`
 
 **Default**: `"preserve"`
+
+**Allowed values**: `"always"` or `"never"` or `"preserve"`

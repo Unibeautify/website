@@ -7,3 +7,5 @@ title: Indent Scripts
 **Type**: `string`
 
 **Default**: `"normal"`
+
+**Allowed values**: `"keep"` or `"separate"` or `"normal"`

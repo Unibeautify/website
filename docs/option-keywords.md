@@ -7,3 +7,5 @@ title: Keywords
 **Type**: `string`
 
 **Default**: `"upper"`
+
+**Allowed values**: `"unchanged"` or `"lower"` or `"upper"` or `"capitalize"`

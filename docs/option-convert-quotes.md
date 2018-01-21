@@ -7,3 +7,5 @@ title: Convert Quotes
 **Type**: `string`
 
 **Default**: `"none"`
+
+**Allowed values**: `"none"` or `"double"` or `"single"`

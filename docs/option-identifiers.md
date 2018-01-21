@@ -7,3 +7,5 @@ title: Identifiers
 **Type**: `string`
 
 **Default**: `"unchanged"`
+
+**Allowed values**: `"unchanged"` or `"lower"` or `"upper"` or `"capitalize"`

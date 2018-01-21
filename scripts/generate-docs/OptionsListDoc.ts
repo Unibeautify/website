@@ -3,6 +3,7 @@ import * as _ from "lodash";
 
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
+import { optionKeyToTitle, slugify } from "./utils";
 
 export default class OptionsListDoc extends Doc {
 
@@ -16,17 +17,18 @@ export default class OptionsListDoc extends Doc {
 
   protected get body(): string {
     const builder = new MarkdownBuilder();
-    builder.append("| Title | Option | Description |");
+    builder.append("| Title | Option Key | Description |");
     builder.append("| --- | --- | --- |");
     const options = this.allOptions;
     Object.keys(options).forEach(key => {
       const option = options[key];
       let title: string = option.title || "";
       if (!title) {
-        title = key.split('_').map(_.capitalize).join(' ');
+        title = optionKeyToTitle(key);
       }
-      let titleLink: string = MarkdownBuilder.createDocLink(title, `option-${key.replace(/_/g, "-")}`)
-      let row = `| ${titleLink} | ${key} | ${option.description.replace(/\|/g, "&#124;")} |`;
+      const optionId = `option-${slugify(title)}`; //.replace(/_/g, "-"); // `option-${key.replace(/_/g, "-")}`
+      let titleLink: string = MarkdownBuilder.createDocLink(title, optionId);
+      let row = `| **${titleLink}** | \`${key}\` | ${option.description.replace(/\|/g, "&#124;")} |`;
       builder.append(row);
     });
     return builder.build();

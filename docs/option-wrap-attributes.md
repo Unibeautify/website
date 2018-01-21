@@ -7,3 +7,5 @@ title: Wrap Attributes
 **Type**: `string`
 
 **Default**: `"auto"`
+
+**Allowed values**: `"auto"` or `"force"`

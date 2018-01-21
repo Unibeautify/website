@@ -7,3 +7,5 @@ title: Arrow Parens
 **Type**: `string`
 
 **Default**: `"always"`
+
+**Allowed values**: `"always"` or `"as-needed"`
