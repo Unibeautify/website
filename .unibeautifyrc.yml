@@ -9,7 +9,7 @@ TypeScript:
   wrap_line_length: 120
   end_with_semicolon: true
   arrow_parens: "as-needed"
-  convert_quotes: "double"
+  convert_quotes: "none"
 # JavaScript:
 #   indent_char: " "
 #   indent_size: 2
