@@ -5,7 +5,7 @@ import {
   BeautifierOptionName,
   BeautifyOptionTransformSingleFunction,
   BeautifyOptionTransform,
-  BeautifierLanguageOptionComplex
+  BeautifierLanguageOptionComplex,
 } from "unibeautify";
 import * as _ from "lodash";
 
