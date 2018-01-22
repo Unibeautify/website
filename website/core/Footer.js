@@ -35,14 +35,14 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+            <a href={this.docUrl('#', this.props.language)}>
+              Getting Started
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
+            <a href={this.docUrl('#', this.props.language)}>
+              Docs
             </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
+            <a href={this.docUrl('#', this.props.language)}>
+              API Reference
             </a>
           </div>
           <div>
@@ -51,11 +51,11 @@ class Footer extends React.Component {
               User Showcase
             </a>
             <a
-              href="http://stackoverflow.com/questions/tagged/"
+              href="http://stackoverflow.com/questions/tagged/unibeautify"
               target="_blank">
               Stack Overflow
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
+            <a href="#">Project Chat</a>
             <a href="https://twitter.com/unibeautify" target="_blank">
               Twitter
             </a>
@@ -77,19 +77,8 @@ class Footer extends React.Component {
           </div>
         </section>
 
-        <a
-          href="https://code.facebook.com/projects/"
-          target="_blank"
-          className="fbOpenSource">
-          <img
-            src={this.props.config.baseUrl + 'img/oss_logo.png'}
-            alt="Facebook Open Source"
-            width="170"
-            height="45"
-          />
-        </a>
         <section className="copyright">
-          Copyright &copy; {currentYear} Facebook Inc.
+          Copyright &copy; {currentYear}
         </section>
       </footer>
     );

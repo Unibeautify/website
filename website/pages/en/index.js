@@ -103,13 +103,13 @@ const Features = props => (
     {[
       {
         content: 'This is the content of my feature',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('unibeautify.png'),
         imageAlign: 'top',
         title: 'Feature One',
       },
       {
         content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('unibeautify.png'),
         imageAlign: 'top',
         title: 'Feature Two',
       },
@@ -131,7 +131,7 @@ const LearnHow = props => (
     {[
       {
         content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('unibeautify.png'),
         imageAlign: 'right',
         title: 'Learn How',
       },
@@ -144,7 +144,7 @@ const TryOut = props => (
     {[
       {
         content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('unibeautify.png'),
         imageAlign: 'left',
         title: 'Try it Out',
       },
@@ -157,7 +157,7 @@ const Description = props => (
     {[
       {
         content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('unibeautify.png'),
         imageAlign: 'right',
         title: 'Description',
       },
