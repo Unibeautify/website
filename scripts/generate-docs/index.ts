@@ -82,9 +82,9 @@ async function updateSidebars(
     docs: {
       ...sidebars.docs,
       Beautifiers: beautifiers.map(beautifier => beautifier.id).sort(),
-      Languages: languages.map(lang => lang.id).sort()
+      Languages: languages.map(lang => lang.id).sort(),
     },
-    options: optionsSidebar()
+    options: optionsSidebar(),
   };
   return await writeFile(sidebarsPath, JSON.stringify(newSidebars, null, 2));
 }
