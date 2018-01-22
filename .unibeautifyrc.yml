@@ -10,6 +10,7 @@ TypeScript:
   end_with_semicolon: true
   arrow_parens: "as-needed"
   convert_quotes: "double"
+  object_curly_spacing: true
 # JavaScript:
 #   indent_char: " "
 #   indent_size: 2
