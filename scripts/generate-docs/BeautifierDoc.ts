@@ -1,16 +1,12 @@
 import Unibeautify, {
   Language,
   Beautifier,
-  Option,
   OptionsRegistry,
-  BeautifierOptionName,
-  BeautifyOptionTransformSingleFunction,
-  BeautifyOptionTransform,
-  BeautifierLanguageOptionComplex
+  BeautifierOptionName
 } from "unibeautify";
 import * as _ from "lodash";
 
-import { slugify, optionKeyToTitle } from "./utils";
+import { optionKeys, linkForLanguage, linkForOption } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 
@@ -70,7 +66,7 @@ export default class BeautifierDoc extends Doc {
     // console.log(JSON.stringify(this.allOptions, null, 2));
     builder.append(
       "| Option |" +
-        this.languages.map(lang => ` ${this.linkForLanguage(lang)} |`).join("")
+        this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join("")
     );
     builder.append("| --- |" + this.languages.map(lang => ` --- |`).join(""));
     const symbols = {
@@ -79,7 +75,7 @@ export default class BeautifierDoc extends Doc {
     };
     Object.keys(this.allOptions).forEach(optionKey => {
       const option = this.allOptions[optionKey];
-      let row = `| ${this.linkForOption(optionKey, option)} |`;
+      let row = `| ${linkForOption(optionKey, option)} |`;
       let isSupported = false;
       this.languages.forEach(language => {
         const languageSupportsOption: boolean = _.get(
@@ -117,7 +113,7 @@ export default class BeautifierDoc extends Doc {
   }
 
   private options(language: Language): OptionsRegistry {
-    const keys = this.optionKeys(language);
+    const keys: BeautifierOptionName[] = optionKeys(this.beautifier, language);
     const allOptions = this.allOptions;
     return keys.reduce((options, key) => {
       const option = allOptions[key];
@@ -131,70 +127,9 @@ export default class BeautifierDoc extends Doc {
     }, {});
   }
 
-  private optionKeys(language: Language): BeautifierOptionName[] {
-    const beautifier = this.beautifier;
-    const globalOptions = beautifier.options._;
-    let beautifierOptions = beautifier.options[language.name];
-    // Global options
-    if (typeof globalOptions === "object") {
-      if (beautifierOptions === true) {
-        beautifierOptions = globalOptions;
-      } else if (typeof beautifierOptions === "object") {
-        beautifierOptions = Object.assign({}, globalOptions, beautifierOptions);
-      }
-    }
-    // Transform options
-    if (typeof beautifierOptions === "boolean") {
-      return [];
-    } else if (typeof beautifierOptions === "object") {
-      const options: BeautifierOptionName[] = [];
-      // const transformedOptions: OptionValues = {};
-      Object.keys(beautifierOptions).forEach(fieldKey => {
-        const op = (<BeautifierLanguageOptionComplex>beautifierOptions)[
-          fieldKey
-        ];
-        if (typeof op === "string") {
-          options.push(op);
-        } else if (isOptionTransformSingleFunction(op)) {
-          options.push(fieldKey as BeautifierOptionName);
-        } else if (typeof op === "boolean") {
-          if (op === true) {
-            options.push(fieldKey as BeautifierOptionName);
-          }
-        } else if (isOptionTransform(op)) {
-          options.push(...op[0]);
-        }
-      });
-      return options;
-    } else {
-      return [];
-    }
-  }
-
   private get allOptions(): OptionsRegistry {
     return (Unibeautify as any).options;
   }
-
-  private linkForLanguage = (language: Language): string => {
-    const docId = `language-${slugify(language.name)}`;
-    return MarkdownBuilder.createDocLink(language.name, docId);
-  };
-
-  private linkForOption = (key: string, option: Option): string => {
-    const title: string = optionKeyToTitle(option.title || key);
-    const docId = `option-${slugify(title)}`;
-    return MarkdownBuilder.createDocLink(title, docId);
-  };
-}
-
-function isOptionTransformSingleFunction(
-  option: any
-): option is BeautifyOptionTransformSingleFunction {
-  return typeof option === "function";
-}
-
-function isOptionTransform(option: any): option is BeautifyOptionTransform {
-  return Array.isArray(option);
 }
 
 interface OptionsLookup {
