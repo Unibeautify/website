@@ -2,6 +2,8 @@
 id: option-yaml
 title: Yaml
 ---
+**Key**: `yaml`
+
 **Description**: Enables raw YAML front matter to be detected (thus ignoring markdown-like syntax).
 
 **Type**: `boolean`

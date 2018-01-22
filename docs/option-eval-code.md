@@ -2,6 +2,8 @@
 id: option-eval-code
 title: Eval Code
 ---
+**Key**: `eval_code`
+
 **Description**: 
 
 **Type**: `boolean`

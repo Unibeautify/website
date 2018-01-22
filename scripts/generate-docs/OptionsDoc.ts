@@ -28,6 +28,7 @@ export default class OptionsDoc extends Doc {
 
   protected get body(): string {
     const builder = new MarkdownBuilder();
+    builder.append(`**Key**: \`${this.optionKey}\`\n`);
     builder.append(`**Description**: ${this.option.description}\n`);
     builder.append(`**Type**: \`${this.type}\`\n`);
     builder.append(`**Default**: \`${JSON.stringify(this.option.default)}\`\n`);

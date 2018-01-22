@@ -2,6 +2,8 @@
 id: option-wrap-attributes
 title: Wrap Attributes
 ---
+**Key**: `wrap_attributes`
+
 **Description**: Wrap attributes to new lines [auto|force]
 
 **Type**: `string`

@@ -2,6 +2,8 @@
 id: option-syntax
 title: Syntax
 ---
+**Key**: `syntax`
+
 **Description**: [html|concise]
 
 **Type**: `string`

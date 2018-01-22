@@ -2,6 +2,8 @@
 id: option-identifiers
 title: Identifiers
 ---
+**Key**: `identifiers`
+
 **Description**: Change case of identifiers
 
 **Type**: `string`

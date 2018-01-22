@@ -2,6 +2,8 @@
 id: option-brace-style
 title: Brace Style
 ---
+**Key**: `brace_style`
+
 **Description**: [collapse|collapse-preserve-inline|expand|end-expand|none]
 
 **Type**: `string`

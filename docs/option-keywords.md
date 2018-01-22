@@ -2,6 +2,8 @@
 id: option-keywords
 title: Keywords
 ---
+**Key**: `keywords`
+
 **Description**: Change case of keywords
 
 **Type**: `string`

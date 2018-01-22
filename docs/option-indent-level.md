@@ -2,6 +2,8 @@
 id: option-indent-level
 title: Indent Level
 ---
+**Key**: `indent_level`
+
 **Description**: Initial indentation level
 
 **Type**: `integer`

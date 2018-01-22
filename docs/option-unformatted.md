@@ -2,6 +2,8 @@
 id: option-unformatted
 title: Unformatted
 ---
+**Key**: `unformatted`
+
 **Description**: List of tags (defaults to inline) that should not be reformatted
 
 **Type**: `array of strings`
