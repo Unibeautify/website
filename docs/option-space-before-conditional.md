@@ -9,3 +9,11 @@ title: Space Before Conditional
 **Type**: `boolean`
 
 **Default**: `true`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `true`
+## `false`

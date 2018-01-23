@@ -18,10 +18,12 @@ export default abstract class Doc {
 
   protected abstract get title(): string;
 
-  protected abstract get body(): string;
+  protected abstract get body(): string | Promise<string>;
 
-  public get contents(): string {
-    return this.frontMatter + "\n" + this.body;
+  public get contents(): Promise<string> {
+    return Promise.resolve(this.body).then(
+      body => this.frontMatter + "\n" + body
+    );
   }
 
   protected get frontMatter(): string {

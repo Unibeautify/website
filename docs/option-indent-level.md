@@ -9,3 +9,10 @@ title: Indent Level
 **Type**: `integer`
 
 **Default**: `0`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `0`

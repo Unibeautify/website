@@ -11,3 +11,14 @@ title: Brace Style
 **Default**: `"collapse"`
 
 **Allowed values**: `"collapse"` or `"collapse-preserve-inline"` or `"expand"` or `"end-expand"` or `"none"`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `"collapse"`
+## `"collapse-preserve-inline"`
+## `"expand"`
+## `"end-expand"`
+## `"none"`

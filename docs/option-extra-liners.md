@@ -9,3 +9,10 @@ title: Extra Liners
 **Type**: `array of strings`
 
 **Default**: `["head","body","/html"]`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `["head","body","/html"]`

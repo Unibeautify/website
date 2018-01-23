@@ -9,3 +9,10 @@ title: Max Preserve Newlines
 **Type**: `integer`
 
 **Default**: `10`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `10`

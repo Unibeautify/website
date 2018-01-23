@@ -1,6 +1,11 @@
-import Unibeautify, { Beautifier, Language } from "unibeautify";
+import Unibeautify, {
+  Beautifier,
+  Language,
+  OptionsRegistry,
+  BeautifierOptionName,
+} from "unibeautify";
 import * as prettyDiff from "beautifier-prettydiff";
-import prettier from "@unibeautify/beautifier-prettier";
+import prettier, { beautifier } from "@unibeautify/beautifier-prettier";
 import { ensureFile, writeFile } from "fs-extra";
 import * as path from "path";
 import * as _ from "lodash";
@@ -14,7 +19,10 @@ import { slugify, optionKeyToTitle } from "./utils";
 
 const docsPath = "docs";
 
-const beautifiers: Beautifier[] = [<any>prettyDiff, <Beautifier>prettier];
+const beautifiers: Beautifier[] = [
+  // <any>prettyDiff,
+  <Beautifier>prettier,
+];
 
 Unibeautify.loadBeautifiers(beautifiers);
 const supportedLanguages = Unibeautify.supportedLanguages;
@@ -44,10 +52,13 @@ function docsForBeautifiers(beautifiers: Beautifier[]): BeautifierDoc[] {
 }
 
 function docsForOptions(): OptionsDoc[] {
-  const optionRegistry = (Unibeautify as any).options;
+  const optionRegistry: OptionsRegistry = (Unibeautify as any).options;
   return Object.keys(optionRegistry)
-    .map(key => ({ option: optionRegistry[key], key: key }))
-    .map(({ option, key }) => new OptionsDoc(option, key));
+    .map(key => ({ option: optionRegistry[key], key }))
+    .map(
+      ({ option, key }) =>
+        new OptionsDoc(option, key as BeautifierOptionName, beautifiers)
+    );
 }
 
 function languagesForBeautifier(beautifier: Beautifier): Language[] {
@@ -65,7 +76,7 @@ async function writeDoc(doc: Doc) {
     doc.fileName
   );
   await ensureFile(filePath);
-  return await writeFile(filePath, doc.contents);
+  return await writeFile(filePath, await doc.contents);
 }
 
 async function updateSidebars(

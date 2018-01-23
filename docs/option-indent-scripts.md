@@ -11,3 +11,12 @@ title: Indent Scripts
 **Default**: `"normal"`
 
 **Allowed values**: `"keep"` or `"separate"` or `"normal"`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `"keep"`
+## `"separate"`
+## `"normal"`

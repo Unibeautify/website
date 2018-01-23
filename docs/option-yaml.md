@@ -9,3 +9,11 @@ title: Yaml
 **Type**: `boolean`
 
 **Default**: `true`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `true`
+## `false`

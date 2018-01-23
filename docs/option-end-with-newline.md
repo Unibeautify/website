@@ -9,3 +9,11 @@ title: End With Newline
 **Type**: `boolean`
 
 **Default**: `false`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `true`
+## `false`

@@ -9,3 +9,11 @@ title: Indent Preamble
 **Type**: `boolean`
 
 **Default**: `false`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `true`
+## `false`

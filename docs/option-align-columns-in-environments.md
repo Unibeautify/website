@@ -9,3 +9,10 @@ title: Align Columns In Environments
 **Type**: `array`
 
 **Default**: `["tabular","matrix","bmatrix","pmatrix"]`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `["tabular","matrix","bmatrix","pmatrix"]`
