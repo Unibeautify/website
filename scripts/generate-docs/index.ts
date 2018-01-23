@@ -1,4 +1,9 @@
-import Unibeautify, { Beautifier, Language, OptionsRegistry, BeautifierOptionName } from "unibeautify";
+import Unibeautify, {
+  Beautifier,
+  Language,
+  OptionsRegistry,
+  BeautifierOptionName,
+} from "unibeautify";
 import * as prettyDiff from "beautifier-prettydiff";
 import prettier, { beautifier } from "@unibeautify/beautifier-prettier";
 import { ensureFile, writeFile } from "fs-extra";
@@ -15,7 +20,7 @@ import { slugify, optionKeyToTitle } from "./utils";
 const docsPath = "docs";
 
 const beautifiers: Beautifier[] = [
-  // <any>prettyDiff, 
+  // <any>prettyDiff,
   <Beautifier>prettier,
 ];
 
@@ -50,7 +55,10 @@ function docsForOptions(): OptionsDoc[] {
   const optionRegistry: OptionsRegistry = (Unibeautify as any).options;
   return Object.keys(optionRegistry)
     .map(key => ({ option: optionRegistry[key], key }))
-    .map(({ option, key }) => new OptionsDoc(option, key as BeautifierOptionName, beautifiers));
+    .map(
+      ({ option, key }) =>
+        new OptionsDoc(option, key as BeautifierOptionName, beautifiers)
+    );
 }
 
 function languagesForBeautifier(beautifier: Beautifier): Language[] {

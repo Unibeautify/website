@@ -6,7 +6,7 @@ import Unibeautify, {
   BeautifierOptionName,
   BeautifyOptionTransformSingleFunction,
   BeautifyOptionTransform,
-  BeautifierLanguageOptionComplex
+  BeautifierLanguageOptionComplex,
 } from "unibeautify";
 import * as _ from "lodash";
 
@@ -107,10 +107,10 @@ export function beautify(
     languageName,
     options: {
       _: options,
-      [languageName]: options
+      [languageName]: options,
     },
-    text
-  })
+    text,
+  });
   // .then(beautified => {
   //   console.log(`After: ${languageName}`);
   //   console.log(languageName);
