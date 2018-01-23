@@ -2,7 +2,7 @@ import Unibeautify, {
   Option,
   Language,
   Beautifier,
-  BeautifierOptionName
+  BeautifierOptionName,
 } from "unibeautify";
 import * as path from "path";
 import * as fs from "fs";
@@ -12,7 +12,7 @@ import {
   optionKeys,
   linkForLanguage,
   linkForBeautifier,
-  beautify
+  beautify,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -104,7 +104,7 @@ export default class OptionsDoc extends Doc {
             example
               ? {
                   ...final,
-                  [languages[index].name]: example
+                  [languages[index].name]: example,
                 }
               : final,
           {} as { [languageName: string]: string | undefined }
@@ -123,7 +123,7 @@ export default class OptionsDoc extends Doc {
                   const options = {
                     indent_size: 2,
                     indent_char: " ",
-                    [this.optionKey]: optionValue
+                    [this.optionKey]: optionValue,
                   };
                   return beautify(language, options, example);
                 } else {
