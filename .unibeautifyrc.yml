@@ -6,10 +6,11 @@ TypeScript:
   indent_char: " "
   indent_size: 2
   end_with_comma: true
-  wrap_line_length: 120
+  wrap_line_length: 80
   end_with_semicolon: true
   arrow_parens: "as-needed"
-  convert_quotes: "none"
+  convert_quotes: "double"
+  object_curly_spacing: true
 # JavaScript:
 #   indent_char: " "
 #   indent_size: 2

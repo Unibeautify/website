@@ -2,7 +2,7 @@ import Unibeautify, {
   Language,
   Beautifier,
   OptionsRegistry,
-  BeautifierOptionName
+  BeautifierOptionName,
 } from "unibeautify";
 import * as _ from "lodash";
 
@@ -71,7 +71,7 @@ export default class BeautifierDoc extends Doc {
     builder.append("| --- |" + this.languages.map(lang => ` --- |`).join(""));
     const symbols = {
       x: "&#10060;",
-      checkmark: "&#9989;"
+      checkmark: "&#9989;",
     };
     Object.keys(this.allOptions).forEach(optionKey => {
       const option = this.allOptions[optionKey];
@@ -101,12 +101,12 @@ export default class BeautifierDoc extends Doc {
     return this.languages
       .map(language => ({
         language,
-        options: this.options(language)
+        options: this.options(language),
       }))
       .reduce(
         (lookup, { language, options }) => ({
           ...lookup,
-          [language.name]: options
+          [language.name]: options,
         }),
         {}
       );
@@ -122,7 +122,7 @@ export default class BeautifierDoc extends Doc {
       }
       return {
         ...options,
-        [key]: option
+        [key]: option,
       };
     }, {});
   }
