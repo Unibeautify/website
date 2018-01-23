@@ -8,9 +8,9 @@
 /* List of projects/orgs using your project for the users page */
 const users = [
   {
-    caption: 'User1',
-    image: '/test-site/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
+    caption: 'User 1',
+    image: 'img/unibeautify.png',
+    infoLink: '#',
     pinned: true,
   },
 ];
@@ -41,7 +41,7 @@ const siteConfig = {
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
-    'Copyright © ' +
+    'Copyright &copy; ' +
     new Date().getFullYear() +
     ' Glavin Wiechert',
   organizationName: 'unibeautify', // or set an env variable ORGANIZATION_NAME
