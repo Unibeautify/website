@@ -19,10 +19,7 @@ import { slugify, optionKeyToTitle } from "./utils";
 
 const docsPath = "docs";
 
-const beautifiers: Beautifier[] = [
-  <Beautifier>prettier,
-  <any>prettyDiff,
-];
+const beautifiers: Beautifier[] = [<Beautifier>prettier, <any>prettyDiff];
 
 Unibeautify.loadBeautifiers(beautifiers);
 const supportedLanguages = Unibeautify.supportedLanguages;
