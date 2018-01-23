@@ -9,3 +9,10 @@ title: PHP-CS-Fixer Path
 **Type**: `string`
 
 **Default**: `""`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `""`

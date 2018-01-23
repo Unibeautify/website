@@ -9,3 +9,10 @@ title: Ignore
 **Type**: `array of strings`
 
 **Default**: `["E24"]`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `["E24"]`

@@ -9,3 +9,10 @@ title: Perltidy Profile
 **Type**: `string`
 
 **Default**: `""`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `""`

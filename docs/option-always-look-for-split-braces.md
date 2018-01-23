@@ -9,3 +9,11 @@ title: Always Look For Split Braces
 **Type**: `boolean`
 
 **Default**: `true`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `true`
+## `false`

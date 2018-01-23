@@ -9,3 +9,10 @@ title: Level
 **Type**: `string`
 
 **Default**: `""`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `""`

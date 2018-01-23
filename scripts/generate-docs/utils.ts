@@ -1,11 +1,12 @@
-import {
+import Unibeautify, {
   Option,
+  OptionValues,
   Language,
   Beautifier,
   BeautifierOptionName,
   BeautifyOptionTransformSingleFunction,
   BeautifyOptionTransform,
-  BeautifierLanguageOptionComplex,
+  BeautifierLanguageOptionComplex
 } from "unibeautify";
 import * as _ from "lodash";
 
@@ -91,4 +92,30 @@ export function linkForOption(key: string, option: Option): string {
   const title: string = optionKeyToTitle(option.title || key);
   const docId = `option-${slugify(title)}`;
   return MarkdownBuilder.createDocLink(title, docId);
+}
+
+export function beautify(
+  language: Language,
+  options: OptionValues,
+  text: string
+): Promise<string> {
+  const languageName = language.name;
+  // console.log(`Before: ${languageName}`);
+  // console.log(options);
+  // console.log(text);
+  return Unibeautify.beautify({
+    languageName,
+    options: {
+      _: options,
+      [languageName]: options
+    },
+    text
+  })
+  // .then(beautified => {
+  //   console.log(`After: ${languageName}`);
+  //   console.log(languageName);
+  //   console.log(options);
+  //   console.log(beautified);
+  //   return beautified;
+  // });
 }

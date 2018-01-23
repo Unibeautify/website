@@ -11,3 +11,13 @@ title: Keywords
 **Default**: `"upper"`
 
 **Allowed values**: `"unchanged"` or `"lower"` or `"upper"` or `"capitalize"`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `"unchanged"`
+## `"lower"`
+## `"upper"`
+## `"capitalize"`

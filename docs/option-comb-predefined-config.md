@@ -11,3 +11,12 @@ title: comb predefined config
 **Default**: `"csscomb"`
 
 **Allowed values**: `"csscomb"` or `"yandex"` or `"zen"`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `"csscomb"`
+## `"yandex"`
+## `"zen"`

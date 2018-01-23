@@ -9,3 +9,10 @@ title: Config Path
 **Type**: `string`
 
 **Default**: `""`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `""`

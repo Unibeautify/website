@@ -11,3 +11,12 @@ title: Multiline Ternary
 **Default**: `"always"`
 
 **Allowed values**: `"always"` or `"always-multiline"` or `"never"`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `"always"`
+## `"always-multiline"`
+## `"never"`

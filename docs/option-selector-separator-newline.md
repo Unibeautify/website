@@ -9,3 +9,11 @@ title: Selector Separator Newline
 **Type**: `boolean`
 
 **Default**: `false`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `true`
+## `false`

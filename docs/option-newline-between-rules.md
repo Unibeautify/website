@@ -9,3 +9,11 @@ title: Newline Between Rules
 **Type**: `boolean`
 
 **Default**: `true`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `true`
+## `false`

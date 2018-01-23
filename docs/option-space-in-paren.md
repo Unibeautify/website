@@ -9,3 +9,11 @@ title: Space In Paren
 **Type**: `boolean`
 
 **Default**: `false`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `true`
+## `false`

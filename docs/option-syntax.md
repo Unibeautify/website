@@ -11,3 +11,11 @@ title: Syntax
 **Default**: `"html"`
 
 **Allowed values**: `"html"` or `"concise"`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `"html"`
+## `"concise"`

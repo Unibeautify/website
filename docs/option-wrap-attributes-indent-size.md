@@ -9,3 +9,10 @@ title: Wrap Attributes Indent Size
 **Type**: `integer`
 
 **Default**: `4`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `4`

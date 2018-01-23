@@ -11,3 +11,11 @@ title: Wrap Attributes
 **Default**: `"auto"`
 
 **Allowed values**: `"auto"` or `"force"`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `"auto"`
+## `"force"`

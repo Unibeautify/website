@@ -9,3 +9,10 @@ title: Max Line Length
 **Type**: `integer`
 
 **Default**: `79`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `79`

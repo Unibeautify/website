@@ -9,3 +9,10 @@ title: Rustfmt Path
 **Type**: `string`
 
 **Default**: `""`
+
+**Supported Languages**: 
+
+**Supported Beautifiers**: 
+
+# Examples
+## `""`
