@@ -13,6 +13,3 @@ title: Wrap Attributes Indent Size
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `4`

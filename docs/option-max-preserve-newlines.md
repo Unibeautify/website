@@ -13,6 +13,3 @@ title: Max Preserve Newlines
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `10`

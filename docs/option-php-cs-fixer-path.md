@@ -13,6 +13,3 @@ title: PHP-CS-Fixer Path
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `""`

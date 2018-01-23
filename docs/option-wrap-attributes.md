@@ -15,7 +15,3 @@ title: Wrap Attributes
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `"auto"`
-## `"force"`

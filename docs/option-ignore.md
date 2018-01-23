@@ -13,6 +13,3 @@ title: Ignore
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `["E24"]`

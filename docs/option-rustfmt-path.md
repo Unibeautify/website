@@ -13,6 +13,3 @@ title: Rustfmt Path
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `""`

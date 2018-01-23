@@ -13,7 +13,3 @@ title: Commonmark
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

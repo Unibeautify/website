@@ -13,7 +13,3 @@ title: Jslint Happy
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

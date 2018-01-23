@@ -13,7 +13,3 @@ title: Keep Array Indentation
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

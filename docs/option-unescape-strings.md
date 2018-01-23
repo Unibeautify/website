@@ -13,7 +13,3 @@ title: Unescape Strings
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

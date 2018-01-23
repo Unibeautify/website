@@ -13,6 +13,3 @@ title: Level
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `""`

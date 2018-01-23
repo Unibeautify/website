@@ -13,7 +13,3 @@ title: Remove Trailing Whitespace
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

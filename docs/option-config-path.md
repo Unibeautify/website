@@ -13,6 +13,3 @@ title: Config Path
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `""`

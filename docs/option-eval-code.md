@@ -13,7 +13,3 @@ title: Eval Code
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

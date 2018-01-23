@@ -13,7 +13,3 @@ title: Indent Inner Html
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

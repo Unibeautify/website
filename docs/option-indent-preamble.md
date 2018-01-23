@@ -13,7 +13,3 @@ title: Indent Preamble
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

@@ -15,9 +15,3 @@ title: Identifiers
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `"unchanged"`
-## `"lower"`
-## `"upper"`
-## `"capitalize"`

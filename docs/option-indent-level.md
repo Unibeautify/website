@@ -13,6 +13,3 @@ title: Indent Level
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `0`

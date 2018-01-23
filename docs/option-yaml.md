@@ -13,7 +13,3 @@ title: Yaml
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

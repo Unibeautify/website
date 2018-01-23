@@ -15,9 +15,3 @@ title: Keywords
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `"unchanged"`
-## `"lower"`
-## `"upper"`
-## `"capitalize"`

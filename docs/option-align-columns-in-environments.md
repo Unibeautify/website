@@ -13,6 +13,3 @@ title: Align Columns In Environments
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `["tabular","matrix","bmatrix","pmatrix"]`

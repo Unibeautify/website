@@ -5,7 +5,7 @@ import Unibeautify, {
   BeautifierOptionName,
 } from "unibeautify";
 import * as prettyDiff from "beautifier-prettydiff";
-import prettier, { beautifier } from "@unibeautify/beautifier-prettier";
+import prettier from "@unibeautify/beautifier-prettier";
 import { ensureFile, writeFile } from "fs-extra";
 import * as path from "path";
 import * as _ from "lodash";
@@ -20,8 +20,8 @@ import { slugify, optionKeyToTitle } from "./utils";
 const docsPath = "docs";
 
 const beautifiers: Beautifier[] = [
-  // <any>prettyDiff,
   <Beautifier>prettier,
+  <any>prettyDiff,
 ];
 
 Unibeautify.loadBeautifiers(beautifiers);

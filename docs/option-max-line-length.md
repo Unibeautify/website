@@ -13,6 +13,3 @@ title: Max Line Length
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `79`

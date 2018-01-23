@@ -13,7 +13,3 @@ title: Sort Imports
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

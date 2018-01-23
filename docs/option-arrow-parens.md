@@ -17,6 +17,12 @@ title: Arrow Parens
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
 # Examples
+## Original Code
+### JavaScript
+```JavaScript
+a => {};
+(a) => {};
+```
 ## `"always"`
 ### JavaScript
 ```JavaScript
