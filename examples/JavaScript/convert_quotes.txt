@@ -1,2 +1,4 @@
 console.log('hello world');
 console.log("hello world");
+const hello = "hey";
+console.log(`${hello} world`);

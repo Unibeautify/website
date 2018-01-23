@@ -22,12 +22,16 @@ title: Convert Quotes
 ```JavaScript
 console.log('hello world');
 console.log("hello world");
+const hello = "hey";
+console.log(`${hello} world`);
 ```
 ## `"none"`
 ### JavaScript
 ```JavaScript
 console.log("hello world");
 console.log("hello world");
+const hello = "hey";
+console.log(`${hello} world`);
 
 ```
 ## `"double"`
@@ -35,6 +39,8 @@ console.log("hello world");
 ```JavaScript
 console.log("hello world");
 console.log("hello world");
+const hello = "hey";
+console.log(`${hello} world`);
 
 ```
 ## `"single"`
@@ -42,5 +48,7 @@ console.log("hello world");
 ```JavaScript
 console.log('hello world');
 console.log('hello world');
+const hello = 'hey';
+console.log(`${hello} world`);
 
 ```

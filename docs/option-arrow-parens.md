@@ -22,12 +22,14 @@ title: Arrow Parens
 ```JavaScript
 a => {};
 (a) => {};
+(a,b) => {};
 ```
 ## `"always"`
 ### JavaScript
 ```JavaScript
 (a) => {};
 (a) => {};
+(a, b) => {};
 
 ```
 ## `"as-needed"`
@@ -35,5 +37,6 @@ a => {};
 ```JavaScript
 a => {};
 a => {};
+(a, b) => {};
 
 ```
