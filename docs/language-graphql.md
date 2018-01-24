@@ -19,4 +19,3 @@ title: GraphQL
 | [Pragma Insert](/docs/option-pragma-insert.html) | &#9989; |
 | [Pragma Require](/docs/option-pragma-require.html) | &#9989; |
 | [Wrap Line Length](/docs/option-wrap-line-length.html) | &#9989; |
-| [Wrap Prose](/docs/option-wrap-prose.html) | &#9989; |
