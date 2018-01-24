@@ -13,7 +13,3 @@ title: Space Before Conditional
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

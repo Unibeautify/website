@@ -13,7 +13,3 @@ title: End With Newline
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

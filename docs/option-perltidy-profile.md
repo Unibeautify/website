@@ -13,6 +13,3 @@ title: Perltidy Profile
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `""`

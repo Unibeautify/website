@@ -13,7 +13,3 @@ title: Omit Div
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

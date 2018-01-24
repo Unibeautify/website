@@ -15,8 +15,3 @@ title: Multiline Ternary
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `"always"`
-## `"always-multiline"`
-## `"never"`

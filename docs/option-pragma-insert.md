@@ -15,5 +15,28 @@ title: Pragma Insert
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
 # Examples
+## Original Code
+### JavaScript
+```JavaScript
+function sayHello() {
+console.log("Hello world");
+}
+```
 ## `true`
+### JavaScript
+```JavaScript
+/** @format */
+
+function sayHello() {
+  console.log("Hello world");
+}
+
+```
 ## `false`
+### JavaScript
+```JavaScript
+function sayHello() {
+  console.log("Hello world");
+}
+
+```

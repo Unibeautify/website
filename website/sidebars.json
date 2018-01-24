@@ -5,18 +5,33 @@
       "options"
     ],
     "Beautifiers": [
-      "beautifier-prettier"
+      "beautifier-prettier",
+      "beautifier-pretty-diff"
     ],
     "Languages": [
+      "language-csharp",
       "language-css",
+      "language-csv",
+      "language-ejs",
       "language-graphql",
+      "language-handlebars",
+      "language-html",
+      "language-java",
       "language-javascript",
       "language-json",
       "language-jsx",
       "language-less",
       "language-markdown",
+      "language-sass",
       "language-scss",
-      "language-typescript"
+      "language-spacebars",
+      "language-svg",
+      "language-swig",
+      "language-twig",
+      "language-typescript",
+      "language-visualforce",
+      "language-xml",
+      "language-xtemplate"
     ]
   },
   "options": {

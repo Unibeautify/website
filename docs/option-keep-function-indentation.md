@@ -13,7 +13,3 @@ title: Keep Function Indentation
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

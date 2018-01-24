@@ -4,7 +4,6 @@ import Unibeautify, {
   Beautifier,
   BeautifierOptionName,
 } from "unibeautify";
-import * as _ from "lodash";
 import * as path from "path";
 import * as fs from "fs";
 
@@ -101,14 +100,20 @@ export default class OptionsDoc extends Doc {
     return Promise.all(languages.map(language => this.readExample(language)))
       .then(examples =>
         examples.reduce(
-          (final, example, index) => ({
-            ...final,
-            [languages[index].name]: example,
-          }),
+          (final, example, index) =>
+            example
+              ? {
+                  ...final,
+                  [languages[index].name]: example,
+                }
+              : final,
           {} as { [languageName: string]: string | undefined }
         )
       )
       .then(examplesForLanguages => {
+        if (Object.keys(examplesForLanguages).length === 0) {
+          return Promise.resolve();
+        }
         return Promise.all(
           this.exampleValues.map(optionValue =>
             Promise.all<string | null>(
@@ -128,14 +133,38 @@ export default class OptionsDoc extends Doc {
             )
           )
         ).then(beautified => {
+          if (Object.keys(examplesForLanguages).length === 0) {
+            return;
+          }
           builder.header("Examples", 1);
+          // builder.code(
+          //   JSON.stringify(
+          //     {
+          //       examplesForLanguages,
+          //       beautified,
+          //       keys: Object.keys(examplesForLanguages)
+          //     },
+          //     null,
+          //     2
+          //   ),
+          //   "json"
+          // );
+
+          builder.header("Original Code", 2);
+          this.languages.forEach((language, languageIndex) => {
+            const example = examplesForLanguages[language.name];
+            if (example) {
+              builder.header(language.name, 3);
+              builder.code(example, language.name);
+            }
+          });
+
           this.exampleValues.forEach((optionValue, valueIndex) => {
             builder.header(`\`${JSON.stringify(optionValue)}\``, 2);
             this.languages.forEach((language, languageIndex) => {
-              const example = examplesForLanguages[language.name];
               const beautifiedExample: string | null =
                 beautified[valueIndex][languageIndex];
-              if (example && beautifiedExample) {
+              if (beautifiedExample) {
                 builder.header(language.name, 3);
                 builder.code(beautifiedExample, language.name);
               }

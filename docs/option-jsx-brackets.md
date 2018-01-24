@@ -15,5 +15,37 @@ title: Jsx Brackets
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
 # Examples
+## Original Code
+### JavaScript
+```JavaScript
+<div
+className="HelloWorld"
+title={`You are visitor number ${num}`}
+onMouseOver={onMouseOver}
+>
+    hello world
+</div>
+```
 ## `true`
+### JavaScript
+```JavaScript
+<div
+  className="HelloWorld"
+  title={`You are visitor number ${num}`}
+  onMouseOver={onMouseOver}>
+  hello world
+</div>;
+
+```
 ## `false`
+### JavaScript
+```JavaScript
+<div
+  className="HelloWorld"
+  title={`You are visitor number ${num}`}
+  onMouseOver={onMouseOver}
+>
+  hello world
+</div>;
+
+```

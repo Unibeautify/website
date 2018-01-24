@@ -13,6 +13,3 @@ title: Rubocop Path
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `""`

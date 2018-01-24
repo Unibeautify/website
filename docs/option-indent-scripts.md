@@ -15,8 +15,3 @@ title: Indent Scripts
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `"keep"`
-## `"separate"`
-## `"normal"`

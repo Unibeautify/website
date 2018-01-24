@@ -13,7 +13,3 @@ title: Always Look For Split Brackets
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

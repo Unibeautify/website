@@ -13,6 +13,3 @@ title: Extra Liners
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `["head","body","/html"]`

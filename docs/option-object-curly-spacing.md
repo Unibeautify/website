@@ -15,5 +15,53 @@ title: Object Curly Spacing
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
 # Examples
+## Original Code
+### JavaScript
+```JavaScript
+// simple object literals
+var obj = { foo: "bar" };
+
+// nested object literals
+var obj = { foo: { zoo: "bar" } };
+
+// destructuring assignment (EcmaScript 6)
+var { x, y } = y;
+
+// import/export declarations (EcmaScript 6)
+import { foo } from "bar";
+export { foo };
+```
 ## `true`
+### JavaScript
+```JavaScript
+// simple object literals
+var obj = { foo: "bar" };
+
+// nested object literals
+var obj = { foo: { zoo: "bar" } };
+
+// destructuring assignment (EcmaScript 6)
+var { x, y } = y;
+
+// import/export declarations (EcmaScript 6)
+import { foo } from "bar";
+export { foo };
+
+```
 ## `false`
+### JavaScript
+```JavaScript
+// simple object literals
+var obj = {foo: "bar"};
+
+// nested object literals
+var obj = {foo: {zoo: "bar"}};
+
+// destructuring assignment (EcmaScript 6)
+var {x, y} = y;
+
+// import/export declarations (EcmaScript 6)
+import {foo} from "bar";
+export {foo};
+
+```

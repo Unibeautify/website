@@ -15,7 +15,3 @@ title: Syntax
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `"html"`
-## `"concise"`

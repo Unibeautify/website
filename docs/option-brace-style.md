@@ -15,10 +15,3 @@ title: Brace Style
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `"collapse"`
-## `"collapse-preserve-inline"`
-## `"expand"`
-## `"end-expand"`
-## `"none"`

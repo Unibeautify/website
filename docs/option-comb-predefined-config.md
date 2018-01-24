@@ -15,8 +15,3 @@ title: comb predefined config
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `"csscomb"`
-## `"yandex"`
-## `"zen"`

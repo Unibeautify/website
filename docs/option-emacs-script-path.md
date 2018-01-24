@@ -13,6 +13,3 @@ title: Emacs Script Path
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `""`

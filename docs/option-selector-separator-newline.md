@@ -13,7 +13,3 @@ title: Selector Separator Newline
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

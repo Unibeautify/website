@@ -13,6 +13,3 @@ title: PHPCBF Path
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `""`

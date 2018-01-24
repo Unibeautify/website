@@ -13,7 +13,3 @@ title: Gfm
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `true`
-## `false`

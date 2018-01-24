@@ -13,6 +13,3 @@ title: Fixers
 **Supported Languages**: 
 
 **Supported Beautifiers**: 
-
-# Examples
-## `""`
