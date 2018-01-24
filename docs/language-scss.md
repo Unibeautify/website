@@ -28,4 +28,3 @@ title: SCSS
 | [Preserve Newlines](/docs/option-preserve-newlines.html) | &#10060; | &#9989; |
 | [Space After Anon Function](/docs/option-space-after-anon-function.html) | &#10060; | &#9989; |
 | [Wrap Line Length](/docs/option-wrap-line-length.html) | &#9989; | &#9989; |
-| [Wrap Prose](/docs/option-wrap-prose.html) | &#9989; | &#10060; |
