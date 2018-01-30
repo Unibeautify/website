@@ -22,7 +22,7 @@ title: Arrow Parens
 ```JavaScript
 a => {};
 (a) => {};
-(a,b) => {};
+(a, b) => {};
 ```
 ## `"always"`
 ### JavaScript
@@ -32,6 +32,34 @@ a => {};
 (a, b) => {};
 
 ```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JavaScript": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "arrow_parens": "always"
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: always
+===================================================================
+--- always	Original
++++ always	Beautified
+@@ -1,3 +1,3 @@
+-a␣=>␣{};␊
+ (a)␣=>␣{};␊
+-(a,␣b)␣=>␣{};
+\ No newline at end of file
++(a)␣=>␣{};␊
++(a,␣b)␣=>␣{};␊
+
+```
+</details>
 ## `"as-needed"`
 ### JavaScript
 ```JavaScript
@@ -40,3 +68,31 @@ a => {};
 (a, b) => {};
 
 ```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JavaScript": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "arrow_parens": "as-needed"
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: as-needed
+===================================================================
+--- as-needed	Original
++++ as-needed	Beautified
+@@ -1,3 +1,3 @@
+ a␣=>␣{};␊
+-(a)␣=>␣{};␊
+-(a,␣b)␣=>␣{};
+\ No newline at end of file
++a␣=>␣{};␊
++(a,␣b)␣=>␣{};␊
+
+```
+</details>

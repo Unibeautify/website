@@ -20,6 +20,7 @@ title: SCSS
 | [Indent Size](/docs/option-indent-size.html) | &#9989; | &#9989; |
 | [Indent With Tabs](/docs/option-indent-with-tabs.html) | &#9989; | &#9989; |
 | [Jsx Brackets](/docs/option-jsx-brackets.html) | &#9989; | &#10060; |
+| [Multiline Ternary](/docs/option-multiline-ternary.html) | &#10060; | &#9989; |
 | [Newline Between Rules](/docs/option-newline-between-rules.html) | &#10060; | &#9989; |
 | [No Lead Zero](/docs/option-no-lead-zero.html) | &#10060; | &#9989; |
 | [Object Curly Spacing](/docs/option-object-curly-spacing.html) | &#9989; | &#10060; |

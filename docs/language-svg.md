@@ -16,6 +16,7 @@ title: SVG
 | [Indent Comments](/docs/option-indent-comments.html) | &#9989; |
 | [Indent Size](/docs/option-indent-size.html) | &#9989; |
 | [Indent With Tabs](/docs/option-indent-with-tabs.html) | &#9989; |
+| [Multiline Ternary](/docs/option-multiline-ternary.html) | &#9989; |
 | [Newline Between Rules](/docs/option-newline-between-rules.html) | &#9989; |
 | [No Lead Zero](/docs/option-no-lead-zero.html) | &#9989; |
 | [Preserve Newlines](/docs/option-preserve-newlines.html) | &#9989; |

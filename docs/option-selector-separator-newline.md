@@ -10,6 +10,6 @@ title: Selector Separator Newline
 
 **Default**: `false`
 
-**Supported Languages**: 
+**Supported Languages**: [CSS](/docs/language-css.html)
 
-**Supported Beautifiers**: 
+**Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)

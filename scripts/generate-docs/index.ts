@@ -4,8 +4,6 @@ import Unibeautify, {
   OptionsRegistry,
   BeautifierOptionName,
 } from "unibeautify";
-import * as prettyDiff from "beautifier-prettydiff";
-import prettier from "@unibeautify/beautifier-prettier";
 import { ensureFile, writeFile } from "fs-extra";
 import * as path from "path";
 import * as _ from "lodash";
@@ -16,10 +14,9 @@ import BeautifierDoc from "./BeautifierDoc";
 import OptionsListDoc from "./OptionsListDoc";
 import OptionsDoc from "./OptionsDoc";
 import { slugify, optionKeyToTitle } from "./utils";
+import beautifiers from "./beautifiers";
 
 const docsPath = "docs";
-
-const beautifiers: Beautifier[] = [<Beautifier>prettier, <any>prettyDiff];
 
 Unibeautify.loadBeautifiers(beautifiers);
 const supportedLanguages = Unibeautify.supportedLanguages;

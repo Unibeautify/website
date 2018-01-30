@@ -7,6 +7,7 @@ import Unibeautify, {
   BeautifyOptionTransformSingleFunction,
   BeautifyOptionTransform,
   BeautifierLanguageOptionComplex,
+  LanguageOptionValues
 } from "unibeautify";
 import * as _ from "lodash";
 
@@ -96,26 +97,16 @@ export function linkForOption(key: string, option: Option): string {
 
 export function beautify(
   language: Language,
-  options: OptionValues,
+  optionValues: OptionValues,
   text: string
 ): Promise<string> {
   const languageName = language.name;
-  // console.log(`Before: ${languageName}`);
-  // console.log(options);
-  // console.log(text);
+  const options = {
+    [languageName]: optionValues
+  };
   return Unibeautify.beautify({
     languageName,
-    options: {
-      _: options,
-      [languageName]: options,
-    },
-    text,
+    options,
+    text
   });
-  // .then(beautified => {
-  //   console.log(`After: ${languageName}`);
-  //   console.log(languageName);
-  //   console.log(options);
-  //   console.log(beautified);
-  //   return beautified;
-  // });
 }

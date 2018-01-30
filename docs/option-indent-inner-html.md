@@ -10,6 +10,6 @@ title: Indent Inner Html
 
 **Default**: `false`
 
-**Supported Languages**: 
+**Supported Languages**: [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
 
-**Supported Beautifiers**: 
+**Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)

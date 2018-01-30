@@ -1,0 +1,3 @@
+function iLoveVeryLongRunOnFunctioNames(longArg1: string, anotherArg: number, tooManyArgs: boolean) {
+    console.log("");
+}

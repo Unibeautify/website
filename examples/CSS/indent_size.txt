@@ -1,0 +1,19 @@
+.class1 {
+    color: blue;
+    background-color: red;
+}
+
+.class2 {
+    color: red;
+    background-color: yellow;
+}
+.class3 {
+    color: yellow;
+    background-color: green;
+}
+
+.selector-1,
+.selector-2 {
+    color: green;
+    background-color: blue;
+}

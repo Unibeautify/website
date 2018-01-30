@@ -2,17 +2,18 @@ import Unibeautify, {
   Option,
   Language,
   Beautifier,
-  BeautifierOptionName,
+  BeautifierOptionName
 } from "unibeautify";
 import * as path from "path";
 import * as fs from "fs";
+import * as JsDiff from "diff";
 
 import {
   optionKeyToTitle,
   optionKeys,
   linkForLanguage,
   linkForBeautifier,
-  beautify,
+  beautify
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -104,7 +105,7 @@ export default class OptionsDoc extends Doc {
             example
               ? {
                   ...final,
-                  [languages[index].name]: example,
+                  [languages[index].name]: example
                 }
               : final,
           {} as { [languageName: string]: string | undefined }
@@ -120,12 +121,11 @@ export default class OptionsDoc extends Doc {
               languages.map(language => {
                 const example = examplesForLanguages[language.name];
                 if (example) {
-                  const options = {
-                    indent_size: 2,
-                    indent_char: " ",
-                    [this.optionKey]: optionValue,
-                  };
-                  return beautify(language, options, example);
+                  const options = this.createOptionValues(optionValue);
+                  return beautify(language, options, example).catch(error => {
+                    console.error(error);
+                    return null;
+                  });
                 } else {
                   return null;
                 }
@@ -136,20 +136,8 @@ export default class OptionsDoc extends Doc {
           if (Object.keys(examplesForLanguages).length === 0) {
             return;
           }
-          builder.header("Examples", 1);
-          // builder.code(
-          //   JSON.stringify(
-          //     {
-          //       examplesForLanguages,
-          //       beautified,
-          //       keys: Object.keys(examplesForLanguages)
-          //     },
-          //     null,
-          //     2
-          //   ),
-          //   "json"
-          // );
 
+          builder.header("Examples", 1);
           builder.header("Original Code", 2);
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
@@ -162,11 +150,29 @@ export default class OptionsDoc extends Doc {
           this.exampleValues.forEach((optionValue, valueIndex) => {
             builder.header(`\`${JSON.stringify(optionValue)}\``, 2);
             this.languages.forEach((language, languageIndex) => {
+              const example = examplesForLanguages[language.name];
               const beautifiedExample: string | null =
                 beautified[valueIndex][languageIndex];
-              if (beautifiedExample) {
+              if (example && beautifiedExample) {
+                const diff = diffExample(
+                  example,
+                  beautifiedExample,
+                  optionValue
+                );
+                const configForExample = {
+                  [language.name]: this.createOptionValues(optionValue)
+                };
                 builder.header(language.name, 3);
                 builder.code(beautifiedExample, language.name);
+                builder.details("Configuration", builder => {
+                  builder.append(
+                    `A \`.unibeautify.json\` file would look like the following:`
+                  );
+                  builder.json(configForExample);
+                });
+                builder.details("Difference from original", builder => {
+                  builder.code(diff, "diff");
+                });
               }
             });
           });
@@ -205,4 +211,51 @@ export default class OptionsDoc extends Doc {
   private get examplesPath(): string {
     return path.resolve(__dirname, "../../examples");
   }
+
+  private createOptionValues(optionValue: any) {
+    return {
+      indent_size: 2,
+      indent_char: " ",
+      [this.optionKey]: optionValue
+    };
+  }
+}
+
+function diffExample(
+  originalText: string,
+  beautifiedText: string,
+  fileName: string
+) {
+  const oldHeader = "Original";
+  const newHeader = "Beautified";
+  return JsDiff.createPatch(
+    fileName,
+    showInvisibles(originalText),
+    showInvisibles(beautifiedText),
+    oldHeader,
+    newHeader
+  );
+}
+
+const invisibles = {
+  carriageReturn: "␍", // \r
+  newLine: "␊", // \n
+  tab: "↹", // \t
+  whitespace: "␣"
+};
+function showInvisibles(text: string): string {
+  return (
+    text
+      // Replace Newlines
+      .replace(
+        /(?:\r\n)/g,
+        `${invisibles.carriageReturn}${invisibles.newLine}\n`
+      )
+      .replace(/(?:\r)/g, `${invisibles.carriageReturn}\n`)
+      .replace(/(?:\n)/g, `${invisibles.newLine}\n`)
+      // Replace tabs
+      .replace(/(?:\t)/g, "↹")
+      // Replace spaces
+      .replace(/(?:\ )/g, "␣")
+  );
 }
