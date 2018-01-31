@@ -1,6 +1,7 @@
 ---
 id: language-spacebars
 title: Spacebars
+sidebar_label: Spacebars
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

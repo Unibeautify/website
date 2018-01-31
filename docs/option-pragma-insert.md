@@ -1,6 +1,7 @@
 ---
 id: option-pragma-insert
 title: Pragma Insert
+sidebar_label: Pragma Insert (✅)
 ---
 **Key**: `pragma_insert`
 

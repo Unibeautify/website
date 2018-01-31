@@ -1,6 +1,7 @@
 ---
 id: option-omit-div
 title: Omit Div
+sidebar_label: Omit Div
 ---
 **Key**: `omit_div`
 

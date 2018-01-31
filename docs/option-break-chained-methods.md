@@ -1,6 +1,7 @@
 ---
 id: option-break-chained-methods
 title: Break Chained Methods
+sidebar_label: Break Chained Methods (✅)
 ---
 **Key**: `break_chained_methods`
 

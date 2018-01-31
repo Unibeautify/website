@@ -1,6 +1,7 @@
 ---
 id: language-javascript
 title: JavaScript
+sidebar_label: JavaScript
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

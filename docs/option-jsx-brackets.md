@@ -1,6 +1,7 @@
 ---
 id: option-jsx-brackets
 title: Jsx Brackets
+sidebar_label: Jsx Brackets (✅)
 ---
 **Key**: `jsx_brackets`
 

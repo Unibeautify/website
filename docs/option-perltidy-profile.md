@@ -1,6 +1,7 @@
 ---
 id: option-perltidy-profile
 title: Perltidy Profile
+sidebar_label: Perltidy Profile
 ---
 **Key**: `perltidy_profile`
 

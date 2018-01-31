@@ -1,6 +1,7 @@
 ---
 id: language-json
 title: JSON
+sidebar_label: JSON
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

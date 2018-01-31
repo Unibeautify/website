@@ -1,6 +1,7 @@
 ---
 id: option-wrap-line-length
 title: Wrap Line Length
+sidebar_label: Wrap Line Length (✅)
 ---
 **Key**: `wrap_line_length`
 

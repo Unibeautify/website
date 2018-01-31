@@ -1,6 +1,7 @@
 ---
 id: option-fixers
 title: Fixers
+sidebar_label: Fixers
 ---
 **Key**: `fixers`
 

@@ -1,6 +1,7 @@
 ---
 id: language-csv
 title: CSV
+sidebar_label: CSV
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

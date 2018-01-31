@@ -1,6 +1,7 @@
 ---
 id: language-html%2Berb
 title: HTML+ERB
+sidebar_label: HTML+ERB
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

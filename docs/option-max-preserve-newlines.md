@@ -1,6 +1,7 @@
 ---
 id: option-max-preserve-newlines
 title: Max Preserve Newlines
+sidebar_label: Max Preserve Newlines (✅)
 ---
 **Key**: `max_preserve_newlines`
 

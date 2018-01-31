@@ -1,6 +1,7 @@
 ---
 id: option-gfm
 title: Gfm
+sidebar_label: Gfm
 ---
 **Key**: `gfm`
 

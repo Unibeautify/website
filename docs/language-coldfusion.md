@@ -1,6 +1,7 @@
 ---
 id: language-coldfusion
 title: ColdFusion
+sidebar_label: ColdFusion
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

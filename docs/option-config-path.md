@@ -1,6 +1,7 @@
 ---
 id: option-config-path
 title: Config Path
+sidebar_label: Config Path
 ---
 **Key**: `configPath`
 

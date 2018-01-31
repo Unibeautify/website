@@ -1,6 +1,7 @@
 ---
 id: language-svg
 title: SVG
+sidebar_label: SVG
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

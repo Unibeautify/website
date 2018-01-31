@@ -1,6 +1,7 @@
 ---
 id: language-ejs
 title: EJS
+sidebar_label: EJS
 ---
 ## Supported Beautifiers
 - [JS-Beautify](/docs/beautifier-js-beautify.html)

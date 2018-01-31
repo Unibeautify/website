@@ -1,6 +1,7 @@
 ---
 id: option-brace-style
 title: Brace Style
+sidebar_label: Brace Style (✅)
 ---
 **Key**: `brace_style`
 

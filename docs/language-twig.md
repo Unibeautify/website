@@ -1,6 +1,7 @@
 ---
 id: language-twig
 title: Twig
+sidebar_label: Twig
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

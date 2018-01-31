@@ -1,6 +1,7 @@
 ---
 id: language-titanium-style-sheets
 title: Titanium Style Sheets
+sidebar_label: Titanium Style Sheets
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

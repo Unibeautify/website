@@ -1,6 +1,7 @@
 ---
 id: option-space-before-conditional
 title: Space Before Conditional
+sidebar_label: Space Before Conditional (✅)
 ---
 **Key**: `space_before_conditional`
 

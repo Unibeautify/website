@@ -61,6 +61,17 @@ export default class OptionsDoc extends Doc {
     return title;
   }
 
+  protected get sidebarLabel(): string {
+    if (this.hasBeautifier) {
+      return `${this.title} (✅)`;
+    }
+    return this.title;
+  }
+
+  private get hasBeautifier(): boolean {
+    return this.beautifiers.length > 0;
+  }
+
   protected get body(): Promise<string> {
     const builder = new MarkdownBuilder();
     builder.append(`**Key**: \`${this.optionKey}\`\n`);

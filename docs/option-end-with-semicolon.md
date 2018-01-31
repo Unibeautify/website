@@ -1,6 +1,7 @@
 ---
 id: option-end-with-semicolon
 title: End With Semicolon
+sidebar_label: End With Semicolon (✅)
 ---
 **Key**: `end_with_semicolon`
 

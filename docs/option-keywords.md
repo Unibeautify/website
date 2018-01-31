@@ -1,6 +1,7 @@
 ---
 id: option-keywords
 title: Keywords
+sidebar_label: Keywords
 ---
 **Key**: `keywords`
 

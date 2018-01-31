@@ -1,6 +1,7 @@
 ---
 id: option-indent-inner-html
 title: Indent Inner Html
+sidebar_label: Indent Inner Html (✅)
 ---
 **Key**: `indent_inner_html`
 

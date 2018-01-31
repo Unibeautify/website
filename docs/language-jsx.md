@@ -1,6 +1,7 @@
 ---
 id: language-jsx
 title: JSX
+sidebar_label: JSX
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

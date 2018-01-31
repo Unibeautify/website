@@ -1,6 +1,7 @@
 ---
 id: option-object-curly-spacing
 title: Object Curly Spacing
+sidebar_label: Object Curly Spacing (✅)
 ---
 **Key**: `object_curly_spacing`
 

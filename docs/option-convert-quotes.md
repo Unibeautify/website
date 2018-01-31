@@ -1,6 +1,7 @@
 ---
 id: option-convert-quotes
 title: Convert Quotes
+sidebar_label: Convert Quotes (✅)
 ---
 **Key**: `convert_quotes`
 

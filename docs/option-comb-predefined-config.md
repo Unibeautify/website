@@ -1,6 +1,7 @@
 ---
 id: option-comb-predefined-config
 title: comb predefined config
+sidebar_label: comb predefined config
 ---
 **Key**: `predefinedConfig`
 

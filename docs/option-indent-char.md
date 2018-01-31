@@ -1,6 +1,7 @@
 ---
 id: option-indent-char
 title: Indent Char
+sidebar_label: Indent Char (✅)
 ---
 **Key**: `indent_char`
 

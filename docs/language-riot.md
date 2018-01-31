@@ -1,6 +1,7 @@
 ---
 id: language-riot
 title: Riot
+sidebar_label: Riot
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

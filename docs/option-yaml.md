@@ -1,6 +1,7 @@
 ---
 id: option-yaml
 title: Yaml
+sidebar_label: Yaml
 ---
 **Key**: `yaml`
 

@@ -1,6 +1,7 @@
 ---
 id: option-pragma-require
 title: Pragma Require
+sidebar_label: Pragma Require (✅)
 ---
 **Key**: `pragma_require`
 

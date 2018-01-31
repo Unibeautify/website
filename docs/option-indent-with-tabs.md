@@ -1,6 +1,7 @@
 ---
 id: option-indent-with-tabs
 title: Indent With Tabs
+sidebar_label: Indent With Tabs (✅)
 ---
 **Key**: `indent_with_tabs`
 

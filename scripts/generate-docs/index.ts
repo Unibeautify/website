@@ -70,7 +70,8 @@ async function writeDoc(doc: Doc) {
     doc.fileName
   );
   await ensureFile(filePath);
-  return await writeFile(filePath, await doc.contents);
+  const contents = await doc.contents;
+  return await writeFile(filePath, contents);
 }
 
 async function updateSidebars(

@@ -1,6 +1,7 @@
 ---
 id: option-align-assignments
 title: Align Assignments
+sidebar_label: Align Assignments (✅)
 ---
 **Key**: `align_assignments`
 

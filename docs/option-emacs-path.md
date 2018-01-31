@@ -1,6 +1,7 @@
 ---
 id: option-emacs-path
 title: Emacs Path
+sidebar_label: Emacs Path
 ---
 **Key**: `emacs_path`
 

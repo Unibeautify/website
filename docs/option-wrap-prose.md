@@ -1,6 +1,7 @@
 ---
 id: option-wrap-prose
 title: Wrap Prose
+sidebar_label: Wrap Prose (✅)
 ---
 **Key**: `wrap_prose`
 

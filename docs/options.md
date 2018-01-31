@@ -1,6 +1,7 @@
 ---
 id: options
 title: Options
+sidebar_label: Options
 ---
 | Title | Option Key | Description |
 | --- | --- | --- |

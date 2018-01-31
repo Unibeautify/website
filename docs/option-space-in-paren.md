@@ -1,6 +1,7 @@
 ---
 id: option-space-in-paren
 title: Space In Paren
+sidebar_label: Space In Paren (✅)
 ---
 **Key**: `space_in_paren`
 

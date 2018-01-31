@@ -1,6 +1,7 @@
 ---
 id: option-extra-liners
 title: Extra Liners
+sidebar_label: Extra Liners (✅)
 ---
 **Key**: `extra_liners`
 

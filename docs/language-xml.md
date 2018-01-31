@@ -1,6 +1,7 @@
 ---
 id: language-xml
 title: XML
+sidebar_label: XML
 ---
 ## Supported Beautifiers
 - [JS-Beautify](/docs/beautifier-js-beautify.html)

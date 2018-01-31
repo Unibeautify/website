@@ -1,6 +1,7 @@
 ---
 id: option-indent-comments
 title: Indent Comments
+sidebar_label: Indent Comments (✅)
 ---
 **Key**: `indent_comments`
 

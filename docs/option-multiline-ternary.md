@@ -1,6 +1,7 @@
 ---
 id: option-multiline-ternary
 title: Multiline Ternary
+sidebar_label: Multiline Ternary (✅)
 ---
 **Key**: `multiline_ternary`
 

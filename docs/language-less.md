@@ -1,6 +1,7 @@
 ---
 id: language-less
 title: Less
+sidebar_label: Less
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

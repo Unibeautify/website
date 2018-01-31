@@ -1,6 +1,7 @@
 ---
 id: language-mustache
 title: Mustache
+sidebar_label: Mustache
 ---
 ## Supported Beautifiers
 - [JS-Beautify](/docs/beautifier-js-beautify.html)

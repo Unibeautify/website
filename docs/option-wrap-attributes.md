@@ -1,6 +1,7 @@
 ---
 id: option-wrap-attributes
 title: Wrap Attributes
+sidebar_label: Wrap Attributes
 ---
 **Key**: `wrap_attributes`
 

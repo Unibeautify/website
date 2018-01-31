@@ -1,6 +1,7 @@
 ---
 id: option-commonmark
 title: Commonmark
+sidebar_label: Commonmark
 ---
 **Key**: `commonmark`
 

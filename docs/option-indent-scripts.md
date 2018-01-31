@@ -1,6 +1,7 @@
 ---
 id: option-indent-scripts
 title: Indent Scripts
+sidebar_label: Indent Scripts (✅)
 ---
 **Key**: `indent_scripts`
 

@@ -1,6 +1,7 @@
 ---
 id: language-csharp
 title: C#
+sidebar_label: C#
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

@@ -1,6 +1,7 @@
 ---
 id: option-unformatted
 title: Unformatted
+sidebar_label: Unformatted (✅)
 ---
 **Key**: `unformatted`
 

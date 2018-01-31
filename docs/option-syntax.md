@@ -1,6 +1,7 @@
 ---
 id: option-syntax
 title: Syntax
+sidebar_label: Syntax
 ---
 **Key**: `syntax`
 

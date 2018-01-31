@@ -1,6 +1,7 @@
 ---
 id: option-keep-array-indentation
 title: Keep Array Indentation
+sidebar_label: Keep Array Indentation (✅)
 ---
 **Key**: `keep_array_indentation`
 

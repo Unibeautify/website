@@ -1,6 +1,7 @@
 ---
 id: option-align-columns-in-environments
 title: Align Columns In Environments
+sidebar_label: Align Columns In Environments
 ---
 **Key**: `align_columns_in_environments`
 

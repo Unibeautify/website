@@ -1,6 +1,7 @@
 ---
 id: language-java
 title: Java
+sidebar_label: Java
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

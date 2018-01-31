@@ -1,6 +1,7 @@
 ---
 id: option-end-with-newline
 title: End With Newline
+sidebar_label: End With Newline (✅)
 ---
 **Key**: `end_with_newline`
 

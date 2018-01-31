@@ -1,6 +1,7 @@
 ---
 id: option-level
 title: Level
+sidebar_label: Level
 ---
 **Key**: `level`
 

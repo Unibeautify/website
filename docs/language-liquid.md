@@ -1,6 +1,7 @@
 ---
 id: language-liquid
 title: Liquid
+sidebar_label: Liquid
 ---
 ## Supported Beautifiers
 - [JS-Beautify](/docs/beautifier-js-beautify.html)

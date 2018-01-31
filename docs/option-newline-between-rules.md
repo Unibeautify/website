@@ -1,6 +1,7 @@
 ---
 id: option-newline-between-rules
 title: Newline Between Rules
+sidebar_label: Newline Between Rules (✅)
 ---
 **Key**: `newline_between_rules`
 

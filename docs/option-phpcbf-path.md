@@ -1,6 +1,7 @@
 ---
 id: option-phpcbf-path
 title: PHPCBF Path
+sidebar_label: PHPCBF Path
 ---
 **Key**: `phpcbf_path`
 

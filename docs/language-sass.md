@@ -1,6 +1,7 @@
 ---
 id: language-sass
 title: Sass
+sidebar_label: Sass
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

@@ -1,6 +1,7 @@
 ---
 id: option-wrap-attributes-indent-size
 title: Wrap Attributes Indent Size
+sidebar_label: Wrap Attributes Indent Size
 ---
 **Key**: `wrap_attributes_indent_size`
 

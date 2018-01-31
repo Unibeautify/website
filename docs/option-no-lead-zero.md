@@ -1,6 +1,7 @@
 ---
 id: option-no-lead-zero
 title: No Lead Zero
+sidebar_label: No Lead Zero (✅)
 ---
 **Key**: `no_lead_zero`
 

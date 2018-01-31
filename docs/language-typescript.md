@@ -1,6 +1,7 @@
 ---
 id: language-typescript
 title: TypeScript
+sidebar_label: TypeScript
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

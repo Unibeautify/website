@@ -1,6 +1,7 @@
 ---
 id: option-jslint-happy
 title: Jslint Happy
+sidebar_label: Jslint Happy (✅)
 ---
 **Key**: `jslint_happy`
 

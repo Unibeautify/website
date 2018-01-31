@@ -1,6 +1,7 @@
 ---
 id: option-arrow-parens
 title: Arrow Parens
+sidebar_label: Arrow Parens (✅)
 ---
 **Key**: `arrow_parens`
 

@@ -1,6 +1,7 @@
 ---
 id: language-handlebars
 title: Handlebars
+sidebar_label: Handlebars
 ---
 ## Supported Beautifiers
 - [JS-Beautify](/docs/beautifier-js-beautify.html)

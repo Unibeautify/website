@@ -1,6 +1,7 @@
 ---
 id: language-css
 title: CSS
+sidebar_label: CSS
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

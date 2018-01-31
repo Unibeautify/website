@@ -1,6 +1,7 @@
 ---
 id: beautifier-js-beautify
 title: JS-Beautify
+sidebar_label: JS-Beautify
 ---
 | Option | [CSS](/docs/language-css.html) | [EJS](/docs/language-ejs.html) | [HTML](/docs/language-html.html) | [Handlebars](/docs/language-handlebars.html) | [JSON](/docs/language-json.html) | [JSX](/docs/language-jsx.html) | [JavaScript](/docs/language-javascript.html) | [Liquid](/docs/language-liquid.html) | [Mustache](/docs/language-mustache.html) | [XML](/docs/language-xml.html) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

@@ -1,6 +1,7 @@
 ---
 id: option-preserve-newlines
 title: Preserve Newlines
+sidebar_label: Preserve Newlines (✅)
 ---
 **Key**: `preserve_newlines`
 

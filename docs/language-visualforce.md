@@ -1,6 +1,7 @@
 ---
 id: language-visualforce
 title: Visualforce
+sidebar_label: Visualforce
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

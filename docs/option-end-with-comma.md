@@ -1,6 +1,7 @@
 ---
 id: option-end-with-comma
 title: End With Comma
+sidebar_label: End With Comma (✅)
 ---
 **Key**: `end_with_comma`
 

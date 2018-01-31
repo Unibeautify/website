@@ -1,6 +1,7 @@
 ---
 id: language-graphql
 title: GraphQL
+sidebar_label: GraphQL
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

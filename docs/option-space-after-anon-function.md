@@ -1,6 +1,7 @@
 ---
 id: option-space-after-anon-function
 title: Space After Anon Function
+sidebar_label: Space After Anon Function (✅)
 ---
 **Key**: `space_after_anon_function`
 

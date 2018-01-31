@@ -1,6 +1,7 @@
 ---
 id: language-xtemplate
 title: XTemplate
+sidebar_label: XTemplate
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

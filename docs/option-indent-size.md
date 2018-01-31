@@ -1,6 +1,7 @@
 ---
 id: option-indent-size
 title: Indent Size
+sidebar_label: Indent Size (✅)
 ---
 **Key**: `indent_size`
 

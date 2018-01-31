@@ -18,15 +18,28 @@ export default abstract class Doc {
 
   protected abstract get title(): string;
 
+  protected get sidebarLabel(): string | Promise<string> {
+    return this.title;
+  }
+
   protected abstract get body(): string | Promise<string>;
 
   public get contents(): Promise<string> {
-    return Promise.resolve(this.body).then(
-      body => this.frontMatter + "\n" + body
+    return Promise.all([this.frontMatter, this.body]).then(
+      ([frontMatter, body]) => frontMatter + "\n" + body
     );
   }
 
-  protected get frontMatter(): string {
-    return ["---", `id: ${this.id}`, `title: ${this.title}`, "---"].join("\n");
+  protected get frontMatter(): Promise<string> {
+    return Promise.all([this.id, this.title, this.sidebarLabel]).then(
+      ([id, title, sidebarLabel]) =>
+        [
+          "---",
+          `id: ${id}`,
+          `title: ${title}`,
+          `sidebar_label: ${sidebarLabel}`,
+          "---"
+        ].join("\n")
+    );
   }
 }
