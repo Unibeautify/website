@@ -15,20 +15,19 @@ title: Align Assignments
 **Supported Beautifiers**: [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 const a = "",
 b = "",
 c = "";
 ```
-## `true`
-### JavaScript
+### `true`
+Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const a = "",
-  b = "",
-  c = "";
-
+  b     = "",
+  c     = "";
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -53,18 +52,17 @@ Index: true
 -b␣=␣"",␊
 -c␣=␣"";
 \ No newline at end of file
-+␣␣b␣=␣"",␊
-+␣␣c␣=␣"";␊
++␣␣b␣␣␣␣␣=␣"",␊
++␣␣c␣␣␣␣␣=␣"";
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const a = "",
   b = "",
   c = "";
-
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -90,7 +88,7 @@ Index: false
 -c␣=␣"";
 \ No newline at end of file
 +␣␣b␣=␣"",␊
-+␣␣c␣=␣"";␊
++␣␣c␣=␣"";
 
 ```
 </details>

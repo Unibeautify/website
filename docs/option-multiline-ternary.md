@@ -17,19 +17,25 @@ title: Multiline Ternary
 **Supported Beautifiers**: [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 const val1 = a ? "yes" : "no";
 const val2 = a ? ( b ? "yes" : "no") : "maybe";
 
 ```
-## `"always"`
-### JavaScript
+### `"always"`
+Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
-const val1 = a ? "yes" : "no";
-const val2 = a ? (b ? "yes" : "no") : "maybe";
-
+const val1 = a
+  ? "yes"
+  : "no";
+const val2 = a
+  ? (
+    b
+    ? "yes"
+    : "no")
+  : "maybe";
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -49,19 +55,34 @@ Index: always
 ===================================================================
 --- always	Original
 +++ always	Beautified
-@@ -1,2 +1,2 @@
- const␣val1␣=␣a␣?␣"yes"␣:␣"no";␊
+@@ -1,2 +1,9 @@
+-const␣val1␣=␣a␣?␣"yes"␣:␣"no";␊
 -const␣val2␣=␣a␣?␣(␣b␣?␣"yes"␣:␣"no")␣:␣"maybe";␊
-+const␣val2␣=␣a␣?␣(b␣?␣"yes"␣:␣"no")␣:␣"maybe";␊
++const␣val1␣=␣a␊
++␣␣?␣"yes"␊
++␣␣:␣"no";␊
++const␣val2␣=␣a␊
++␣␣?␣(␊
++␣␣␣␣b␊
++␣␣␣␣?␣"yes"␊
++␣␣␣␣:␣"no")␊
++␣␣:␣"maybe";
+\ No newline at end of file
 
 ```
 </details>
-## `"always-multiline"`
-### JavaScript
+### `"always-multiline"`
+Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
-const val1 = a ? "yes" : "no";
-const val2 = a ? (b ? "yes" : "no") : "maybe";
-
+const val1 = a
+  ? "yes"
+  : "no";
+const val2 = a
+  ? (
+    b
+    ? "yes"
+    : "no")
+  : "maybe";
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -81,19 +102,27 @@ Index: always-multiline
 ===================================================================
 --- always-multiline	Original
 +++ always-multiline	Beautified
-@@ -1,2 +1,2 @@
- const␣val1␣=␣a␣?␣"yes"␣:␣"no";␊
+@@ -1,2 +1,9 @@
+-const␣val1␣=␣a␣?␣"yes"␣:␣"no";␊
 -const␣val2␣=␣a␣?␣(␣b␣?␣"yes"␣:␣"no")␣:␣"maybe";␊
-+const␣val2␣=␣a␣?␣(b␣?␣"yes"␣:␣"no")␣:␣"maybe";␊
++const␣val1␣=␣a␊
++␣␣?␣"yes"␊
++␣␣:␣"no";␊
++const␣val2␣=␣a␊
++␣␣?␣(␊
++␣␣␣␣b␊
++␣␣␣␣?␣"yes"␊
++␣␣␣␣:␣"no")␊
++␣␣:␣"maybe";
+\ No newline at end of file
 
 ```
 </details>
-## `"never"`
-### JavaScript
+### `"never"`
+Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const val1 = a ? "yes" : "no";
 const val2 = a ? (b ? "yes" : "no") : "maybe";
-
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -116,7 +145,8 @@ Index: never
 @@ -1,2 +1,2 @@
  const␣val1␣=␣a␣?␣"yes"␣:␣"no";␊
 -const␣val2␣=␣a␣?␣(␣b␣?␣"yes"␣:␣"no")␣:␣"maybe";␊
-+const␣val2␣=␣a␣?␣(b␣?␣"yes"␣:␣"no")␣:␣"maybe";␊
++const␣val2␣=␣a␣?␣(b␣?␣"yes"␣:␣"no")␣:␣"maybe";
+\ No newline at end of file
 
 ```
 </details>

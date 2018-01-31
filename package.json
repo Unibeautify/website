@@ -41,5 +41,7 @@
     "typescript": "^2.6.2",
     "unibeautify": "^0.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "prettydiff": "git+https://github.com/prettydiff/prettydiff.git"
+  }
 }

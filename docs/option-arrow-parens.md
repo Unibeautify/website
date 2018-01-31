@@ -17,15 +17,15 @@ title: Arrow Parens
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 a => {};
 (a) => {};
 (a, b) => {};
 ```
-## `"always"`
-### JavaScript
+### `"always"`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 (a) => {};
 (a) => {};
@@ -60,8 +60,8 @@ Index: always
 
 ```
 </details>
-## `"as-needed"`
-### JavaScript
+### `"as-needed"`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 a => {};
 a => {};

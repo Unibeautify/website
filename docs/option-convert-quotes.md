@@ -17,16 +17,16 @@ title: Convert Quotes
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 console.log('hello world');
 console.log("hello world");
 const hello = "hey";
 console.log(`${hello} world`);
 ```
-## `"none"`
-### JavaScript
+### `"none"`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 console.log("hello world");
 console.log("hello world");
@@ -63,8 +63,8 @@ Index: none
 
 ```
 </details>
-## `"double"`
-### JavaScript
+### `"double"`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 console.log("hello world");
 console.log("hello world");
@@ -101,8 +101,8 @@ Index: double
 
 ```
 </details>
-## `"single"`
-### JavaScript
+### `"single"`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 console.log('hello world');
 console.log('hello world');

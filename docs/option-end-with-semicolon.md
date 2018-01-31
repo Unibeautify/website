@@ -15,8 +15,8 @@ title: End With Semicolon
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 var str1 = "Unibeautify"
 var str2 = "Unibeautify";
@@ -29,8 +29,8 @@ var method2 = function() {
 method1()
 method2();
 ```
-## `true`
-### JavaScript
+### `true`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 var str1 = "Unibeautify";
 var str2 = "Unibeautify";
@@ -83,8 +83,8 @@ Index: true
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 var str1 = "Unibeautify"
 var str2 = "Unibeautify"

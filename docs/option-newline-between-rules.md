@@ -15,8 +15,8 @@ title: Newline Between Rules
 **Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
 # Examples
-## Original Code
-### CSS
+## CSS
+### Original Code
 ```CSS
 .class1 {
     color: blue;
@@ -39,8 +39,8 @@ title: Newline Between Rules
 }
 
 ```
-## `true`
-### CSS
+### `true`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```CSS
 .class1 {
   color: blue;
@@ -51,6 +51,7 @@ title: Newline Between Rules
   color: red;
   background-color: yellow;
 }
+
 .class3 {
   color: yellow;
   background-color: green;
@@ -61,7 +62,6 @@ title: Newline Between Rules
   color: green;
   background-color: blue;
 }
-
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -81,7 +81,7 @@ Index: true
 ===================================================================
 --- true	Original
 +++ true	Beautified
-@@ -1,19 +1,19 @@
+@@ -1,19 +1,20 @@
  .class1␣{␊
 -␣␣␣␣color:␣blue;␊
 -␣␣␣␣background-color:␣red;␊
@@ -95,6 +95,7 @@ Index: true
 +␣␣color:␣red;␊
 +␣␣background-color:␣yellow;␊
  }␊
++␊
  .class3␣{␊
 -␣␣␣␣color:␣yellow;␊
 -␣␣␣␣background-color:␣green;␊
@@ -106,20 +107,21 @@ Index: true
  .selector-2␣{␊
 -␣␣␣␣color:␣green;␊
 -␣␣␣␣background-color:␣blue;␊
+-}␊
 +␣␣color:␣green;␊
 +␣␣background-color:␣blue;␊
- }␊
++}
+\ No newline at end of file
 
 ```
 </details>
-## `false`
-### CSS
+### `false`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```CSS
 .class1 {
   color: blue;
   background-color: red;
 }
-
 .class2 {
   color: red;
   background-color: yellow;
@@ -128,13 +130,11 @@ Index: true
   color: yellow;
   background-color: green;
 }
-
 .selector-1,
 .selector-2 {
   color: green;
   background-color: blue;
 }
-
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -154,14 +154,14 @@ Index: false
 ===================================================================
 --- false	Original
 +++ false	Beautified
-@@ -1,19 +1,19 @@
+@@ -1,19 +1,17 @@
  .class1␣{␊
 -␣␣␣␣color:␣blue;␊
 -␣␣␣␣background-color:␣red;␊
 +␣␣color:␣blue;␊
 +␣␣background-color:␣red;␊
  }␊
- ␊
+-␊
  .class2␣{␊
 -␣␣␣␣color:␣red;␊
 -␣␣␣␣background-color:␣yellow;␊
@@ -174,14 +174,16 @@ Index: false
 +␣␣color:␣yellow;␊
 +␣␣background-color:␣green;␊
  }␊
- ␊
+-␊
  .selector-1,␊
  .selector-2␣{␊
 -␣␣␣␣color:␣green;␊
 -␣␣␣␣background-color:␣blue;␊
+-}␊
 +␣␣color:␣green;␊
 +␣␣background-color:␣blue;␊
- }␊
++}
+\ No newline at end of file
 
 ```
 </details>

@@ -15,8 +15,8 @@ title: Unformatted
 **Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
 # Examples
-## Original Code
-### HTML
+## HTML
+### Original Code
 ```HTML
 <div>
 <h1>Unformatted</h1>
@@ -28,8 +28,8 @@ title: Unformatted
 </div>
 
 ```
-## `["a","abbr","area","audio","b","bdi","bdo","br","button","canvas","cite","code","data","datalist","del","dfn","em","embed","i","iframe","img","input","ins","kbd","keygen","label","map","mark","math","meter","noscript","object","output","progress","q","ruby","s","samp","select","small","span","strong","sub","sup","svg","template","textarea","time","u","var","video","wbr","text","acronym","address","big","dt","ins","small","strike","tt","pre","h1","h2","h3","h4","h5","h6"]`
-### HTML
+### `["a","abbr","area","audio","b","bdi","bdo","br","button","canvas","cite","code","data","datalist","del","dfn","em","embed","i","iframe","img","input","ins","kbd","keygen","label","map","mark","math","meter","noscript","object","output","progress","q","ruby","s","samp","select","small","span","strong","sub","sup","svg","template","textarea","time","u","var","video","wbr","text","acronym","address","big","dt","ins","small","strike","tt","pre","h1","h2","h3","h4","h5","h6"]`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
   <h1>Unformatted</h1>

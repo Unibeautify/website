@@ -1,4 +1,4 @@
-import Unibeautify, {
+import {
   Option,
   OptionValues,
   Language,
@@ -7,11 +7,15 @@ import Unibeautify, {
   BeautifyOptionTransformSingleFunction,
   BeautifyOptionTransform,
   BeautifierLanguageOptionComplex,
-  LanguageOptionValues
+  LanguageOptionValues,
+  Unibeautify,
+  newUnibeautify,
 } from "unibeautify";
 import * as _ from "lodash";
 
+import beautifiers from "./beautifiers";
 import MarkdownBuilder from "./MarkdownBuilder";
+import { beautifier } from "@unibeautify/beautifier-js-beautify";
 
 export function optionKeyToTitle(key: string): string {
   return key
@@ -95,18 +99,6 @@ export function linkForOption(key: string, option: Option): string {
   return MarkdownBuilder.createDocLink(title, docId);
 }
 
-export function beautify(
-  language: Language,
-  optionValues: OptionValues,
-  text: string
-): Promise<string> {
-  const languageName = language.name;
-  const options = {
-    [languageName]: optionValues
-  };
-  return Unibeautify.beautify({
-    languageName,
-    options,
-    text
-  });
+export function unibeautifyWithBeautifier(beautifier: Beautifier): Unibeautify {
+  return newUnibeautify().loadBeautifier(beautifier);
 }

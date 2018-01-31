@@ -15,8 +15,8 @@ title: Indent With Tabs
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 if (a) {
      b=c;
@@ -36,8 +36,8 @@ foo
 .bar
 .baz()
 ```
-## `true`
-### JavaScript
+### `true`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
 	b = c;
@@ -105,8 +105,8 @@ Index: true
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
   b = c;

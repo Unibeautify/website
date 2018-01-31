@@ -1,8 +1,10 @@
-import Unibeautify, {
+import GlobalUnibeautify, {
   Option,
   Language,
   Beautifier,
-  BeautifierOptionName
+  BeautifierOptionName,
+  Unibeautify,
+  BeautifyData
 } from "unibeautify";
 import * as path from "path";
 import * as fs from "fs";
@@ -13,7 +15,7 @@ import {
   optionKeys,
   linkForLanguage,
   linkForBeautifier,
-  beautify
+  unibeautifyWithBeautifier
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -28,7 +30,7 @@ export default class OptionsDoc extends Doc {
     allBeautifiers: Beautifier[]
   ) {
     super();
-    this.languages = Unibeautify.supportedLanguages.filter(
+    this.languages = GlobalUnibeautify.supportedLanguages.filter(
       language =>
         allBeautifiers.findIndex(
           beautifier =>
@@ -121,11 +123,12 @@ export default class OptionsDoc extends Doc {
               languages.map(language => {
                 const example = examplesForLanguages[language.name];
                 if (example) {
-                  const options = this.createOptionValues(optionValue);
-                  return beautify(language, options, example).catch(error => {
-                    console.error(error);
-                    return null;
-                  });
+                  return this.beautify(language, optionValue, example).catch(
+                    error => {
+                      console.error(error);
+                      return null;
+                    }
+                  );
                 } else {
                   return null;
                 }
@@ -138,43 +141,61 @@ export default class OptionsDoc extends Doc {
           }
 
           builder.header("Examples", 1);
-          builder.header("Original Code", 2);
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
             if (example) {
-              builder.header(language.name, 3);
+              builder.header(language.name, 2);
+              builder.header("Original Code", 3);
               builder.code(example, language.name);
-            }
-          });
+              let beautifiedExamplesAreDifferent: boolean = false;
+              let lastCode: string | null = null;
+              this.exampleValues.forEach((optionValue, valueIndex) => {
+                builder.header(`\`${JSON.stringify(optionValue)}\``, 3);
+                const beautifiedExample: string | null =
+                  beautified[valueIndex][languageIndex];
+                if (beautifiedExample) {
+                  if (lastCode === null) {
+                    lastCode = beautifiedExample;
+                  } else {
+                    if (lastCode !== beautifiedExample) {
+                      lastCode = beautifiedExample;
+                      beautifiedExamplesAreDifferent = true;
+                    }
+                  }
 
-          this.exampleValues.forEach((optionValue, valueIndex) => {
-            builder.header(`\`${JSON.stringify(optionValue)}\``, 2);
-            this.languages.forEach((language, languageIndex) => {
-              const example = examplesForLanguages[language.name];
-              const beautifiedExample: string | null =
-                beautified[valueIndex][languageIndex];
-              if (example && beautifiedExample) {
-                const diff = diffExample(
-                  example,
-                  beautifiedExample,
-                  optionValue
-                );
-                const configForExample = {
-                  [language.name]: this.createOptionValues(optionValue)
-                };
-                builder.header(language.name, 3);
-                builder.code(beautifiedExample, language.name);
-                builder.details("Configuration", builder => {
-                  builder.append(
-                    `A \`.unibeautify.json\` file would look like the following:`
+                  const diff = diffExample(
+                    example,
+                    beautifiedExample,
+                    optionValue
                   );
-                  builder.json(configForExample);
-                });
-                builder.details("Difference from original", builder => {
-                  builder.code(diff, "diff");
-                });
+                  const configForExample = this.createOptionsWithLanguageAndValue(
+                    language,
+                    optionValue
+                  );
+                  const beautifier = this.beautifierForLanguage(language);
+                  if (beautifier) {
+                    builder.append(`Using ${linkForBeautifier(beautifier)} beautifier:`);
+                  }
+                  builder.code(beautifiedExample, language.name);
+                  builder.details("Configuration", builder => {
+                    builder.append(
+                      `A \`.unibeautify.json\` file would look like the following:`
+                    );
+                    builder.json(configForExample);
+                  });
+                  builder.details("Difference from original", builder => {
+                    builder.code(diff, "diff");
+                  });
+                }
+              });
+
+              if (
+                this.exampleValues.length > 1 &&
+                !beautifiedExamplesAreDifferent
+              ) {
+                console.log(`${this.optionKey} - ${language.name} - BAD`);
               }
-            });
+            }
           });
         });
       })
@@ -212,12 +233,51 @@ export default class OptionsDoc extends Doc {
     return path.resolve(__dirname, "../../examples");
   }
 
+  private createOptionsWithLanguageAndValue(
+    language: Language,
+    optionValue: any
+  ) {
+    return {
+      [language.name]: this.createOptionValues(optionValue)
+    };
+  }
+
   private createOptionValues(optionValue: any) {
     return {
       indent_size: 2,
       indent_char: " ",
       [this.optionKey]: optionValue
     };
+  }
+
+  private beautify(
+    language: Language,
+    optionValue: any,
+    text: string
+  ): Promise<string> {
+    const configForExample = this.createOptionsWithLanguageAndValue(
+      language,
+      optionValue
+    );
+    const beautifier = this.beautifierForLanguage(language);
+    if (beautifier) {
+      const unibeautify = unibeautifyWithBeautifier(beautifier);
+      return unibeautify.beautify({
+        languageName: language.name,
+        options: configForExample,
+        text
+      });
+    }
+    return Promise.reject(
+      new Error(`No beautifier supports option ${this.optionKey}.`)
+    );
+  }
+
+  private beautifierForLanguage(language: Language): Beautifier | undefined {
+    return this.beautifiers.filter(
+      beautifier =>
+        optionKeys(beautifier, language).indexOf(this.optionKey) !== -1
+    )[0];
   }
 }
 

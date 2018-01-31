@@ -15,8 +15,8 @@ title: Space In Paren
 **Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 const fun1 = function(arg1, arg2) {
 }
@@ -26,13 +26,12 @@ const fun3 = function( arg1, arg2 ) {
 }
 
 ```
-## `true`
-### JavaScript
+### `true`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
-const fun1 = function(arg1, arg2) {};
-const fun2 = function(arg1, arg2) {};
-const fun3 = function(arg1, arg2) {};
-
+const fun1 = function( arg1, arg2 ) {}
+const fun2 = function( arg1, arg2 ) {}
+const fun3 = function( arg1, arg2 ) {}
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -59,19 +58,19 @@ Index: true
 -}␊
 -const␣fun3␣=␣function(␣arg1,␣arg2␣)␣{␊
 -}␊
-+const␣fun1␣=␣function(arg1,␣arg2)␣{};␊
-+const␣fun2␣=␣function(arg1,␣arg2)␣{};␊
-+const␣fun3␣=␣function(arg1,␣arg2)␣{};␊
++const␣fun1␣=␣function(␣arg1,␣arg2␣)␣{}␊
++const␣fun2␣=␣function(␣arg1,␣arg2␣)␣{}␊
++const␣fun3␣=␣function(␣arg1,␣arg2␣)␣{}
+\ No newline at end of file
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
-const fun1 = function(arg1, arg2) {};
-const fun2 = function(arg1, arg2) {};
-const fun3 = function(arg1, arg2) {};
-
+const fun1 = function(arg1, arg2) {}
+const fun2 = function(arg1, arg2) {}
+const fun3 = function(arg1, arg2) {}
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -98,9 +97,10 @@ Index: false
 -}␊
 -const␣fun3␣=␣function(␣arg1,␣arg2␣)␣{␊
 -}␊
-+const␣fun1␣=␣function(arg1,␣arg2)␣{};␊
-+const␣fun2␣=␣function(arg1,␣arg2)␣{};␊
-+const␣fun3␣=␣function(arg1,␣arg2)␣{};␊
++const␣fun1␣=␣function(arg1,␣arg2)␣{}␊
++const␣fun2␣=␣function(arg1,␣arg2)␣{}␊
++const␣fun3␣=␣function(arg1,␣arg2)␣{}
+\ No newline at end of file
 
 ```
 </details>

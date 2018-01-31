@@ -15,8 +15,8 @@ title: Break Chained Methods
 **Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 foo.bar().baz();
 
@@ -47,10 +47,11 @@ return false;
 }
 
 ```
-## `true`
-### JavaScript
+### `true`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
-foo.bar().baz();
+foo.bar()
+  .baz();
 
 foo
   .bar()
@@ -65,31 +66,27 @@ foo
 this.$("#fileName")
   .val()
   .addClass("disabled")
-  .prop("disabled", true);
+  .prop("disabled", true)
 
-$("#items")
-  .find(".selected")
+$('#items')
+  .find('.selected')
   .highlight()
   .end()
-  .find(".open")
+  .find('.open')
   .updateCount();
 
 function doStuff() {
-  if (
-    oParameters.State !==
-    ui()
-      .s2p()
-      .mm()
-      .supplinvoice()
-      .manage()
-      .util()
-      .Constants()
-      .blabla()
-  ) {
+  if (oParameters.State !== ui()
+    .s2p()
+    .mm()
+    .supplinvoice()
+    .manage()
+    .util()
+    .Constants()
+    .blabla()) {
     return false;
   }
 }
-
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -109,8 +106,10 @@ Index: true
 ===================================================================
 --- true	Original
 +++ true	Beautified
-@@ -1,27 +1,39 @@
- foo.bar().baz();␊
+@@ -1,27 +1,37 @@
+-foo.bar().baz();␊
++foo.bar()␊
++␣␣.baz();␊
  ␊
  foo␊
 -.bar()␊
@@ -132,44 +131,40 @@ Index: true
 +this.$("#fileName")␊
 +␣␣.val()␊
 +␣␣.addClass("disabled")␊
-+␣␣.prop("disabled",␣true);␊
++␣␣.prop("disabled",␣true)␊
  ␊
--$('#items')␊
--␣␣.find('.selected')␊
+ $('#items')␊
+ ␣␣.find('.selected')␊
 -␣␣␣␣.highlight()␊
 -␣␣␣␣.end()␊
--␣␣.find('.open')␊
--␣␣␣␣.updateCount();␊
-+$("#items")␊
-+␣␣.find(".selected")␊
 +␣␣.highlight()␊
 +␣␣.end()␊
-+␣␣.find(".open")␊
+ ␣␣.find('.open')␊
+-␣␣␣␣.updateCount();␊
 +␣␣.updateCount();␊
  ␊
  function␣doStuff()␣{␊
 -if␣(oParameters.State␣!==␣ui().s2p().mm().supplinvoice().manage().util().Constants().blabla())␣{␊
 -return␣false;␊
-+␣␣if␣(␊
-+␣␣␣␣oParameters.State␣!==␊
-+␣␣␣␣ui()␊
-+␣␣␣␣␣␣.s2p()␊
-+␣␣␣␣␣␣.mm()␊
-+␣␣␣␣␣␣.supplinvoice()␊
-+␣␣␣␣␣␣.manage()␊
-+␣␣␣␣␣␣.util()␊
-+␣␣␣␣␣␣.Constants()␊
-+␣␣␣␣␣␣.blabla()␊
-+␣␣)␣{␊
+-}␊
+-}␊
++␣␣if␣(oParameters.State␣!==␣ui()␊
++␣␣␣␣.s2p()␊
++␣␣␣␣.mm()␊
++␣␣␣␣.supplinvoice()␊
++␣␣␣␣.manage()␊
++␣␣␣␣.util()␊
++␣␣␣␣.Constants()␊
++␣␣␣␣.blabla())␣{␊
 +␣␣␣␣return␣false;␊
 +␣␣}␊
- }␊
--}␊
++}
+\ No newline at end of file
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 foo.bar().baz();
 
@@ -183,34 +178,21 @@ foo
   // some comment here
   .baz();
 
-this.$("#fileName")
-  .val()
-  .addClass("disabled")
-  .prop("disabled", true);
+this.$("#fileName").val().addClass("disabled")
+  .prop("disabled", true)
 
-$("#items")
-  .find(".selected")
+$('#items')
+  .find('.selected')
   .highlight()
   .end()
-  .find(".open")
+  .find('.open')
   .updateCount();
 
 function doStuff() {
-  if (
-    oParameters.State !==
-    ui()
-      .s2p()
-      .mm()
-      .supplinvoice()
-      .manage()
-      .util()
-      .Constants()
-      .blabla()
-  ) {
+  if (oParameters.State !== ui().s2p().mm().supplinvoice().manage().util().Constants().blabla()) {
     return false;
   }
 }
-
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -230,7 +212,7 @@ Index: false
 ===================================================================
 --- false	Original
 +++ false	Beautified
-@@ -1,27 +1,39 @@
+@@ -1,27 +1,27 @@
  foo.bar().baz();␊
  ␊
  foo␊
@@ -248,44 +230,30 @@ Index: false
 +␣␣//␣some␣comment␣here␊
 +␣␣.baz();␊
  ␊
--this.$("#fileName").val().addClass("disabled")␊
+ this.$("#fileName").val().addClass("disabled")␊
 -␣␣␣␣.prop("disabled",␣true)␊
-+this.$("#fileName")␊
-+␣␣.val()␊
-+␣␣.addClass("disabled")␊
-+␣␣.prop("disabled",␣true);␊
++␣␣.prop("disabled",␣true)␊
  ␊
--$('#items')␊
--␣␣.find('.selected')␊
+ $('#items')␊
+ ␣␣.find('.selected')␊
 -␣␣␣␣.highlight()␊
 -␣␣␣␣.end()␊
--␣␣.find('.open')␊
--␣␣␣␣.updateCount();␊
-+$("#items")␊
-+␣␣.find(".selected")␊
 +␣␣.highlight()␊
 +␣␣.end()␊
-+␣␣.find(".open")␊
+ ␣␣.find('.open')␊
+-␣␣␣␣.updateCount();␊
 +␣␣.updateCount();␊
  ␊
  function␣doStuff()␣{␊
 -if␣(oParameters.State␣!==␣ui().s2p().mm().supplinvoice().manage().util().Constants().blabla())␣{␊
 -return␣false;␊
-+␣␣if␣(␊
-+␣␣␣␣oParameters.State␣!==␊
-+␣␣␣␣ui()␊
-+␣␣␣␣␣␣.s2p()␊
-+␣␣␣␣␣␣.mm()␊
-+␣␣␣␣␣␣.supplinvoice()␊
-+␣␣␣␣␣␣.manage()␊
-+␣␣␣␣␣␣.util()␊
-+␣␣␣␣␣␣.Constants()␊
-+␣␣␣␣␣␣.blabla()␊
-+␣␣)␣{␊
+-}␊
+-}␊
++␣␣if␣(oParameters.State␣!==␣ui().s2p().mm().supplinvoice().manage().util().Constants().blabla())␣{␊
 +␣␣␣␣return␣false;␊
 +␣␣}␊
- }␊
--}␊
++}
+\ No newline at end of file
 
 ```
 </details>

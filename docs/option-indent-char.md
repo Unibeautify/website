@@ -17,8 +17,8 @@ title: Indent Char
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
 # Examples
-## Original Code
-### HTML
+## HTML
+### Original Code
 ```HTML
 <div>
 <span>Hello</span>
@@ -26,27 +26,8 @@ title: Indent Char
 </div>
 
 ```
-### JavaScript
-```JavaScript
-if (a) {
-      b = c;
-function foo(d) {
-          e = f;
-  }
-}
-
-if (a) {
-  b = c;
-  function foo(d) {
-      e = f;
-  }
-}
-
-foo.bar.baz();
-
-```
-## `" "`
-### HTML
+### `" "`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
   <span>Hello</span>
@@ -82,7 +63,65 @@ Index:
 
 ```
 </details>
-### JavaScript
+### `"\t"`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```HTML
+<div>
+		<span>Hello</span>
+		<span>World</span>
+</div>
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "HTML": {
+    "indent_size": 2,
+    "indent_char": "\t"
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 	
+===================================================================
+--- 		Original
++++ 		Beautified
+@@ -1,4 +1,4 @@
+ <div>␊
+-<span>Hello</span>␊
+-<span>World</span>␊
+-</div>␊
++↹↹<span>Hello</span>␊
++↹↹<span>World</span>␊
++</div>
+\ No newline at end of file
+
+```
+</details>
+## JavaScript
+### Original Code
+```JavaScript
+if (a) {
+      b = c;
+function foo(d) {
+          e = f;
+  }
+}
+
+if (a) {
+  b = c;
+  function foo(d) {
+      e = f;
+  }
+}
+
+foo.bar.baz();
+
+```
+### `" "`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
   b = c;
@@ -141,44 +180,8 @@ Index:
 
 ```
 </details>
-## `"\t"`
-### HTML
-```HTML
-<div>
-		<span>Hello</span>
-		<span>World</span>
-</div>
-```
-<details><summary>Configuration</summary>
-A `.unibeautify.json` file would look like the following:
-```json
-{
-  "HTML": {
-    "indent_size": 2,
-    "indent_char": "\t"
-  }
-}
-```
-</details>
-<details><summary>Difference from original</summary>
-```diff
-Index: 	
-===================================================================
---- 		Original
-+++ 		Beautified
-@@ -1,4 +1,4 @@
- <div>␊
--<span>Hello</span>␊
--<span>World</span>␊
--</div>␊
-+↹↹<span>Hello</span>␊
-+↹↹<span>World</span>␊
-+</div>
-\ No newline at end of file
-
-```
-</details>
-### JavaScript
+### `"\t"`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
 	b = c;

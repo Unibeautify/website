@@ -15,15 +15,15 @@ title: Pragma Insert
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 function sayHello() {
 console.log("Hello world");
 }
 ```
-## `true`
-### JavaScript
+### `true`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 /** @format */
 
@@ -62,8 +62,8 @@ Index: true
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 function sayHello() {
   console.log("Hello world");

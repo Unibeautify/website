@@ -15,8 +15,8 @@ title: Indent Comments
 **Supported Beautifiers**: [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 /*
 This 
@@ -67,12 +67,12 @@ if (a) {
 foo.bar.baz();
 
 ```
-## `true`
-### JavaScript
+### `true`
+Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 /*
-This 
-   is 
+This
+   is
       a
         test
 */
@@ -80,7 +80,6 @@ This
 //   is
 //      a
 //        test
-
 // Comment
 if (a) {
   // Comment
@@ -92,7 +91,6 @@ if (a) {
     e = f;
   }
 }
-
 // Comment
 if (a) {
   // Comment
@@ -103,7 +101,6 @@ if (a) {
     e = f;
   }
 }
-
 // Comment
 if (a) {
   // Comment
@@ -114,10 +111,8 @@ if (a) {
     e = f;
   }
 }
-
 // Comment
 foo.bar.baz();
-
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -137,9 +132,20 @@ Index: true
 ===================================================================
 --- true	Original
 +++ true	Beautified
-@@ -10,37 +10,37 @@
+@@ -1,47 +1,43 @@
+ /*␊
+-This␣␊
+-␣␣␣is␣␊
++This␊
++␣␣␣is␊
+ ␣␣␣␣␣␣a␊
+ ␣␣␣␣␣␣␣␣test␊
+ */␊
+ //␣This␊
+ //␣␣␣is␊
+ //␣␣␣␣␣␣a␊
  //␣␣␣␣␣␣␣␣test␊
- ␊
+-␊
  //␣Comment␊
  if␣(a)␣{␊
 -//␣Comment␊
@@ -158,7 +164,7 @@ Index: true
 +␣␣␣␣e␣=␣f;␊
  ␣␣}␊
  }␊
- ␊
+-␊
 -␣␣//␣Comment␊
 +//␣Comment␊
  if␣(a)␣{␊
@@ -172,7 +178,7 @@ Index: true
 +␣␣␣␣e␣=␣f;␊
  ␣␣}␊
  }␊
- ␊
+-␊
  //␣Comment␊
  if␣(a)␣{␊
 -//␣Comment␊
@@ -187,17 +193,20 @@ Index: true
 +␣␣␣␣e␣=␣f;␊
  ␣␣}␊
  }␊
- ␊
+-␊
  //␣Comment␊
+-foo.bar.baz();␊
++foo.bar.baz();
+\ No newline at end of file
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 /*
-This 
-   is 
+This
+   is
       a
         test
 */
@@ -205,44 +214,39 @@ This
 //   is
 //      a
 //        test
-
 // Comment
 if (a) {
-  // Comment
-  // Comment
+// Comment
+// Comment
   b = c;
-  // Comment
+// Comment
   function foo(d) {
-    // Comment
+// Comment
     e = f;
   }
 }
-
 // Comment
 if (a) {
-  // Comment
+// Comment
   b = c;
-  // Comment
+// Comment
   function foo(d) {
-    // Comment
+// Comment
     e = f;
   }
 }
-
 // Comment
 if (a) {
-  // Comment
+// Comment
   b = c;
-  // Comment
+// Comment
   function foo(d) {
-    // Comment
+// Comment
     e = f;
   }
 }
-
 // Comment
 foo.bar.baz();
-
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -262,58 +266,69 @@ Index: false
 ===================================================================
 --- false	Original
 +++ false	Beautified
-@@ -10,37 +10,37 @@
+@@ -1,47 +1,43 @@
+ /*␊
+-This␣␊
+-␣␣␣is␣␊
++This␊
++␣␣␣is␊
+ ␣␣␣␣␣␣a␊
+ ␣␣␣␣␣␣␣␣test␊
+ */␊
+ //␣This␊
+ //␣␣␣is␊
+ //␣␣␣␣␣␣a␊
  //␣␣␣␣␣␣␣␣test␊
- ␊
+-␊
  //␣Comment␊
  if␣(a)␣{␊
--//␣Comment␊
+ //␣Comment␊
 -␣␣␣␣␣␣//␣Comment␊
 -␣␣␣␣␣␣b␣=␣c;␊
--//␣Comment␊
+ //␣Comment␊
 -function␣foo(d)␣{␊
 -␣␣␣␣␣␣␣␣␣␣//␣Comment␊
 -␣␣␣␣␣␣␣␣␣␣e␣=␣f;␊
-+␣␣//␣Comment␊
-+␣␣//␣Comment␊
 +␣␣b␣=␣c;␊
-+␣␣//␣Comment␊
++//␣Comment␊
 +␣␣function␣foo(d)␣{␊
-+␣␣␣␣//␣Comment␊
++//␣Comment␊
 +␣␣␣␣e␣=␣f;␊
  ␣␣}␊
  }␊
- ␊
+-␊
 -␣␣//␣Comment␊
 +//␣Comment␊
  if␣(a)␣{␊
- ␣␣//␣Comment␊
+-␣␣//␣Comment␊
++//␣Comment␊
  ␣␣b␣=␣c;␊
- ␣␣//␣Comment␊
+-␣␣//␣Comment␊
++//␣Comment␊
  ␣␣function␣foo(d)␣{␊
 -␣␣␣␣␣␣//␣Comment␊
 -␣␣␣␣␣␣e␣=␣f;␊
-+␣␣␣␣//␣Comment␊
++//␣Comment␊
 +␣␣␣␣e␣=␣f;␊
  ␣␣}␊
  }␊
- ␊
+-␊
  //␣Comment␊
  if␣(a)␣{␊
--//␣Comment␊
-+␣␣//␣Comment␊
+ //␣Comment␊
  ␣␣b␣=␣c;␊
--//␣Comment␊
-+␣␣//␣Comment␊
+ //␣Comment␊
  ␣␣function␣foo(d)␣{␊
--//␣Comment␊
+ //␣Comment␊
 -␣␣␣␣␣␣e␣=␣f;␊
-+␣␣␣␣//␣Comment␊
 +␣␣␣␣e␣=␣f;␊
  ␣␣}␊
  }␊
- ␊
+-␊
  //␣Comment␊
+-foo.bar.baz();␊
++foo.bar.baz();
+\ No newline at end of file
 
 ```
 </details>

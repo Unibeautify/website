@@ -15,8 +15,8 @@ title: End With Comma
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 var foo = {
     bar: "baz",
@@ -28,8 +28,8 @@ var bar = {
     qux: "quux"
 };
 ```
-## `true`
-### JavaScript
+### `true`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 var foo = {
   bar: "baz",
@@ -79,8 +79,8 @@ Index: true
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 var foo = {
   bar: "baz",

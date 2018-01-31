@@ -17,8 +17,8 @@ title: Brace Style
 **Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
 # Examples
-## Original Code
-### HTML
+## HTML
+### Original Code
 ```HTML
 <div>
 <h1>Unformatted</h1>
@@ -30,8 +30,8 @@ title: Brace Style
 </div>
 
 ```
-## `"collapse"`
-### HTML
+### `"collapse"`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
   <h1>Unformatted</h1>
@@ -88,8 +88,8 @@ Index: collapse
 
 ```
 </details>
-## `"collapse-preserve-inline"`
-### HTML
+### `"collapse-preserve-inline"`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
   <h1>Unformatted</h1>
@@ -146,8 +146,8 @@ Index: collapse-preserve-inline
 
 ```
 </details>
-## `"expand"`
-### HTML
+### `"expand"`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
   <h1>Unformatted</h1>
@@ -204,8 +204,8 @@ Index: expand
 
 ```
 </details>
-## `"end-expand"`
-### HTML
+### `"end-expand"`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
   <h1>Unformatted</h1>
@@ -262,8 +262,8 @@ Index: end-expand
 
 ```
 </details>
-## `"none"`
-### HTML
+### `"none"`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
   <h1>Unformatted</h1>

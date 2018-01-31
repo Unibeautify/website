@@ -15,8 +15,8 @@ title: Object Curly Spacing
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 // simple object literals
 var obj = { foo: "bar" };
@@ -31,8 +31,8 @@ var { x, y } = y;
 import { foo } from "bar";
 export { foo };
 ```
-## `true`
-### JavaScript
+### `true`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 // simple object literals
 var obj = { foo: "bar" };
@@ -77,8 +77,8 @@ Index: true
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 // simple object literals
 var obj = {foo: "bar"};

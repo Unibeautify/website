@@ -15,8 +15,8 @@ title: Jsx Brackets
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 <div
 className="HelloWorld"
@@ -26,8 +26,8 @@ onMouseOver={onMouseOver}
     hello world
 </div>
 ```
-## `true`
-### JavaScript
+### `true`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 <div
   className="HelloWorld"
@@ -72,8 +72,8 @@ Index: true
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 <div
   className="HelloWorld"

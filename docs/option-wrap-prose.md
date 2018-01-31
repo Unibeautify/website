@@ -17,8 +17,8 @@ title: Wrap Prose
 **Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
 # Examples
-## Original Code
-### Markdown
+## Markdown
+### Original Code
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
 
@@ -26,8 +26,8 @@ Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown 
 
 
 ```
-## `"always"`
-### Markdown
+### `"always"`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
 
@@ -67,8 +67,8 @@ Index: always
 
 ```
 </details>
-## `"never"`
-### Markdown
+### `"never"`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
 
@@ -101,8 +101,8 @@ Index: never
 
 ```
 </details>
-## `"preserve"`
-### Markdown
+### `"preserve"`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
 

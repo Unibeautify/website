@@ -15,8 +15,8 @@ title: Jslint Happy
 **Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
 # Examples
-## Original Code
-### JavaScript
+## JavaScript
+### Original Code
 ```JavaScript
 const fun1 = function (arg1) {
 }
@@ -24,12 +24,11 @@ const fun2 = function(arg1) {
 }
 
 ```
-## `true`
-### JavaScript
+### `true`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
-const fun1 = function(arg1) {};
-const fun2 = function(arg1) {};
-
+const fun1 = function (arg1) {}
+const fun2 = function (arg1) {}
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -54,17 +53,17 @@ Index: true
 -}␊
 -const␣fun2␣=␣function(arg1)␣{␊
 -}␊
-+const␣fun1␣=␣function(arg1)␣{};␊
-+const␣fun2␣=␣function(arg1)␣{};␊
++const␣fun1␣=␣function␣(arg1)␣{}␊
++const␣fun2␣=␣function␣(arg1)␣{}
+\ No newline at end of file
 
 ```
 </details>
-## `false`
-### JavaScript
+### `false`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
-const fun1 = function(arg1) {};
-const fun2 = function(arg1) {};
-
+const fun1 = function(arg1) {}
+const fun2 = function(arg1) {}
 ```
 <details><summary>Configuration</summary>
 A `.unibeautify.json` file would look like the following:
@@ -89,8 +88,9 @@ Index: false
 -}␊
 -const␣fun2␣=␣function(arg1)␣{␊
 -}␊
-+const␣fun1␣=␣function(arg1)␣{};␊
-+const␣fun2␣=␣function(arg1)␣{};␊
++const␣fun1␣=␣function(arg1)␣{}␊
++const␣fun2␣=␣function(arg1)␣{}
+\ No newline at end of file
 
 ```
 </details>
