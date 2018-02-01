@@ -2,7 +2,7 @@ import Unibeautify, {
   Language,
   Beautifier,
   OptionsRegistry,
-  BeautifierOptionName
+  BeautifierOptionName,
 } from "unibeautify";
 import * as _ from "lodash";
 
@@ -97,12 +97,12 @@ export default class BeautifierDoc extends Doc {
     return this.languages
       .map(language => ({
         language,
-        options: this.options(language)
+        options: this.options(language),
       }))
       .reduce(
         (lookup, { language, options }) => ({
           ...lookup,
-          [language.name]: options
+          [language.name]: options,
         }),
         {}
       );
@@ -118,7 +118,7 @@ export default class BeautifierDoc extends Doc {
       }
       return {
         ...options,
-        [key]: option
+        [key]: option,
       };
     }, {});
   }

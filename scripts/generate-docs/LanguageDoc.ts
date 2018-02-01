@@ -1,7 +1,7 @@
 import Unibeautify, {
   Language,
   Beautifier,
-  OptionsRegistry
+  OptionsRegistry,
 } from "unibeautify";
 import * as _ from "lodash";
 
@@ -10,7 +10,7 @@ import {
   optionKeys,
   linkForBeautifier,
   linkForOption,
-  emojis
+  emojis,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -87,12 +87,12 @@ export default class LanguageDoc extends Doc {
     return this.beautifiers
       .map(beautifier => ({
         beautifier,
-        options: this.options(beautifier)
+        options: this.options(beautifier),
       }))
       .reduce(
         (lookup, { beautifier, options }) => ({
           ...lookup,
-          [beautifier.name]: options
+          [beautifier.name]: options,
         }),
         {}
       );
@@ -108,7 +108,7 @@ export default class LanguageDoc extends Doc {
       }
       return {
         ...options,
-        [key]: option
+        [key]: option,
       };
     }, {});
   }

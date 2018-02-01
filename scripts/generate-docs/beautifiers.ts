@@ -3,10 +3,6 @@ import prettyDiff from "@unibeautify/beautifier-prettydiff";
 import prettier from "@unibeautify/beautifier-prettier";
 import jsBeautify from "@unibeautify/beautifier-js-beautify";
 
-const beautifiers: Beautifier[] = <any[]>[
-    prettier,
-    jsBeautify,
-    prettyDiff,
-];
+const beautifiers: Beautifier[] = <any[]>[prettier, jsBeautify, prettyDiff];
 
 export default beautifiers;
