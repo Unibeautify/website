@@ -1,7 +1,7 @@
 ---
 id: option-indent-with-tabs
 title: Indent With Tabs
-sidebar_label: Indent With Tabs (✅)
+sidebar_label: ✅ Indent With Tabs
 ---
 **Key**: `indent_with_tabs`
 
@@ -46,7 +46,7 @@ sidebar_label: Indent With Tabs (✅)
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 if (a) {
      b=c;
@@ -66,7 +66,7 @@ foo
 .bar
 .baz()
 ```
-#### `true`
+#### 🔧 `true`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
@@ -135,7 +135,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {

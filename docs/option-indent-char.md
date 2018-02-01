@@ -1,7 +1,7 @@
 ---
 id: option-indent-char
 title: Indent Char
-sidebar_label: Indent Char (✅)
+sidebar_label: ✅ Indent Char
 ---
 **Key**: `indent_char`
 
@@ -50,7 +50,7 @@ sidebar_label: Indent Char (✅)
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#10060; | &#9989; |
 ## Examples
 ### HTML
-#### Original Code
+#### 🚧 Original Code
 ```HTML
 <div>
 <span>Hello</span>
@@ -58,7 +58,7 @@ sidebar_label: Indent Char (✅)
 </div>
 
 ```
-#### `" "`
+#### 🔧 `" "`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -95,7 +95,7 @@ Index:
 
 ```
 </details>
-#### `"\t"`
+#### 🔧 `"\t"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -133,7 +133,7 @@ Index:
 ```
 </details>
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 if (a) {
       b = c;
@@ -152,7 +152,7 @@ if (a) {
 foo.bar.baz();
 
 ```
-#### `" "`
+#### 🔧 `" "`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
@@ -212,7 +212,7 @@ Index:
 
 ```
 </details>
-#### `"\t"`
+#### 🔧 `"\t"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {

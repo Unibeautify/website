@@ -1,7 +1,7 @@
 ---
 id: option-arrow-parens
 title: Arrow Parens
-sidebar_label: Arrow Parens (✅)
+sidebar_label: ✅ Arrow Parens
 ---
 **Key**: `arrow_parens`
 
@@ -30,13 +30,13 @@ sidebar_label: Arrow Parens (✅)
 | [TypeScript](/docs/language-typescript.html) | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 a => {};
 (a) => {};
 (a, b) => {};
 ```
-#### `"always"`
+#### 🔧 `"always"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 (a) => {};
@@ -72,7 +72,7 @@ Index: always
 
 ```
 </details>
-#### `"as-needed"`
+#### 🔧 `"as-needed"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 a => {};

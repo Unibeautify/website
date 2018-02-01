@@ -1,11 +1,11 @@
 ---
 id: option-brace-style
 title: Brace Style
-sidebar_label: Brace Style (✅)
+sidebar_label: ✅ Brace Style
 ---
 **Key**: `brace_style`
 
-**Description**: [collapse|collapse-preserve-inline|expand|end-expand|none]
+**Description**: Brace style
 
 **Type**: `string`
 
@@ -14,20 +14,24 @@ sidebar_label: Brace Style (✅)
 **Allowed values**: `"collapse"` or `"collapse-preserve-inline"` or `"expand"` or `"end-expand"` or `"none"`
 
 ## Support
-**Languages**: [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
+**Languages**: [EJS](/docs/language-ejs.html), [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
 | --- | --- |
+| [EJS](/docs/language-ejs.html) | &#9989; |
 | [HTML](/docs/language-html.html) | &#9989; |
 | [Handlebars](/docs/language-handlebars.html) | &#9989; |
+| [JSON](/docs/language-json.html) | &#9989; |
+| [JSX](/docs/language-jsx.html) | &#9989; |
+| [JavaScript](/docs/language-javascript.html) | &#9989; |
 | [Liquid](/docs/language-liquid.html) | &#9989; |
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
 ## Examples
 ### HTML
-#### Original Code
+#### 🚧 Original Code
 ```HTML
 <div>
 <h1>Unformatted</h1>
@@ -39,7 +43,7 @@ sidebar_label: Brace Style (✅)
 </div>
 
 ```
-#### `"collapse"`
+#### 🔧 `"collapse"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -97,7 +101,7 @@ Index: collapse
 
 ```
 </details>
-#### `"collapse-preserve-inline"`
+#### 🔧 `"collapse-preserve-inline"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -155,7 +159,7 @@ Index: collapse-preserve-inline
 
 ```
 </details>
-#### `"expand"`
+#### 🔧 `"expand"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -213,7 +217,7 @@ Index: expand
 
 ```
 </details>
-#### `"end-expand"`
+#### 🔧 `"end-expand"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -271,7 +275,7 @@ Index: end-expand
 
 ```
 </details>
-#### `"none"`
+#### 🔧 `"none"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>

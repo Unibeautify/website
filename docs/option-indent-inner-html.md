@@ -1,7 +1,7 @@
 ---
 id: option-indent-inner-html
 title: Indent Inner Html
-sidebar_label: Indent Inner Html (✅)
+sidebar_label: ✅ Indent Inner Html
 ---
 **Key**: `indent_inner_html`
 
@@ -23,3 +23,93 @@ sidebar_label: Indent Inner Html (✅)
 | [Liquid](/docs/language-liquid.html) | &#9989; |
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
+## Examples
+### HTML
+#### 🚧 Original Code
+```HTML
+<html><head></head><body></body></html>
+```
+#### 🔧 `true`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```HTML
+<html>
+
+  <head></head>
+
+  <body></body>
+
+</html>
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "HTML": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "indent_inner_html": true
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: true
+===================================================================
+--- true	Original
++++ true	Beautified
+@@ -1,1 +1,7 @@
+-<html><head></head><body></body></html>
+\ No newline at end of file
++<html>␊
++␊
++␣␣<head></head>␊
++␊
++␣␣<body></body>␊
++␊
++</html>
+
+```
+</details>
+#### 🔧 `false`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```HTML
+<html>
+
+<head></head>
+
+<body></body>
+
+</html>
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "HTML": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "indent_inner_html": false
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: false
+===================================================================
+--- false	Original
++++ false	Beautified
+@@ -1,1 +1,7 @@
+-<html><head></head><body></body></html>
+\ No newline at end of file
++<html>␊
++␊
++<head></head>␊
++␊
++<body></body>␊
++␊
++</html>
+
+```
+</details>

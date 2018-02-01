@@ -1,7 +1,7 @@
 ---
 id: option-remove-trailing-whitespace
 title: Remove Trailing Whitespace
-sidebar_label: Remove Trailing Whitespace
+sidebar_label: 🚨 Remove Trailing Whitespace
 ---
 **Key**: `remove_trailing_whitespace`
 
@@ -15,6 +15,3 @@ sidebar_label: Remove Trailing Whitespace
 **Languages**: 
 
 **Beautifiers**: 
-
-| Language |
-| --- |

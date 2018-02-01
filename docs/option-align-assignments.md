@@ -1,7 +1,7 @@
 ---
 id: option-align-assignments
 title: Align Assignments
-sidebar_label: Align Assignments (✅)
+sidebar_label: ✅ Align Assignments
 ---
 **Key**: `align_assignments`
 
@@ -45,13 +45,13 @@ sidebar_label: Align Assignments (✅)
 | [XTemplate](/docs/language-xtemplate.html) | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 const a = "",
 b = "",
 c = "";
 ```
-#### `true`
+#### 🔧 `true`
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const a = "",
@@ -86,7 +86,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const a = "",

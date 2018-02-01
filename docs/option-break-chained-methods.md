@@ -1,7 +1,7 @@
 ---
 id: option-break-chained-methods
 title: Break Chained Methods
-sidebar_label: Break Chained Methods (✅)
+sidebar_label: ✅ Break Chained Methods
 ---
 **Key**: `break_chained_methods`
 
@@ -45,7 +45,7 @@ sidebar_label: Break Chained Methods (✅)
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 foo.bar().baz();
 
@@ -76,7 +76,7 @@ return false;
 }
 
 ```
-#### `true`
+#### 🔧 `true`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 foo.bar()
@@ -192,7 +192,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 foo.bar().baz();

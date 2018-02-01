@@ -1,7 +1,7 @@
 ---
 id: option-newline-between-rules
 title: Newline Between Rules
-sidebar_label: Newline Between Rules (✅)
+sidebar_label: ✅ Newline Between Rules
 ---
 **Key**: `newline_between_rules`
 
@@ -45,7 +45,7 @@ sidebar_label: Newline Between Rules (✅)
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; |
 ## Examples
 ### CSS
-#### Original Code
+#### 🚧 Original Code
 ```CSS
 .class1 {
     color: blue;
@@ -68,7 +68,7 @@ sidebar_label: Newline Between Rules (✅)
 }
 
 ```
-#### `true`
+#### 🔧 `true`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```CSS
 .class1 {
@@ -144,7 +144,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```CSS
 .class1 {

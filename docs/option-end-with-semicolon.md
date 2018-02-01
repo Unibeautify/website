@@ -1,7 +1,7 @@
 ---
 id: option-end-with-semicolon
 title: End With Semicolon
-sidebar_label: End With Semicolon (✅)
+sidebar_label: ✅ End With Semicolon
 ---
 **Key**: `end_with_semicolon`
 
@@ -28,7 +28,7 @@ sidebar_label: End With Semicolon (✅)
 | [TypeScript](/docs/language-typescript.html) | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 var str1 = "Unibeautify"
 var str2 = "Unibeautify";
@@ -41,7 +41,7 @@ var method2 = function() {
 method1()
 method2();
 ```
-#### `true`
+#### 🔧 `true`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 var str1 = "Unibeautify";
@@ -95,7 +95,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 var str1 = "Unibeautify"

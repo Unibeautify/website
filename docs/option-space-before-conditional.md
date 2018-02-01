@@ -1,11 +1,11 @@
 ---
 id: option-space-before-conditional
 title: Space Before Conditional
-sidebar_label: Space Before Conditional (✅)
+sidebar_label: ✅ Space Before Conditional
 ---
 **Key**: `space_before_conditional`
 
-**Description**: 
+**Description**: Add a space before conditional, "if(true)" vs "if (true)"
 
 **Type**: `boolean`
 

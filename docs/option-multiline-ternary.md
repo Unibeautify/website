@@ -1,7 +1,7 @@
 ---
 id: option-multiline-ternary
 title: Multiline Ternary
-sidebar_label: Multiline Ternary (✅)
+sidebar_label: ✅ Multiline Ternary
 ---
 **Key**: `multiline_ternary`
 
@@ -47,13 +47,13 @@ sidebar_label: Multiline Ternary (✅)
 | [XTemplate](/docs/language-xtemplate.html) | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 const val1 = a ? "yes" : "no";
 const val2 = a ? ( b ? "yes" : "no") : "maybe";
 
 ```
-#### `"always"`
+#### 🔧 `"always"`
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const val1 = a
@@ -100,7 +100,7 @@ Index: always
 
 ```
 </details>
-#### `"always-multiline"`
+#### 🔧 `"always-multiline"`
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const val1 = a
@@ -147,7 +147,7 @@ Index: always-multiline
 
 ```
 </details>
-#### `"never"`
+#### 🔧 `"never"`
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const val1 = a ? "yes" : "no";

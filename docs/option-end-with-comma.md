@@ -1,7 +1,7 @@
 ---
 id: option-end-with-comma
 title: End With Comma
-sidebar_label: End With Comma (✅)
+sidebar_label: ✅ End With Comma
 ---
 **Key**: `end_with_comma`
 
@@ -46,7 +46,7 @@ sidebar_label: End With Comma (✅)
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 var foo = {
     bar: "baz",
@@ -58,7 +58,7 @@ var bar = {
     qux: "quux"
 };
 ```
-#### `true`
+#### 🔧 `true`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 var foo = {
@@ -109,7 +109,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 var foo = {

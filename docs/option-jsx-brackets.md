@@ -1,7 +1,7 @@
 ---
 id: option-jsx-brackets
-title: Jsx Brackets
-sidebar_label: Jsx Brackets (✅)
+title: JSX Brackets
+sidebar_label: ✅ JSX Brackets
 ---
 **Key**: `jsx_brackets`
 
@@ -28,7 +28,7 @@ sidebar_label: Jsx Brackets (✅)
 | [TypeScript](/docs/language-typescript.html) | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 <div
 className="HelloWorld"
@@ -38,7 +38,7 @@ onMouseOver={onMouseOver}
     hello world
 </div>
 ```
-#### `true`
+#### 🔧 `true`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 <div
@@ -84,7 +84,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 <div

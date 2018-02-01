@@ -1,7 +1,7 @@
 ---
 id: option-pragma-insert
 title: Pragma Insert
-sidebar_label: Pragma Insert (✅)
+sidebar_label: ✅ Pragma Insert
 ---
 **Key**: `pragma_insert`
 
@@ -28,13 +28,13 @@ sidebar_label: Pragma Insert (✅)
 | [TypeScript](/docs/language-typescript.html) | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 function sayHello() {
 console.log("Hello world");
 }
 ```
-#### `true`
+#### 🔧 `true`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 /** @format */
@@ -74,7 +74,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 function sayHello() {

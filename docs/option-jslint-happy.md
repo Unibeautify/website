@@ -1,7 +1,7 @@
 ---
 id: option-jslint-happy
-title: Jslint Happy
-sidebar_label: Jslint Happy (✅)
+title: JSLint Happy
+sidebar_label: ✅ JSLint Happy
 ---
 **Key**: `jslint_happy`
 
@@ -24,7 +24,7 @@ sidebar_label: Jslint Happy (✅)
 | [JavaScript](/docs/language-javascript.html) | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 const fun1 = function (arg1) {
 }
@@ -32,7 +32,7 @@ const fun2 = function(arg1) {
 }
 
 ```
-#### `true`
+#### 🔧 `true`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function (arg1) {}
@@ -67,7 +67,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function(arg1) {}

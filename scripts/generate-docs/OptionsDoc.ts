@@ -61,10 +61,7 @@ export default class OptionsDoc extends Doc {
   }
 
   protected get sidebarLabel(): string {
-    if (this.hasBeautifier) {
-      return `${this.title} (✅)`;
-    }
-    return this.title;
+    return `${this.hasBeautifier ? "✅" : "🚨"} ${this.title}`;
   }
 
   private get hasBeautifier(): boolean {
@@ -111,6 +108,10 @@ export default class OptionsDoc extends Doc {
     | --- | --- | --- |
     | Arrow Parens | &#10060; | &#9989; |
     */
+
+    if (!(this.beautifiers.length && this.languages.length)) {
+      return builder;
+    }
 
     builder.append(
       "| Language |" +
@@ -179,13 +180,14 @@ export default class OptionsDoc extends Doc {
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
             if (example) {
+              // builder.details(`**${language.name}**`, builder => {
               builder.header(language.name, 3);
-              builder.header("Original Code", 4);
+              builder.header("🚧 Original Code", 4);
               builder.code(example, language.name);
               let beautifiedExamplesAreDifferent: boolean = false;
               let lastCode: string | null = null;
               this.exampleValues.forEach((optionValue, valueIndex) => {
-                builder.header(`\`${JSON.stringify(optionValue)}\``, 4);
+                builder.header(`🔧 \`${JSON.stringify(optionValue)}\``, 4);
                 const beautifiedExample: string | null =
                   beautified[valueIndex][languageIndex];
                 if (beautifiedExample) {
@@ -230,8 +232,11 @@ export default class OptionsDoc extends Doc {
                 this.exampleValues.length > 1 &&
                 !beautifiedExamplesAreDifferent
               ) {
-                console.log(`${this.optionKey} - ${language.name} - BAD`);
+                console.log(
+                  `${this.optionKey} - ${language.name} - BAD EXAMPLES`
+                );
               }
+              // });
             }
           });
         });
@@ -244,10 +249,20 @@ export default class OptionsDoc extends Doc {
     if (option.enum) {
       return option.enum;
     }
-    if (this.option.type === "boolean") {
-      return [true, false];
+    switch (option.type) {
+      case "boolean":
+        return [true, false];
+      case "integer": {
+        const min = option.minimum || 0;
+        const max = option.maximum || option.default * 2;
+        return [option.default, min, max].sort();
+      }
+      case "array": {
+        return [[], option.default];
+      }
+      default:
+        return [option.default];
     }
-    return [this.option.default];
   }
 
   private readExample(language: Language): string | undefined {

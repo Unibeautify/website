@@ -1,7 +1,7 @@
 ---
 id: option-end-with-newline
 title: End With Newline
-sidebar_label: End With Newline (✅)
+sidebar_label: ✅ End With Newline
 ---
 **Key**: `end_with_newline`
 
@@ -28,3 +28,66 @@ sidebar_label: End With Newline (✅)
 | [Liquid](/docs/language-liquid.html) | &#9989; |
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
+## Examples
+### JavaScript
+#### 🚧 Original Code
+```JavaScript
+console.log("hello world");
+```
+#### 🔧 `true`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```JavaScript
+console.log("hello world");
+
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JavaScript": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "end_with_newline": true
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: true
+===================================================================
+--- true	Original
++++ true	Beautified
+@@ -1,1 +1,1 @@
+-console.log("hello␣world");
+\ No newline at end of file
++console.log("hello␣world");␊
+
+```
+</details>
+#### 🔧 `false`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```JavaScript
+console.log("hello world");
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JavaScript": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "end_with_newline": false
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: false
+===================================================================
+--- false	Original
++++ false	Beautified
+
+```
+</details>

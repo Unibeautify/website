@@ -1,11 +1,11 @@
 ---
 id: option-space-after-anon-function
 title: Space After Anon Function
-sidebar_label: Space After Anon Function (✅)
+sidebar_label: ✅ Space After Anon Function
 ---
 **Key**: `space_after_anon_function`
 
-**Description**: Add a space before an anonymous function's parens, ie. function ()
+**Description**: Add a space before an anonymous function's parentheses. ie. function ()
 
 **Type**: `boolean`
 
@@ -45,7 +45,7 @@ sidebar_label: Space After Anon Function (✅)
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 const fun1 = function (arg1) {
 }
@@ -53,7 +53,7 @@ const fun2 = function(arg1) {
 }
 
 ```
-#### `true`
+#### 🔧 `true`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function (arg1) {}
@@ -88,7 +88,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function(arg1) {}

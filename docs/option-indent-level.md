@@ -1,7 +1,7 @@
 ---
 id: option-indent-level
 title: Indent Level
-sidebar_label: Indent Level
+sidebar_label: 🚨 Indent Level
 ---
 **Key**: `indent_level`
 
@@ -15,6 +15,3 @@ sidebar_label: Indent Level
 **Languages**: 
 
 **Beautifiers**: 
-
-| Language |
-| --- |

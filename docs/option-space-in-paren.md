@@ -1,11 +1,11 @@
 ---
 id: option-space-in-paren
 title: Space In Paren
-sidebar_label: Space In Paren (✅)
+sidebar_label: ✅ Space In Paren
 ---
 **Key**: `space_in_paren`
 
-**Description**: Add padding spaces within paren, ie. f( a, b )
+**Description**: Add padding spaces within parentheses, ie. f( a, b )
 
 **Type**: `boolean`
 
@@ -24,7 +24,7 @@ sidebar_label: Space In Paren (✅)
 | [JavaScript](/docs/language-javascript.html) | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 const fun1 = function(arg1, arg2) {
 }
@@ -34,7 +34,7 @@ const fun3 = function( arg1, arg2 ) {
 }
 
 ```
-#### `true`
+#### 🔧 `true`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function( arg1, arg2 ) {}
@@ -73,7 +73,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function(arg1, arg2) {}

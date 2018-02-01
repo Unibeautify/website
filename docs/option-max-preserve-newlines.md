@@ -1,7 +1,7 @@
 ---
 id: option-max-preserve-newlines
 title: Max Preserve Newlines
-sidebar_label: Max Preserve Newlines (✅)
+sidebar_label: ✅ Max Preserve Newlines
 ---
 **Key**: `max_preserve_newlines`
 
@@ -27,3 +27,299 @@ sidebar_label: Max Preserve Newlines (✅)
 | [Liquid](/docs/language-liquid.html) | &#9989; |
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
+## Examples
+### HTML
+#### 🚧 Original Code
+```HTML
+<html>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+console.log("hello world");
+
+
+</script>
+
+
+</body>
+
+
+
+</html>
+```
+#### 🔧 `0`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```HTML
+<html>
+
+<body>
+  <script>
+    console.log("hello world");
+  </script>
+</body>
+
+</html>
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "HTML": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "max_preserve_newlines": 0
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 0
+===================================================================
+--- 0	Original
++++ 0	Beautified
+@@ -1,42 +1,9 @@
+ <html>␊
+ ␊
+-␊
+-␊
+ <body>␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-<script>␊
+-␊
+-␊
+-console.log("hello␣world");␊
+-␊
+-␊
+-</script>␊
+-␊
+-␊
++␣␣<script>␊
++␣␣␣␣console.log("hello␣world");␊
++␣␣</script>␊
+ </body>␊
+ ␊
+-␊
+-␊
+ </html>
+\ No newline at end of file
+
+```
+</details>
+#### 🔧 `10`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```HTML
+<html>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+  <script>
+    console.log("hello world");
+  </script>
+
+
+</body>
+
+
+
+</html>
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "HTML": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "max_preserve_newlines": 10
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 10
+===================================================================
+--- 10	Original
++++ 10	Beautified
+@@ -12,30 +12,13 @@
+ ␊
+ ␊
+ ␊
+ ␊
++␣␣<script>␊
++␣␣␣␣console.log("hello␣world");␊
++␣␣</script>␊
+ ␊
+ ␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-<script>␊
+-␊
+-␊
+-console.log("hello␣world");␊
+-␊
+-␊
+-</script>␊
+-␊
+-␊
+ </body>␊
+ ␊
+ ␊
+ ␊
+
+```
+</details>
+#### 🔧 `20`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```HTML
+<html>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    console.log("hello world");
+  </script>
+
+
+</body>
+
+
+
+</html>
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "HTML": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "max_preserve_newlines": 20
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 20
+===================================================================
+--- 20	Original
++++ 20	Beautified
+@@ -22,20 +22,13 @@
+ ␊
+ ␊
+ ␊
+ ␊
++␣␣<script>␊
++␣␣␣␣console.log("hello␣world");␊
++␣␣</script>␊
+ ␊
+ ␊
+-␊
+-<script>␊
+-␊
+-␊
+-console.log("hello␣world");␊
+-␊
+-␊
+-</script>␊
+-␊
+-␊
+ </body>␊
+ ␊
+ ␊
+ ␊
+
+```
+</details>

@@ -1,7 +1,7 @@
 ---
 id: option-unescape-strings
 title: Unescape Strings
-sidebar_label: Unescape Strings (✅)
+sidebar_label: ✅ Unescape Strings
 ---
 **Key**: `unescape_strings`
 

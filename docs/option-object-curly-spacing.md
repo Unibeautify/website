@@ -1,7 +1,7 @@
 ---
 id: option-object-curly-spacing
 title: Object Curly Spacing
-sidebar_label: Object Curly Spacing (✅)
+sidebar_label: ✅ Object Curly Spacing
 ---
 **Key**: `object_curly_spacing`
 
@@ -28,7 +28,7 @@ sidebar_label: Object Curly Spacing (✅)
 | [TypeScript](/docs/language-typescript.html) | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 // simple object literals
 var obj = { foo: "bar" };
@@ -43,7 +43,7 @@ var { x, y } = y;
 import { foo } from "bar";
 export { foo };
 ```
-#### `true`
+#### 🔧 `true`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 // simple object literals
@@ -89,7 +89,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 // simple object literals

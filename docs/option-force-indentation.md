@@ -1,7 +1,7 @@
 ---
 id: option-force-indentation
 title: Force Indentation
-sidebar_label: Force Indentation (✅)
+sidebar_label: ✅ Force Indentation
 ---
 **Key**: `force_indentation`
 

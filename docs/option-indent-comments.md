@@ -1,7 +1,7 @@
 ---
 id: option-indent-comments
 title: Indent Comments
-sidebar_label: Indent Comments (✅)
+sidebar_label: ✅ Indent Comments
 ---
 **Key**: `indent_comments`
 
@@ -45,7 +45,7 @@ sidebar_label: Indent Comments (✅)
 | [XTemplate](/docs/language-xtemplate.html) | &#9989; |
 ## Examples
 ### JavaScript
-#### Original Code
+#### 🚧 Original Code
 ```JavaScript
 /*
 This 
@@ -96,7 +96,7 @@ if (a) {
 foo.bar.baz();
 
 ```
-#### `true`
+#### 🔧 `true`
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 /*
@@ -230,7 +230,7 @@ Index: true
 
 ```
 </details>
-#### `false`
+#### 🔧 `false`
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 /*

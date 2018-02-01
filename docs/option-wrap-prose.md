@@ -1,7 +1,7 @@
 ---
 id: option-wrap-prose
 title: Wrap Prose
-sidebar_label: Wrap Prose (✅)
+sidebar_label: ✅ Wrap Prose
 ---
 **Key**: `wrap_prose`
 
@@ -23,7 +23,7 @@ sidebar_label: Wrap Prose (✅)
 | [Markdown](/docs/language-markdown.html) | &#9989; |
 ## Examples
 ### Markdown
-#### Original Code
+#### 🚧 Original Code
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
 
@@ -31,7 +31,7 @@ Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown 
 
 
 ```
-#### `"always"`
+#### 🔧 `"always"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
@@ -72,7 +72,7 @@ Index: always
 
 ```
 </details>
-#### `"never"`
+#### 🔧 `"never"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
@@ -106,7 +106,7 @@ Index: never
 
 ```
 </details>
-#### `"preserve"`
+#### 🔧 `"preserve"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
