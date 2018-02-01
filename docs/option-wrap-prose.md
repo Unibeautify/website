@@ -13,13 +13,17 @@ sidebar_label: Wrap Prose (✅)
 
 **Allowed values**: `"always"` or `"never"` or `"preserve"`
 
-**Supported Languages**: [Markdown](/docs/language-markdown.html)
+## Support
+**Languages**: [Markdown](/docs/language-markdown.html)
 
-**Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
+**Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
-# Examples
-## Markdown
-### Original Code
+| Language | [Prettier](/docs/beautifier-prettier.html) |
+| --- | --- |
+| [Markdown](/docs/language-markdown.html) | &#9989; |
+## Examples
+### Markdown
+#### Original Code
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
 
@@ -27,7 +31,7 @@ Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown 
 
 
 ```
-### `"always"`
+#### `"always"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
@@ -68,7 +72,7 @@ Index: always
 
 ```
 </details>
-### `"never"`
+#### `"never"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
@@ -102,7 +106,7 @@ Index: never
 
 ```
 </details>
-### `"preserve"`
+#### `"preserve"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.

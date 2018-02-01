@@ -13,6 +13,10 @@ sidebar_label: Wrap Attributes
 
 **Allowed values**: `"auto"` or `"force"`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

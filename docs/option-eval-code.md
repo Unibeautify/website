@@ -11,6 +11,10 @@ sidebar_label: Eval Code
 
 **Default**: `false`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

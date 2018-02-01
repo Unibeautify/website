@@ -11,13 +11,44 @@ sidebar_label: Indent Size (✅)
 
 **Default**: `4`
 
-**Supported Languages**: [C#](/docs/language-csharp.html), [CSS](/docs/language-css.html), [CSV](/docs/language-csv.html), [ColdFusion](/docs/language-coldfusion.html), [EJS](/docs/language-ejs.html), [GraphQL](/docs/language-graphql.html), [HTML](/docs/language-html.html), [HTML+ERB](/docs/language-html%2Berb.html), [Handlebars](/docs/language-handlebars.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [Java](/docs/language-java.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [Riot](/docs/language-riot.html), [SCSS](/docs/language-scss.html), [SVG](/docs/language-svg.html), [Sass](/docs/language-sass.html), [Spacebars](/docs/language-spacebars.html), [Swig](/docs/language-swig.html), [Titanium Style Sheets](/docs/language-titanium-style-sheets.html), [Twig](/docs/language-twig.html), [TypeScript](/docs/language-typescript.html), [Visualforce](/docs/language-visualforce.html), [XML](/docs/language-xml.html), [XTemplate](/docs/language-xtemplate.html)
+## Support
+**Languages**: [C#](/docs/language-csharp.html), [CSS](/docs/language-css.html), [CSV](/docs/language-csv.html), [ColdFusion](/docs/language-coldfusion.html), [EJS](/docs/language-ejs.html), [GraphQL](/docs/language-graphql.html), [HTML](/docs/language-html.html), [HTML+ERB](/docs/language-html%2Berb.html), [Handlebars](/docs/language-handlebars.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [Java](/docs/language-java.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [Riot](/docs/language-riot.html), [SCSS](/docs/language-scss.html), [SVG](/docs/language-svg.html), [Sass](/docs/language-sass.html), [Spacebars](/docs/language-spacebars.html), [Swig](/docs/language-swig.html), [Titanium Style Sheets](/docs/language-titanium-style-sheets.html), [Twig](/docs/language-twig.html), [TypeScript](/docs/language-typescript.html), [Visualforce](/docs/language-visualforce.html), [XML](/docs/language-xml.html), [XTemplate](/docs/language-xtemplate.html)
 
-**Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
+**Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
-# Examples
-## CSS
-### Original Code
+| Language | [Prettier](/docs/beautifier-prettier.html) | [JS-Beautify](/docs/beautifier-js-beautify.html) | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
+| --- | --- | --- | --- |
+| [C#](/docs/language-csharp.html) | &#10060; | &#10060; | &#9989; |
+| [CSS](/docs/language-css.html) | &#9989; | &#9989; | &#9989; |
+| [CSV](/docs/language-csv.html) | &#10060; | &#10060; | &#9989; |
+| [ColdFusion](/docs/language-coldfusion.html) | &#10060; | &#10060; | &#9989; |
+| [EJS](/docs/language-ejs.html) | &#10060; | &#9989; | &#9989; |
+| [GraphQL](/docs/language-graphql.html) | &#9989; | &#10060; | &#10060; |
+| [HTML](/docs/language-html.html) | &#10060; | &#9989; | &#9989; |
+| [HTML+ERB](/docs/language-html%2Berb.html) | &#10060; | &#10060; | &#9989; |
+| [Handlebars](/docs/language-handlebars.html) | &#10060; | &#9989; | &#9989; |
+| [JSON](/docs/language-json.html) | &#9989; | &#9989; | &#9989; |
+| [JSX](/docs/language-jsx.html) | &#9989; | &#9989; | &#9989; |
+| [Java](/docs/language-java.html) | &#10060; | &#10060; | &#9989; |
+| [JavaScript](/docs/language-javascript.html) | &#9989; | &#9989; | &#9989; |
+| [Less](/docs/language-less.html) | &#9989; | &#10060; | &#9989; |
+| [Liquid](/docs/language-liquid.html) | &#10060; | &#9989; | &#10060; |
+| [Mustache](/docs/language-mustache.html) | &#10060; | &#9989; | &#10060; |
+| [Riot](/docs/language-riot.html) | &#10060; | &#10060; | &#9989; |
+| [SCSS](/docs/language-scss.html) | &#9989; | &#10060; | &#9989; |
+| [SVG](/docs/language-svg.html) | &#10060; | &#10060; | &#9989; |
+| [Sass](/docs/language-sass.html) | &#10060; | &#10060; | &#9989; |
+| [Spacebars](/docs/language-spacebars.html) | &#10060; | &#10060; | &#9989; |
+| [Swig](/docs/language-swig.html) | &#10060; | &#10060; | &#9989; |
+| [Titanium Style Sheets](/docs/language-titanium-style-sheets.html) | &#10060; | &#10060; | &#9989; |
+| [Twig](/docs/language-twig.html) | &#10060; | &#10060; | &#9989; |
+| [TypeScript](/docs/language-typescript.html) | &#9989; | &#10060; | &#9989; |
+| [Visualforce](/docs/language-visualforce.html) | &#10060; | &#10060; | &#9989; |
+| [XML](/docs/language-xml.html) | &#10060; | &#9989; | &#9989; |
+| [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#10060; | &#9989; |
+## Examples
+### CSS
+#### Original Code
 ```CSS
 .class1 {
     color: blue;
@@ -40,7 +71,7 @@ sidebar_label: Indent Size (✅)
 }
 
 ```
-### `4`
+#### `4`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```CSS
 .class1 {
@@ -84,8 +115,8 @@ Index: 4
 
 ```
 </details>
-## HTML
-### Original Code
+### HTML
+#### Original Code
 ```HTML
 <div>
 <span>Hello</span>
@@ -93,7 +124,7 @@ Index: 4
 </div>
 
 ```
-### `4`
+#### `4`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -130,8 +161,8 @@ Index: 4
 
 ```
 </details>
-## JavaScript
-### Original Code
+### JavaScript
+#### Original Code
 ```JavaScript
 if (a) {
       b = c;
@@ -150,7 +181,7 @@ if (a) {
 foo.bar.baz();
 
 ```
-### `4`
+#### `4`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
@@ -214,8 +245,8 @@ Index: 4
 
 ```
 </details>
-## XML
-### Original Code
+### XML
+#### Original Code
 ```XML
 <breakfast_menu>
 <food>
@@ -260,7 +291,7 @@ Two eggs, bacon or sausage, toast, and our ever-popular hash browns
 </food>
 </breakfast_menu>
 ```
-### `4`
+#### `4`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```XML
 <breakfast_menu>

@@ -13,6 +13,10 @@ sidebar_label: Syntax
 
 **Allowed values**: `"html"` or `"concise"`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

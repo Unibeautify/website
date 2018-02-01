@@ -11,6 +11,10 @@ sidebar_label: Gfm
 
 **Default**: `true`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

@@ -9,7 +9,7 @@ import {
   BeautifierLanguageOptionComplex,
   LanguageOptionValues,
   Unibeautify,
-  newUnibeautify,
+  newUnibeautify
 } from "unibeautify";
 import * as _ from "lodash";
 
@@ -102,3 +102,8 @@ export function linkForOption(key: string, option: Option): string {
 export function unibeautifyWithBeautifier(beautifier: Beautifier): Unibeautify {
   return newUnibeautify().loadBeautifier(beautifier);
 }
+
+export const emojis = {
+  x: "&#10060;",
+  checkmark: "&#9989;"
+};

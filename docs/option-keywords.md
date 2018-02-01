@@ -13,6 +13,10 @@ sidebar_label: Keywords
 
 **Allowed values**: `"unchanged"` or `"lower"` or `"upper"` or `"capitalize"`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

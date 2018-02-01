@@ -11,13 +11,20 @@ sidebar_label: Jslint Happy (✅)
 
 **Default**: `false`
 
-**Supported Languages**: [EJS](/docs/language-ejs.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html)
+## Support
+**Languages**: [EJS](/docs/language-ejs.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html)
 
-**Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
+**Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
-# Examples
-## JavaScript
-### Original Code
+| Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
+| --- | --- |
+| [EJS](/docs/language-ejs.html) | &#9989; |
+| [JSON](/docs/language-json.html) | &#9989; |
+| [JSX](/docs/language-jsx.html) | &#9989; |
+| [JavaScript](/docs/language-javascript.html) | &#9989; |
+## Examples
+### JavaScript
+#### Original Code
 ```JavaScript
 const fun1 = function (arg1) {
 }
@@ -25,7 +32,7 @@ const fun2 = function(arg1) {
 }
 
 ```
-### `true`
+#### `true`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function (arg1) {}
@@ -60,7 +67,7 @@ Index: true
 
 ```
 </details>
-### `false`
+#### `false`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function(arg1) {}

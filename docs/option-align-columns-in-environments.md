@@ -11,6 +11,10 @@ sidebar_label: Align Columns In Environments
 
 **Default**: `["tabular","matrix","bmatrix","pmatrix"]`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

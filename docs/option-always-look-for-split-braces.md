@@ -11,6 +11,10 @@ sidebar_label: Always Look For Split Braces
 
 **Default**: `true`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

@@ -11,6 +11,10 @@ sidebar_label: Indent Level
 
 **Default**: `0`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

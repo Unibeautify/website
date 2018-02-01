@@ -11,6 +11,10 @@ sidebar_label: Ignore
 
 **Default**: `["E24"]`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

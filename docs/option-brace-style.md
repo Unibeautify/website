@@ -13,13 +13,21 @@ sidebar_label: Brace Style (✅)
 
 **Allowed values**: `"collapse"` or `"collapse-preserve-inline"` or `"expand"` or `"end-expand"` or `"none"`
 
-**Supported Languages**: [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
+## Support
+**Languages**: [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
 
-**Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
+**Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
-# Examples
-## HTML
-### Original Code
+| Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
+| --- | --- |
+| [HTML](/docs/language-html.html) | &#9989; |
+| [Handlebars](/docs/language-handlebars.html) | &#9989; |
+| [Liquid](/docs/language-liquid.html) | &#9989; |
+| [Mustache](/docs/language-mustache.html) | &#9989; |
+| [XML](/docs/language-xml.html) | &#9989; |
+## Examples
+### HTML
+#### Original Code
 ```HTML
 <div>
 <h1>Unformatted</h1>
@@ -31,7 +39,7 @@ sidebar_label: Brace Style (✅)
 </div>
 
 ```
-### `"collapse"`
+#### `"collapse"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -89,7 +97,7 @@ Index: collapse
 
 ```
 </details>
-### `"collapse-preserve-inline"`
+#### `"collapse-preserve-inline"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -147,7 +155,7 @@ Index: collapse-preserve-inline
 
 ```
 </details>
-### `"expand"`
+#### `"expand"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -205,7 +213,7 @@ Index: expand
 
 ```
 </details>
-### `"end-expand"`
+#### `"end-expand"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -263,7 +271,7 @@ Index: end-expand
 
 ```
 </details>
-### `"none"`
+#### `"none"`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>

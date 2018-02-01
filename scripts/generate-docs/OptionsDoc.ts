@@ -2,9 +2,7 @@ import GlobalUnibeautify, {
   Option,
   Language,
   Beautifier,
-  BeautifierOptionName,
-  Unibeautify,
-  BeautifyData
+  BeautifierOptionName
 } from "unibeautify";
 import * as path from "path";
 import * as fs from "fs";
@@ -15,7 +13,8 @@ import {
   optionKeys,
   linkForLanguage,
   linkForBeautifier,
-  unibeautifyWithBeautifier
+  unibeautifyWithBeautifier,
+  emojis
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -86,17 +85,14 @@ export default class OptionsDoc extends Doc {
       );
     }
 
+    builder.header("Support", 2);
     builder.append(
-      `**Supported Languages**: ${this.languages
-        .map(linkForLanguage)
-        .join(", ")}\n`
+      `**Languages**: ${this.languages.map(linkForLanguage).join(", ")}\n`
     );
     builder.append(
-      `**Supported Beautifiers**: ${this.beautifiers
-        .map(linkForBeautifier)
-        .join(", ")}\n`
+      `**Beautifiers**: ${this.beautifiers.map(linkForBeautifier).join(", ")}\n`
     );
-
+    this.appendTable(builder);
     return this.appendExamples(builder).then(() => builder.build());
   }
 
@@ -107,6 +103,34 @@ export default class OptionsDoc extends Doc {
       }
     }
     return this.option.type;
+  }
+
+  private appendTable(builder: MarkdownBuilder): MarkdownBuilder {
+    /*
+    | Language | Beautifier 1 | Beautifier 2 |
+    | --- | --- | --- |
+    | Arrow Parens | &#10060; | &#9989; |
+    */
+
+    builder.append(
+      "| Language |" +
+        this.beautifiers
+          .map(beautifier => ` ${linkForBeautifier(beautifier)} |`)
+          .join("")
+    );
+    builder.append("| --- |" + this.beautifiers.map(b => ` --- |`).join(""));
+    this.languages.forEach(language => {
+      let row = `| ${linkForLanguage(language)} |`;
+      this.beautifiers.forEach(beautifier => {
+        const isSupported: boolean =
+          optionKeys(beautifier, language).indexOf(this.optionKey) !== -1;
+        const symbol = isSupported ? emojis.checkmark : emojis.x;
+        row += ` ${symbol} |`;
+      });
+      builder.append(row);
+    });
+
+    return builder;
   }
 
   private appendExamples(builder: MarkdownBuilder): Promise<MarkdownBuilder> {
@@ -151,17 +175,17 @@ export default class OptionsDoc extends Doc {
             return;
           }
 
-          builder.header("Examples", 1);
+          builder.header("Examples", 2);
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
             if (example) {
-              builder.header(language.name, 2);
-              builder.header("Original Code", 3);
+              builder.header(language.name, 3);
+              builder.header("Original Code", 4);
               builder.code(example, language.name);
               let beautifiedExamplesAreDifferent: boolean = false;
               let lastCode: string | null = null;
               this.exampleValues.forEach((optionValue, valueIndex) => {
-                builder.header(`\`${JSON.stringify(optionValue)}\``, 3);
+                builder.header(`\`${JSON.stringify(optionValue)}\``, 4);
                 const beautifiedExample: string | null =
                   beautified[valueIndex][languageIndex];
                 if (beautifiedExample) {
@@ -185,7 +209,9 @@ export default class OptionsDoc extends Doc {
                   );
                   const beautifier = this.beautifierForLanguage(language);
                   if (beautifier) {
-                    builder.append(`Using ${linkForBeautifier(beautifier)} beautifier:`);
+                    builder.append(
+                      `Using ${linkForBeautifier(beautifier)} beautifier:`
+                    );
                   }
                   builder.code(beautifiedExample, language.name);
                   builder.details("Configuration", builder => {

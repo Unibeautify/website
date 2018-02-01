@@ -11,13 +11,21 @@ sidebar_label: Unformatted (✅)
 
 **Default**: `["a","abbr","area","audio","b","bdi","bdo","br","button","canvas","cite","code","data","datalist","del","dfn","em","embed","i","iframe","img","input","ins","kbd","keygen","label","map","mark","math","meter","noscript","object","output","progress","q","ruby","s","samp","select","small","span","strong","sub","sup","svg","template","textarea","time","u","var","video","wbr","text","acronym","address","big","dt","ins","small","strike","tt","pre","h1","h2","h3","h4","h5","h6"]`
 
-**Supported Languages**: [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
+## Support
+**Languages**: [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
 
-**Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
+**Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
-# Examples
-## HTML
-### Original Code
+| Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
+| --- | --- |
+| [HTML](/docs/language-html.html) | &#9989; |
+| [Handlebars](/docs/language-handlebars.html) | &#9989; |
+| [Liquid](/docs/language-liquid.html) | &#9989; |
+| [Mustache](/docs/language-mustache.html) | &#9989; |
+| [XML](/docs/language-xml.html) | &#9989; |
+## Examples
+### HTML
+#### Original Code
 ```HTML
 <div>
 <h1>Unformatted</h1>
@@ -29,7 +37,7 @@ sidebar_label: Unformatted (✅)
 </div>
 
 ```
-### `["a","abbr","area","audio","b","bdi","bdo","br","button","canvas","cite","code","data","datalist","del","dfn","em","embed","i","iframe","img","input","ins","kbd","keygen","label","map","mark","math","meter","noscript","object","output","progress","q","ruby","s","samp","select","small","span","strong","sub","sup","svg","template","textarea","time","u","var","video","wbr","text","acronym","address","big","dt","ins","small","strike","tt","pre","h1","h2","h3","h4","h5","h6"]`
+#### `["a","abbr","area","audio","b","bdi","bdo","br","button","canvas","cite","code","data","datalist","del","dfn","em","embed","i","iframe","img","input","ins","kbd","keygen","label","map","mark","math","meter","noscript","object","output","progress","q","ruby","s","samp","select","small","span","strong","sub","sup","svg","template","textarea","time","u","var","video","wbr","text","acronym","address","big","dt","ins","small","strike","tt","pre","h1","h2","h3","h4","h5","h6"]`
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>

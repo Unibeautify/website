@@ -11,6 +11,11 @@ sidebar_label: Selector Separator Newline (✅)
 
 **Default**: `false`
 
-**Supported Languages**: [CSS](/docs/language-css.html)
+## Support
+**Languages**: [CSS](/docs/language-css.html)
 
-**Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
+**Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
+
+| Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
+| --- | --- |
+| [CSS](/docs/language-css.html) | &#9989; |

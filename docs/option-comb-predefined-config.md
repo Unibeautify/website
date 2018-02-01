@@ -13,6 +13,10 @@ sidebar_label: comb predefined config
 
 **Allowed values**: `"csscomb"` or `"yandex"` or `"zen"`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

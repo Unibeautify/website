@@ -11,6 +11,15 @@ sidebar_label: Extra Liners (✅)
 
 **Default**: `["head","body","/html"]`
 
-**Supported Languages**: [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
+## Support
+**Languages**: [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
 
-**Supported Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
+**Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
+
+| Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
+| --- | --- |
+| [HTML](/docs/language-html.html) | &#9989; |
+| [Handlebars](/docs/language-handlebars.html) | &#9989; |
+| [Liquid](/docs/language-liquid.html) | &#9989; |
+| [Mustache](/docs/language-mustache.html) | &#9989; |
+| [XML](/docs/language-xml.html) | &#9989; |

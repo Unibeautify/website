@@ -13,19 +13,30 @@ sidebar_label: Arrow Parens (✅)
 
 **Allowed values**: `"always"` or `"as-needed"`
 
-**Supported Languages**: [CSS](/docs/language-css.html), [GraphQL](/docs/language-graphql.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [SCSS](/docs/language-scss.html), [TypeScript](/docs/language-typescript.html)
+## Support
+**Languages**: [CSS](/docs/language-css.html), [GraphQL](/docs/language-graphql.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [SCSS](/docs/language-scss.html), [TypeScript](/docs/language-typescript.html)
 
-**Supported Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
+**Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
-# Examples
-## JavaScript
-### Original Code
+| Language | [Prettier](/docs/beautifier-prettier.html) |
+| --- | --- |
+| [CSS](/docs/language-css.html) | &#9989; |
+| [GraphQL](/docs/language-graphql.html) | &#9989; |
+| [JSON](/docs/language-json.html) | &#9989; |
+| [JSX](/docs/language-jsx.html) | &#9989; |
+| [JavaScript](/docs/language-javascript.html) | &#9989; |
+| [Less](/docs/language-less.html) | &#9989; |
+| [SCSS](/docs/language-scss.html) | &#9989; |
+| [TypeScript](/docs/language-typescript.html) | &#9989; |
+## Examples
+### JavaScript
+#### Original Code
 ```JavaScript
 a => {};
 (a) => {};
 (a, b) => {};
 ```
-### `"always"`
+#### `"always"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 (a) => {};
@@ -61,7 +72,7 @@ Index: always
 
 ```
 </details>
-### `"as-needed"`
+#### `"as-needed"`
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 a => {};

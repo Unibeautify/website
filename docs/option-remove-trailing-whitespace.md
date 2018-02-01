@@ -11,6 +11,10 @@ sidebar_label: Remove Trailing Whitespace
 
 **Default**: `false`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

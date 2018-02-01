@@ -11,6 +11,10 @@ sidebar_label: Max Line Length
 
 **Default**: `79`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

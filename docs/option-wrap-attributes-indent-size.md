@@ -11,6 +11,10 @@ sidebar_label: Wrap Attributes Indent Size
 
 **Default**: `4`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |
