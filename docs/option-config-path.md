@@ -1,6 +1,7 @@
 ---
 id: option-config-path
 title: Config Path
+sidebar_label: Config Path
 ---
 **Key**: `configPath`
 
@@ -10,6 +11,10 @@ title: Config Path
 
 **Default**: `""`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

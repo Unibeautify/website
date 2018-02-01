@@ -1,6 +1,7 @@
 ---
 id: option-max-line-length
 title: Max Line Length
+sidebar_label: Max Line Length
 ---
 **Key**: `max_line_length`
 
@@ -10,6 +11,10 @@ title: Max Line Length
 
 **Default**: `79`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

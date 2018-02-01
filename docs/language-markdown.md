@@ -1,6 +1,7 @@
 ---
 id: language-markdown
 title: Markdown
+sidebar_label: Markdown
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

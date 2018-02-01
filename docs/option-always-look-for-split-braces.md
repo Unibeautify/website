@@ -1,6 +1,7 @@
 ---
 id: option-always-look-for-split-braces
 title: Always Look For Split Braces
+sidebar_label: Always Look For Split Braces
 ---
 **Key**: `always_look_for_split_braces`
 
@@ -10,6 +11,10 @@ title: Always Look For Split Braces
 
 **Default**: `true`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

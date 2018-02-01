@@ -1,0 +1,8 @@
+<div>
+<h1>Unformatted</h1>
+<div>
+<span>Un<span>formatted</span></span>
+</div>
+<span><span>For</span><span>mat</span><span>ted</span></span>
+<div><div>For</div><div>mat</div><div>ted</div></div>
+</div>

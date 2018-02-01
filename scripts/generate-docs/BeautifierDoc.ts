@@ -6,7 +6,7 @@ import Unibeautify, {
 } from "unibeautify";
 import * as _ from "lodash";
 
-import { optionKeys, linkForLanguage, linkForOption } from "./utils";
+import { optionKeys, linkForLanguage, linkForOption, emojis } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 
@@ -69,10 +69,6 @@ export default class BeautifierDoc extends Doc {
         this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join("")
     );
     builder.append("| --- |" + this.languages.map(lang => ` --- |`).join(""));
-    const symbols = {
-      x: "&#10060;",
-      checkmark: "&#9989;",
-    };
     Object.keys(this.allOptions).forEach(optionKey => {
       const option = this.allOptions[optionKey];
       let row = `| ${linkForOption(optionKey, option)} |`;
@@ -83,7 +79,7 @@ export default class BeautifierDoc extends Doc {
           `${language.name}.${optionKey}`,
           false
         );
-        const symbol = languageSupportsOption ? symbols.checkmark : symbols.x;
+        const symbol = languageSupportsOption ? emojis.checkmark : emojis.x;
         row += ` ${symbol} |`;
         if (languageSupportsOption) {
           isSupported = true;

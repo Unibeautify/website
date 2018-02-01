@@ -1,6 +1,7 @@
 ---
 id: option-align-columns-in-environments
 title: Align Columns In Environments
+sidebar_label: Align Columns In Environments
 ---
 **Key**: `align_columns_in_environments`
 
@@ -10,6 +11,10 @@ title: Align Columns In Environments
 
 **Default**: `["tabular","matrix","bmatrix","pmatrix"]`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

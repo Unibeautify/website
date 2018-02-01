@@ -5,7 +5,13 @@ import Unibeautify, {
 } from "unibeautify";
 import * as _ from "lodash";
 
-import { slugify, optionKeys, linkForBeautifier, linkForOption } from "./utils";
+import {
+  slugify,
+  optionKeys,
+  linkForBeautifier,
+  linkForOption,
+  emojis,
+} from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 import OptionsListDoc from "./OptionsListDoc";
@@ -54,10 +60,6 @@ export default class LanguageDoc extends Doc {
     builder.append(
       "| --- |" + this.beautifiers.map(beautifier => ` --- |`).join("")
     );
-    const symbols = {
-      x: "&#10060;",
-      checkmark: "&#9989;",
-    };
     Object.keys(this.allOptions).forEach(optionKey => {
       const option = this.allOptions[optionKey];
       let row = `| ${linkForOption(optionKey, option)} |`;
@@ -68,7 +70,7 @@ export default class LanguageDoc extends Doc {
           `${beautifier.name}.${optionKey}`,
           false
         );
-        const symbol = beautifierSupportsOption ? symbols.checkmark : symbols.x;
+        const symbol = beautifierSupportsOption ? emojis.checkmark : emojis.x;
         row += ` ${symbol} |`;
         if (beautifierSupportsOption) {
           isSupported = true;

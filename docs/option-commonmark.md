@@ -1,6 +1,7 @@
 ---
 id: option-commonmark
 title: Commonmark
+sidebar_label: Commonmark
 ---
 **Key**: `commonmark`
 
@@ -10,6 +11,10 @@ title: Commonmark
 
 **Default**: `false`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

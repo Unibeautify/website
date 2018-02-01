@@ -1,6 +1,7 @@
 ---
 id: option-yaml
 title: Yaml
+sidebar_label: Yaml
 ---
 **Key**: `yaml`
 
@@ -10,6 +11,10 @@ title: Yaml
 
 **Default**: `true`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

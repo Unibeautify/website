@@ -1,0 +1,27 @@
+foo.bar().baz();
+
+foo
+.bar()
+
+.baz();
+
+foo
+.bar()
+// some comment here
+.baz();
+
+this.$("#fileName").val().addClass("disabled")
+    .prop("disabled", true)
+
+$('#items')
+  .find('.selected')
+    .highlight()
+    .end()
+  .find('.open')
+    .updateCount();
+
+function doStuff() {
+if (oParameters.State !== ui().s2p().mm().supplinvoice().manage().util().Constants().blabla()) {
+return false;
+}
+}

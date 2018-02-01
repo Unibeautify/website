@@ -1,6 +1,7 @@
 ---
 id: option-max-preserve-newlines
 title: Max Preserve Newlines
+sidebar_label: ✅ Max Preserve Newlines
 ---
 **Key**: `max_preserve_newlines`
 
@@ -10,6 +11,315 @@ title: Max Preserve Newlines
 
 **Default**: `10`
 
-**Supported Languages**: 
+## Support
+**Languages**: [EJS](/docs/language-ejs.html), [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
 
-**Supported Beautifiers**: 
+**Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
+
+| Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
+| --- | --- |
+| [EJS](/docs/language-ejs.html) | &#9989; |
+| [HTML](/docs/language-html.html) | &#9989; |
+| [Handlebars](/docs/language-handlebars.html) | &#9989; |
+| [JSON](/docs/language-json.html) | &#9989; |
+| [JSX](/docs/language-jsx.html) | &#9989; |
+| [JavaScript](/docs/language-javascript.html) | &#9989; |
+| [Liquid](/docs/language-liquid.html) | &#9989; |
+| [Mustache](/docs/language-mustache.html) | &#9989; |
+| [XML](/docs/language-xml.html) | &#9989; |
+## Examples
+### HTML
+#### 🚧 Original Code
+```HTML
+<html>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+console.log("hello world");
+
+
+</script>
+
+
+</body>
+
+
+
+</html>
+```
+#### 🔧 `0`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```HTML
+<html>
+
+<body>
+  <script>
+    console.log("hello world");
+  </script>
+</body>
+
+</html>
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "HTML": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "max_preserve_newlines": 0
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 0
+===================================================================
+--- 0	Original
++++ 0	Beautified
+@@ -1,42 +1,9 @@
+ <html>␊
+ ␊
+-␊
+-␊
+ <body>␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-<script>␊
+-␊
+-␊
+-console.log("hello␣world");␊
+-␊
+-␊
+-</script>␊
+-␊
+-␊
++␣␣<script>␊
++␣␣␣␣console.log("hello␣world");␊
++␣␣</script>␊
+ </body>␊
+ ␊
+-␊
+-␊
+ </html>
+\ No newline at end of file
+
+```
+</details>
+#### 🔧 `10`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```HTML
+<html>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+  <script>
+    console.log("hello world");
+  </script>
+
+
+</body>
+
+
+
+</html>
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "HTML": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "max_preserve_newlines": 10
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 10
+===================================================================
+--- 10	Original
++++ 10	Beautified
+@@ -12,30 +12,13 @@
+ ␊
+ ␊
+ ␊
+ ␊
++␣␣<script>␊
++␣␣␣␣console.log("hello␣world");␊
++␣␣</script>␊
+ ␊
+ ␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-␊
+-<script>␊
+-␊
+-␊
+-console.log("hello␣world");␊
+-␊
+-␊
+-</script>␊
+-␊
+-␊
+ </body>␊
+ ␊
+ ␊
+ ␊
+
+```
+</details>
+#### 🔧 `20`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```HTML
+<html>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    console.log("hello world");
+  </script>
+
+
+</body>
+
+
+
+</html>
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "HTML": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "max_preserve_newlines": 20
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 20
+===================================================================
+--- 20	Original
++++ 20	Beautified
+@@ -22,20 +22,13 @@
+ ␊
+ ␊
+ ␊
+ ␊
++␣␣<script>␊
++␣␣␣␣console.log("hello␣world");␊
++␣␣</script>␊
+ ␊
+ ␊
+-␊
+-<script>␊
+-␊
+-␊
+-console.log("hello␣world");␊
+-␊
+-␊
+-</script>␊
+-␊
+-␊
+ </body>␊
+ ␊
+ ␊
+ ␊
+
+```
+</details>

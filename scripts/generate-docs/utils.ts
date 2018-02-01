@@ -1,4 +1,4 @@
-import Unibeautify, {
+import {
   Option,
   OptionValues,
   Language,
@@ -7,10 +7,15 @@ import Unibeautify, {
   BeautifyOptionTransformSingleFunction,
   BeautifyOptionTransform,
   BeautifierLanguageOptionComplex,
+  LanguageOptionValues,
+  Unibeautify,
+  newUnibeautify,
 } from "unibeautify";
 import * as _ from "lodash";
 
+import beautifiers from "./beautifiers";
 import MarkdownBuilder from "./MarkdownBuilder";
+import { beautifier } from "@unibeautify/beautifier-js-beautify";
 
 export function optionKeyToTitle(key: string): string {
   return key
@@ -94,28 +99,11 @@ export function linkForOption(key: string, option: Option): string {
   return MarkdownBuilder.createDocLink(title, docId);
 }
 
-export function beautify(
-  language: Language,
-  options: OptionValues,
-  text: string
-): Promise<string> {
-  const languageName = language.name;
-  // console.log(`Before: ${languageName}`);
-  // console.log(options);
-  // console.log(text);
-  return Unibeautify.beautify({
-    languageName,
-    options: {
-      _: options,
-      [languageName]: options,
-    },
-    text,
-  });
-  // .then(beautified => {
-  //   console.log(`After: ${languageName}`);
-  //   console.log(languageName);
-  //   console.log(options);
-  //   console.log(beautified);
-  //   return beautified;
-  // });
+export function unibeautifyWithBeautifier(beautifier: Beautifier): Unibeautify {
+  return newUnibeautify().loadBeautifier(beautifier);
 }
+
+export const emojis = {
+  x: "&#10060;",
+  checkmark: "&#9989;",
+};

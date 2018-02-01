@@ -1,6 +1,7 @@
 ---
 id: option-unescape-strings
 title: Unescape Strings
+sidebar_label: ✅ Unescape Strings
 ---
 **Key**: `unescape_strings`
 
@@ -10,6 +11,14 @@ title: Unescape Strings
 
 **Default**: `false`
 
-**Supported Languages**: 
+## Support
+**Languages**: [EJS](/docs/language-ejs.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html)
 
-**Supported Beautifiers**: 
+**Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
+
+| Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
+| --- | --- |
+| [EJS](/docs/language-ejs.html) | &#9989; |
+| [JSON](/docs/language-json.html) | &#9989; |
+| [JSX](/docs/language-jsx.html) | &#9989; |
+| [JavaScript](/docs/language-javascript.html) | &#9989; |

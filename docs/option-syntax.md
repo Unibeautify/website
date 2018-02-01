@@ -1,6 +1,7 @@
 ---
 id: option-syntax
 title: Syntax
+sidebar_label: Syntax
 ---
 **Key**: `syntax`
 
@@ -12,6 +13,10 @@ title: Syntax
 
 **Allowed values**: `"html"` or `"concise"`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

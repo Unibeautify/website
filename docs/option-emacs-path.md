@@ -1,6 +1,7 @@
 ---
 id: option-emacs-path
 title: Emacs Path
+sidebar_label: Emacs Path
 ---
 **Key**: `emacs_path`
 
@@ -10,6 +11,10 @@ title: Emacs Path
 
 **Default**: `""`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

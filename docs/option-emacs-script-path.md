@@ -1,6 +1,7 @@
 ---
 id: option-emacs-script-path
 title: Emacs Script Path
+sidebar_label: Emacs Script Path
 ---
 **Key**: `emacs_script_path`
 
@@ -10,6 +11,10 @@ title: Emacs Script Path
 
 **Default**: `""`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

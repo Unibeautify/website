@@ -1,6 +1,7 @@
 ---
 id: option-sort-imports
 title: Sort Imports
+sidebar_label: Sort Imports
 ---
 **Key**: `sort_imports`
 
@@ -10,6 +11,10 @@ title: Sort Imports
 
 **Default**: `false`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

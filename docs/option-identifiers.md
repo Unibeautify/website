@@ -1,6 +1,7 @@
 ---
 id: option-identifiers
 title: Identifiers
+sidebar_label: Identifiers
 ---
 **Key**: `identifiers`
 
@@ -12,6 +13,10 @@ title: Identifiers
 
 **Allowed values**: `"unchanged"` or `"lower"` or `"upper"` or `"capitalize"`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

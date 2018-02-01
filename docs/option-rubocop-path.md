@@ -1,6 +1,7 @@
 ---
 id: option-rubocop-path
 title: Rubocop Path
+sidebar_label: Rubocop Path
 ---
 **Key**: `rubocop_path`
 
@@ -10,6 +11,10 @@ title: Rubocop Path
 
 **Default**: `""`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

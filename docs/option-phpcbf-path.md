@@ -1,6 +1,7 @@
 ---
 id: option-phpcbf-path
 title: PHPCBF Path
+sidebar_label: PHPCBF Path
 ---
 **Key**: `phpcbf_path`
 
@@ -10,6 +11,10 @@ title: PHPCBF Path
 
 **Default**: `""`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

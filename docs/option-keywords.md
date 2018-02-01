@@ -1,6 +1,7 @@
 ---
 id: option-keywords
 title: Keywords
+sidebar_label: Keywords
 ---
 **Key**: `keywords`
 
@@ -12,6 +13,10 @@ title: Keywords
 
 **Allowed values**: `"unchanged"` or `"lower"` or `"upper"` or `"capitalize"`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

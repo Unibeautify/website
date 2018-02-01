@@ -1,6 +1,7 @@
 ---
 id: option-gfm
 title: Gfm
+sidebar_label: Gfm
 ---
 **Key**: `gfm`
 
@@ -10,6 +11,10 @@ title: Gfm
 
 **Default**: `true`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

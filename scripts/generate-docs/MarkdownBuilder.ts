@@ -22,8 +22,18 @@ export default class MarkdownBuilder {
     return this.append(text);
   }
 
+  public json(json: object) {
+    return this.code(JSON.stringify(json, null, 2), "json");
+  }
+
   public code(code: string, language: string = "") {
     return this.append("```" + language + "\n" + code + "\n```");
+  }
+
+  public details(summary: string, details: (builder: MarkdownBuilder) => void) {
+    this.append(`<details><summary>${summary}</summary>`);
+    details(this);
+    this.append(`</details>`);
   }
 
   public append(text: string): MarkdownBuilder {

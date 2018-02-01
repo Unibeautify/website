@@ -1,6 +1,7 @@
 ---
 id: option-fixers
 title: Fixers
+sidebar_label: Fixers
 ---
 **Key**: `fixers`
 
@@ -10,6 +11,10 @@ title: Fixers
 
 **Default**: `""`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

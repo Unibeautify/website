@@ -1,6 +1,7 @@
 ---
 id: option-indent-preamble
 title: Indent Preamble
+sidebar_label: Indent Preamble
 ---
 **Key**: `indent_preamble`
 
@@ -10,6 +11,10 @@ title: Indent Preamble
 
 **Default**: `false`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

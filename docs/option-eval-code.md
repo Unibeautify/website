@@ -1,6 +1,7 @@
 ---
 id: option-eval-code
 title: Eval Code
+sidebar_label: Eval Code
 ---
 **Key**: `eval_code`
 
@@ -10,6 +11,10 @@ title: Eval Code
 
 **Default**: `false`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

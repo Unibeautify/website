@@ -1,6 +1,7 @@
 ---
 id: option-rustfmt-path
 title: Rustfmt Path
+sidebar_label: Rustfmt Path
 ---
 **Key**: `rustfmt_path`
 
@@ -10,6 +11,10 @@ title: Rustfmt Path
 
 **Default**: `""`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

@@ -1,6 +1,7 @@
 ---
 id: option-phpcbf-standard
 title: PHPCBF Standard
+sidebar_label: PHPCBF Standard
 ---
 **Key**: `standard`
 
@@ -10,6 +11,10 @@ title: PHPCBF Standard
 
 **Default**: `""`
 
-**Supported Languages**: 
+## Support
+**Languages**: 
 
-**Supported Beautifiers**: 
+**Beautifiers**: 
+
+| Language |
+| --- |

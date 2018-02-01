@@ -1,4 +1,4 @@
-import Unibeautify, {
+import GlobalUnibeautify, {
   Option,
   Language,
   Beautifier,
@@ -6,13 +6,15 @@ import Unibeautify, {
 } from "unibeautify";
 import * as path from "path";
 import * as fs from "fs";
+import * as JsDiff from "diff";
 
 import {
   optionKeyToTitle,
   optionKeys,
   linkForLanguage,
   linkForBeautifier,
-  beautify,
+  unibeautifyWithBeautifier,
+  emojis,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -27,7 +29,7 @@ export default class OptionsDoc extends Doc {
     allBeautifiers: Beautifier[]
   ) {
     super();
-    this.languages = Unibeautify.supportedLanguages.filter(
+    this.languages = GlobalUnibeautify.supportedLanguages.filter(
       language =>
         allBeautifiers.findIndex(
           beautifier =>
@@ -58,6 +60,14 @@ export default class OptionsDoc extends Doc {
     return title;
   }
 
+  protected get sidebarLabel(): string {
+    return `${this.hasBeautifier ? "✅" : "🚨"} ${this.title}`;
+  }
+
+  private get hasBeautifier(): boolean {
+    return this.beautifiers.length > 0;
+  }
+
   protected get body(): Promise<string> {
     const builder = new MarkdownBuilder();
     builder.append(`**Key**: \`${this.optionKey}\`\n`);
@@ -72,17 +82,14 @@ export default class OptionsDoc extends Doc {
       );
     }
 
+    builder.header("Support", 2);
     builder.append(
-      `**Supported Languages**: ${this.languages
-        .map(linkForLanguage)
-        .join(", ")}\n`
+      `**Languages**: ${this.languages.map(linkForLanguage).join(", ")}\n`
     );
     builder.append(
-      `**Supported Beautifiers**: ${this.beautifiers
-        .map(linkForBeautifier)
-        .join(", ")}\n`
+      `**Beautifiers**: ${this.beautifiers.map(linkForBeautifier).join(", ")}\n`
     );
-
+    this.appendTable(builder);
     return this.appendExamples(builder).then(() => builder.build());
   }
 
@@ -93,6 +100,38 @@ export default class OptionsDoc extends Doc {
       }
     }
     return this.option.type;
+  }
+
+  private appendTable(builder: MarkdownBuilder): MarkdownBuilder {
+    /*
+    | Language | Beautifier 1 | Beautifier 2 |
+    | --- | --- | --- |
+    | Arrow Parens | &#10060; | &#9989; |
+    */
+
+    if (!(this.beautifiers.length && this.languages.length)) {
+      return builder;
+    }
+
+    builder.append(
+      "| Language |" +
+        this.beautifiers
+          .map(beautifier => ` ${linkForBeautifier(beautifier)} |`)
+          .join("")
+    );
+    builder.append("| --- |" + this.beautifiers.map(b => ` --- |`).join(""));
+    this.languages.forEach(language => {
+      let row = `| ${linkForLanguage(language)} |`;
+      this.beautifiers.forEach(beautifier => {
+        const isSupported: boolean =
+          optionKeys(beautifier, language).indexOf(this.optionKey) !== -1;
+        const symbol = isSupported ? emojis.checkmark : emojis.x;
+        row += ` ${symbol} |`;
+      });
+      builder.append(row);
+    });
+
+    return builder;
   }
 
   private appendExamples(builder: MarkdownBuilder): Promise<MarkdownBuilder> {
@@ -120,12 +159,12 @@ export default class OptionsDoc extends Doc {
               languages.map(language => {
                 const example = examplesForLanguages[language.name];
                 if (example) {
-                  const options = {
-                    indent_size: 2,
-                    indent_char: " ",
-                    [this.optionKey]: optionValue,
-                  };
-                  return beautify(language, options, example);
+                  return this.beautify(language, optionValue, example).catch(
+                    error => {
+                      console.error(error);
+                      return null;
+                    }
+                  );
                 } else {
                   return null;
                 }
@@ -136,39 +175,69 @@ export default class OptionsDoc extends Doc {
           if (Object.keys(examplesForLanguages).length === 0) {
             return;
           }
-          builder.header("Examples", 1);
-          // builder.code(
-          //   JSON.stringify(
-          //     {
-          //       examplesForLanguages,
-          //       beautified,
-          //       keys: Object.keys(examplesForLanguages)
-          //     },
-          //     null,
-          //     2
-          //   ),
-          //   "json"
-          // );
 
-          builder.header("Original Code", 2);
+          builder.header("Examples", 2);
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
             if (example) {
+              // builder.details(`**${language.name}**`, builder => {
               builder.header(language.name, 3);
+              builder.header("🚧 Original Code", 4);
               builder.code(example, language.name);
-            }
-          });
+              let beautifiedExamplesAreDifferent: boolean = false;
+              let lastCode: string | null = null;
+              this.exampleValues.forEach((optionValue, valueIndex) => {
+                builder.header(`🔧 \`${JSON.stringify(optionValue)}\``, 4);
+                const beautifiedExample: string | null =
+                  beautified[valueIndex][languageIndex];
+                if (beautifiedExample) {
+                  if (lastCode === null) {
+                    lastCode = beautifiedExample;
+                  } else {
+                    if (lastCode !== beautifiedExample) {
+                      lastCode = beautifiedExample;
+                      beautifiedExamplesAreDifferent = true;
+                    }
+                  }
 
-          this.exampleValues.forEach((optionValue, valueIndex) => {
-            builder.header(`\`${JSON.stringify(optionValue)}\``, 2);
-            this.languages.forEach((language, languageIndex) => {
-              const beautifiedExample: string | null =
-                beautified[valueIndex][languageIndex];
-              if (beautifiedExample) {
-                builder.header(language.name, 3);
-                builder.code(beautifiedExample, language.name);
+                  const diff = diffExample(
+                    example,
+                    beautifiedExample,
+                    optionValue
+                  );
+                  const configForExample = this.createOptionsWithLanguageAndValue(
+                    language,
+                    optionValue
+                  );
+                  const beautifier = this.beautifierForLanguage(language);
+                  if (beautifier) {
+                    builder.append(
+                      `Using ${linkForBeautifier(beautifier)} beautifier:`
+                    );
+                  }
+                  builder.code(beautifiedExample, language.name);
+                  builder.details("Configuration", builder => {
+                    builder.append(
+                      `A \`.unibeautify.json\` file would look like the following:`
+                    );
+                    builder.json(configForExample);
+                  });
+                  builder.details("Difference from original", builder => {
+                    builder.code(diff, "diff");
+                  });
+                }
+              });
+
+              if (
+                this.exampleValues.length > 1 &&
+                !beautifiedExamplesAreDifferent
+              ) {
+                console.log(
+                  `${this.optionKey} - ${language.name} - BAD EXAMPLES`
+                );
               }
-            });
+              // });
+            }
           });
         });
       })
@@ -180,10 +249,20 @@ export default class OptionsDoc extends Doc {
     if (option.enum) {
       return option.enum;
     }
-    if (this.option.type === "boolean") {
-      return [true, false];
+    switch (option.type) {
+      case "boolean":
+        return [true, false];
+      case "integer": {
+        const min = option.minimum || 0;
+        const max = option.maximum || option.default * 2;
+        return [option.default, min, max].sort();
+      }
+      case "array": {
+        return [[], option.default];
+      }
+      default:
+        return [option.default];
     }
-    return [this.option.default];
   }
 
   private readExample(language: Language): string | undefined {
@@ -205,4 +284,90 @@ export default class OptionsDoc extends Doc {
   private get examplesPath(): string {
     return path.resolve(__dirname, "../../examples");
   }
+
+  private createOptionsWithLanguageAndValue(
+    language: Language,
+    optionValue: any
+  ) {
+    return {
+      [language.name]: this.createOptionValues(optionValue),
+    };
+  }
+
+  private createOptionValues(optionValue: any) {
+    return {
+      indent_size: 2,
+      indent_char: " ",
+      [this.optionKey]: optionValue,
+    };
+  }
+
+  private beautify(
+    language: Language,
+    optionValue: any,
+    text: string
+  ): Promise<string> {
+    const configForExample = this.createOptionsWithLanguageAndValue(
+      language,
+      optionValue
+    );
+    const beautifier = this.beautifierForLanguage(language);
+    if (beautifier) {
+      const unibeautify = unibeautifyWithBeautifier(beautifier);
+      return unibeautify.beautify({
+        languageName: language.name,
+        options: configForExample,
+        text,
+      });
+    }
+    return Promise.reject(
+      new Error(`No beautifier supports option ${this.optionKey}.`)
+    );
+  }
+
+  private beautifierForLanguage(language: Language): Beautifier | undefined {
+    return this.beautifiers.filter(
+      beautifier =>
+        optionKeys(beautifier, language).indexOf(this.optionKey) !== -1
+    )[0];
+  }
+}
+
+function diffExample(
+  originalText: string,
+  beautifiedText: string,
+  fileName: string
+) {
+  const oldHeader = "Original";
+  const newHeader = "Beautified";
+  return JsDiff.createPatch(
+    fileName,
+    showInvisibles(originalText),
+    showInvisibles(beautifiedText),
+    oldHeader,
+    newHeader
+  );
+}
+
+const invisibles = {
+  carriageReturn: "␍", // \r
+  newLine: "␊", // \n
+  tab: "↹", // \t
+  whitespace: "␣",
+};
+function showInvisibles(text: string): string {
+  return (
+    text
+      // Replace Newlines
+      .replace(
+        /(?:\r\n)/g,
+        `${invisibles.carriageReturn}${invisibles.newLine}\n`
+      )
+      .replace(/(?:\r)/g, `${invisibles.carriageReturn}\n`)
+      .replace(/(?:\n)/g, `${invisibles.newLine}\n`)
+      // Replace tabs
+      .replace(/(?:\t)/g, "↹")
+      // Replace spaces
+      .replace(/(?:\ )/g, "␣")
+  );
 }

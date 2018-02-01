@@ -1,0 +1,99 @@
+---
+id: option-comma-first
+title: Comma First
+sidebar_label: ✅ Comma First
+---
+**Key**: `comma_first`
+
+**Description**: Put commas at the beginning of new line instead of end
+
+**Type**: `boolean`
+
+**Default**: `false`
+
+## Support
+**Languages**: [EJS](/docs/language-ejs.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html)
+
+**Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
+
+| Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
+| --- | --- |
+| [EJS](/docs/language-ejs.html) | &#9989; |
+| [JSON](/docs/language-json.html) | &#9989; |
+| [JSX](/docs/language-jsx.html) | &#9989; |
+| [JavaScript](/docs/language-javascript.html) | &#9989; |
+## Examples
+### JavaScript
+#### 🚧 Original Code
+```JavaScript
+const a = "a", b = "b", c = "c";
+
+```
+#### 🔧 `true`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```JavaScript
+const a = "a"
+  , b = "b"
+  , c = "c";
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JavaScript": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "comma_first": true
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: true
+===================================================================
+--- true	Original
++++ true	Beautified
+@@ -1,1 +1,3 @@
+-const␣a␣=␣"a",␣b␣=␣"b",␣c␣=␣"c";␊
++const␣a␣=␣"a"␊
++␣␣,␣b␣=␣"b"␊
++␣␣,␣c␣=␣"c";
+\ No newline at end of file
+
+```
+</details>
+#### 🔧 `false`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```JavaScript
+const a = "a",
+  b = "b",
+  c = "c";
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JavaScript": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "comma_first": false
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: false
+===================================================================
+--- false	Original
++++ false	Beautified
+@@ -1,1 +1,3 @@
+-const␣a␣=␣"a",␣b␣=␣"b",␣c␣=␣"c";␊
++const␣a␣=␣"a",␊
++␣␣b␣=␣"b",␊
++␣␣c␣=␣"c";
+\ No newline at end of file
+
+```
+</details>
