@@ -9,7 +9,7 @@ import {
   BeautifierLanguageOptionComplex,
   LanguageOptionValues,
   Unibeautify,
-  newUnibeautify
+  newUnibeautify,
 } from "unibeautify";
 import * as _ from "lodash";
 
@@ -105,5 +105,5 @@ export function unibeautifyWithBeautifier(beautifier: Beautifier): Unibeautify {
 
 export const emojis = {
   x: "&#10060;",
-  checkmark: "&#9989;"
+  checkmark: "&#9989;",
 };

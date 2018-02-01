@@ -2,7 +2,7 @@ import GlobalUnibeautify, {
   Option,
   Language,
   Beautifier,
-  BeautifierOptionName
+  BeautifierOptionName,
 } from "unibeautify";
 import * as path from "path";
 import * as fs from "fs";
@@ -14,7 +14,7 @@ import {
   linkForLanguage,
   linkForBeautifier,
   unibeautifyWithBeautifier,
-  emojis
+  emojis,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -143,7 +143,7 @@ export default class OptionsDoc extends Doc {
             example
               ? {
                   ...final,
-                  [languages[index].name]: example
+                  [languages[index].name]: example,
                 }
               : final,
           {} as { [languageName: string]: string | undefined }
@@ -290,7 +290,7 @@ export default class OptionsDoc extends Doc {
     optionValue: any
   ) {
     return {
-      [language.name]: this.createOptionValues(optionValue)
+      [language.name]: this.createOptionValues(optionValue),
     };
   }
 
@@ -298,7 +298,7 @@ export default class OptionsDoc extends Doc {
     return {
       indent_size: 2,
       indent_char: " ",
-      [this.optionKey]: optionValue
+      [this.optionKey]: optionValue,
     };
   }
 
@@ -317,7 +317,7 @@ export default class OptionsDoc extends Doc {
       return unibeautify.beautify({
         languageName: language.name,
         options: configForExample,
-        text
+        text,
       });
     }
     return Promise.reject(
@@ -353,7 +353,7 @@ const invisibles = {
   carriageReturn: "␍", // \r
   newLine: "␊", // \n
   tab: "↹", // \t
-  whitespace: "␣"
+  whitespace: "␣",
 };
 function showInvisibles(text: string): string {
   return (

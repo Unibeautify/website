@@ -38,7 +38,7 @@ export default abstract class Doc {
           `id: ${id}`,
           `title: ${title}`,
           `sidebar_label: ${sidebarLabel}`,
-          "---"
+          "---",
         ].join("\n")
     );
   }
