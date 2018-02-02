@@ -5,6 +5,7 @@
       "options"
     ],
     "Beautifiers": [
+      "beautifier-eslint",
       "beautifier-js-beautify",
       "beautifier-prettier",
       "beautifier-pretty-diff"

@@ -1,7 +1,7 @@
 ---
 id: option-remove-trailing-whitespace
 title: Remove Trailing Whitespace
-sidebar_label: 🚨 Remove Trailing Whitespace
+sidebar_label: ✅ Remove Trailing Whitespace
 ---
 **Key**: `remove_trailing_whitespace`
 
@@ -12,6 +12,11 @@ sidebar_label: 🚨 Remove Trailing Whitespace
 **Default**: `false`
 
 ## Support
-**Languages**: 
+**Languages**: [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html)
 
-**Beautifiers**: 
+**Beautifiers**: [ESLint](/docs/beautifier-eslint.html)
+
+| Language | [ESLint](/docs/beautifier-eslint.html) |
+| --- | --- |
+| [JSX](/docs/language-jsx.html) | &#9989; |
+| [JavaScript](/docs/language-javascript.html) | &#9989; |
