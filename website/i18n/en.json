@@ -68,6 +68,8 @@
     "TypeScript": "TypeScript",
     "language-visualforce": "Visualforce",
     "Visualforce": "Visualforce",
+    "language-vue": "Vue",
+    "Vue": "Vue",
     "language-xml": "XML",
     "XML": "XML",
     "language-xtemplate": "XTemplate",

@@ -14,7 +14,7 @@ sidebar_label: ✅ Arrow Parens
 **Allowed values**: `"always"` or `"as-needed"`
 
 ## Support
-**Languages**: [CSS](/docs/language-css.html), [GraphQL](/docs/language-graphql.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [SCSS](/docs/language-scss.html), [TypeScript](/docs/language-typescript.html)
+**Languages**: [CSS](/docs/language-css.html), [GraphQL](/docs/language-graphql.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [SCSS](/docs/language-scss.html), [TypeScript](/docs/language-typescript.html), [Vue](/docs/language-vue.html)
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
@@ -28,6 +28,7 @@ sidebar_label: ✅ Arrow Parens
 | [Less](/docs/language-less.html) | &#9989; |
 | [SCSS](/docs/language-scss.html) | &#9989; |
 | [TypeScript](/docs/language-typescript.html) | &#9989; |
+| [Vue](/docs/language-vue.html) | &#9989; |
 ## Examples
 ### JavaScript
 #### 🚧 Original Code

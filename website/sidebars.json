@@ -37,6 +37,7 @@
       "language-twig",
       "language-typescript",
       "language-visualforce",
+      "language-vue",
       "language-xml",
       "language-xtemplate"
     ]
