@@ -7,7 +7,6 @@ import Unibeautify, {
 import { ensureFile, writeFile } from "fs-extra";
 import * as path from "path";
 import * as _ from "lodash";
-
 import Doc from "./Doc";
 import LanguageDoc from "./LanguageDoc";
 import BeautifierDoc from "./BeautifierDoc";
@@ -15,36 +14,30 @@ import OptionsListDoc from "./OptionsListDoc";
 import OptionsDoc from "./OptionsDoc";
 import { slugify, optionKeyToTitle } from "./utils";
 import beautifiers from "./beautifiers";
-
 const docsPath = "docs";
-
 Unibeautify.loadBeautifiers(beautifiers);
 const supportedLanguages = Unibeautify.supportedLanguages;
 const languageDocs = docsForLanguages(supportedLanguages);
 const beautifierDocs = docsForBeautifiers(beautifiers);
 const optionsDocs = docsForOptions();
 const optionsListDoc = new OptionsListDoc();
-
 languageDocs.map(writeDoc);
 beautifierDocs.map(writeDoc);
 optionsDocs.map(writeDoc);
 writeDoc(optionsListDoc);
 updateSidebars(languageDocs, beautifierDocs);
-
 function docsForLanguages(languages: Language[]): LanguageDoc[] {
   return languages.map(
     language =>
       new LanguageDoc(language, Unibeautify.getBeautifiersForLanguage(language))
   );
 }
-
 function docsForBeautifiers(beautifiers: Beautifier[]): BeautifierDoc[] {
   return beautifiers.map(
     beautifier =>
       new BeautifierDoc(beautifier, languagesForBeautifier(beautifier))
   );
 }
-
 function docsForOptions(): OptionsDoc[] {
   const optionRegistry: OptionsRegistry = (Unibeautify as any).options;
   return Object.keys(optionRegistry)
@@ -54,14 +47,12 @@ function docsForOptions(): OptionsDoc[] {
         new OptionsDoc(option, key as BeautifierOptionName, beautifiers)
     );
 }
-
 function languagesForBeautifier(beautifier: Beautifier): Language[] {
   const languages = Unibeautify.getLoadedLanguages();
   return languages.filter(
     lang => Object.keys(beautifier.options).indexOf(lang.name) !== -1
   );
 }
-
 async function writeDoc(doc: Doc) {
   const filePath: string = path.resolve(
     __dirname,
@@ -73,7 +64,6 @@ async function writeDoc(doc: Doc) {
   const contents = await doc.contents;
   return await writeFile(filePath, contents);
 }
-
 async function updateSidebars(
   languages: LanguageDoc[],
   beautifiers: BeautifierDoc[]
@@ -94,8 +84,9 @@ async function updateSidebars(
   };
   return await writeFile(sidebarsPath, JSON.stringify(newSidebars, null, 2));
 }
-
-function optionsSidebar(): { [sectionKey: string]: string[] } {
+function optionsSidebar(): {
+  [sectionKey: string]: string[];
+} {
   const optionRegistry = (Unibeautify as any).options;
   const optionKeys = Object.keys(optionRegistry);
   const optionIds = optionKeys.map(key => {
