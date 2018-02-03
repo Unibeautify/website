@@ -25,17 +25,6 @@ export default class BeautifierDoc extends Doc {
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
-    // this.languages.forEach(lang => {   builder.header(lang.name, 2);
-    // builder.append(     "For more information click " +
-    // this.linkForLanguage(lang)   );   builder.header("Options", 3);
-    // builder.append("Lots of options!");   const options = this.options(lang);
-    // Object.keys(options).forEach(key => {     const option = options[key];
-    // let title: string = option.title || "";     if (!title) {       title =
-    // key.split('_').map(_.capitalize).join(' ');     }     builder.header(title,
-    // 3);     builder.append(`**Key**: \`${key}\`\n`);
-    // builder.append(`**Type**: \`${option.type}\`\n`);
-    // builder.append(`**Default**: \`${JSON.stringify(option.default)}\`\n`);
-    // builder.append(`**Description**: ${option.description}\n`);   }); });
     this.appendOptionsTable(builder);
     return builder.build();
   }
