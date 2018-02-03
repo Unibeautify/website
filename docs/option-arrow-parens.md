@@ -16,19 +16,19 @@ sidebar_label: ✅ Arrow Parens
 ## Support
 **Languages**: [CSS](/docs/language-css.html), [GraphQL](/docs/language-graphql.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [SCSS](/docs/language-scss.html), [TypeScript](/docs/language-typescript.html), [Vue](/docs/language-vue.html)
 
-**Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
+**Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [ESLint](/docs/beautifier-eslint.html)
 
-| Language | [Prettier](/docs/beautifier-prettier.html) |
-| --- | --- |
-| [CSS](/docs/language-css.html) | &#9989; |
-| [GraphQL](/docs/language-graphql.html) | &#9989; |
-| [JSON](/docs/language-json.html) | &#9989; |
-| [JSX](/docs/language-jsx.html) | &#9989; |
-| [JavaScript](/docs/language-javascript.html) | &#9989; |
-| [Less](/docs/language-less.html) | &#9989; |
-| [SCSS](/docs/language-scss.html) | &#9989; |
-| [TypeScript](/docs/language-typescript.html) | &#9989; |
-| [Vue](/docs/language-vue.html) | &#9989; |
+| Language | [Prettier](/docs/beautifier-prettier.html) | [ESLint](/docs/beautifier-eslint.html) |
+| --- | --- | --- |
+| [CSS](/docs/language-css.html) | &#9989; | &#10060; |
+| [GraphQL](/docs/language-graphql.html) | &#9989; | &#10060; |
+| [JSON](/docs/language-json.html) | &#9989; | &#10060; |
+| [JSX](/docs/language-jsx.html) | &#9989; | &#9989; |
+| [JavaScript](/docs/language-javascript.html) | &#9989; | &#9989; |
+| [Less](/docs/language-less.html) | &#9989; | &#10060; |
+| [SCSS](/docs/language-scss.html) | &#9989; | &#10060; |
+| [TypeScript](/docs/language-typescript.html) | &#9989; | &#10060; |
+| [Vue](/docs/language-vue.html) | &#9989; | &#10060; |
 ## Examples
 ### JavaScript
 #### 🚧 Original Code

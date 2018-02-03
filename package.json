@@ -33,6 +33,7 @@
     "@unibeautify/beautifier-js-beautify": "^0.2.0",
     "@unibeautify/beautifier-prettier": "^0.5.0",
     "@unibeautify/beautifier-prettydiff": "^0.3.0",
+    "@unibeautify/beautifier-eslint": "^0.0.1",
     "diff": "^3.4.0",
     "fs-extra": "^5.0.0",
     "lodash": "^4.17.4",
