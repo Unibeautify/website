@@ -12,7 +12,7 @@ sidebar_label: ✅ End With Semicolon
 **Default**: `false`
 
 ## Support
-**Languages**: [CSS](/docs/language-css.html), [GraphQL](/docs/language-graphql.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [SCSS](/docs/language-scss.html), [TypeScript](/docs/language-typescript.html)
+**Languages**: [CSS](/docs/language-css.html), [GraphQL](/docs/language-graphql.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [SCSS](/docs/language-scss.html), [TypeScript](/docs/language-typescript.html), [Vue](/docs/language-vue.html)
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [ESLint](/docs/beautifier-eslint.html)
 
@@ -26,6 +26,7 @@ sidebar_label: ✅ End With Semicolon
 | [Less](/docs/language-less.html) | &#9989; | &#10060; |
 | [SCSS](/docs/language-scss.html) | &#9989; | &#10060; |
 | [TypeScript](/docs/language-typescript.html) | &#9989; | &#10060; |
+| [Vue](/docs/language-vue.html) | &#9989; | &#10060; |
 ## Examples
 ### JavaScript
 #### 🚧 Original Code

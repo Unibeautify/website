@@ -22,3 +22,81 @@ sidebar_label: ✅ Unindent Chained Methods
 | [JSON](/docs/language-json.html) | &#9989; |
 | [JSX](/docs/language-jsx.html) | &#9989; |
 | [JavaScript](/docs/language-javascript.html) | &#9989; |
+## Examples
+### JavaScript
+#### 🚧 Original Code
+```JavaScript
+foo
+.bar
+.baz()
+
+```
+#### 🔧 `true`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```JavaScript
+foo
+.bar
+.baz()
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JavaScript": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "unindent_chained_methods": true
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: true
+===================================================================
+--- true	Original
++++ true	Beautified
+@@ -1,3 +1,3 @@
+ foo␊
+ .bar␊
+-.baz()␊
++.baz()
+\ No newline at end of file
+
+```
+</details>
+#### 🔧 `false`
+Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
+```JavaScript
+foo
+  .bar
+  .baz()
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JavaScript": {
+    "indent_size": 2,
+    "indent_char": " ",
+    "unindent_chained_methods": false
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: false
+===================================================================
+--- false	Original
++++ false	Beautified
+@@ -1,3 +1,3 @@
+ foo␊
+-.bar␊
+-.baz()␊
++␣␣.bar␊
++␣␣.baz()
+\ No newline at end of file
+
+```
+</details>

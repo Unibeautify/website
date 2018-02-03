@@ -3,17 +3,20 @@ _:
   indent_char: " "
   indent_size: 2
 TypeScript:
+  beautifiers: ["Pretty Diff", "Prettier"]
+  align_assignments: false
+  arrow_parens: "as-needed"
+  break_chained_methods: true
+  end_with_comma: true
+  end_with_semicolon: true
   indent_char: " "
   indent_size: 2
-  end_with_comma: true
-  wrap_line_length: 80
-  end_with_semicolon: true
-  arrow_parens: "as-needed"
-  convert_quotes: "double"
+  jsx_brackets: false
+  multiline_ternary: true
   object_curly_spacing: true
-# JavaScript:
-#   indent_char: " "
-#   indent_size: 2
+  quotes: "double"
+  space_after_anon_function: false
+  wrap_line_length: 80
 CSS:
   indent_char: " "
   indent_size: 2

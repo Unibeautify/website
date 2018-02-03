@@ -12,7 +12,7 @@ sidebar_label: ✅ Indent Size
 **Default**: `4`
 
 ## Support
-**Languages**: [C#](/docs/language-csharp.html), [CSS](/docs/language-css.html), [CSV](/docs/language-csv.html), [ColdFusion](/docs/language-coldfusion.html), [EJS](/docs/language-ejs.html), [GraphQL](/docs/language-graphql.html), [HTML](/docs/language-html.html), [HTML+ERB](/docs/language-html%2Berb.html), [Handlebars](/docs/language-handlebars.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [Java](/docs/language-java.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [Riot](/docs/language-riot.html), [SCSS](/docs/language-scss.html), [SVG](/docs/language-svg.html), [Sass](/docs/language-sass.html), [Spacebars](/docs/language-spacebars.html), [Swig](/docs/language-swig.html), [Titanium Style Sheets](/docs/language-titanium-style-sheets.html), [Twig](/docs/language-twig.html), [TypeScript](/docs/language-typescript.html), [Visualforce](/docs/language-visualforce.html), [XML](/docs/language-xml.html), [XTemplate](/docs/language-xtemplate.html)
+**Languages**: [C#](/docs/language-csharp.html), [CSS](/docs/language-css.html), [CSV](/docs/language-csv.html), [ColdFusion](/docs/language-coldfusion.html), [EJS](/docs/language-ejs.html), [GraphQL](/docs/language-graphql.html), [HTML](/docs/language-html.html), [HTML+ERB](/docs/language-html%2Berb.html), [Handlebars](/docs/language-handlebars.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [Java](/docs/language-java.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [Riot](/docs/language-riot.html), [SCSS](/docs/language-scss.html), [SVG](/docs/language-svg.html), [Sass](/docs/language-sass.html), [Spacebars](/docs/language-spacebars.html), [Swig](/docs/language-swig.html), [Titanium Style Sheets](/docs/language-titanium-style-sheets.html), [Twig](/docs/language-twig.html), [TypeScript](/docs/language-typescript.html), [Visualforce](/docs/language-visualforce.html), [Vue](/docs/language-vue.html), [XML](/docs/language-xml.html), [XTemplate](/docs/language-xtemplate.html)
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
@@ -44,6 +44,7 @@ sidebar_label: ✅ Indent Size
 | [Twig](/docs/language-twig.html) | &#10060; | &#10060; | &#9989; |
 | [TypeScript](/docs/language-typescript.html) | &#9989; | &#10060; | &#9989; |
 | [Visualforce](/docs/language-visualforce.html) | &#10060; | &#10060; | &#9989; |
+| [Vue](/docs/language-vue.html) | &#9989; | &#10060; | &#10060; |
 | [XML](/docs/language-xml.html) | &#10060; | &#9989; | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#10060; | &#9989; |
 ## Examples
@@ -585,6 +586,247 @@ Index: 8
  }␊
  ␊
  foo.bar.baz();␊
+
+```
+</details>
+### Vue
+#### 🚧 Original Code
+```Vue
+<template >
+  <h1 >{{greeting}}     world</h1 >
+  <script>kikoo ( ) </script>
+</template >
+
+<script>
+module  .  exports  =
+{data : function () {return {
+	greeting: "Hello"
+}}
+}
+</script>
+
+<style   scoped >
+p { font-size : 2em ; text-align : center ; }
+  </style >  
+```
+#### 🔧 `0`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
+```Vue
+<template >
+  <h1 >{{greeting}}     world</h1 >
+  <script>kikoo ( ) </script>
+</template >
+
+<script>
+module.exports = {
+data: function() {
+return {
+greeting: "Hello"
+};
+}
+};
+</script>
+
+<style   scoped >
+p {
+font-size: 2em;
+text-align: center;
+}
+</style >
+
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "Vue": {
+    "indent_size": 0,
+    "indent_char": " "
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 0
+===================================================================
+--- 0	Original
++++ 0	Beautified
+@@ -3,14 +3,19 @@
+ ␣␣<script>kikoo␣(␣)␣</script>␊
+ </template␣>␊
+ ␊
+ <script>␊
+-module␣␣.␣␣exports␣␣=␊
+-{data␣:␣function␣()␣{return␣{␊
+-↹greeting:␣"Hello"␊
+-}}␊
++module.exports␣=␣{␊
++data:␣function()␣{␊
++return␣{␊
++greeting:␣"Hello"␊
++};␊
+ }␊
+\ No newline at end of file
++};␊
+ </script>␊
+ ␊
+ <style␣␣␣scoped␣>␊
+-p␣{␣font-size␣:␣2em␣;␣text-align␣:␣center␣;␣}␊
+-␣␣</style␣>␣␣
++p␣{␊
++font-size:␣2em;␊
++text-align:␣center;␊
++}␊
++</style␣>␊
+
+```
+</details>
+#### 🔧 `4`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
+```Vue
+<template >
+  <h1 >{{greeting}}     world</h1 >
+  <script>kikoo ( ) </script>
+</template >
+
+<script>
+module.exports = {
+    data: function() {
+        return {
+            greeting: "Hello"
+        };
+    }
+};
+</script>
+
+<style   scoped >
+p {
+    font-size: 2em;
+    text-align: center;
+}
+</style >
+
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "Vue": {
+    "indent_size": 4,
+    "indent_char": " "
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 4
+===================================================================
+--- 4	Original
++++ 4	Beautified
+@@ -3,14 +3,19 @@
+ ␣␣<script>kikoo␣(␣)␣</script>␊
+ </template␣>␊
+ ␊
+ <script>␊
+-module␣␣.␣␣exports␣␣=␊
+-{data␣:␣function␣()␣{return␣{␊
+-↹greeting:␣"Hello"␊
+-}}␊
+-}␊
++module.exports␣=␣{␊
++␣␣␣␣data:␣function()␣{␊
++␣␣␣␣␣␣␣␣return␣{␊
++␣␣␣␣␣␣␣␣␣␣␣␣greeting:␣"Hello"␊
++␣␣␣␣␣␣␣␣};␊
+\ No newline at end of file
++␣␣␣␣}␊
++};␊
+ </script>␊
+ ␊
+ <style␣␣␣scoped␣>␊
+-p␣{␣font-size␣:␣2em␣;␣text-align␣:␣center␣;␣}␊
+-␣␣</style␣>␣␣
++p␣{␊
++␣␣␣␣font-size:␣2em;␊
++␣␣␣␣text-align:␣center;␊
++}␊
++</style␣>␊
+
+```
+</details>
+#### 🔧 `8`
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
+```Vue
+<template >
+  <h1 >{{greeting}}     world</h1 >
+  <script>kikoo ( ) </script>
+</template >
+
+<script>
+module.exports = {
+        data: function() {
+                return {
+                        greeting: "Hello"
+                };
+        }
+};
+</script>
+
+<style   scoped >
+p {
+        font-size: 2em;
+        text-align: center;
+}
+</style >
+
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "Vue": {
+    "indent_size": 8,
+    "indent_char": " "
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 8
+===================================================================
+--- 8	Original
++++ 8	Beautified
+@@ -3,14 +3,19 @@
+ ␣␣<script>kikoo␣(␣)␣</script>␊
+ </template␣>␊
+ ␊
+ <script>␊
+-module␣␣.␣␣exports␣␣=␊
+-{data␣:␣function␣()␣{return␣{␊
+-↹greeting:␣"Hello"␊
+-}}␊
+-}␊
++module.exports␣=␣{␊
++␣␣␣␣␣␣␣␣data:␣function()␣{␊
++␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣return␣{␊
++␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣greeting:␣"Hello"␊
++␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣};␊
+\ No newline at end of file
++␣␣␣␣␣␣␣␣}␊
++};␊
+ </script>␊
+ ␊
+ <style␣␣␣scoped␣>␊
+-p␣{␣font-size␣:␣2em␣;␣text-align␣:␣center␣;␣}␊
+-␣␣</style␣>␣␣
++p␣{␊
++␣␣␣␣␣␣␣␣font-size:␣2em;␊
++␣␣␣␣␣␣␣␣text-align:␣center;␊
++}␊
++</style␣>␊
 
 ```
 </details>
