@@ -81,7 +81,7 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('getting-started.html', this.props.language)}>Get Started</Button>
-            <Button href="https://github.com/Unibeautify/">GitHub</Button>
+            <Button href={docUrl('options.html', this.props.language)}>Options</Button>
           </PromoSection>
         </div>
       </SplashContainer>

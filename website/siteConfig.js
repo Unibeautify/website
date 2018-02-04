@@ -5,58 +5,62 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+const GITHUB_URL = "https://github.com/unibeautify/unibeautify";
+
 /* List of projects/orgs using your project for the users page */
 const users = [
   {
-    caption: 'User 1',
-    image: 'img/unibeautify.png',
-    infoLink: '#',
-    pinned: true,
-  },
+    caption: "User 1",
+    image: "img/unibeautify.png",
+    infoLink: "#",
+    pinned: true
+  }
 ];
 
 const siteConfig = {
-  title: 'Unibeautify' /* title for your website */,
-  tagline: 'The one beautifier to rule them all',
-  url: 'https://unibeautify.github.io/' /* your website url */,
-  baseUrl: '/' /* base url for your project */,
-  projectName: 'unibeautify.github.io',
-  editUrl: 'https://github.com/unibeautify/unibeautify.github.io/edit/develop/docs/',
+  title: "Unibeautify" /* title for your website */,
+  tagline: "The one beautifier to rule them all",
+  githubUrl: GITHUB_URL,
+  url: "https://unibeautify.github.io/" /* your website url */,
+  baseUrl: "/" /* base url for your project */,
+  projectName: "unibeautify.github.io",
+  editUrl:
+    "https://github.com/unibeautify/unibeautify.github.io/edit/develop/docs/",
   gaTrackingId: "UA-112681254-1",
   headerLinks: [
-    {doc: 'config-file', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    { doc: "about", label: "About" },
+    { doc: "getting-started", label: "Usage" },
+    { page: "help", label: "Help" },
+    { blog: true, label: "Blog" },
+    { search: true },
+    { href: GITHUB_URL, label: "GitHub" }
   ],
   users,
   /* path to images for header/footer */
-  headerIcon: 'img/unibeautify-white.png',
-  footerIcon: 'img/unibeautify.png',
-  favicon: 'img/favicon.png',
+  headerIcon: "img/unibeautify-white.png",
+  footerIcon: "img/unibeautify.png",
+  favicon: "img/favicon.png",
   /* colors for website */
   colors: {
-    primaryColor: '#24292e',
-    secondaryColor: '#205C3B',
+    primaryColor: "#24292e",
+    secondaryColor: "#205C3B"
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
-    'Copyright &copy; ' +
-    new Date().getFullYear() +
-    ' Glavin Wiechert',
-  organizationName: 'unibeautify', // or set an env variable ORGANIZATION_NAME
-  projectName: 'unibeautify.github.io', // or set an env variable PROJECT_NAME
+    "Copyright &copy; " + new Date().getFullYear() + " Glavin Wiechert",
+  organizationName: "unibeautify", // or set an env variable ORGANIZATION_NAME
+  projectName: "unibeautify.github.io", // or set an env variable PROJECT_NAME
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'default',
+    theme: "default"
   },
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: ["https://buttons.github.io/buttons.js"],
   // You may provide arbitrary config keys to be used as needed by your template.
-  repoUrl: 'https://github.com/unibeautify/unibeautify',
+  repoUrl: GITHUB_URL,
   algolia: {
     apiKey: "f48f239ca346334bd0b61308ab16f524",
     indexName: "unibeautify"
-  },
+  }
 };
 
 module.exports = siteConfig;
