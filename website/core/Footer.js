@@ -53,9 +53,20 @@ class Footer extends React.Component {
               Stack Overflow
             </a>
             <a href="#">Project Chat</a>
-            <a href="https://twitter.com/unibeautify" target="_blank">
-              Twitter
+            <a href="https://twitter.com/Unibeautify" target="_blank">
+              @Unibeautify on Twitter
             </a>
+            <object
+              type="image/svg+xml"
+              data="https://img.shields.io/twitter/follow/unibeautify.svg?label=Follow+Unibeautify&style=social"
+            >
+              <a href="https://twitter.com/intent/follow?screen_name=unibeautify">
+                <img
+                  alt="Follow Unibeautify on Twitter"
+                  src="https://img.shields.io/twitter/follow/unibeautify.png?label=Follow+Unibeautify&style=social"
+                />
+              </a>
+            </object>
           </div>
           <div>
             <h5>More</h5>

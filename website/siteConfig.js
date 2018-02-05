@@ -1,27 +1,27 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+// Docs: https://docusaurus.io/docs/en/site-config.html
 
+const parseYaml = require("js-yaml").safeLoad;
+const path = require("path");
+const fs = require("fs");
+
+const PACKAGE = require("../package");
 const GITHUB_URL = "https://github.com/unibeautify/unibeautify";
 
-/* List of projects/orgs using your project for the users page */
-const users = [
-  {
-    caption: "User 1",
-    image: "img/unibeautify.png",
-    infoLink: "#",
-    pinned: true
-  }
-];
+function loadYaml(fsPath) {
+  return parseYaml(fs.readFileSync(path.join(__dirname, fsPath), "utf8"));
+}
+
+const users = loadYaml("./data/users.yml");
+// const editors = loadYaml("./data/editors.yml");
+// const supportedLanguages = loadYaml("./data/languages.yml");
 
 const siteConfig = {
   title: "Unibeautify" /* title for your website */,
-  tagline: "The one beautifier to rule them all",
+  tagline: "Universal Code Beautifier",
   githubUrl: GITHUB_URL,
-  url: "https://unibeautify.github.io/" /* your website url */,
+  url: "https://unibeautify.com/" /* your website url */,
+  cname: "unibeautify.com",
+  noIndex: false,
   baseUrl: "/" /* base url for your project */,
   projectName: "unibeautify.github.io",
   editUrl:

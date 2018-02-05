@@ -1,6 +1,7 @@
 ---
 id: ci
-title: Coding Style Service
+title: "Unibeautify CI: Universal Coding Style Service"
+sidebar_label: "Unibeautify CI"
 ---
 
-Coming soon.
+[Click here to sign for Unibeautify CI private beta](https://goo.gl/jmM4QN).

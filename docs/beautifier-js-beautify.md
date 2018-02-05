@@ -3,6 +3,129 @@ id: beautifier-js-beautify
 title: JS-Beautify
 sidebar_label: JS-Beautify
 ---
+## Usage
+Below are example configuration files for each of the supported languages.
+<details><summary>CSS</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "CSS": {
+    "beautifiers": [
+      "JS-Beautify"
+    ]
+  }
+}
+```
+</details>
+<details><summary>EJS</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "EJS": {
+    "beautifiers": [
+      "JS-Beautify"
+    ]
+  }
+}
+```
+</details>
+<details><summary>HTML</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "HTML": {
+    "beautifiers": [
+      "JS-Beautify"
+    ]
+  }
+}
+```
+</details>
+<details><summary>Handlebars</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "Handlebars": {
+    "beautifiers": [
+      "JS-Beautify"
+    ]
+  }
+}
+```
+</details>
+<details><summary>JSON</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "JSON": {
+    "beautifiers": [
+      "JS-Beautify"
+    ]
+  }
+}
+```
+</details>
+<details><summary>JSX</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "JSX": {
+    "beautifiers": [
+      "JS-Beautify"
+    ]
+  }
+}
+```
+</details>
+<details><summary>JavaScript</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "JavaScript": {
+    "beautifiers": [
+      "JS-Beautify"
+    ]
+  }
+}
+```
+</details>
+<details><summary>Liquid</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "Liquid": {
+    "beautifiers": [
+      "JS-Beautify"
+    ]
+  }
+}
+```
+</details>
+<details><summary>Mustache</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "Mustache": {
+    "beautifiers": [
+      "JS-Beautify"
+    ]
+  }
+}
+```
+</details>
+<details><summary>XML</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "XML": {
+    "beautifiers": [
+      "JS-Beautify"
+    ]
+  }
+}
+```
+</details>
+## Options
 | Option | [CSS](/docs/language-css.html) | [EJS](/docs/language-ejs.html) | [HTML](/docs/language-html.html) | [Handlebars](/docs/language-handlebars.html) | [JSON](/docs/language-json.html) | [JSX](/docs/language-jsx.html) | [JavaScript](/docs/language-javascript.html) | [Liquid](/docs/language-liquid.html) | [Mustache](/docs/language-mustache.html) | [XML](/docs/language-xml.html) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [Brace Style](/docs/option-brace-style.html) | &#10060; | &#9989; | &#9989; | &#9989; | &#9989; | &#9989; | &#9989; | &#9989; | &#9989; | &#9989; |

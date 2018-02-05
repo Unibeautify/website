@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "The one beautifier to rule them all",
+    "tagline": "Universal Code Beautifier",
     "about": "What is Unibeautify",
     "beautifier-eslint": "ESLint",
     "ESLint": "ESLint",
@@ -13,7 +13,8 @@
     "Prettier": "Prettier",
     "beautifier-pretty-diff": "Pretty Diff",
     "Pretty Diff": "Pretty Diff",
-    "ci": "Coding Style Service",
+    "ci": "Unibeautify CI: Universal Coding Style Service",
+    "Unibeautify CI": "Unibeautify CI",
     "cli": "CLI",
     "config-file": "Configuration File",
     "editors": "Editors",

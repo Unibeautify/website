@@ -25,9 +25,29 @@ export default class BeautifierDoc extends Doc {
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
+    this.appendUsageSection(builder);
+    builder.header("Options", 2);
     this.appendOptionsTable(builder);
     return builder.build();
   }
+
+  private appendUsageSection(builder: MarkdownBuilder): MarkdownBuilder {
+    builder.header("Usage", 2);
+    builder.append("Below are example configuration files for each of the supported languages.");
+    const beautifierName: string = this.beautifier.name;
+    this.languages.forEach(lang => {
+      builder.details(lang.name, (builder) => {
+        builder.append(`A \`.unibeautifyrc.json\` file would look like the following:`);
+        builder.code(JSON.stringify({
+          [lang.name]: {
+            beautifiers: [beautifierName],
+          },
+        }, null, 2), "json");
+      })
+    });
+    return builder;
+  }
+
   private appendOptionsTable(builder: MarkdownBuilder): MarkdownBuilder {
     /*
     | Option | CSS | Lang 2 |
@@ -37,7 +57,7 @@ export default class BeautifierDoc extends Doc {
     // console.log(JSON.stringify(this.allOptions, null, 2));
     builder.append(
       "| Option |" +
-        this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join("")
+      this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join("")
     );
     builder.append("| --- |" + this.languages.map(lang => ` --- |`).join(""));
     Object.keys(this.allOptions).forEach(optionKey => {
@@ -66,11 +86,11 @@ export default class BeautifierDoc extends Doc {
     return this.languages
       .map(language => ({ language, options: this.options(language) }))
       .reduce(
-        (lookup, { language, options }) => ({
-          ...lookup,
-          [language.name]: options,
-        }),
-        {}
+      (lookup, { language, options }) => ({
+        ...lookup,
+        [language.name]: options,
+      }),
+      {}
       );
   }
   private options(language: Language): OptionsRegistry {

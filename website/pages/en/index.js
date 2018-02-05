@@ -82,6 +82,7 @@ class HomeSplash extends React.Component {
           <PromoSection>
             <Button href={docUrl('getting-started.html', this.props.language)}>Get Started</Button>
             <Button href={docUrl('options.html', this.props.language)}>Options</Button>
+            <Button href={docUrl('ci.html', this.props.language)}>Unibeautify CI</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -94,7 +95,7 @@ const Block = props => (
     padding={['bottom', 'top']}
     id={props.id}
     background={props.background}>
-    <GridBlock align="center" contents={props.children} layout={props.layout} />
+    <GridBlock align={props.align || "center"} contents={props.children} layout={props.layout} />
   </Container>
 );
 
@@ -102,16 +103,16 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'This is the content of my feature',
-        image: imgUrl('unibeautify.png'),
+        content: `Personalize with [40+ configuration options](${docUrl('options.html', props.language)})!`,
+        image: imgUrl('wrench.svg'),
         imageAlign: 'top',
-        title: 'Feature One',
+        title: 'Unparalleled Customization',
       },
       {
-        content: 'The content of my second feature',
-        image: imgUrl('unibeautify.png'),
+        content: 'The one beautifier to rule them all!',
+        image: imgUrl('connectdevelop.svg'),
         imageAlign: 'top',
-        title: 'Feature Two',
+        title: 'Multiple beautifiers in one',
       },
     ]}
   </Block>
@@ -121,19 +122,19 @@ const FeatureCallout = props => (
   <div
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
+    <h2>Detailed Documentation</h2>
+    <MarkdownBlock>Up-to-date documentation is automatically generated from beautifier, language, and option metadata.</MarkdownBlock>
   </div>
 );
 
-const LearnHow = props => (
-  <Block background="light">
+const UnibeautifyCi = props => (
+  <Block background="light" align="left">
     {[
       {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('unibeautify.png'),
+        content: 'Automatically beautify your code on each push with [Unibeautify CI](https://goo.gl/jmM4QN)!',
+        image: imgUrl('unibeautify-ci-demo.png'),
         imageAlign: 'right',
-        title: 'Learn How',
+        title: 'GitHub Automation',
       },
     ]}
   </Block>
@@ -177,6 +178,8 @@ const Showcase = props => {
       return (
         <a href={user.infoLink} key={i}>
           <img src={user.image} title={user.caption} />
+          <br />
+          {user.caption}
         </a>
       );
     });
@@ -203,11 +206,13 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          <Features />
+          <Features language={language} />
           <FeatureCallout />
-          <LearnHow />
+          <UnibeautifyCi />
+          {/*
           <TryOut />
           <Description />
+          */}
           <Showcase language={language} />
         </div>
       </div>
