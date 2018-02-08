@@ -16,6 +16,7 @@ sidebar_label: ✅ Newline Before Tags
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
 | --- | --- |
 | [HTML](/docs/language-html.html) | &#9989; |
@@ -23,9 +24,10 @@ sidebar_label: ✅ Newline Before Tags
 | [Liquid](/docs/language-liquid.html) | &#9989; |
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
+</details>
 ## Examples
 ### HTML
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```HTML
 <html>
 <head></head>
@@ -36,7 +38,8 @@ sidebar_label: ✅ Newline Before Tags
 </body>
 </html>
 ```
-#### 🔧 `[]`
+</details>
+<details><summary><strong>🔧 `[]`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <html>
@@ -69,7 +72,8 @@ Index:
 
 ```
 </details>
-#### 🔧 `["head","body","/html"]`
+</details>
+<details><summary><strong>🔧 `["head","body","/html"]`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <html>
@@ -121,4 +125,5 @@ Index: head,body,/html
 \ No newline at end of file
 
 ```
+</details>
 </details>

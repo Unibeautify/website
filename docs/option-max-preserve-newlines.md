@@ -16,6 +16,7 @@ sidebar_label: ✅ Max Preserve Newlines
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
 | --- | --- |
 | [EJS](/docs/language-ejs.html) | &#9989; |
@@ -27,9 +28,10 @@ sidebar_label: ✅ Max Preserve Newlines
 | [Liquid](/docs/language-liquid.html) | &#9989; |
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
+</details>
 ## Examples
 ### HTML
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```HTML
 <html>
 
@@ -74,7 +76,8 @@ console.log("hello world");
 
 </html>
 ```
-#### 🔧 `0`
+</details>
+<details><summary><strong>🔧 `0`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <html>
@@ -155,7 +158,8 @@ Index: 0
 
 ```
 </details>
-#### 🔧 `10`
+</details>
+<details><summary><strong>🔧 `10`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <html>
@@ -239,7 +243,8 @@ Index: 10
 
 ```
 </details>
-#### 🔧 `20`
+</details>
+<details><summary><strong>🔧 `20`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <html>
@@ -322,4 +327,5 @@ Index: 20
  ␊
 
 ```
+</details>
 </details>

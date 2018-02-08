@@ -16,6 +16,7 @@ sidebar_label: ✅ Indent With Tabs
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- | --- |
 | [C#](/docs/language-csharp.html) | &#10060; | &#9989; |
@@ -45,9 +46,10 @@ sidebar_label: ✅ Indent With Tabs
 | [Vue](/docs/language-vue.html) | &#9989; | &#10060; |
 | [XML](/docs/language-xml.html) | &#10060; | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 if (a) {
      b=c;
@@ -67,7 +69,8 @@ foo
 .bar
 .baz()
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
@@ -136,7 +139,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
@@ -202,4 +206,5 @@ Index: false
 +foo.bar.baz();␊
 
 ```
+</details>
 </details>

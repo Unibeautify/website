@@ -16,6 +16,7 @@ sidebar_label: ✅ JSX Brackets
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) |
 | --- | --- |
 | [CSS](/docs/language-css.html) | &#9989; |
@@ -27,9 +28,10 @@ sidebar_label: ✅ JSX Brackets
 | [SCSS](/docs/language-scss.html) | &#9989; |
 | [TypeScript](/docs/language-typescript.html) | &#9989; |
 | [Vue](/docs/language-vue.html) | &#9989; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 <div
 className="HelloWorld"
@@ -39,7 +41,8 @@ onMouseOver={onMouseOver}
     hello world
 </div>
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 <div
@@ -85,7 +88,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 <div
@@ -131,4 +135,5 @@ Index: false
 +</div>;␊
 
 ```
+</details>
 </details>

@@ -15,3 +15,6 @@ sidebar_label: 🚨 Indent Level
 **Languages**: 
 
 **Beautifiers**: 
+
+<details><summary><strong>Comparison Table</strong></summary>
+</details>

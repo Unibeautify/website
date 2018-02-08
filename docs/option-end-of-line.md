@@ -17,3 +17,6 @@ sidebar_label: 🚨 End Of Line
 **Languages**: 
 
 **Beautifiers**: 
+
+<details><summary><strong>Comparison Table</strong></summary>
+</details>

@@ -16,6 +16,7 @@ sidebar_label: ✅ Object Curly Spacing
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [ESLint](/docs/beautifier-eslint.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) | [ESLint](/docs/beautifier-eslint.html) |
 | --- | --- | --- |
 | [CSS](/docs/language-css.html) | &#9989; | &#10060; |
@@ -27,9 +28,10 @@ sidebar_label: ✅ Object Curly Spacing
 | [SCSS](/docs/language-scss.html) | &#9989; | &#10060; |
 | [TypeScript](/docs/language-typescript.html) | &#9989; | &#10060; |
 | [Vue](/docs/language-vue.html) | &#9989; | &#10060; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 // simple object literals
 var obj = { foo: "bar" };
@@ -44,7 +46,8 @@ var { x, y } = y;
 import { foo } from "bar";
 export { foo };
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 // simple object literals
@@ -90,7 +93,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 // simple object literals
@@ -146,4 +150,5 @@ Index: false
 +export␣{foo};␊
 
 ```
+</details>
 </details>

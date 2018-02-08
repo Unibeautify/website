@@ -18,6 +18,7 @@ sidebar_label: ✅ Multiline Ternary
 
 **Beautifiers**: [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- |
 | [C#](/docs/language-csharp.html) | &#9989; |
@@ -45,15 +46,17 @@ sidebar_label: ✅ Multiline Ternary
 | [Visualforce](/docs/language-visualforce.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#9989; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 const val1 = a ? "yes" : "no";
 const val2 = a ? ( b ? "yes" : "no") : "maybe";
 
 ```
-#### 🔧 `"always"`
+</details>
+<details><summary><strong>🔧 `"always"`</strong></summary>
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const val1 = a
@@ -100,7 +103,8 @@ Index: always
 
 ```
 </details>
-#### 🔧 `"always-multiline"`
+</details>
+<details><summary><strong>🔧 `"always-multiline"`</strong></summary>
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const val1 = a
@@ -147,7 +151,8 @@ Index: always-multiline
 
 ```
 </details>
-#### 🔧 `"never"`
+</details>
+<details><summary><strong>🔧 `"never"`</strong></summary>
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const val1 = a ? "yes" : "no";
@@ -178,4 +183,5 @@ Index: never
 \ No newline at end of file
 
 ```
+</details>
 </details>

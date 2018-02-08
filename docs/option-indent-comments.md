@@ -16,6 +16,7 @@ sidebar_label: ✅ Indent Comments
 
 **Beautifiers**: [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- |
 | [C#](/docs/language-csharp.html) | &#9989; |
@@ -43,9 +44,10 @@ sidebar_label: ✅ Indent Comments
 | [Visualforce](/docs/language-visualforce.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#9989; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 /*
 This 
@@ -96,7 +98,8 @@ if (a) {
 foo.bar.baz();
 
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 /*
@@ -230,7 +233,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 /*
@@ -360,4 +364,5 @@ Index: false
 \ No newline at end of file
 
 ```
+</details>
 </details>

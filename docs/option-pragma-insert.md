@@ -16,6 +16,7 @@ sidebar_label: ✅ Pragma Insert
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) |
 | --- | --- |
 | [CSS](/docs/language-css.html) | &#9989; |
@@ -27,15 +28,17 @@ sidebar_label: ✅ Pragma Insert
 | [SCSS](/docs/language-scss.html) | &#9989; |
 | [TypeScript](/docs/language-typescript.html) | &#9989; |
 | [Vue](/docs/language-vue.html) | &#9989; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 function sayHello() {
 console.log("Hello world");
 }
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 /** @format */
@@ -75,7 +78,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 function sayHello() {
@@ -110,4 +114,5 @@ Index: false
 +}␊
 
 ```
+</details>
 </details>

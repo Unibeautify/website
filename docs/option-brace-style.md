@@ -18,6 +18,7 @@ sidebar_label: ✅ Brace Style
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
 | --- | --- |
 | [EJS](/docs/language-ejs.html) | &#9989; |
@@ -29,9 +30,10 @@ sidebar_label: ✅ Brace Style
 | [Liquid](/docs/language-liquid.html) | &#9989; |
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
+</details>
 ## Examples
 ### HTML
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```HTML
 <div>
 <h1>Unformatted</h1>
@@ -43,7 +45,8 @@ sidebar_label: ✅ Brace Style
 </div>
 
 ```
-#### 🔧 `"collapse"`
+</details>
+<details><summary><strong>🔧 `"collapse"`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -101,7 +104,8 @@ Index: collapse
 
 ```
 </details>
-#### 🔧 `"collapse-preserve-inline"`
+</details>
+<details><summary><strong>🔧 `"collapse-preserve-inline"`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -159,7 +163,8 @@ Index: collapse-preserve-inline
 
 ```
 </details>
-#### 🔧 `"expand"`
+</details>
+<details><summary><strong>🔧 `"expand"`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -217,7 +222,8 @@ Index: expand
 
 ```
 </details>
-#### 🔧 `"end-expand"`
+</details>
+<details><summary><strong>🔧 `"end-expand"`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -275,7 +281,8 @@ Index: end-expand
 
 ```
 </details>
-#### 🔧 `"none"`
+</details>
+<details><summary><strong>🔧 `"none"`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -332,4 +339,5 @@ Index: none
 \ No newline at end of file
 
 ```
+</details>
 </details>

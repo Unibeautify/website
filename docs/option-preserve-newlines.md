@@ -16,6 +16,7 @@ sidebar_label: ✅ Preserve Newlines
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- | --- |
 | [C#](/docs/language-csharp.html) | &#10060; | &#9989; |
@@ -45,3 +46,4 @@ sidebar_label: ✅ Preserve Newlines
 | [Visualforce](/docs/language-visualforce.html) | &#10060; | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; |
+</details>

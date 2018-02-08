@@ -16,6 +16,7 @@ sidebar_label: ✅ No Leading Zero
 
 **Beautifiers**: [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- |
 | [C#](/docs/language-csharp.html) | &#9989; |
@@ -43,9 +44,10 @@ sidebar_label: ✅ No Leading Zero
 | [Visualforce](/docs/language-visualforce.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#9989; |
+</details>
 ## Examples
 ### CSS
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```CSS
 .c1 {
     font-size: 0.3em;
@@ -60,7 +62,8 @@ sidebar_label: ✅ No Leading Zero
     border-radius: 10.5;
 }
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```CSS
 .c1 {
@@ -117,7 +120,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```CSS
 .c1 {
@@ -173,4 +177,5 @@ Index: false
 \ No newline at end of file
 
 ```
+</details>
 </details>

@@ -16,6 +16,7 @@ sidebar_label: ✅ End With Comma
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [Pretty Diff](/docs/beautifier-pretty-diff.html), [ESLint](/docs/beautifier-eslint.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) | [Pretty Diff](/docs/beautifier-pretty-diff.html) | [ESLint](/docs/beautifier-eslint.html) |
 | --- | --- | --- | --- |
 | [C#](/docs/language-csharp.html) | &#10060; | &#9989; | &#10060; |
@@ -45,9 +46,10 @@ sidebar_label: ✅ End With Comma
 | [Vue](/docs/language-vue.html) | &#9989; | &#10060; | &#10060; |
 | [XML](/docs/language-xml.html) | &#10060; | &#9989; | &#10060; |
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; | &#10060; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 var foo = {
     bar: "baz",
@@ -59,7 +61,8 @@ var bar = {
     qux: "quux"
 };
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 var foo = {
@@ -110,7 +113,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 var foo = {
@@ -160,4 +164,5 @@ Index: false
 +};␊
 
 ```
+</details>
 </details>

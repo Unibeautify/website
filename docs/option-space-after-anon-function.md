@@ -16,6 +16,7 @@ sidebar_label: ✅ Space After Anon Function
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- | --- |
 | [C#](/docs/language-csharp.html) | &#10060; | &#9989; |
@@ -43,9 +44,10 @@ sidebar_label: ✅ Space After Anon Function
 | [Visualforce](/docs/language-visualforce.html) | &#10060; | &#9989; |
 | [XML](/docs/language-xml.html) | &#10060; | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 const fun1 = function (arg1) {
 }
@@ -53,7 +55,8 @@ const fun2 = function(arg1) {
 }
 
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function (arg1) {}
@@ -88,7 +91,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function(arg1) {}
@@ -122,4 +126,5 @@ Index: false
 \ No newline at end of file
 
 ```
+</details>
 </details>

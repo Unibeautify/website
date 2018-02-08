@@ -26,21 +26,22 @@ export default class OptionsDoc extends Doc {
   constructor(
     private option: Option,
     private optionKey: BeautifierOptionName,
-    allBeautifiers: Beautifier[]
+    allBeautifiers: Beautifier[],
   ) {
     super();
     this.languages = GlobalUnibeautify.supportedLanguages.filter(
       language =>
         allBeautifiers.findIndex(
           beautifier =>
-            optionKeys(beautifier, language).indexOf(optionKey) !== -1
-        ) !== -1
+            optionKeys(beautifier, language).indexOf(optionKey) !== -1,
+        ) !== -1,
     );
     this.beautifiers = allBeautifiers.filter(
       beautifier =>
         this.languages.findIndex(
-          language => optionKeys(beautifier, language).indexOf(optionKey) !== -1
-        ) !== -1
+          language =>
+            optionKeys(beautifier, language).indexOf(optionKey) !== -1,
+        ) !== -1,
     );
   }
 
@@ -78,18 +79,22 @@ export default class OptionsDoc extends Doc {
       builder.append(
         `**Allowed values**: ${this.option.enum
           .map(val => "`" + JSON.stringify(val) + "`")
-          .join(" or ")}\n`
+          .join(" or ")}\n`,
       );
     }
 
     builder.header("Support", 2);
     builder.append(
-      `**Languages**: ${this.languages.map(linkForLanguage).join(", ")}\n`
+      `**Languages**: ${this.languages.map(linkForLanguage).join(", ")}\n`,
     );
     builder.append(
-      `**Beautifiers**: ${this.beautifiers.map(linkForBeautifier).join(", ")}\n`
+      `**Beautifiers**: ${this.beautifiers
+        .map(linkForBeautifier)
+        .join(", ")}\n`,
     );
-    this.appendTable(builder);
+    builder.details("<strong>Comparison Table</strong>", builder => {
+      this.appendTable(builder);
+    });
     return this.appendExamples(builder).then(() => builder.build());
   }
 
@@ -117,7 +122,7 @@ export default class OptionsDoc extends Doc {
       "| Language |" +
         this.beautifiers
           .map(beautifier => ` ${linkForBeautifier(beautifier)} |`)
-          .join("")
+          .join(""),
     );
     builder.append("| --- |" + this.beautifiers.map(b => ` --- |`).join(""));
     this.languages.forEach(language => {
@@ -146,8 +151,8 @@ export default class OptionsDoc extends Doc {
                   [languages[index].name]: example,
                 }
               : final,
-          {} as { [languageName: string]: string | undefined }
-        )
+          {} as { [languageName: string]: string | undefined },
+        ),
       )
       .then(examplesForLanguages => {
         if (Object.keys(examplesForLanguages).length === 0) {
@@ -163,14 +168,14 @@ export default class OptionsDoc extends Doc {
                     error => {
                       console.error(error);
                       return null;
-                    }
+                    },
                   );
                 } else {
                   return null;
                 }
-              })
-            )
-          )
+              }),
+            ),
+          ),
         ).then(beautified => {
           if (Object.keys(examplesForLanguages).length === 0) {
             return;
@@ -180,52 +185,56 @@ export default class OptionsDoc extends Doc {
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
             if (example) {
-              // builder.details(`**${language.name}**`, builder => {
               builder.header(language.name, 3);
-              builder.header("🚧 Original Code", 4);
-              builder.code(example, language.name);
+              builder.details("<strong>🚧 Original Code</strong>", builder => {
+                builder.code(example, language.name);
+              });
               let beautifiedExamplesAreDifferent: boolean = false;
               let lastCode: string | null = null;
               this.exampleValues.forEach((optionValue, valueIndex) => {
-                builder.header(`🔧 \`${JSON.stringify(optionValue)}\``, 4);
-                const beautifiedExample: string | null =
-                  beautified[valueIndex][languageIndex];
-                if (beautifiedExample) {
-                  if (lastCode === null) {
-                    lastCode = beautifiedExample;
-                  } else {
-                    if (lastCode !== beautifiedExample) {
-                      lastCode = beautifiedExample;
-                      beautifiedExamplesAreDifferent = true;
-                    }
-                  }
+                builder.details(
+                  `<strong>🔧 \`${JSON.stringify(optionValue)}\`</strong>`,
+                  builder => {
+                    const beautifiedExample: string | null =
+                      beautified[valueIndex][languageIndex];
+                    if (beautifiedExample) {
+                      if (lastCode === null) {
+                        lastCode = beautifiedExample;
+                      } else {
+                        if (lastCode !== beautifiedExample) {
+                          lastCode = beautifiedExample;
+                          beautifiedExamplesAreDifferent = true;
+                        }
+                      }
 
-                  const diff = diffExample(
-                    example,
-                    beautifiedExample,
-                    optionValue
-                  );
-                  const configForExample = this.createOptionsWithLanguageAndValue(
-                    language,
-                    optionValue
-                  );
-                  const beautifier = this.beautifierForLanguage(language);
-                  if (beautifier) {
-                    builder.append(
-                      `Using ${linkForBeautifier(beautifier)} beautifier:`
-                    );
-                  }
-                  builder.code(beautifiedExample, language.name);
-                  builder.details("Configuration", builder => {
-                    builder.append(
-                      `A \`.unibeautify.json\` file would look like the following:`
-                    );
-                    builder.json(configForExample);
-                  });
-                  builder.details("Difference from original", builder => {
-                    builder.code(diff, "diff");
-                  });
-                }
+                      const diff = diffExample(
+                        example,
+                        beautifiedExample,
+                        optionValue,
+                      );
+                      const configForExample = this.createOptionsWithLanguageAndValue(
+                        language,
+                        optionValue,
+                      );
+                      const beautifier = this.beautifierForLanguage(language);
+                      if (beautifier) {
+                        builder.append(
+                          `Using ${linkForBeautifier(beautifier)} beautifier:`,
+                        );
+                      }
+                      builder.code(beautifiedExample, language.name);
+                      builder.details("Configuration", builder => {
+                        builder.append(
+                          `A \`.unibeautify.json\` file would look like the following:`,
+                        );
+                        builder.json(configForExample);
+                      });
+                      builder.details("Difference from original", builder => {
+                        builder.code(diff, "diff");
+                      });
+                    }
+                  },
+                );
               });
 
               if (
@@ -233,10 +242,9 @@ export default class OptionsDoc extends Doc {
                 !beautifiedExamplesAreDifferent
               ) {
                 console.log(
-                  `${this.optionKey} - ${language.name} - BAD EXAMPLES`
+                  `${this.optionKey} - ${language.name} - BAD EXAMPLES`,
                 );
               }
-              // });
             }
           });
         });
@@ -270,7 +278,7 @@ export default class OptionsDoc extends Doc {
     const examplePath = path.join(
       this.examplesPath,
       language.name,
-      `${this.optionKey}${exampleExtension}`
+      `${this.optionKey}${exampleExtension}`,
     );
     try {
       return fs.readFileSync(examplePath).toString();
@@ -287,7 +295,7 @@ export default class OptionsDoc extends Doc {
 
   private createOptionsWithLanguageAndValue(
     language: Language,
-    optionValue: any
+    optionValue: any,
   ) {
     return {
       [language.name]: this.createOptionValues(optionValue),
@@ -305,11 +313,11 @@ export default class OptionsDoc extends Doc {
   private beautify(
     language: Language,
     optionValue: any,
-    text: string
+    text: string,
   ): Promise<string> {
     const configForExample = this.createOptionsWithLanguageAndValue(
       language,
-      optionValue
+      optionValue,
     );
     const beautifier = this.beautifierForLanguage(language);
     if (beautifier) {
@@ -321,14 +329,14 @@ export default class OptionsDoc extends Doc {
       });
     }
     return Promise.reject(
-      new Error(`No beautifier supports option ${this.optionKey}.`)
+      new Error(`No beautifier supports option ${this.optionKey}.`),
     );
   }
 
   private beautifierForLanguage(language: Language): Beautifier | undefined {
     return this.beautifiers.filter(
       beautifier =>
-        optionKeys(beautifier, language).indexOf(this.optionKey) !== -1
+        optionKeys(beautifier, language).indexOf(this.optionKey) !== -1,
     )[0];
   }
 }
@@ -336,7 +344,7 @@ export default class OptionsDoc extends Doc {
 function diffExample(
   originalText: string,
   beautifiedText: string,
-  fileName: string
+  fileName: string,
 ) {
   const oldHeader = "Original";
   const newHeader = "Beautified";
@@ -345,7 +353,7 @@ function diffExample(
     showInvisibles(originalText),
     showInvisibles(beautifiedText),
     oldHeader,
-    newHeader
+    newHeader,
   );
 }
 
@@ -361,7 +369,7 @@ function showInvisibles(text: string): string {
       // Replace Newlines
       .replace(
         /(?:\r\n)/g,
-        `${invisibles.carriageReturn}${invisibles.newLine}\n`
+        `${invisibles.carriageReturn}${invisibles.newLine}\n`,
       )
       .replace(/(?:\r)/g, `${invisibles.carriageReturn}\n`)
       .replace(/(?:\n)/g, `${invisibles.newLine}\n`)

@@ -16,7 +16,9 @@ sidebar_label: ✅ Remove Trailing Whitespace
 
 **Beautifiers**: [ESLint](/docs/beautifier-eslint.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [ESLint](/docs/beautifier-eslint.html) |
 | --- | --- |
 | [JSX](/docs/language-jsx.html) | &#9989; |
 | [JavaScript](/docs/language-javascript.html) | &#9989; |
+</details>
