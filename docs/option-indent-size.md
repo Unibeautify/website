@@ -388,6 +388,121 @@ Index: 8
 ```
 </details>
 </details>
+### JSON
+<details><summary><strong>🚧 Original Code</strong></summary>
+```JSON
+{
+    "key": "value"
+}
+```
+</details>
+<details><summary><strong>🔧 `0`</strong></summary>
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
+```JSON
+{
+"key": "value"
+}
+
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JSON": {
+    "indent_size": 0,
+    "indent_char": " "
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 0
+===================================================================
+--- 0	Original
++++ 0	Beautified
+@@ -1,3 +1,3 @@
+ {␊
+-␣␣␣␣"key":␣"value"␊
+-}
+\ No newline at end of file
++"key":␣"value"␊
++}␊
+
+```
+</details>
+</details>
+<details><summary><strong>🔧 `4`</strong></summary>
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
+```JSON
+{
+    "key": "value"
+}
+
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JSON": {
+    "indent_size": 4,
+    "indent_char": " "
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 4
+===================================================================
+--- 4	Original
++++ 4	Beautified
+@@ -1,3 +1,3 @@
+ {␊
+ ␣␣␣␣"key":␣"value"␊
+-}
+\ No newline at end of file
++}␊
+
+```
+</details>
+</details>
+<details><summary><strong>🔧 `8`</strong></summary>
+Using [Prettier](/docs/beautifier-prettier.html) beautifier:
+```JSON
+{
+        "key": "value"
+}
+
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "JSON": {
+    "indent_size": 8,
+    "indent_char": " "
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 8
+===================================================================
+--- 8	Original
++++ 8	Beautified
+@@ -1,3 +1,3 @@
+ {␊
+-␣␣␣␣"key":␣"value"␊
+-}
+\ No newline at end of file
++␣␣␣␣␣␣␣␣"key":␣"value"␊
++}␊
+
+```
+</details>
+</details>
 ### Java
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```Java
