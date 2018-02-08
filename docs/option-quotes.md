@@ -18,6 +18,7 @@ sidebar_label: ✅ Quotes
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [Pretty Diff](/docs/beautifier-pretty-diff.html), [ESLint](/docs/beautifier-eslint.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) | [Pretty Diff](/docs/beautifier-pretty-diff.html) | [ESLint](/docs/beautifier-eslint.html) |
 | --- | --- | --- | --- |
 | [C#](/docs/language-csharp.html) | &#10060; | &#9989; | &#10060; |
@@ -47,16 +48,18 @@ sidebar_label: ✅ Quotes
 | [Vue](/docs/language-vue.html) | &#9989; | &#10060; | &#10060; |
 | [XML](/docs/language-xml.html) | &#10060; | &#9989; | &#10060; |
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; | &#10060; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 console.log('hello world');
 console.log("hello world");
 const hello = "hey";
 console.log(`${hello} world`);
 ```
-#### 🔧 `"none"`
+</details>
+<details><summary><strong>🔧 `"none"`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 console.log("hello world");
@@ -94,7 +97,8 @@ Index: none
 
 ```
 </details>
-#### 🔧 `"double"`
+</details>
+<details><summary><strong>🔧 `"double"`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 console.log("hello world");
@@ -132,7 +136,8 @@ Index: double
 
 ```
 </details>
-#### 🔧 `"single"`
+</details>
+<details><summary><strong>🔧 `"single"`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 console.log('hello world');
@@ -170,4 +175,5 @@ Index: single
 +console.log(`${hello}␣world`);␊
 
 ```
+</details>
 </details>

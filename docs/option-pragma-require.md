@@ -16,6 +16,7 @@ sidebar_label: ✅ Pragma Require
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) |
 | --- | --- |
 | [CSS](/docs/language-css.html) | &#9989; |
@@ -27,3 +28,4 @@ sidebar_label: ✅ Pragma Require
 | [SCSS](/docs/language-scss.html) | &#9989; |
 | [TypeScript](/docs/language-typescript.html) | &#9989; |
 | [Vue](/docs/language-vue.html) | &#9989; |
+</details>

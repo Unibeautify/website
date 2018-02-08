@@ -5,64 +5,64 @@ import Unibeautify, {
   BeautifierOptionName,
 } from "unibeautify";
 import * as _ from "lodash";
-
 import { optionKeys, linkForLanguage, linkForOption, emojis } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
-
 export default class BeautifierDoc extends Doc {
   private readonly optionsLookup: OptionsLookup;
   constructor(private beautifier: Beautifier, private languages: Language[]) {
     super();
     this.optionsLookup = this.createOptionsLookup();
   }
-
   public get prefix(): string {
     return "beautifier-";
   }
-
   public get id(): string {
     return `${this.prefix}${this.slug}`;
   }
-
   public get title(): string {
     return this.beautifier.name;
   }
-
   protected get body(): string {
     const builder = new MarkdownBuilder();
-    // this.languages.forEach(lang => {
-    //   builder.header(lang.name, 2);
-    //   builder.append(
-    //     "For more information click " + this.linkForLanguage(lang)
-    //   );
-    //   builder.header("Options", 3);
-    //   builder.append("Lots of options!");
-    //   const options = this.options(lang);
-    //   Object.keys(options).forEach(key => {
-    //     const option = options[key];
-    //     let title: string = option.title || "";
-    //     if (!title) {
-    //       title = key.split('_').map(_.capitalize).join(' ');
-    //     }
-    //     builder.header(title, 3);
-    //     builder.append(`**Key**: \`${key}\`\n`);
-    //     builder.append(`**Type**: \`${option.type}\`\n`);
-    //     builder.append(`**Default**: \`${JSON.stringify(option.default)}\`\n`);
-    //     builder.append(`**Description**: ${option.description}\n`);
-    //   });
-    // });
+    this.appendUsageSection(builder);
+    builder.header("Options", 2);
     this.appendOptionsTable(builder);
     return builder.build();
   }
-
+  private appendUsageSection(builder: MarkdownBuilder): MarkdownBuilder {
+    builder.header("Usage", 2);
+    builder.append(
+      "Below are example configuration files for each of the supported languages."
+    );
+    const beautifierName: string = this.beautifier.name;
+    this.languages.forEach(lang => {
+      builder.details(lang.name, builder => {
+        builder.append(
+          `A \`.unibeautifyrc.json\` file would look like the following:`
+        );
+        builder.code(
+          JSON.stringify(
+            {
+              [lang.name]: {
+                beautifiers: [beautifierName],
+              },
+            },
+            null,
+            2
+          ),
+          "json"
+        );
+      });
+    });
+    return builder;
+  }
   private appendOptionsTable(builder: MarkdownBuilder): MarkdownBuilder {
     /*
     | Option | CSS | Lang 2 |
     | --- | --- | --- |
     | Arrow Parens | &#10060; | &#9989; |
     */
-
     // console.log(JSON.stringify(this.allOptions, null, 2));
     builder.append(
       "| Option |" +
@@ -89,16 +89,11 @@ export default class BeautifierDoc extends Doc {
         builder.append(row);
       }
     });
-
     return builder;
   }
-
   private createOptionsLookup(): OptionsLookup {
     return this.languages
-      .map(language => ({
-        language,
-        options: this.options(language),
-      }))
+      .map(language => ({ language, options: this.options(language) }))
       .reduce(
         (lookup, { language, options }) => ({
           ...lookup,
@@ -107,7 +102,6 @@ export default class BeautifierDoc extends Doc {
         {}
       );
   }
-
   private options(language: Language): OptionsRegistry {
     const keys: BeautifierOptionName[] = optionKeys(this.beautifier, language);
     const allOptions = this.allOptions;
@@ -122,12 +116,10 @@ export default class BeautifierDoc extends Doc {
       };
     }, {});
   }
-
   private get allOptions(): OptionsRegistry {
     return (Unibeautify as any).options;
   }
 }
-
 interface OptionsLookup {
   [languageName: string]: OptionsRegistry;
 }

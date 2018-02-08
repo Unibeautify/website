@@ -16,6 +16,7 @@ sidebar_label: ✅ Unformatted
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
 | --- | --- |
 | [HTML](/docs/language-html.html) | &#9989; |
@@ -23,9 +24,10 @@ sidebar_label: ✅ Unformatted
 | [Liquid](/docs/language-liquid.html) | &#9989; |
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
+</details>
 ## Examples
 ### HTML
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```HTML
 <div>
 <h1>Unformatted</h1>
@@ -37,7 +39,8 @@ sidebar_label: ✅ Unformatted
 </div>
 
 ```
-#### 🔧 `[]`
+</details>
+<details><summary><strong>🔧 `[]`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -107,7 +110,8 @@ Index:
 
 ```
 </details>
-#### 🔧 `["a","abbr","area","audio","b","bdi","bdo","br","button","canvas","cite","code","data","datalist","del","dfn","em","embed","i","iframe","img","input","ins","kbd","keygen","label","map","mark","math","meter","noscript","object","output","progress","q","ruby","s","samp","select","small","span","strong","sub","sup","svg","template","textarea","time","u","var","video","wbr","text","acronym","address","big","dt","ins","small","strike","tt","pre","h1","h2","h3","h4","h5","h6"]`
+</details>
+<details><summary><strong>🔧 `["a","abbr","area","audio","b","bdi","bdo","br","button","canvas","cite","code","data","datalist","del","dfn","em","embed","i","iframe","img","input","ins","kbd","keygen","label","map","mark","math","meter","noscript","object","output","progress","q","ruby","s","samp","select","small","span","strong","sub","sup","svg","template","textarea","time","u","var","video","wbr","text","acronym","address","big","dt","ins","small","strike","tt","pre","h1","h2","h3","h4","h5","h6"]`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -233,4 +237,5 @@ Index: a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,
 \ No newline at end of file
 
 ```
+</details>
 </details>

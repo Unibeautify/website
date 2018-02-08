@@ -18,6 +18,7 @@ sidebar_label: ✅ Indent Char
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) | [JS-Beautify](/docs/beautifier-js-beautify.html) | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- | --- | --- |
 | [C#](/docs/language-csharp.html) | &#10060; | &#10060; | &#9989; |
@@ -49,9 +50,10 @@ sidebar_label: ✅ Indent Char
 | [Vue](/docs/language-vue.html) | &#9989; | &#10060; | &#10060; |
 | [XML](/docs/language-xml.html) | &#10060; | &#9989; | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#10060; | &#9989; |
+</details>
 ## Examples
 ### HTML
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```HTML
 <div>
 <span>Hello</span>
@@ -59,7 +61,8 @@ sidebar_label: ✅ Indent Char
 </div>
 
 ```
-#### 🔧 `" "`
+</details>
+<details><summary><strong>🔧 `" "`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -96,7 +99,8 @@ Index:
 
 ```
 </details>
-#### 🔧 `"\t"`
+</details>
+<details><summary><strong>🔧 `"\t"`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -133,8 +137,9 @@ Index:
 
 ```
 </details>
+</details>
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 if (a) {
       b = c;
@@ -153,7 +158,8 @@ if (a) {
 foo.bar.baz();
 
 ```
-#### 🔧 `" "`
+</details>
+<details><summary><strong>🔧 `" "`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
@@ -213,7 +219,8 @@ Index:
 
 ```
 </details>
-#### 🔧 `"\t"`
+</details>
+<details><summary><strong>🔧 `"\t"`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
@@ -276,4 +283,5 @@ Index:
  foo.bar.baz();␊
 
 ```
+</details>
 </details>

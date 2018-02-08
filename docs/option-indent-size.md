@@ -16,6 +16,7 @@ sidebar_label: ✅ Indent Size
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) | [JS-Beautify](/docs/beautifier-js-beautify.html) | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- | --- | --- |
 | [C#](/docs/language-csharp.html) | &#10060; | &#10060; | &#9989; |
@@ -47,9 +48,10 @@ sidebar_label: ✅ Indent Size
 | [Vue](/docs/language-vue.html) | &#9989; | &#10060; | &#10060; |
 | [XML](/docs/language-xml.html) | &#10060; | &#9989; | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#10060; | &#9989; |
+</details>
 ## Examples
 ### CSS
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```CSS
 .class1 {
     color: blue;
@@ -72,7 +74,8 @@ sidebar_label: ✅ Indent Size
 }
 
 ```
-#### 🔧 `0`
+</details>
+<details><summary><strong>🔧 `0`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```CSS
 .class1 {
@@ -144,7 +147,8 @@ Index: 0
 
 ```
 </details>
-#### 🔧 `4`
+</details>
+<details><summary><strong>🔧 `4`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```CSS
 .class1 {
@@ -188,7 +192,8 @@ Index: 4
 
 ```
 </details>
-#### 🔧 `8`
+</details>
+<details><summary><strong>🔧 `8`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```CSS
 .class1 {
@@ -260,8 +265,9 @@ Index: 8
 
 ```
 </details>
+</details>
 ### HTML
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```HTML
 <div>
 <span>Hello</span>
@@ -269,7 +275,8 @@ Index: 8
 </div>
 
 ```
-#### 🔧 `0`
+</details>
+<details><summary><strong>🔧 `0`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -304,7 +311,8 @@ Index: 0
 
 ```
 </details>
-#### 🔧 `4`
+</details>
+<details><summary><strong>🔧 `4`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -341,7 +349,8 @@ Index: 4
 
 ```
 </details>
-#### 🔧 `8`
+</details>
+<details><summary><strong>🔧 `8`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <div>
@@ -378,8 +387,9 @@ Index: 8
 
 ```
 </details>
+</details>
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 if (a) {
       b = c;
@@ -398,7 +408,8 @@ if (a) {
 foo.bar.baz();
 
 ```
-#### 🔧 `0`
+</details>
+<details><summary><strong>🔧 `0`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
@@ -461,7 +472,8 @@ Index: 0
 
 ```
 </details>
-#### 🔧 `4`
+</details>
+<details><summary><strong>🔧 `4`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
@@ -525,7 +537,8 @@ Index: 4
 
 ```
 </details>
-#### 🔧 `8`
+</details>
+<details><summary><strong>🔧 `8`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 if (a) {
@@ -589,8 +602,9 @@ Index: 8
 
 ```
 </details>
+</details>
 ### Vue
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```Vue
 <template >
   <h1 >{{greeting}}     world</h1 >
@@ -609,7 +623,8 @@ module  .  exports  =
 p { font-size : 2em ; text-align : center ; }
   </style >  
 ```
-#### 🔧 `0`
+</details>
+<details><summary><strong>🔧 `0`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Vue
 <template >
@@ -682,7 +697,8 @@ Index: 0
 
 ```
 </details>
-#### 🔧 `4`
+</details>
+<details><summary><strong>🔧 `4`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Vue
 <template >
@@ -756,7 +772,8 @@ Index: 4
 
 ```
 </details>
-#### 🔧 `8`
+</details>
+<details><summary><strong>🔧 `8`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Vue
 <template >
@@ -830,8 +847,9 @@ Index: 8
 
 ```
 </details>
+</details>
 ### XML
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```XML
 <breakfast_menu>
 <food>
@@ -876,7 +894,8 @@ Two eggs, bacon or sausage, toast, and our ever-popular hash browns
 </food>
 </breakfast_menu>
 ```
-#### 🔧 `0`
+</details>
+<details><summary><strong>🔧 `0`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```XML
 <breakfast_menu>
@@ -942,7 +961,8 @@ Index: 0
 
 ```
 </details>
-#### 🔧 `4`
+</details>
+<details><summary><strong>🔧 `4`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```XML
 <breakfast_menu>
@@ -1092,7 +1112,8 @@ Index: 4
 
 ```
 </details>
-#### 🔧 `8`
+</details>
+<details><summary><strong>🔧 `8`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```XML
 <breakfast_menu>
@@ -1241,4 +1262,5 @@ Index: 8
 \ No newline at end of file
 
 ```
+</details>
 </details>

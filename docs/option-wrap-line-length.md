@@ -16,6 +16,7 @@ sidebar_label: ✅ Wrap Line Length
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) | [JS-Beautify](/docs/beautifier-js-beautify.html) | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- | --- | --- |
 | [C#](/docs/language-csharp.html) | &#10060; | &#10060; | &#9989; |
@@ -48,3 +49,4 @@ sidebar_label: ✅ Wrap Line Length
 | [Vue](/docs/language-vue.html) | &#9989; | &#10060; | &#10060; |
 | [XML](/docs/language-xml.html) | &#10060; | &#9989; | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#10060; | &#9989; |
+</details>

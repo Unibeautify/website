@@ -18,6 +18,7 @@ sidebar_label: ✅ Indent Scripts
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
 | --- | --- |
 | [HTML](/docs/language-html.html) | &#9989; |
@@ -25,9 +26,10 @@ sidebar_label: ✅ Indent Scripts
 | [Liquid](/docs/language-liquid.html) | &#9989; |
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
+</details>
 ## Examples
 ### HTML
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```HTML
 <html>
 
@@ -39,7 +41,8 @@ console.log("hello world");
 
 </html>
 ```
-#### 🔧 `"keep"`
+</details>
+<details><summary><strong>🔧 `"keep"`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <html>
@@ -87,7 +90,8 @@ Index: keep
 
 ```
 </details>
-#### 🔧 `"separate"`
+</details>
+<details><summary><strong>🔧 `"separate"`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <html>
@@ -134,7 +138,8 @@ Index: separate
 
 ```
 </details>
-#### 🔧 `"normal"`
+</details>
+<details><summary><strong>🔧 `"normal"`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```HTML
 <html>
@@ -181,4 +186,5 @@ Index: normal
 \ No newline at end of file
 
 ```
+</details>
 </details>

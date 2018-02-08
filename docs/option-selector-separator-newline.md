@@ -16,6 +16,8 @@ sidebar_label: ✅ Selector Separator Newline
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
 | --- | --- |
 | [CSS](/docs/language-css.html) | &#9989; |
+</details>

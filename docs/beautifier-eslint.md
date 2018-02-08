@@ -3,6 +3,33 @@ id: beautifier-eslint
 title: ESLint
 sidebar_label: ESLint
 ---
+## Usage
+Below are example configuration files for each of the supported languages.
+<details><summary>JSX</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "JSX": {
+    "beautifiers": [
+      "ESLint"
+    ]
+  }
+}
+```
+</details>
+<details><summary>JavaScript</summary>
+A `.unibeautifyrc.json` file would look like the following:
+```json
+{
+  "JavaScript": {
+    "beautifiers": [
+      "ESLint"
+    ]
+  }
+}
+```
+</details>
+## Options
 | Option | [JSX](/docs/language-jsx.html) | [JavaScript](/docs/language-javascript.html) |
 | --- | --- | --- |
 | [Arrow Parens](/docs/option-arrow-parens.html) | &#9989; | &#9989; |

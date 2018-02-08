@@ -18,6 +18,7 @@ sidebar_label: ✅ Arrow Parens
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html), [ESLint](/docs/beautifier-eslint.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) | [ESLint](/docs/beautifier-eslint.html) |
 | --- | --- | --- |
 | [CSS](/docs/language-css.html) | &#9989; | &#10060; |
@@ -29,15 +30,17 @@ sidebar_label: ✅ Arrow Parens
 | [SCSS](/docs/language-scss.html) | &#9989; | &#10060; |
 | [TypeScript](/docs/language-typescript.html) | &#9989; | &#10060; |
 | [Vue](/docs/language-vue.html) | &#9989; | &#10060; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 a => {};
 (a) => {};
 (a, b) => {};
 ```
-#### 🔧 `"always"`
+</details>
+<details><summary><strong>🔧 `"always"`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 (a) => {};
@@ -73,7 +76,8 @@ Index: always
 
 ```
 </details>
-#### 🔧 `"as-needed"`
+</details>
+<details><summary><strong>🔧 `"as-needed"`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```JavaScript
 a => {};
@@ -108,4 +112,5 @@ Index: as-needed
 +(a,␣b)␣=>␣{};␊
 
 ```
+</details>
 </details>

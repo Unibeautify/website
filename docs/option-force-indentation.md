@@ -16,6 +16,7 @@ sidebar_label: ✅ Force Indentation
 
 **Beautifiers**: [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- |
 | [C#](/docs/language-csharp.html) | &#9989; |
@@ -43,3 +44,4 @@ sidebar_label: ✅ Force Indentation
 | [Visualforce](/docs/language-visualforce.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#9989; |
+</details>

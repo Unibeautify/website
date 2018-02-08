@@ -18,6 +18,7 @@ sidebar_label: ✅ Wrap Attributes
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
 | --- | --- |
 | [HTML](/docs/language-html.html) | &#9989; |
@@ -25,3 +26,4 @@ sidebar_label: ✅ Wrap Attributes
 | [Liquid](/docs/language-liquid.html) | &#9989; |
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
+</details>

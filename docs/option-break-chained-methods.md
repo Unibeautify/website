@@ -16,6 +16,7 @@ sidebar_label: ✅ Break Chained Methods
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html), [ESLint](/docs/beautifier-eslint.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) | [Pretty Diff](/docs/beautifier-pretty-diff.html) | [ESLint](/docs/beautifier-eslint.html) |
 | --- | --- | --- | --- |
 | [C#](/docs/language-csharp.html) | &#10060; | &#9989; | &#10060; |
@@ -43,9 +44,10 @@ sidebar_label: ✅ Break Chained Methods
 | [Visualforce](/docs/language-visualforce.html) | &#10060; | &#9989; | &#10060; |
 | [XML](/docs/language-xml.html) | &#10060; | &#9989; | &#10060; |
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; | &#10060; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 foo.bar().baz();
 
@@ -76,7 +78,8 @@ return false;
 }
 
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 foo.bar()
@@ -192,7 +195,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 foo.bar().baz();
@@ -285,4 +289,5 @@ Index: false
 \ No newline at end of file
 
 ```
+</details>
 </details>

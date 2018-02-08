@@ -18,12 +18,14 @@ sidebar_label: ✅ Wrap Prose
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Prettier](/docs/beautifier-prettier.html) |
 | --- | --- |
 | [Markdown](/docs/language-markdown.html) | &#9989; |
+</details>
 ## Examples
 ### Markdown
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
 
@@ -31,7 +33,8 @@ Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown 
 
 
 ```
-#### 🔧 `"always"`
+</details>
+<details><summary><strong>🔧 `"always"`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
@@ -72,7 +75,8 @@ Index: always
 
 ```
 </details>
-#### 🔧 `"never"`
+</details>
+<details><summary><strong>🔧 `"never"`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
@@ -106,7 +110,8 @@ Index: never
 
 ```
 </details>
-#### 🔧 `"preserve"`
+</details>
+<details><summary><strong>🔧 `"preserve"`</strong></summary>
 Using [Prettier](/docs/beautifier-prettier.html) beautifier:
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.
@@ -139,4 +144,5 @@ Index: preserve
 -␊
 
 ```
+</details>
 </details>

@@ -16,15 +16,17 @@ sidebar_label: ✅ Space In Paren
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [JS-Beautify](/docs/beautifier-js-beautify.html) |
 | --- | --- |
 | [EJS](/docs/language-ejs.html) | &#9989; |
 | [JSON](/docs/language-json.html) | &#9989; |
 | [JSX](/docs/language-jsx.html) | &#9989; |
 | [JavaScript](/docs/language-javascript.html) | &#9989; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 const fun1 = function(arg1, arg2) {
 }
@@ -34,7 +36,8 @@ const fun3 = function( arg1, arg2 ) {
 }
 
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function( arg1, arg2 ) {}
@@ -73,7 +76,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 const fun1 = function(arg1, arg2) {}
@@ -111,4 +115,5 @@ Index: false
 \ No newline at end of file
 
 ```
+</details>
 </details>

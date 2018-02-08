@@ -16,6 +16,7 @@ sidebar_label: ✅ Align Assignments
 
 **Beautifiers**: [Pretty Diff](/docs/beautifier-pretty-diff.html)
 
+<details><summary><strong>Comparison Table</strong></summary>
 | Language | [Pretty Diff](/docs/beautifier-pretty-diff.html) |
 | --- | --- |
 | [C#](/docs/language-csharp.html) | &#9989; |
@@ -43,15 +44,17 @@ sidebar_label: ✅ Align Assignments
 | [Visualforce](/docs/language-visualforce.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
 | [XTemplate](/docs/language-xtemplate.html) | &#9989; |
+</details>
 ## Examples
 ### JavaScript
-#### 🚧 Original Code
+<details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 const a = "",
 b = "",
 c = "";
 ```
-#### 🔧 `true`
+</details>
+<details><summary><strong>🔧 `true`</strong></summary>
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const a = "",
@@ -86,7 +89,8 @@ Index: true
 
 ```
 </details>
-#### 🔧 `false`
+</details>
+<details><summary><strong>🔧 `false`</strong></summary>
 Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
 ```JavaScript
 const a = "",
@@ -120,4 +124,5 @@ Index: false
 +␣␣c␣=␣"";
 
 ```
+</details>
 </details>

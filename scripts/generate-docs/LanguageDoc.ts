@@ -4,7 +4,6 @@ import Unibeautify, {
   OptionsRegistry,
 } from "unibeautify";
 import * as _ from "lodash";
-
 import {
   slugify,
   optionKeys,
@@ -15,26 +14,21 @@ import {
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 import OptionsListDoc from "./OptionsListDoc";
-
 export default class LanguageDoc extends Doc {
   private readonly optionsLookup: OptionsLookup;
   constructor(private language: Language, private beautifiers: Beautifier[]) {
     super();
     this.optionsLookup = this.createOptionsLookup();
   }
-
   public get prefix(): string {
     return "language-";
   }
-
   public get id(): string {
     return `${this.prefix}${this.slug}`;
   }
-
   public get title(): string {
     return this.language.name;
   }
-
   protected get body(): string {
     const builder = new MarkdownBuilder();
     builder
@@ -44,12 +38,10 @@ export default class LanguageDoc extends Doc {
     this.appendOptionsTable(builder);
     return builder.build();
   }
-
   private linkForBeautifier = (beautifier: Beautifier): string => {
     const docId = `beautifier-${slugify(beautifier.name)}`;
     return MarkdownBuilder.createDocLink(beautifier.name, docId);
   };
-
   private appendOptionsTable(builder: MarkdownBuilder): MarkdownBuilder {
     builder.append(
       "| Option |" +
@@ -82,13 +74,9 @@ export default class LanguageDoc extends Doc {
     });
     return builder;
   }
-
   private createOptionsLookup(): OptionsLookup {
     return this.beautifiers
-      .map(beautifier => ({
-        beautifier,
-        options: this.options(beautifier),
-      }))
+      .map(beautifier => ({ beautifier, options: this.options(beautifier) }))
       .reduce(
         (lookup, { beautifier, options }) => ({
           ...lookup,
@@ -97,7 +85,6 @@ export default class LanguageDoc extends Doc {
         {}
       );
   }
-
   private options(beautifier: Beautifier): OptionsRegistry {
     const keys = optionKeys(beautifier, this.language);
     const allOptions = this.allOptions;
@@ -112,12 +99,10 @@ export default class LanguageDoc extends Doc {
       };
     }, {});
   }
-
   private get allOptions(): OptionsRegistry {
     return (Unibeautify as any).options;
   }
 }
-
 interface OptionsLookup {
   [beautifierName: string]: OptionsRegistry;
 }

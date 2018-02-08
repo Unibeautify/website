@@ -1,6 +1,16 @@
 {
   "docs": {
-    "Options": [
+    "About": [
+      "about"
+    ],
+    "Usage": [
+      "getting-started",
+      "install",
+      "cli",
+      "editors",
+      "ci"
+    ],
+    "Configuring": [
       "config-file",
       "options"
     ],
@@ -120,12 +130,6 @@
       "option-wrap-attributes-indent-size",
       "option-wrap-line-length",
       "option-wrap-prose"
-    ]
-  },
-  "docs-other": {
-    "First Category": [
-      "doc4",
-      "doc5"
     ]
   }
 }
