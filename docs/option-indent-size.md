@@ -388,6 +388,153 @@ Index: 8
 ```
 </details>
 </details>
+### Java
+<details><summary><strong>🚧 Original Code</strong></summary>
+```Java
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+    }
+
+}
+
+```
+</details>
+<details><summary><strong>🔧 `0`</strong></summary>
+Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
+```Java
+public class HelloWorld {
+public static void main(String[] args) {
+// Prints "Hello, World" to the terminal window.
+System.out.println("Hello, World");
+}
+}
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "Java": {
+    "indent_size": 0,
+    "indent_char": " "
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 0
+===================================================================
+--- 0	Original
++++ 0	Beautified
+@@ -1,8 +1,6 @@
+ public␣class␣HelloWorld␣{␊
+-␊
+-␣␣␣␣public␣static␣void␣main(String[]␣args)␣{␊
+-␣␣␣␣␣␣␣␣//␣Prints␣"Hello,␣World"␣to␣the␣terminal␣window.␊
+-␣␣␣␣␣␣␣␣System.out.println("Hello,␣World");␊
+-␣␣␣␣}␊
+-␊
++public␣static␣void␣main(String[]␣args)␣{␊
++//␣Prints␣"Hello,␣World"␣to␣the␣terminal␣window.␊
++System.out.println("Hello,␣World");␊
+ }␊
++}
+\ No newline at end of file
+
+```
+</details>
+</details>
+<details><summary><strong>🔧 `4`</strong></summary>
+Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
+```Java
+public class HelloWorld {
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+    }
+}
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "Java": {
+    "indent_size": 4,
+    "indent_char": " "
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 4
+===================================================================
+--- 4	Original
++++ 4	Beautified
+@@ -1,8 +1,6 @@
+ public␣class␣HelloWorld␣{␊
+-␊
+ ␣␣␣␣public␣static␣void␣main(String[]␣args)␣{␊
+ ␣␣␣␣␣␣␣␣//␣Prints␣"Hello,␣World"␣to␣the␣terminal␣window.␊
+ ␣␣␣␣␣␣␣␣System.out.println("Hello,␣World");␊
+ ␣␣␣␣}␊
+-␊
+-}␊
++}
+\ No newline at end of file
+
+```
+</details>
+</details>
+<details><summary><strong>🔧 `8`</strong></summary>
+Using [Pretty Diff](/docs/beautifier-pretty-diff.html) beautifier:
+```Java
+public class HelloWorld {
+        public static void main(String[] args) {
+                // Prints "Hello, World" to the terminal window.
+                System.out.println("Hello, World");
+        }
+}
+```
+<details><summary>Configuration</summary>
+A `.unibeautify.json` file would look like the following:
+```json
+{
+  "Java": {
+    "indent_size": 8,
+    "indent_char": " "
+  }
+}
+```
+</details>
+<details><summary>Difference from original</summary>
+```diff
+Index: 8
+===================================================================
+--- 8	Original
++++ 8	Beautified
+@@ -1,8 +1,6 @@
+ public␣class␣HelloWorld␣{␊
+-␊
+-␣␣␣␣public␣static␣void␣main(String[]␣args)␣{␊
+-␣␣␣␣␣␣␣␣//␣Prints␣"Hello,␣World"␣to␣the␣terminal␣window.␊
+-␣␣␣␣␣␣␣␣System.out.println("Hello,␣World");␊
+-␣␣␣␣}␊
+-␊
+-}␊
++␣␣␣␣␣␣␣␣public␣static␣void␣main(String[]␣args)␣{␊
++␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣//␣Prints␣"Hello,␣World"␣to␣the␣terminal␣window.␊
++␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣System.out.println("Hello,␣World");␊
++␣␣␣␣␣␣␣␣}␊
++}
+\ No newline at end of file
+
+```
+</details>
+</details>
 ### JavaScript
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
