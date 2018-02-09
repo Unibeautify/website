@@ -51,25 +51,8 @@ sidebar_label: ✅ Break Chained Methods
 ```JavaScript
 foo.bar().baz();
 
-foo
-.bar()
-
-.baz();
-
-foo
-.bar()
-// some comment here
-.baz();
-
 this.$("#fileName").val().addClass("disabled")
     .prop("disabled", true)
-
-$('#items')
-  .find('.selected')
-    .highlight()
-    .end()
-  .find('.open')
-    .updateCount();
 
 function doStuff() {
 if (oParameters.State !== ui().s2p().mm().supplinvoice().manage().util().Constants().blabla()) {
@@ -85,27 +68,10 @@ Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 foo.bar()
   .baz();
 
-foo
-  .bar()
-
-  .baz();
-
-foo
-  .bar()
-  // some comment here
-  .baz();
-
 this.$("#fileName")
   .val()
   .addClass("disabled")
   .prop("disabled", true)
-
-$('#items')
-  .find('.selected')
-  .highlight()
-  .end()
-  .find('.open')
-  .updateCount();
 
 function doStuff() {
   if (oParameters.State !== ui()
@@ -138,24 +104,9 @@ Index: true
 ===================================================================
 --- true	Original
 +++ true	Beautified
-@@ -1,27 +1,37 @@
+@@ -1,10 +1,20 @@
 -foo.bar().baz();␊
 +foo.bar()␊
-+␣␣.baz();␊
- ␊
- foo␊
--.bar()␊
-+␣␣.bar()␊
- ␊
--.baz();␊
-+␣␣.baz();␊
- ␊
- foo␊
--.bar()␊
--//␣some␣comment␣here␊
--.baz();␊
-+␣␣.bar()␊
-+␣␣//␣some␣comment␣here␊
 +␣␣.baz();␊
  ␊
 -this.$("#fileName").val().addClass("disabled")␊
@@ -164,16 +115,6 @@ Index: true
 +␣␣.val()␊
 +␣␣.addClass("disabled")␊
 +␣␣.prop("disabled",␣true)␊
- ␊
- $('#items')␊
- ␣␣.find('.selected')␊
--␣␣␣␣.highlight()␊
--␣␣␣␣.end()␊
-+␣␣.highlight()␊
-+␣␣.end()␊
- ␣␣.find('.open')␊
--␣␣␣␣.updateCount();␊
-+␣␣.updateCount();␊
  ␊
  function␣doStuff()␣{␊
 -if␣(oParameters.State␣!==␣ui().s2p().mm().supplinvoice().manage().util().Constants().blabla())␣{␊
@@ -201,25 +142,8 @@ Using [JS-Beautify](/docs/beautifier-js-beautify.html) beautifier:
 ```JavaScript
 foo.bar().baz();
 
-foo
-  .bar()
-
-  .baz();
-
-foo
-  .bar()
-  // some comment here
-  .baz();
-
 this.$("#fileName").val().addClass("disabled")
   .prop("disabled", true)
-
-$('#items')
-  .find('.selected')
-  .highlight()
-  .end()
-  .find('.open')
-  .updateCount();
 
 function doStuff() {
   if (oParameters.State !== ui().s2p().mm().supplinvoice().manage().util().Constants().blabla()) {
@@ -245,37 +169,12 @@ Index: false
 ===================================================================
 --- false	Original
 +++ false	Beautified
-@@ -1,27 +1,27 @@
+@@ -1,10 +1,10 @@
  foo.bar().baz();␊
- ␊
- foo␊
--.bar()␊
-+␣␣.bar()␊
- ␊
--.baz();␊
-+␣␣.baz();␊
- ␊
- foo␊
--.bar()␊
--//␣some␣comment␣here␊
--.baz();␊
-+␣␣.bar()␊
-+␣␣//␣some␣comment␣here␊
-+␣␣.baz();␊
  ␊
  this.$("#fileName").val().addClass("disabled")␊
 -␣␣␣␣.prop("disabled",␣true)␊
 +␣␣.prop("disabled",␣true)␊
- ␊
- $('#items')␊
- ␣␣.find('.selected')␊
--␣␣␣␣.highlight()␊
--␣␣␣␣.end()␊
-+␣␣.highlight()␊
-+␣␣.end()␊
- ␣␣.find('.open')␊
--␣␣␣␣.updateCount();␊
-+␣␣.updateCount();␊
  ␊
  function␣doStuff()␣{␊
 -if␣(oParameters.State␣!==␣ui().s2p().mm().supplinvoice().manage().util().Constants().blabla())␣{␊
