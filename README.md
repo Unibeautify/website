@@ -1,11 +1,17 @@
-# unibeautify.github.io
-
-Webpage for Unibeautifier
+# Unibeautify Website
 
 ## Contributing
 
-To generate the docs:
+Generate the docs for options, languages, and beautifiers:
 
 ```
 npm run docs
+```
+
+We use [Docusaurus](https://docusaurus.io/) which can be run with:
+
+```
+cd website
+yarn run start # or `npm run start`
+# navigate to http://localhost:3000
 ```
