@@ -5,7 +5,7 @@ import Unibeautify, {
   BeautifierOptionName,
 } from "unibeautify";
 import * as _ from "lodash";
-import { optionKeys, linkForLanguage, linkForOption, emojis } from "./utils";
+import { linkForLanguage, linkForOption, emojis } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 export default class BeautifierDoc extends Doc {
@@ -158,21 +158,13 @@ export default class BeautifierDoc extends Doc {
       );
   }
   private options(language: Language): OptionsRegistry {
-    const keys: BeautifierOptionName[] = optionKeys(this.beautifier, language);
-    const allOptions = this.allOptions;
-    return keys.reduce((options, key) => {
-      const option = allOptions[key];
-      if (!option) {
-        return options;
-      }
-      return {
-        ...options,
-        [key]: option,
-      };
-    }, {});
+    return Unibeautify.getOptionsSupportedByBeautifierForLanguage({
+      beautifier: this.beautifier,
+      language,
+    });
   }
   private get allOptions(): OptionsRegistry {
-    return (Unibeautify as any).options;
+    return Unibeautify.loadedOptions;
   }
   private get pkg(): object | undefined {
     return this.beautifier.package;

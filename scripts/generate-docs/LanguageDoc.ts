@@ -4,13 +4,7 @@ import Unibeautify, {
   OptionsRegistry,
 } from "unibeautify";
 import * as _ from "lodash";
-import {
-  slugify,
-  optionKeys,
-  linkForBeautifier,
-  linkForOption,
-  emojis,
-} from "./utils";
+import { slugify, linkForBeautifier, linkForOption, emojis } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 import OptionsListDoc from "./OptionsListDoc";
@@ -89,21 +83,13 @@ export default class LanguageDoc extends Doc {
       );
   }
   private options(beautifier: Beautifier): OptionsRegistry {
-    const keys = optionKeys(beautifier, this.language);
-    const allOptions = this.allOptions;
-    return keys.reduce((options, key) => {
-      const option = allOptions[key];
-      if (!option) {
-        return options;
-      }
-      return {
-        ...options,
-        [key]: option,
-      };
-    }, {});
+    return Unibeautify.getOptionsSupportedByBeautifierForLanguage({
+      beautifier,
+      language: this.language,
+    });
   }
   private get allOptions(): OptionsRegistry {
-    return (Unibeautify as any).options;
+    return Unibeautify.loadedOptions;
   }
 }
 interface OptionsLookup {
