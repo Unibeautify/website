@@ -52,7 +52,7 @@ class Footer extends React.Component {
               target="_blank">
               Stack Overflow
             </a>
-            <a href="#">Project Chat</a>
+            <a href="https://unibeautify-slack.herokuapp.com/">Slack <img src="https://unibeautify-slack.herokuapp.com/badge.svg" /></a>
             <a href="https://twitter.com/Unibeautify" target="_blank">
               @Unibeautify on Twitter
             </a>
