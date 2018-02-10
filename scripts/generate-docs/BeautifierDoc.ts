@@ -32,7 +32,6 @@ export default class BeautifierDoc extends Doc {
     this.appendOptionsTable(builder);
     return builder.build();
   }
-
   private appendAboutSection(builder: MarkdownBuilder): MarkdownBuilder {
     if (!this.pkg) {
       return builder;
@@ -59,19 +58,15 @@ export default class BeautifierDoc extends Doc {
     );
     return builder;
   }
-
   private getPackageCurrentVersion(packageName: string): string {
     return require(`${packageName}/package.json`).version;
   }
-
   private get packageName(): string {
     return _.get(this.pkg, "name", "");
   }
-
   private get packageDescription(): string {
     return _.get(this.pkg, "description", "");
   }
-
   private appendInstallSection(builder: MarkdownBuilder): MarkdownBuilder {
     if (!this.pkg) {
       return builder;
@@ -87,11 +82,9 @@ export default class BeautifierDoc extends Doc {
     builder.code(`yarn add --dev ${packageNames.join(" ")}`, "bash");
     return builder;
   }
-
   private get packagePeerDependencies(): string[] {
     return Object.keys(_.get(this.pkg, "peerDependencies", {}));
   }
-
   private appendUsageSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("Usage", 2);
     builder.append(
@@ -181,15 +174,12 @@ export default class BeautifierDoc extends Doc {
   private get allOptions(): OptionsRegistry {
     return (Unibeautify as any).options;
   }
-
   private get pkg(): object | undefined {
     return this.beautifier.package;
   }
-
   protected get editUrl() {
     return _.get(this.pkg, "homepage");
   }
-
 }
 interface OptionsLookup {
   [languageName: string]: OptionsRegistry;

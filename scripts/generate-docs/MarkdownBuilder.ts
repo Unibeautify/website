@@ -6,7 +6,7 @@ export default class MarkdownBuilder {
   public header(
     text: string,
     level: number = 1,
-    toc: boolean = false
+    toc: boolean = false,
   ): MarkdownBuilder {
     const prefix = "#".repeat(level);
     if (toc === true) {
