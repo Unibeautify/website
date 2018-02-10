@@ -23,9 +23,8 @@ const siteConfig = {
   cname: "unibeautify.com",
   noIndex: false,
   baseUrl: "/" /* base url for your project */,
-  projectName: "unibeautify.github.io",
   editUrl:
-    "https://github.com/unibeautify/unibeautify.github.io/edit/develop/docs/",
+    "https://github.com/unibeautify/website/edit/master/docs/",
   gaTrackingId: "UA-112681254-1",
   headerLinks: [
     { doc: "about", label: "About" },
@@ -51,7 +50,7 @@ const siteConfig = {
   copyright:
     "Copyright &copy; " + new Date().getFullYear() + " Glavin Wiechert",
   organizationName: "unibeautify", // or set an env variable ORGANIZATION_NAME
-  projectName: "unibeautify.github.io", // or set an env variable PROJECT_NAME
+  projectName: "website", // or set an env variable PROJECT_NAME
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: "default"
