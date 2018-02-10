@@ -1,5 +1,5 @@
 {
-  "name": "unibeautify.github.io",
+  "name": "website",
   "version": "1.0.0",
   "description": "Webpage for Unibeautifier",
   "private": true,
@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Unibeautify/unibeautify.github.io.git"
+    "url": "git+https://github.com/Unibeautify/website.git"
   },
   "keywords": [],
   "author": "Glavin Wiechert",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Unibeautify/unibeautify.github.io/issues"
+    "url": "https://github.com/Unibeautify/website/issues"
   },
-  "homepage": "https://github.com/Unibeautify/unibeautify.github.io#readme",
+  "homepage": "https://github.com/Unibeautify/website#readme",
   "devDependencies": {
     "@types/diff": "^3.2.2",
     "@types/fs-extra": "^5.0.0",

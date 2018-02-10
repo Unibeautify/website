@@ -26,6 +26,7 @@ export function slugify(title: string): string {
     title
       .toLowerCase()
       .replace(/ /g, "-")
+      .replace(/\+/g, "-")
       .replace("#", "sharp")
   );
 }

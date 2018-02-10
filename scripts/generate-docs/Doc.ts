@@ -4,7 +4,10 @@ export default abstract class Doc {
     return `${this.prefix}${this.slug}`;
   }
   public get fileName(): string {
-    const title = this.title.toLowerCase().replace(/ /g, "-");
+    const title = this.title
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/\+/g, "-");
     return `${this.prefix}${title}.md`;
   }
   protected abstract get prefix(): string;
