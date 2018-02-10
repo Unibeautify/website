@@ -12,7 +12,7 @@ sidebar_label: ✅ Break Chained Methods
 **Default**: `false`
 
 ## Support
-**Languages**: [C#](/docs/language-csharp.html), [CSS](/docs/language-css.html), [CSV](/docs/language-csv.html), [ColdFusion](/docs/language-coldfusion.html), [EJS](/docs/language-ejs.html), [HTML](/docs/language-html.html), [HTML+ERB](/docs/language-html%2Berb.html), [Handlebars](/docs/language-handlebars.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [Java](/docs/language-java.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [Riot](/docs/language-riot.html), [SCSS](/docs/language-scss.html), [SVG](/docs/language-svg.html), [Sass](/docs/language-sass.html), [Spacebars](/docs/language-spacebars.html), [Swig](/docs/language-swig.html), [Titanium Style Sheets](/docs/language-titanium-style-sheets.html), [Twig](/docs/language-twig.html), [TypeScript](/docs/language-typescript.html), [Visualforce](/docs/language-visualforce.html), [XML](/docs/language-xml.html), [XTemplate](/docs/language-xtemplate.html)
+**Languages**: [C#](/docs/language-csharp.html), [CSS](/docs/language-css.html), [CSV](/docs/language-csv.html), [ColdFusion](/docs/language-coldfusion.html), [EJS](/docs/language-ejs.html), [HTML](/docs/language-html.html), [HTML+ERB](/docs/language-html-erb.html), [Handlebars](/docs/language-handlebars.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [Java](/docs/language-java.html), [JavaScript](/docs/language-javascript.html), [Less](/docs/language-less.html), [Riot](/docs/language-riot.html), [SCSS](/docs/language-scss.html), [SVG](/docs/language-svg.html), [Sass](/docs/language-sass.html), [Spacebars](/docs/language-spacebars.html), [Swig](/docs/language-swig.html), [Titanium Style Sheets](/docs/language-titanium-style-sheets.html), [Twig](/docs/language-twig.html), [TypeScript](/docs/language-typescript.html), [Visualforce](/docs/language-visualforce.html), [XML](/docs/language-xml.html), [XTemplate](/docs/language-xtemplate.html)
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html), [Pretty Diff](/docs/beautifier-pretty-diff.html), [ESLint](/docs/beautifier-eslint.html)
 
@@ -25,7 +25,7 @@ sidebar_label: ✅ Break Chained Methods
 | [ColdFusion](/docs/language-coldfusion.html) | &#10060; | &#9989; | &#10060; |
 | [EJS](/docs/language-ejs.html) | &#9989; | &#9989; | &#10060; |
 | [HTML](/docs/language-html.html) | &#10060; | &#9989; | &#10060; |
-| [HTML+ERB](/docs/language-html%2Berb.html) | &#10060; | &#9989; | &#10060; |
+| [HTML+ERB](/docs/language-html-erb.html) | &#10060; | &#9989; | &#10060; |
 | [Handlebars](/docs/language-handlebars.html) | &#10060; | &#9989; | &#10060; |
 | [JSON](/docs/language-json.html) | &#9989; | &#9989; | &#10060; |
 | [JSX](/docs/language-jsx.html) | &#9989; | &#9989; | &#9989; |
