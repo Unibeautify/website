@@ -27,12 +27,12 @@ export function slugify(title: string): string {
       .toLowerCase()
       .replace(/ /g, "-")
       .replace(/\+/g, "-")
-      .replace("#", "sharp")
+      .replace("#", "sharp"),
   );
 }
 export function optionKeys(
   beautifier: Beautifier,
-  language: Language
+  language: Language,
 ): BeautifierOptionName[] {
   const globalOptions = beautifier.options._;
   let beautifierOptions = beautifier.options[language.name];
@@ -70,7 +70,7 @@ export function optionKeys(
   }
 }
 function isOptionTransformSingleFunction(
-  option: any
+  option: any,
 ): option is BeautifyOptionTransformSingleFunction {
   return typeof option === "function";
 }

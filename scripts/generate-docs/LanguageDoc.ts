@@ -41,7 +41,6 @@ export default class LanguageDoc extends Doc {
   protected get editUrl() {
     return "https://github.com/unibeautify/unibeautify/edit/master/src/languages.json";
   }
-
   private linkForBeautifier = (beautifier: Beautifier): string => {
     const docId = `beautifier-${slugify(beautifier.name)}`;
     return MarkdownBuilder.createDocLink(beautifier.name, docId);
