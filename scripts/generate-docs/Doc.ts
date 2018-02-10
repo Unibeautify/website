@@ -18,6 +18,9 @@ export default abstract class Doc {
   protected get sidebarLabel(): string | Promise<string> {
     return this.title;
   }
+  protected get editUrl(): string | undefined {
+    return undefined;
+  }
   protected abstract get body(): string | Promise<string>;
   public get contents(): Promise<string> {
     return Promise.all([this.frontMatter, this.body]).then(
@@ -32,6 +35,7 @@ export default abstract class Doc {
           `id: ${id}`,
           `title: ${title}`,
           `sidebar_label: ${sidebarLabel}`,
+          this.editUrl ? `edit_url: ${this.editUrl}` : "",
           "---",
         ].join("\n")
     );

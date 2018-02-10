@@ -34,17 +34,7 @@ export default class OptionsListDoc extends Doc {
   public get allOptions(): OptionsRegistry[] {
     return (Unibeautify as any).options;
   }
-  protected get frontMatter(): Promise<string> {
-    return Promise.all([this.id, this.title, this.sidebarLabel]).then(
-      ([id, title, sidebarLabel]) =>
-        [
-          "---",
-          `id: ${id}`,
-          `title: ${title}`,
-          `sidebar_label: ${sidebarLabel}`,
-          `edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts`,
-          "---",
-        ].join("\n"),
-    );
+  protected get editUrl() {
+    return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
   }
 }

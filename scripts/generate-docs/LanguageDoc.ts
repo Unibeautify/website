@@ -38,19 +38,10 @@ export default class LanguageDoc extends Doc {
     this.appendOptionsTable(builder);
     return builder.build();
   }
-  protected get frontMatter(): Promise<string> {
-    return Promise.all([this.id, this.title, this.sidebarLabel]).then(
-      ([id, title, sidebarLabel]) =>
-        [
-          "---",
-          `id: ${id}`,
-          `title: ${title}`,
-          `sidebar_label: ${sidebarLabel}`,
-          `edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json`,
-          "---",
-        ].join("\n"),
-    );
+  protected get editUrl() {
+    return "https://github.com/unibeautify/unibeautify/edit/master/src/languages.json";
   }
+
   private linkForBeautifier = (beautifier: Beautifier): string => {
     const docId = `beautifier-${slugify(beautifier.name)}`;
     return MarkdownBuilder.createDocLink(beautifier.name, docId);
