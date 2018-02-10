@@ -2,7 +2,24 @@
 id: beautifier-js-beautify
 title: JS-Beautify
 sidebar_label: JS-Beautify
+edit_url: https://github.com/Unibeautify/beautifier-js-beautify#readme
 ---
+## About
+JS-Beautify beautifier for Unibeautify
+| Package | Docs | Latest |
+| --- | --- | --- |
+| **[@unibeautify/beautifier-js-beautify](https://www.npmjs.com/package/@unibeautify/beautifier-js-beautify)** | v0.3.0 | [![npm](https://img.shields.io/npm/v/@unibeautify/beautifier-js-beautify.svg)](https://www.npmjs.com/package/@unibeautify/beautifier-js-beautify) |
+| **[js-beautify](https://www.npmjs.com/package/js-beautify)** | v1.7.5 | [![npm](https://img.shields.io/npm/v/js-beautify.svg)](https://www.npmjs.com/package/js-beautify) |
+| **[unibeautify](https://www.npmjs.com/package/unibeautify)** | v0.7.0 | [![npm](https://img.shields.io/npm/v/unibeautify.svg)](https://www.npmjs.com/package/unibeautify) |
+## Install
+Install with [`npm`](https://www.npmjs.com/):
+```bash
+npm install --save-dev js-beautify unibeautify @unibeautify/beautifier-js-beautify
+```
+Or with [`yarn`](https://yarnpkg.com/):
+```bash
+yarn add --dev js-beautify unibeautify @unibeautify/beautifier-js-beautify
+```
 ## Usage
 Below are example configuration files for each of the supported languages.
 <details><summary>CSS</summary>

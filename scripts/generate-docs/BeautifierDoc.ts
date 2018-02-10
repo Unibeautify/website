@@ -25,21 +25,83 @@ export default class BeautifierDoc extends Doc {
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
+    this.appendAboutSection(builder);
+    this.appendInstallSection(builder);
     this.appendUsageSection(builder);
     builder.header("Options", 2);
     this.appendOptionsTable(builder);
     return builder.build();
   }
+
+  private appendAboutSection(builder: MarkdownBuilder): MarkdownBuilder {
+    if (!this.pkg) {
+      return builder;
+    }
+    builder.header("About", 2);
+    builder.append(this.packageDescription);
+    builder.append("| Package | Docs | Latest |");
+    builder.append("| --- | --- | --- |");
+    builder.append(
+      `| **[${this.packageName}](https://www.npmjs.com/package/${
+        this.packageName
+      })** | v${this.getPackageCurrentVersion(
+        this.packageName,
+      )} | [![npm](https://img.shields.io/npm/v/${
+        this.packageName
+      }.svg)](https://www.npmjs.com/package/${this.packageName}) |`,
+    );
+    this.packagePeerDependencies.forEach(dep =>
+      builder.append(
+        `| **[${dep}](https://www.npmjs.com/package/${dep})** | v${this.getPackageCurrentVersion(
+          dep,
+        )} | [![npm](https://img.shields.io/npm/v/${dep}.svg)](https://www.npmjs.com/package/${dep}) |`,
+      ),
+    );
+    return builder;
+  }
+
+  private getPackageCurrentVersion(packageName: string): string {
+    return require(`${packageName}/package.json`).version;
+  }
+
+  private get packageName(): string {
+    return _.get(this.pkg, "name", "");
+  }
+
+  private get packageDescription(): string {
+    return _.get(this.pkg, "description", "");
+  }
+
+  private appendInstallSection(builder: MarkdownBuilder): MarkdownBuilder {
+    if (!this.pkg) {
+      return builder;
+    }
+    builder.header("Install", 2);
+    const packageNames: string[] = [
+      ...this.packagePeerDependencies,
+      this.packageName,
+    ];
+    builder.append("Install with [`npm`](https://www.npmjs.com/):");
+    builder.code(`npm install --save-dev ${packageNames.join(" ")}`, "bash");
+    builder.append("Or with [`yarn`](https://yarnpkg.com/):");
+    builder.code(`yarn add --dev ${packageNames.join(" ")}`, "bash");
+    return builder;
+  }
+
+  private get packagePeerDependencies(): string[] {
+    return Object.keys(_.get(this.pkg, "peerDependencies", {}));
+  }
+
   private appendUsageSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("Usage", 2);
     builder.append(
-      "Below are example configuration files for each of the supported languages."
+      "Below are example configuration files for each of the supported languages.",
     );
     const beautifierName: string = this.beautifier.name;
     this.languages.forEach(lang => {
       builder.details(lang.name, builder => {
         builder.append(
-          `A \`.unibeautifyrc.json\` file would look like the following:`
+          `A \`.unibeautifyrc.json\` file would look like the following:`,
         );
         builder.code(
           JSON.stringify(
@@ -49,9 +111,9 @@ export default class BeautifierDoc extends Doc {
               },
             },
             null,
-            2
+            2,
           ),
-          "json"
+          "json",
         );
       });
     });
@@ -66,7 +128,7 @@ export default class BeautifierDoc extends Doc {
     // console.log(JSON.stringify(this.allOptions, null, 2));
     builder.append(
       "| Option |" +
-        this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join("")
+        this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join(""),
     );
     builder.append("| --- |" + this.languages.map(lang => ` --- |`).join(""));
     Object.keys(this.allOptions).forEach(optionKey => {
@@ -77,7 +139,7 @@ export default class BeautifierDoc extends Doc {
         const languageSupportsOption: boolean = _.get(
           this.optionsLookup as any,
           `${language.name}.${optionKey}`,
-          false
+          false,
         );
         const symbol = languageSupportsOption ? emojis.checkmark : emojis.x;
         row += ` ${symbol} |`;
@@ -99,7 +161,7 @@ export default class BeautifierDoc extends Doc {
           ...lookup,
           [language.name]: options,
         }),
-        {}
+        {},
       );
   }
   private options(language: Language): OptionsRegistry {
@@ -119,6 +181,15 @@ export default class BeautifierDoc extends Doc {
   private get allOptions(): OptionsRegistry {
     return (Unibeautify as any).options;
   }
+
+  private get pkg(): object | undefined {
+    return this.beautifier.package;
+  }
+
+  protected get editUrl() {
+    return _.get(this.pkg, "homepage");
+  }
+
 }
 interface OptionsLookup {
   [languageName: string]: OptionsRegistry;

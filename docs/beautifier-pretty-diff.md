@@ -2,7 +2,24 @@
 id: beautifier-pretty-diff
 title: Pretty Diff
 sidebar_label: Pretty Diff
+edit_url: https://github.com/Unibeautify/beautifier-prettydiff#readme
 ---
+## About
+Pretty Diff beautifier for Unibeautify
+| Package | Docs | Latest |
+| --- | --- | --- |
+| **[@unibeautify/beautifier-prettydiff](https://www.npmjs.com/package/@unibeautify/beautifier-prettydiff)** | v0.4.0 | [![npm](https://img.shields.io/npm/v/@unibeautify/beautifier-prettydiff.svg)](https://www.npmjs.com/package/@unibeautify/beautifier-prettydiff) |
+| **[unibeautify](https://www.npmjs.com/package/unibeautify)** | v0.7.0 | [![npm](https://img.shields.io/npm/v/unibeautify.svg)](https://www.npmjs.com/package/unibeautify) |
+| **[prettydiff2](https://www.npmjs.com/package/prettydiff2)** | v2.2.7 | [![npm](https://img.shields.io/npm/v/prettydiff2.svg)](https://www.npmjs.com/package/prettydiff2) |
+## Install
+Install with [`npm`](https://www.npmjs.com/):
+```bash
+npm install --save-dev unibeautify prettydiff2 @unibeautify/beautifier-prettydiff
+```
+Or with [`yarn`](https://yarnpkg.com/):
+```bash
+yarn add --dev unibeautify prettydiff2 @unibeautify/beautifier-prettydiff
+```
 ## Usage
 Below are example configuration files for each of the supported languages.
 <details><summary>C#</summary>

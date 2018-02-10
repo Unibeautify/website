@@ -2,7 +2,24 @@
 id: beautifier-prettier
 title: Prettier
 sidebar_label: Prettier
+edit_url: https://github.com/Unibeautify/beautifier-prettier#readme
 ---
+## About
+Prettier beautifier for Unibeautify
+| Package | Docs | Latest |
+| --- | --- | --- |
+| **[@unibeautify/beautifier-prettier](https://www.npmjs.com/package/@unibeautify/beautifier-prettier)** | v0.6.0 | [![npm](https://img.shields.io/npm/v/@unibeautify/beautifier-prettier.svg)](https://www.npmjs.com/package/@unibeautify/beautifier-prettier) |
+| **[unibeautify](https://www.npmjs.com/package/unibeautify)** | v0.7.0 | [![npm](https://img.shields.io/npm/v/unibeautify.svg)](https://www.npmjs.com/package/unibeautify) |
+| **[prettier](https://www.npmjs.com/package/prettier)** | v1.10.2 | [![npm](https://img.shields.io/npm/v/prettier.svg)](https://www.npmjs.com/package/prettier) |
+## Install
+Install with [`npm`](https://www.npmjs.com/):
+```bash
+npm install --save-dev unibeautify prettier @unibeautify/beautifier-prettier
+```
+Or with [`yarn`](https://yarnpkg.com/):
+```bash
+yarn add --dev unibeautify prettier @unibeautify/beautifier-prettier
+```
 ## Usage
 Below are example configuration files for each of the supported languages.
 <details><summary>CSS</summary>
