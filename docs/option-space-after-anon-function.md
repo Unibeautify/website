@@ -2,6 +2,7 @@
 id: option-space-after-anon-function
 title: Space After Anon Function
 sidebar_label: ✅ Space After Anon Function
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `space_after_anon_function`
 

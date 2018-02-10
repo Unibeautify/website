@@ -2,6 +2,7 @@
 id: language-mustache
 title: Mustache
 sidebar_label: Mustache
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [JS-Beautify](/docs/beautifier-js-beautify.html)

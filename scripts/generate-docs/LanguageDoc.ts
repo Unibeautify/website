@@ -38,6 +38,19 @@ export default class LanguageDoc extends Doc {
     this.appendOptionsTable(builder);
     return builder.build();
   }
+  protected get frontMatter(): Promise<string> {
+    return Promise.all([this.id, this.title, this.sidebarLabel]).then(
+      ([id, title, sidebarLabel]) =>
+        [
+          "---",
+          `id: ${id}`,
+          `title: ${title}`,
+          `sidebar_label: ${sidebarLabel}`,
+          `edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json`,
+          "---",
+        ].join("\n"),
+    );
+  }
   private linkForBeautifier = (beautifier: Beautifier): string => {
     const docId = `beautifier-${slugify(beautifier.name)}`;
     return MarkdownBuilder.createDocLink(beautifier.name, docId);
@@ -47,10 +60,10 @@ export default class LanguageDoc extends Doc {
       "| Option |" +
         this.beautifiers
           .map(beautifier => ` ${linkForBeautifier(beautifier)} |`)
-          .join("")
+          .join(""),
     );
     builder.append(
-      "| --- |" + this.beautifiers.map(beautifier => ` --- |`).join("")
+      "| --- |" + this.beautifiers.map(beautifier => ` --- |`).join(""),
     );
     Object.keys(this.allOptions).forEach(optionKey => {
       const option = this.allOptions[optionKey];
@@ -60,7 +73,7 @@ export default class LanguageDoc extends Doc {
         const beautifierSupportsOption: boolean = _.get(
           this.optionsLookup as any,
           `${beautifier.name}.${optionKey}`,
-          false
+          false,
         );
         const symbol = beautifierSupportsOption ? emojis.checkmark : emojis.x;
         row += ` ${symbol} |`;
@@ -82,7 +95,7 @@ export default class LanguageDoc extends Doc {
           ...lookup,
           [beautifier.name]: options,
         }),
-        {}
+        {},
       );
   }
   private options(beautifier: Beautifier): OptionsRegistry {

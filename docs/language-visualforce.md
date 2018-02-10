@@ -2,6 +2,7 @@
 id: language-visualforce
 title: Visualforce
 sidebar_label: Visualforce
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

@@ -2,6 +2,7 @@
 id: option-indent-level
 title: Indent Level
 sidebar_label: 🚨 Indent Level
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `indent_level`
 

@@ -2,6 +2,7 @@
 id: language-typescript
 title: TypeScript
 sidebar_label: TypeScript
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

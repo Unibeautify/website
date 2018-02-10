@@ -2,6 +2,7 @@
 id: language-java
 title: Java
 sidebar_label: Java
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

@@ -2,6 +2,7 @@
 id: option-indent-char
 title: Indent Char
 sidebar_label: ✅ Indent Char
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `indent_char`
 

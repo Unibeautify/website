@@ -2,6 +2,7 @@
 id: option-end-with-newline
 title: End With Newline
 sidebar_label: ✅ End With Newline
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `end_with_newline`
 

@@ -2,6 +2,7 @@
 id: option-object-curly-spacing
 title: Object Curly Spacing
 sidebar_label: ✅ Object Curly Spacing
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `object_curly_spacing`
 

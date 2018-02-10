@@ -2,6 +2,7 @@
 id: option-quotes
 title: Quotes
 sidebar_label: ✅ Quotes
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `quotes`
 

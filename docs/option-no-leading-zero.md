@@ -2,6 +2,7 @@
 id: option-no-leading-zero
 title: No Leading Zero
 sidebar_label: ✅ No Leading Zero
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `no_leading_zero`
 

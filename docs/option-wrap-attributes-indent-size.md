@@ -2,6 +2,7 @@
 id: option-wrap-attributes-indent-size
 title: Wrap Attributes Indent Size
 sidebar_label: ✅ Wrap Attributes Indent Size
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `wrap_attributes_indent_size`
 

@@ -2,6 +2,7 @@
 id: option-wrap-line-length
 title: Wrap Line Length
 sidebar_label: ✅ Wrap Line Length
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `wrap_line_length`
 

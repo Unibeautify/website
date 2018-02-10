@@ -2,6 +2,7 @@
 id: language-liquid
 title: Liquid
 sidebar_label: Liquid
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [JS-Beautify](/docs/beautifier-js-beautify.html)

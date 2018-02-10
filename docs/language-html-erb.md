@@ -2,6 +2,7 @@
 id: language-html-erb
 title: HTML+ERB
 sidebar_label: HTML+ERB
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

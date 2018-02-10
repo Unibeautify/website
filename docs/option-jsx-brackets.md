@@ -2,6 +2,7 @@
 id: option-jsx-brackets
 title: JSX Brackets
 sidebar_label: ✅ JSX Brackets
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `jsx_brackets`
 
