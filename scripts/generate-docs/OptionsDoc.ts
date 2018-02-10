@@ -18,6 +18,9 @@ import {
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 
+const siteConfig = require("../../website/siteConfig.js");
+const editUrl = siteConfig.editUrl;
+
 export default class OptionsDoc extends Doc {
   private readonly languages: Language[];
   private readonly beautifiers: Beautifier[];
@@ -183,7 +186,10 @@ export default class OptionsDoc extends Doc {
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
             if (example) {
+              const editExampleButton = this.editExampleButton(language);
               builder.header(language.name, 3);
+              builder.append(`<div>${editExampleButton}</div>`);
+              builder.append("");
               builder.details("<strong>🚧 Original Code</strong>", builder => {
                 builder.code(example, language.name);
               });
@@ -339,6 +345,12 @@ export default class OptionsDoc extends Doc {
         optionName: this.optionKey,
       }),
     )[0];
+  }
+
+  private editExampleButton(language: Language): string {
+    return `<a class="edit-page-link button" href="${editUrl}../examples/${
+      language.name
+    }/${this.optionKey}.txt" target="_blank">Edit ${language.name} Example</a>`;
   }
 }
 

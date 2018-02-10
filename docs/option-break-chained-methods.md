@@ -48,6 +48,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 </details>
 ## Examples
 ### JavaScript
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/JavaScript/break_chained_methods.txt" target="_blank">Edit JavaScript Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 foo.bar().baz();
