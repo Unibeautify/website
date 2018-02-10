@@ -1,5 +1,5 @@
 ---
-id: language-html%2Berb
+id: language-html-erb
 title: HTML+ERB
 sidebar_label: HTML+ERB
 ---
