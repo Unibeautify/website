@@ -3,7 +3,7 @@ _:
   indent_char: " "
   indent_size: 2
 TypeScript:
-  beautifiers: ["Prettier"]
+  beautifiers: ["Pretty Diff", "Prettier"]
   align_assignments: false
   arrow_parens: "as-needed"
   break_chained_methods: true
