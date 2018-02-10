@@ -2,6 +2,7 @@
 id: option-multiline-ternary
 title: Multiline Ternary
 sidebar_label: ✅ Multiline Ternary
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `multiline_ternary`
 

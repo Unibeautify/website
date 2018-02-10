@@ -2,6 +2,7 @@
 id: option-preserve-newlines
 title: Preserve Newlines
 sidebar_label: ✅ Preserve Newlines
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `preserve_newlines`
 

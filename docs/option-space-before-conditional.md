@@ -2,6 +2,7 @@
 id: option-space-before-conditional
 title: Space Before Conditional
 sidebar_label: ✅ Space Before Conditional
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `space_before_conditional`
 

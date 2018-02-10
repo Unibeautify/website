@@ -2,6 +2,7 @@
 id: option-unindent-chained-methods
 title: Unindent Chained Methods
 sidebar_label: ✅ Unindent Chained Methods
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `unindent_chained_methods`
 

@@ -2,6 +2,7 @@
 id: option-align-assignments
 title: Align Assignments
 sidebar_label: ✅ Align Assignments
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `align_assignments`
 

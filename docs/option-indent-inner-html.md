@@ -2,6 +2,7 @@
 id: option-indent-inner-html
 title: Indent Inner Html
 sidebar_label: ✅ Indent Inner Html
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `indent_inner_html`
 

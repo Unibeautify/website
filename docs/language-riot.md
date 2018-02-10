@@ -2,6 +2,7 @@
 id: language-riot
 title: Riot
 sidebar_label: Riot
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

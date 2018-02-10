@@ -2,6 +2,7 @@
 id: option-break-chained-methods
 title: Break Chained Methods
 sidebar_label: ✅ Break Chained Methods
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `break_chained_methods`
 

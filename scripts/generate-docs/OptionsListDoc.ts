@@ -21,11 +21,11 @@ export default class OptionsListDoc extends Doc {
       if (!title) {
         title = optionKeyToTitle(key);
       }
-      const optionId = `option-${slugify(title)}`; //.replace(/_/g, "-");  `option-${key.replace(/_/g, "-")}`
+      const optionId = `option-${slugify(title)}`;
       let titleLink: string = MarkdownBuilder.createDocLink(title, optionId);
       let row = `| **${titleLink}** | \`${key}\` | ${option.description.replace(
         /\|/g,
-        "&#124;"
+        "&#124;",
       )} |`;
       builder.append(row);
     });
@@ -33,5 +33,18 @@ export default class OptionsListDoc extends Doc {
   }
   public get allOptions(): OptionsRegistry[] {
     return (Unibeautify as any).options;
+  }
+  protected get frontMatter(): Promise<string> {
+    return Promise.all([this.id, this.title, this.sidebarLabel]).then(
+      ([id, title, sidebarLabel]) =>
+        [
+          "---",
+          `id: ${id}`,
+          `title: ${title}`,
+          `sidebar_label: ${sidebarLabel}`,
+          `edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts`,
+          "---",
+        ].join("\n"),
+    );
   }
 }

@@ -2,6 +2,7 @@
 id: options
 title: Options
 sidebar_label: Options
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 | Title | Option Key | Description |
 | --- | --- | --- |

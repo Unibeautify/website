@@ -2,6 +2,7 @@
 id: language-sass
 title: Sass
 sidebar_label: Sass
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

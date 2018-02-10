@@ -2,6 +2,7 @@
 id: option-selector-separator-newline
 title: Selector Separator Newline
 sidebar_label: ✅ Selector Separator Newline
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `selector_separator_newline`
 

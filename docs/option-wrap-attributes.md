@@ -2,6 +2,7 @@
 id: option-wrap-attributes
 title: Wrap Attributes
 sidebar_label: ✅ Wrap Attributes
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `wrap_attributes`
 

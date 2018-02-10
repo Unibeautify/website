@@ -2,6 +2,7 @@
 id: option-force-indentation
 title: Force Indentation
 sidebar_label: ✅ Force Indentation
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `force_indentation`
 

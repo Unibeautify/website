@@ -2,6 +2,7 @@
 id: option-indent-size
 title: Indent Size
 sidebar_label: ✅ Indent Size
+edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `indent_size`
 
