@@ -47,6 +47,10 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#9989; |
 </details>
 ## Examples
+### C#
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/C%23/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add C# Example</a></div>
+
+No example found. Please submit a Pull Request!
 ### CSS
 <div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/CSS/newline_between_rules.txt" target="_blank">Edit CSS Example</a></div>
 
@@ -224,3 +228,95 @@ Index: false
 ```
 </details>
 </details>
+### CSV
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/CSV/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add CSV Example</a></div>
+
+No example found. Please submit a Pull Request!
+### ColdFusion
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/ColdFusion/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add ColdFusion Example</a></div>
+
+No example found. Please submit a Pull Request!
+### EJS
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/EJS/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add EJS Example</a></div>
+
+No example found. Please submit a Pull Request!
+### HTML
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/HTML/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add HTML Example</a></div>
+
+No example found. Please submit a Pull Request!
+### HTML+ERB
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/HTML%2BERB/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add HTML+ERB Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Handlebars
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Handlebars/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add Handlebars Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JSON
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JSON/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add JSON Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JSX
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JSX/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add JSX Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Java
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Java/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add Java Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JavaScript
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JavaScript/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add JavaScript Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Less
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Less/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add Less Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Riot
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Riot/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add Riot Example</a></div>
+
+No example found. Please submit a Pull Request!
+### SCSS
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/SCSS/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add SCSS Example</a></div>
+
+No example found. Please submit a Pull Request!
+### SVG
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/SVG/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add SVG Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Sass
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Sass/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add Sass Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Spacebars
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Spacebars/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add Spacebars Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Swig
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Swig/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add Swig Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Titanium Style Sheets
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Titanium%20Style%20Sheets/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add Titanium Style Sheets Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Twig
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Twig/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add Twig Example</a></div>
+
+No example found. Please submit a Pull Request!
+### TypeScript
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/TypeScript/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add TypeScript Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Visualforce
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Visualforce/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add Visualforce Example</a></div>
+
+No example found. Please submit a Pull Request!
+### XML
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/XML/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add XML Example</a></div>
+
+No example found. Please submit a Pull Request!
+### XTemplate
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/XTemplate/new?filename=newline_between_rules.txt&value=Type%20Example%20Here" target="_blank">Add XTemplate Example</a></div>
+
+No example found. Please submit a Pull Request!

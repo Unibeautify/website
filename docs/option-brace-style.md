@@ -33,6 +33,10 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 | [XML](/docs/language-xml.html) | &#9989; |
 </details>
 ## Examples
+### EJS
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/EJS/new?filename=brace_style.txt&value=Type%20Example%20Here" target="_blank">Add EJS Example</a></div>
+
+No example found. Please submit a Pull Request!
 ### HTML
 <div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/HTML/brace_style.txt" target="_blank">Edit HTML Example</a></div>
 
@@ -344,3 +348,31 @@ Index: none
 ```
 </details>
 </details>
+### Handlebars
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Handlebars/new?filename=brace_style.txt&value=Type%20Example%20Here" target="_blank">Add Handlebars Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JSON
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JSON/new?filename=brace_style.txt&value=Type%20Example%20Here" target="_blank">Add JSON Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JSX
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JSX/new?filename=brace_style.txt&value=Type%20Example%20Here" target="_blank">Add JSX Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JavaScript
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JavaScript/new?filename=brace_style.txt&value=Type%20Example%20Here" target="_blank">Add JavaScript Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Liquid
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Liquid/new?filename=brace_style.txt&value=Type%20Example%20Here" target="_blank">Add Liquid Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Mustache
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Mustache/new?filename=brace_style.txt&value=Type%20Example%20Here" target="_blank">Add Mustache Example</a></div>
+
+No example found. Please submit a Pull Request!
+### XML
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/XML/new?filename=brace_style.txt&value=Type%20Example%20Here" target="_blank">Add XML Example</a></div>
+
+No example found. Please submit a Pull Request!

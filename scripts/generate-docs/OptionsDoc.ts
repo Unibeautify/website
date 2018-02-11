@@ -249,6 +249,12 @@ export default class OptionsDoc extends Doc {
                   `${this.optionKey} - ${language.name} - BAD EXAMPLES`,
                 );
               }
+            } else {
+              const addExampleButton = this.addExampleButton(language);
+              builder.header(language.name, 3);
+              builder.append(`<div>${addExampleButton}</div>`);
+              builder.append("");
+              builder.append("No example found. Please submit a Pull Request!");
             }
           });
         });
@@ -351,6 +357,17 @@ export default class OptionsDoc extends Doc {
     return `<a class="edit-page-link button" href="${editUrl}../examples/${
       language.name
     }/${this.optionKey}.txt" target="_blank">Edit ${language.name} Example</a>`;
+  }
+
+  private addExampleButton(language: Language): string {
+    return `<a class="edit-page-link button" href="${editUrl.replace(
+      "/edit/",
+      "/new/",
+    )}../examples/${encodeURIComponent(language.name)}/new?filename=${
+      this.optionKey
+    }.txt&value=Type%20Example%20Here" target="_blank">Add ${
+      language.name
+    } Example</a>`;
   }
 }
 

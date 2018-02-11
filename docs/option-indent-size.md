@@ -51,6 +51,10 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 | [XTemplate](/docs/language-xtemplate.html) | &#10060; | &#10060; | &#9989; |
 </details>
 ## Examples
+### C#
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/C%23/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add C# Example</a></div>
+
+No example found. Please submit a Pull Request!
 ### CSS
 <div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/CSS/indent_size.txt" target="_blank">Edit CSS Example</a></div>
 
@@ -269,6 +273,22 @@ Index: 8
 ```
 </details>
 </details>
+### CSV
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/CSV/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add CSV Example</a></div>
+
+No example found. Please submit a Pull Request!
+### ColdFusion
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/ColdFusion/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add ColdFusion Example</a></div>
+
+No example found. Please submit a Pull Request!
+### EJS
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/EJS/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add EJS Example</a></div>
+
+No example found. Please submit a Pull Request!
+### GraphQL
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/GraphQL/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add GraphQL Example</a></div>
+
+No example found. Please submit a Pull Request!
 ### HTML
 <div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/HTML/indent_size.txt" target="_blank">Edit HTML Example</a></div>
 
@@ -393,6 +413,14 @@ Index: 8
 ```
 </details>
 </details>
+### HTML+ERB
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/HTML%2BERB/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add HTML+ERB Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Handlebars
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Handlebars/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Handlebars Example</a></div>
+
+No example found. Please submit a Pull Request!
 ### JSON
 <div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/JSON/indent_size.txt" target="_blank">Edit JSON Example</a></div>
 
@@ -510,6 +538,10 @@ Index: 8
 ```
 </details>
 </details>
+### JSX
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JSX/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add JSX Example</a></div>
+
+No example found. Please submit a Pull Request!
 ### Java
 <div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/Java/indent_size.txt" target="_blank">Edit Java Example</a></div>
 
@@ -876,6 +908,58 @@ Index: 8
 ```
 </details>
 </details>
+### Less
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Less/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Less Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Liquid
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Liquid/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Liquid Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Mustache
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Mustache/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Mustache Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Riot
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Riot/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Riot Example</a></div>
+
+No example found. Please submit a Pull Request!
+### SCSS
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/SCSS/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add SCSS Example</a></div>
+
+No example found. Please submit a Pull Request!
+### SVG
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/SVG/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add SVG Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Sass
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Sass/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Sass Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Spacebars
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Spacebars/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Spacebars Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Swig
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Swig/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Swig Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Titanium Style Sheets
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Titanium%20Style%20Sheets/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Titanium Style Sheets Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Twig
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Twig/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Twig Example</a></div>
+
+No example found. Please submit a Pull Request!
+### TypeScript
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/TypeScript/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add TypeScript Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Visualforce
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Visualforce/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Visualforce Example</a></div>
+
+No example found. Please submit a Pull Request!
 ### Vue
 <div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/Vue/indent_size.txt" target="_blank">Edit Vue Example</a></div>
 
@@ -1541,3 +1625,7 @@ Index: 8
 ```
 </details>
 </details>
+### XTemplate
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/XTemplate/new?filename=indent_size.txt&value=Type%20Example%20Here" target="_blank">Add XTemplate Example</a></div>
+
+No example found. Please submit a Pull Request!

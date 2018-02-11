@@ -26,6 +26,18 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 | [JavaScript](/docs/language-javascript.html) | &#9989; |
 </details>
 ## Examples
+### EJS
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/EJS/new?filename=unindent_chained_methods.txt&value=Type%20Example%20Here" target="_blank">Add EJS Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JSON
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JSON/new?filename=unindent_chained_methods.txt&value=Type%20Example%20Here" target="_blank">Add JSON Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JSX
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JSX/new?filename=unindent_chained_methods.txt&value=Type%20Example%20Here" target="_blank">Add JSX Example</a></div>
+
+No example found. Please submit a Pull Request!
 ### JavaScript
 <div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/JavaScript/unindent_chained_methods.txt" target="_blank">Edit JavaScript Example</a></div>
 
