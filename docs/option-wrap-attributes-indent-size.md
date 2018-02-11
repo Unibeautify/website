@@ -28,3 +28,24 @@ custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/opti
 | [Mustache](/docs/language-mustache.html) | &#9989; |
 | [XML](/docs/language-xml.html) | &#9989; |
 </details>
+## Examples
+### HTML
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/HTML/new?filename=wrap_attributes_indent_size.txt&value=Type%20Example%20Here" target="_blank">Add HTML Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Handlebars
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Handlebars/new?filename=wrap_attributes_indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Handlebars Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Liquid
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Liquid/new?filename=wrap_attributes_indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Liquid Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Mustache
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Mustache/new?filename=wrap_attributes_indent_size.txt&value=Type%20Example%20Here" target="_blank">Add Mustache Example</a></div>
+
+No example found. Please submit a Pull Request!
+### XML
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/XML/new?filename=wrap_attributes_indent_size.txt&value=Type%20Example%20Here" target="_blank">Add XML Example</a></div>
+
+No example found. Please submit a Pull Request!

@@ -24,3 +24,8 @@ custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/opti
 | --- | --- |
 | [CSS](/docs/language-css.html) | &#9989; |
 </details>
+## Examples
+### CSS
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/CSS/new?filename=selector_separator_newline.txt&value=Type%20Example%20Here" target="_blank">Add CSS Example</a></div>
+
+No example found. Please submit a Pull Request!

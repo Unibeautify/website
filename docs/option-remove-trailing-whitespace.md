@@ -25,3 +25,12 @@ custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/opti
 | [JSX](/docs/language-jsx.html) | &#9989; |
 | [JavaScript](/docs/language-javascript.html) | &#9989; |
 </details>
+## Examples
+### JSX
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JSX/new?filename=remove_trailing_whitespace.txt&value=Type%20Example%20Here" target="_blank">Add JSX Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JavaScript
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JavaScript/new?filename=remove_trailing_whitespace.txt&value=Type%20Example%20Here" target="_blank">Add JavaScript Example</a></div>
+
+No example found. Please submit a Pull Request!
