@@ -30,7 +30,6 @@ export function slugify(title: string): string {
       .replace("#", "sharp"),
   );
 }
-
 export function linkForBeautifier(beautifier: Beautifier): string {
   const docId = `beautifier-${slugify(beautifier.name)}`;
   return MarkdownBuilder.createDocLink(beautifier.name, docId);
