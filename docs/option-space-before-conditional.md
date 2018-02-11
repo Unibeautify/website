@@ -13,6 +13,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 **Default**: `true`
 
 ## Support
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../scripts/generate-docs/beautifiers.ts" target="_blank">Edit Beautifiers</a></div>
+
 **Languages**: [EJS](/docs/language-ejs.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html)
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)

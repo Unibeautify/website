@@ -15,6 +15,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 **Allowed values**: `"always"` or `"never"` or `"preserve"`
 
 ## Support
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../scripts/generate-docs/beautifiers.ts" target="_blank">Edit Beautifiers</a></div>
+
 **Languages**: [Markdown](/docs/language-markdown.html)
 
 **Beautifiers**: [Prettier](/docs/beautifier-prettier.html)

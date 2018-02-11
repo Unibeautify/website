@@ -13,9 +13,6 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 **Default**: `0`
 
 ## Support
-**Languages**: 
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../scripts/generate-docs/beautifiers.ts" target="_blank">Add Beautifier</a></div>
 
-**Beautifiers**: 
-
-<details><summary><strong>Comparison Table</strong></summary>
-</details>
+No language or beautifier support!
