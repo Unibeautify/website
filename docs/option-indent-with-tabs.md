@@ -2,7 +2,7 @@
 id: option-indent-with-tabs
 title: Indent With Tabs
 sidebar_label: ✅ Indent With Tabs
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `indent_with_tabs`
 

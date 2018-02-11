@@ -2,7 +2,7 @@
 id: option-space-in-empty-paren
 title: Space In Empty Paren
 sidebar_label: ✅ Space In Empty Paren
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `space_in_empty_paren`
 

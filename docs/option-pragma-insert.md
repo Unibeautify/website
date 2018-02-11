@@ -2,7 +2,7 @@
 id: option-pragma-insert
 title: Pragma Insert
 sidebar_label: ✅ Pragma Insert
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `pragma_insert`
 

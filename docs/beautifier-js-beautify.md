@@ -2,7 +2,7 @@
 id: beautifier-js-beautify
 title: JS-Beautify
 sidebar_label: JS-Beautify
-edit_url: https://github.com/Unibeautify/beautifier-js-beautify#readme
+custom_edit_url: https://github.com/Unibeautify/beautifier-js-beautify#readme
 ---
 ## About
 JS-Beautify beautifier for Unibeautify

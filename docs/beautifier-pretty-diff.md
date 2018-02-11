@@ -2,7 +2,7 @@
 id: beautifier-pretty-diff
 title: Pretty Diff
 sidebar_label: Pretty Diff
-edit_url: https://github.com/Unibeautify/beautifier-prettydiff#readme
+custom_edit_url: https://github.com/Unibeautify/beautifier-prettydiff#readme
 ---
 ## About
 Pretty Diff beautifier for Unibeautify

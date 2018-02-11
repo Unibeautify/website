@@ -2,7 +2,7 @@
 id: option-pragma-require
 title: Pragma Require
 sidebar_label: ✅ Pragma Require
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `pragma_require`
 

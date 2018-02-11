@@ -2,7 +2,7 @@
 id: option-comma-first
 title: Comma First
 sidebar_label: ✅ Comma First
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `comma_first`
 

@@ -2,7 +2,7 @@
 id: option-arrow-parens
 title: Arrow Parens
 sidebar_label: ✅ Arrow Parens
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `arrow_parens`
 

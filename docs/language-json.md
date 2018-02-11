@@ -2,7 +2,7 @@
 id: language-json
 title: JSON
 sidebar_label: JSON
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

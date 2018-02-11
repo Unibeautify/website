@@ -2,7 +2,7 @@
 id: option-end-with-semicolon
 title: End With Semicolon
 sidebar_label: ✅ End With Semicolon
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `end_with_semicolon`
 

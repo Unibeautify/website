@@ -2,7 +2,7 @@
 id: option-unescape-strings
 title: Unescape Strings
 sidebar_label: ✅ Unescape Strings
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `unescape_strings`
 

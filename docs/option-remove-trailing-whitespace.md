@@ -2,7 +2,7 @@
 id: option-remove-trailing-whitespace
 title: Remove Trailing Whitespace
 sidebar_label: ✅ Remove Trailing Whitespace
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `remove_trailing_whitespace`
 

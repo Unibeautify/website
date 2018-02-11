@@ -2,7 +2,7 @@
 id: option-brace-style
 title: Brace Style
 sidebar_label: ✅ Brace Style
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `brace_style`
 

@@ -2,7 +2,7 @@
 id: option-max-preserve-newlines
 title: Max Preserve Newlines
 sidebar_label: ✅ Max Preserve Newlines
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `max_preserve_newlines`
 

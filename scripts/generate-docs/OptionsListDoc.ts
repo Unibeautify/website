@@ -34,7 +34,7 @@ export default class OptionsListDoc extends Doc {
   public get allOptions(): OptionsRegistry {
     return Unibeautify.loadedOptions;
   }
-  protected get editUrl() {
+  protected get customEditUrl() {
     return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
   }
 }

@@ -2,7 +2,7 @@
 id: language-csv
 title: CSV
 sidebar_label: CSV
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [Pretty Diff](/docs/beautifier-pretty-diff.html)

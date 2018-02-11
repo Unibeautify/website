@@ -2,7 +2,7 @@
 id: language-javascript
 title: JavaScript
 sidebar_label: JavaScript
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [Prettier](/docs/beautifier-prettier.html)

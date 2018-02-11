@@ -2,7 +2,7 @@
 id: option-newline-between-rules
 title: Newline Between Rules
 sidebar_label: ✅ Newline Between Rules
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `newline_between_rules`
 

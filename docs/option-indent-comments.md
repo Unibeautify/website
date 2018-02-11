@@ -2,7 +2,7 @@
 id: option-indent-comments
 title: Indent Comments
 sidebar_label: ✅ Indent Comments
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `indent_comments`
 

@@ -58,7 +58,7 @@ export default class OptionsDoc extends Doc {
     return `${this.hasSupport ? "✅" : "🚨"} ${this.title}`;
   }
 
-  protected get editUrl() {
+  protected get customEditUrl() {
     return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
   }
 

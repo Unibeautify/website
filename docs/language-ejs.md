@@ -2,7 +2,7 @@
 id: language-ejs
 title: EJS
 sidebar_label: EJS
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/languages.json
 ---
 ## Supported Beautifiers
 - [JS-Beautify](/docs/beautifier-js-beautify.html)

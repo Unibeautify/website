@@ -2,7 +2,7 @@
 id: option-end-with-comma
 title: End With Comma
 sidebar_label: ✅ End With Comma
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `end_with_comma`
 

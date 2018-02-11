@@ -2,7 +2,7 @@
 id: option-indent-scripts
 title: Indent Scripts
 sidebar_label: ✅ Indent Scripts
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `indent_scripts`
 

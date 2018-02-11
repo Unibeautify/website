@@ -2,7 +2,7 @@
 id: beautifier-eslint
 title: ESLint
 sidebar_label: ESLint
-edit_url: https://github.com/Unibeautify/beautifier-eslint#readme
+custom_edit_url: https://github.com/Unibeautify/beautifier-eslint#readme
 ---
 ## About
 ESLint beautifier for Unibeautify

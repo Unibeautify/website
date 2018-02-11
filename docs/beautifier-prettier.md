@@ -2,7 +2,7 @@
 id: beautifier-prettier
 title: Prettier
 sidebar_label: Prettier
-edit_url: https://github.com/Unibeautify/beautifier-prettier#readme
+custom_edit_url: https://github.com/Unibeautify/beautifier-prettier#readme
 ---
 ## About
 Prettier beautifier for Unibeautify

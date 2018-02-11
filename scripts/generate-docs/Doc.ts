@@ -18,7 +18,7 @@ export default abstract class Doc {
   protected get sidebarLabel(): string | Promise<string> {
     return this.title;
   }
-  protected get editUrl(): string | undefined {
+  protected get customEditUrl(): string | undefined {
     return undefined;
   }
   protected abstract get body(): string | Promise<string>;
@@ -35,7 +35,7 @@ export default abstract class Doc {
           `id: ${id}`,
           `title: ${title}`,
           `sidebar_label: ${sidebarLabel}`,
-          this.editUrl ? `edit_url: ${this.editUrl}` : "",
+          this.customEditUrl ? `custom_edit_url: ${this.customEditUrl}` : "",
           "---",
         ].join("\n"),
     );

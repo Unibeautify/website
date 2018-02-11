@@ -2,7 +2,7 @@
 id: option-end-of-line
 title: End Of Line
 sidebar_label: 🚨 End Of Line
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `end_of_line`
 

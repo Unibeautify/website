@@ -2,7 +2,7 @@
 id: option-wrap-prose
 title: Wrap Prose
 sidebar_label: ✅ Wrap Prose
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `wrap_prose`
 

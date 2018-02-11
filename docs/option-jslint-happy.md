@@ -2,7 +2,7 @@
 id: option-jslint-happy
 title: JSLint Happy
 sidebar_label: ✅ JSLint Happy
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `jslint_happy`
 

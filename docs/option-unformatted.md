@@ -2,7 +2,7 @@
 id: option-unformatted
 title: Unformatted
 sidebar_label: ✅ Unformatted
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `unformatted`
 

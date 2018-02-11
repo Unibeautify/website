@@ -2,7 +2,7 @@
 id: option-newline-before-tags
 title: Newline Before Tags
 sidebar_label: ✅ Newline Before Tags
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `newline_before_tags`
 

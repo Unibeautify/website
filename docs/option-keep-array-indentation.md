@@ -2,7 +2,7 @@
 id: option-keep-array-indentation
 title: Keep Array Indentation
 sidebar_label: ✅ Keep Array Indentation
-edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 **Key**: `keep_array_indentation`
 
