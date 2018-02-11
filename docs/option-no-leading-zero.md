@@ -48,6 +48,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 </details>
 ## Examples
 ### CSS
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/CSS/no_leading_zero.txt" target="_blank">Edit CSS Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```CSS
 .c1 {

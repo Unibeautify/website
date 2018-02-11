@@ -50,6 +50,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 </details>
 ## Examples
 ### JavaScript
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/JavaScript/multiline_ternary.txt" target="_blank">Edit JavaScript Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 const val1 = a ? "yes" : "no";

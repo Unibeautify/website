@@ -10,7 +10,6 @@ import * as JsDiff from "diff";
 
 import {
   optionKeyToTitle,
-  optionKeys,
   linkForLanguage,
   linkForBeautifier,
   unibeautifyWithBeautifier,
@@ -18,6 +17,9 @@ import {
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
+
+const siteConfig = require("../../website/siteConfig.js");
+const editUrl = siteConfig.editUrl;
 
 export default class OptionsDoc extends Doc {
   private readonly languages: Language[];
@@ -29,19 +31,9 @@ export default class OptionsDoc extends Doc {
     allBeautifiers: Beautifier[],
   ) {
     super();
-    this.languages = GlobalUnibeautify.supportedLanguages.filter(
-      language =>
-        allBeautifiers.findIndex(
-          beautifier =>
-            optionKeys(beautifier, language).indexOf(optionKey) !== -1,
-        ) !== -1,
-    );
-    this.beautifiers = allBeautifiers.filter(
-      beautifier =>
-        this.languages.findIndex(
-          language =>
-            optionKeys(beautifier, language).indexOf(optionKey) !== -1,
-        ) !== -1,
+    this.languages = GlobalUnibeautify.getLanguagesSupportingOption(optionKey);
+    this.beautifiers = GlobalUnibeautify.getBeautifiersSupportingOption(
+      optionKey,
     );
   }
 
@@ -132,8 +124,13 @@ export default class OptionsDoc extends Doc {
     this.languages.forEach(language => {
       let row = `| ${linkForLanguage(language)} |`;
       this.beautifiers.forEach(beautifier => {
-        const isSupported: boolean =
-          optionKeys(beautifier, language).indexOf(this.optionKey) !== -1;
+        const isSupported: boolean = GlobalUnibeautify.doesBeautifierSupportOptionForLanguage(
+          {
+            beautifier,
+            language,
+            optionName: this.optionKey,
+          },
+        );
         const symbol = isSupported ? emojis.checkmark : emojis.x;
         row += ` ${symbol} |`;
       });
@@ -189,7 +186,10 @@ export default class OptionsDoc extends Doc {
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
             if (example) {
+              const editExampleButton = this.editExampleButton(language);
               builder.header(language.name, 3);
+              builder.append(`<div>${editExampleButton}</div>`);
+              builder.append("");
               builder.details("<strong>🚧 Original Code</strong>", builder => {
                 builder.code(example, language.name);
               });
@@ -338,10 +338,19 @@ export default class OptionsDoc extends Doc {
   }
 
   private beautifierForLanguage(language: Language): Beautifier | undefined {
-    return this.beautifiers.filter(
-      beautifier =>
-        optionKeys(beautifier, language).indexOf(this.optionKey) !== -1,
+    return this.beautifiers.filter(beautifier =>
+      GlobalUnibeautify.doesBeautifierSupportOptionForLanguage({
+        beautifier,
+        language,
+        optionName: this.optionKey,
+      }),
     )[0];
+  }
+
+  private editExampleButton(language: Language): string {
+    return `<a class="edit-page-link button" href="${editUrl}../examples/${
+      language.name
+    }/${this.optionKey}.txt" target="_blank">Edit ${language.name} Example</a>`;
   }
 }
 

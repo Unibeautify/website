@@ -26,6 +26,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 </details>
 ## Examples
 ### Markdown
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/Markdown/wrap_prose.txt" target="_blank">Edit Markdown Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```Markdown
 # Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines. Wrap markdown text to new lines.

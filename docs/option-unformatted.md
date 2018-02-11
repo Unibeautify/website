@@ -28,6 +28,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 </details>
 ## Examples
 ### HTML
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/HTML/unformatted.txt" target="_blank">Edit HTML Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```HTML
 <div>

@@ -52,6 +52,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 </details>
 ## Examples
 ### CSS
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/CSS/indent_size.txt" target="_blank">Edit CSS Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```CSS
 .class1 {
@@ -268,6 +270,8 @@ Index: 8
 </details>
 </details>
 ### HTML
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/HTML/indent_size.txt" target="_blank">Edit HTML Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```HTML
 <div>
@@ -390,6 +394,8 @@ Index: 8
 </details>
 </details>
 ### JSON
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/JSON/indent_size.txt" target="_blank">Edit JSON Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```JSON
 {
@@ -505,6 +511,8 @@ Index: 8
 </details>
 </details>
 ### Java
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/Java/indent_size.txt" target="_blank">Edit Java Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```Java
 public class HelloWorld {
@@ -652,6 +660,8 @@ Index: 8
 </details>
 </details>
 ### JavaScript
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/JavaScript/indent_size.txt" target="_blank">Edit JavaScript Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 if (a) {
@@ -867,6 +877,8 @@ Index: 8
 </details>
 </details>
 ### Vue
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/Vue/indent_size.txt" target="_blank">Edit Vue Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```Vue
 <template >
@@ -1112,6 +1124,8 @@ Index: 8
 </details>
 </details>
 ### XML
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/XML/indent_size.txt" target="_blank">Edit XML Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```XML
 <breakfast_menu>

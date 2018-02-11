@@ -27,6 +27,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 </details>
 ## Examples
 ### JavaScript
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/JavaScript/comma_first.txt" target="_blank">Edit JavaScript Example</a></div>
+
 <details><summary><strong>🚧 Original Code</strong></summary>
 ```JavaScript
 const a = "a", b = "b", c = "c";

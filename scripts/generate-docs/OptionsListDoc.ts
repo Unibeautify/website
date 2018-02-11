@@ -14,7 +14,7 @@ export default class OptionsListDoc extends Doc {
     const builder = new MarkdownBuilder();
     builder.append("| Title | Option Key | Description |");
     builder.append("| --- | --- | --- |");
-    const options = this.allOptions;
+    const options: OptionsRegistry = this.allOptions;
     Object.keys(options).forEach(key => {
       const option = options[key];
       let title: string = option.title || "";
@@ -31,8 +31,8 @@ export default class OptionsListDoc extends Doc {
     });
     return builder.build();
   }
-  public get allOptions(): OptionsRegistry[] {
-    return (Unibeautify as any).options;
+  public get allOptions(): OptionsRegistry {
+    return Unibeautify.loadedOptions;
   }
   protected get editUrl() {
     return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
