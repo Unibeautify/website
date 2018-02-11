@@ -54,10 +54,6 @@ export default class OptionsDoc extends Doc {
     return title;
   }
 
-  protected get sidebarLabel(): string {
-    return `${this.hasSupport ? "✅" : "🚨"} ${this.title}`;
-  }
-
   protected get customEditUrl() {
     return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
   }
