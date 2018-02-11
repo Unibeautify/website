@@ -20,6 +20,7 @@ import MarkdownBuilder from "./MarkdownBuilder";
 
 const siteConfig = require("../../website/siteConfig.js");
 const editUrl = siteConfig.editUrl;
+const editBeautifiersUrl = `${editUrl}../scripts/generate-docs/beautifiers.ts`;
 
 export default class OptionsDoc extends Doc {
   private readonly languages: Language[];
@@ -54,18 +55,18 @@ export default class OptionsDoc extends Doc {
   }
 
   protected get sidebarLabel(): string {
-    return `${this.hasBeautifier ? "✅" : "🚨"} ${this.title}`;
+    return `${this.hasSupport ? "✅" : "🚨"} ${this.title}`;
   }
 
   protected get editUrl() {
     return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
   }
 
-  private get hasBeautifier(): boolean {
-    return this.beautifiers.length > 0;
+  private get hasSupport(): boolean {
+    return Boolean(this.beautifiers.length && this.languages.length);
   }
 
-  protected get body(): Promise<string> {
+  protected get body() {
     const builder = new MarkdownBuilder();
     builder.append(`**Key**: \`${this.optionKey}\`\n`);
     builder.append(`**Description**: ${this.option.description}\n`);
@@ -80,18 +81,25 @@ export default class OptionsDoc extends Doc {
     }
 
     builder.header("Support", 2);
-    builder.append(
-      `**Languages**: ${this.languages.map(linkForLanguage).join(", ")}\n`,
-    );
-    builder.append(
-      `**Beautifiers**: ${this.beautifiers
-        .map(linkForBeautifier)
-        .join(", ")}\n`,
-    );
-    builder.details("<strong>Comparison Table</strong>", builder => {
-      this.appendTable(builder);
-    });
-    return this.appendExamples(builder).then(() => builder.build());
+    if (this.hasSupport) {
+      builder.editButton("Edit Beautifiers", editBeautifiersUrl);
+      builder.append(
+        `**Languages**: ${this.languages.map(linkForLanguage).join(", ")}\n`,
+      );
+      builder.append(
+        `**Beautifiers**: ${this.beautifiers
+          .map(linkForBeautifier)
+          .join(", ")}\n`,
+      );
+      builder.details("<strong>Comparison Table</strong>", builder => {
+        this.appendTable(builder);
+      });
+      return this.appendExamples(builder).then(() => builder.build());
+    } else {
+      builder.editButton("Add Beautifier", editBeautifiersUrl);
+      builder.append("No language or beautifier support!");
+      return builder.build();
+    }
   }
 
   private get type(): string {
@@ -110,7 +118,7 @@ export default class OptionsDoc extends Doc {
     | Arrow Parens | &#10060; | &#9989; |
     */
 
-    if (!(this.beautifiers.length && this.languages.length)) {
+    if (!this.hasSupport) {
       return builder;
     }
 
@@ -186,10 +194,8 @@ export default class OptionsDoc extends Doc {
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
             if (example) {
-              const editExampleButton = this.editExampleButton(language);
               builder.header(language.name, 3);
-              builder.append(`<div>${editExampleButton}</div>`);
-              builder.append("");
+              builder.editButton(`Edit ${language.name} Example`, this.editExampleButtonUrl(language));
               builder.details("<strong>🚧 Original Code</strong>", builder => {
                 builder.code(example, language.name);
               });
@@ -249,6 +255,10 @@ export default class OptionsDoc extends Doc {
                   `${this.optionKey} - ${language.name} - BAD EXAMPLES`,
                 );
               }
+            } else {
+              builder.header(language.name, 3);
+              builder.editButton(`Add ${language.name} Example`, this.addExampleButtonUrl(language));
+              builder.append("No example found. Please submit a Pull Request!");
             }
           });
         });
@@ -347,10 +357,17 @@ export default class OptionsDoc extends Doc {
     )[0];
   }
 
-  private editExampleButton(language: Language): string {
-    return `<a class="edit-page-link button" href="${editUrl}../examples/${
-      language.name
-    }/${this.optionKey}.txt" target="_blank">Edit ${language.name} Example</a>`;
+  private editExampleButtonUrl(language: Language): string {
+    return `${editUrl}../examples/${language.name}/${this.optionKey}.txt`;
+  }
+
+  private addExampleButtonUrl(language: Language): string {
+    return `${editUrl.replace(
+      "/edit/",
+      "/new/",
+    )}../examples/${encodeURIComponent(language.name)}/new?filename=${
+      this.optionKey
+    }.txt&value=Type%20Example%20Here`;
   }
 }
 

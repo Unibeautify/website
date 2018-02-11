@@ -13,6 +13,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 **Default**: `10`
 
 ## Support
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../scripts/generate-docs/beautifiers.ts" target="_blank">Edit Beautifiers</a></div>
+
 **Languages**: [EJS](/docs/language-ejs.html), [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [JSON](/docs/language-json.html), [JSX](/docs/language-jsx.html), [JavaScript](/docs/language-javascript.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
@@ -31,6 +33,10 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 | [XML](/docs/language-xml.html) | &#9989; |
 </details>
 ## Examples
+### EJS
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/EJS/new?filename=max_preserve_newlines.txt&value=Type%20Example%20Here" target="_blank">Add EJS Example</a></div>
+
+No example found. Please submit a Pull Request!
 ### HTML
 <div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../examples/HTML/max_preserve_newlines.txt" target="_blank">Edit HTML Example</a></div>
 
@@ -332,3 +338,31 @@ Index: 20
 ```
 </details>
 </details>
+### Handlebars
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Handlebars/new?filename=max_preserve_newlines.txt&value=Type%20Example%20Here" target="_blank">Add Handlebars Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JSON
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JSON/new?filename=max_preserve_newlines.txt&value=Type%20Example%20Here" target="_blank">Add JSON Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JSX
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JSX/new?filename=max_preserve_newlines.txt&value=Type%20Example%20Here" target="_blank">Add JSX Example</a></div>
+
+No example found. Please submit a Pull Request!
+### JavaScript
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/JavaScript/new?filename=max_preserve_newlines.txt&value=Type%20Example%20Here" target="_blank">Add JavaScript Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Liquid
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Liquid/new?filename=max_preserve_newlines.txt&value=Type%20Example%20Here" target="_blank">Add Liquid Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Mustache
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Mustache/new?filename=max_preserve_newlines.txt&value=Type%20Example%20Here" target="_blank">Add Mustache Example</a></div>
+
+No example found. Please submit a Pull Request!
+### XML
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/XML/new?filename=max_preserve_newlines.txt&value=Type%20Example%20Here" target="_blank">Add XML Example</a></div>
+
+No example found. Please submit a Pull Request!

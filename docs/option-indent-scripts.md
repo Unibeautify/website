@@ -15,6 +15,8 @@ edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 **Allowed values**: `"keep"` or `"separate"` or `"normal"`
 
 ## Support
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/edit/master/docs/../scripts/generate-docs/beautifiers.ts" target="_blank">Edit Beautifiers</a></div>
+
 **Languages**: [HTML](/docs/language-html.html), [Handlebars](/docs/language-handlebars.html), [Liquid](/docs/language-liquid.html), [Mustache](/docs/language-mustache.html), [XML](/docs/language-xml.html)
 
 **Beautifiers**: [JS-Beautify](/docs/beautifier-js-beautify.html)
@@ -191,3 +193,19 @@ Index: normal
 ```
 </details>
 </details>
+### Handlebars
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Handlebars/new?filename=indent_scripts.txt&value=Type%20Example%20Here" target="_blank">Add Handlebars Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Liquid
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Liquid/new?filename=indent_scripts.txt&value=Type%20Example%20Here" target="_blank">Add Liquid Example</a></div>
+
+No example found. Please submit a Pull Request!
+### Mustache
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/Mustache/new?filename=indent_scripts.txt&value=Type%20Example%20Here" target="_blank">Add Mustache Example</a></div>
+
+No example found. Please submit a Pull Request!
+### XML
+<div><a class="edit-page-link button" href="https://github.com/unibeautify/website/new/master/docs/../examples/XML/new?filename=indent_scripts.txt&value=Type%20Example%20Here" target="_blank">Add XML Example</a></div>
+
+No example found. Please submit a Pull Request!
