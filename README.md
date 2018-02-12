@@ -2,19 +2,27 @@
 
 ## Contributing
 
+Install dependencies:
+
+```
+# For scripts
+npm install
+
+# For Docusaurus
+cd website
+npm install
+```
+
 Generate the docs for options, languages, and beautifiers:
 
 ```
-npm install
 npm run docs
 ```
 
-We use [Docusaurus](https://docusaurus.io/) which can be run with:
+We use [Docusaurus](https://docusaurus.io/) to build the website:
 
 ```
 cd website
-npm install
-
-yarn run start # or `npm run start`
+npm run start
 # navigate to http://localhost:3000
 ```

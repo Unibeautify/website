@@ -32,7 +32,7 @@ export default class LanguageDoc extends Doc {
     this.appendOptionsTable(builder);
     return builder.build();
   }
-  protected get editUrl() {
+  protected get customEditUrl() {
     return "https://github.com/unibeautify/unibeautify/edit/master/src/languages.json";
   }
   private linkForBeautifier = (beautifier: Beautifier): string => {

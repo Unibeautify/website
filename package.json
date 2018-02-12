@@ -8,9 +8,11 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs": "npm run rm-languages && npm run rm-beautifiers && npm run generate-docs",
+    "docs": "npm run clean && npm run generate-docs",
+    "clean": "npm run rm-languages && npm run rm-beautifiers && npm run rm-options",
     "rm-beautifiers": "rimraf 'docs/beautifier-*'",
     "rm-languages": "rimraf 'docs/language-*'",
+    "rm-options": "rimraf 'docs/option-*'",
     "generate-docs": "ts-node scripts/generate-docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

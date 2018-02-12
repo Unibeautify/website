@@ -54,11 +54,7 @@ export default class OptionsDoc extends Doc {
     return title;
   }
 
-  protected get sidebarLabel(): string {
-    return `${this.hasSupport ? "✅" : "🚨"} ${this.title}`;
-  }
-
-  protected get editUrl() {
+  protected get customEditUrl() {
     return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
   }
 
@@ -164,9 +160,6 @@ export default class OptionsDoc extends Doc {
         ),
       )
       .then(examplesForLanguages => {
-        if (Object.keys(examplesForLanguages).length === 0) {
-          return Promise.resolve();
-        }
         return Promise.all(
           this.exampleValues.map(optionValue =>
             Promise.all<string | null>(
@@ -186,10 +179,6 @@ export default class OptionsDoc extends Doc {
             ),
           ),
         ).then(beautified => {
-          if (Object.keys(examplesForLanguages).length === 0) {
-            return;
-          }
-
           builder.header("Examples", 2);
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];

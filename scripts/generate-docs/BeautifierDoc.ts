@@ -169,7 +169,7 @@ export default class BeautifierDoc extends Doc {
   private get pkg(): object | undefined {
     return this.beautifier.package;
   }
-  protected get editUrl() {
+  protected get customEditUrl() {
     return _.get(this.pkg, "homepage");
   }
 }
