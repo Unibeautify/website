@@ -24,7 +24,7 @@ export default abstract class Doc {
   protected abstract get body(): string | Promise<string>;
   public get contents(): Promise<string> {
     return Promise.all([this.frontMatter, this.body]).then(
-      ([frontMatter, body]) => frontMatter + "\n" + body,
+      ([frontMatter, body]) => frontMatter + "\n" + body
     );
   }
   protected get frontMatter(): Promise<string> {
@@ -37,7 +37,7 @@ export default abstract class Doc {
           `sidebar_label: ${sidebarLabel}`,
           this.customEditUrl ? `custom_edit_url: ${this.customEditUrl}` : "",
           "---",
-        ].join("\n"),
+        ].join("\n")
     );
   }
 }

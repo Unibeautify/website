@@ -25,7 +25,7 @@ export default class OptionsListDoc extends Doc {
       let titleLink: string = MarkdownBuilder.createDocLink(title, optionId);
       let row = `| **${titleLink}** | \`${key}\` | ${option.description.replace(
         /\|/g,
-        "&#124;",
+        "&#124;"
       )} |`;
       builder.append(row);
     });

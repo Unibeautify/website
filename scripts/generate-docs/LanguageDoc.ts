@@ -44,10 +44,10 @@ export default class LanguageDoc extends Doc {
       "| Option |" +
         this.beautifiers
           .map(beautifier => ` ${linkForBeautifier(beautifier)} |`)
-          .join(""),
+          .join("")
     );
     builder.append(
-      "| --- |" + this.beautifiers.map(beautifier => ` --- |`).join(""),
+      "| --- |" + this.beautifiers.map(beautifier => ` --- |`).join("")
     );
     Object.keys(this.allOptions).forEach(optionKey => {
       const option = this.allOptions[optionKey];
@@ -57,7 +57,7 @@ export default class LanguageDoc extends Doc {
         const beautifierSupportsOption: boolean = _.get(
           this.optionsLookup as any,
           `${beautifier.name}.${optionKey}`,
-          false,
+          false
         );
         const symbol = beautifierSupportsOption ? emojis.checkmark : emojis.x;
         row += ` ${symbol} |`;
@@ -79,7 +79,7 @@ export default class LanguageDoc extends Doc {
           ...lookup,
           [beautifier.name]: options,
         }),
-        {},
+        {}
       );
   }
   private options(beautifier: Beautifier): OptionsRegistry {
