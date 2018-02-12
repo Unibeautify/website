@@ -44,17 +44,17 @@ export default class BeautifierDoc extends Doc {
       `| **[${this.packageName}](https://www.npmjs.com/package/${
         this.packageName
       })** | v${this.getPackageCurrentVersion(
-        this.packageName,
+        this.packageName
       )} | [![npm](https://img.shields.io/npm/v/${
         this.packageName
-      }.svg)](https://www.npmjs.com/package/${this.packageName}) |`,
+      }.svg)](https://www.npmjs.com/package/${this.packageName}) |`
     );
     this.packagePeerDependencies.forEach(dep =>
       builder.append(
         `| **[${dep}](https://www.npmjs.com/package/${dep})** | v${this.getPackageCurrentVersion(
-          dep,
-        )} | [![npm](https://img.shields.io/npm/v/${dep}.svg)](https://www.npmjs.com/package/${dep}) |`,
-      ),
+          dep
+        )} | [![npm](https://img.shields.io/npm/v/${dep}.svg)](https://www.npmjs.com/package/${dep}) |`
+      )
     );
     return builder;
   }
@@ -88,13 +88,13 @@ export default class BeautifierDoc extends Doc {
   private appendUsageSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("Usage", 2);
     builder.append(
-      "Below are example configuration files for each of the supported languages.",
+      "Below are example configuration files for each of the supported languages."
     );
     const beautifierName: string = this.beautifier.name;
     this.languages.forEach(lang => {
       builder.details(lang.name, builder => {
         builder.append(
-          `A \`.unibeautifyrc.json\` file would look like the following:`,
+          `A \`.unibeautifyrc.json\` file would look like the following:`
         );
         builder.code(
           JSON.stringify(
@@ -104,9 +104,9 @@ export default class BeautifierDoc extends Doc {
               },
             },
             null,
-            2,
+            2
           ),
-          "json",
+          "json"
         );
       });
     });
@@ -121,7 +121,7 @@ export default class BeautifierDoc extends Doc {
     // console.log(JSON.stringify(this.allOptions, null, 2));
     builder.append(
       "| Option |" +
-        this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join(""),
+        this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join("")
     );
     builder.append("| --- |" + this.languages.map(lang => ` --- |`).join(""));
     Object.keys(this.allOptions).forEach(optionKey => {
@@ -132,7 +132,7 @@ export default class BeautifierDoc extends Doc {
         const languageSupportsOption: boolean = _.get(
           this.optionsLookup as any,
           `${language.name}.${optionKey}`,
-          false,
+          false
         );
         const symbol = languageSupportsOption ? emojis.checkmark : emojis.x;
         row += ` ${symbol} |`;
@@ -154,7 +154,7 @@ export default class BeautifierDoc extends Doc {
           ...lookup,
           [language.name]: options,
         }),
-        {},
+        {}
       );
   }
   private options(language: Language): OptionsRegistry {

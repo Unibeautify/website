@@ -29,16 +29,13 @@ updateSidebars(languageDocs, beautifierDocs);
 function docsForLanguages(languages: Language[]): LanguageDoc[] {
   return languages.map(
     language =>
-      new LanguageDoc(
-        language,
-        Unibeautify.getBeautifiersForLanguage(language),
-      ),
+      new LanguageDoc(language, Unibeautify.getBeautifiersForLanguage(language))
   );
 }
 function docsForBeautifiers(beautifiers: Beautifier[]): BeautifierDoc[] {
   return beautifiers.map(
     beautifier =>
-      new BeautifierDoc(beautifier, languagesForBeautifier(beautifier)),
+      new BeautifierDoc(beautifier, languagesForBeautifier(beautifier))
   );
 }
 function docsForOptions(): OptionsDoc[] {
@@ -47,13 +44,13 @@ function docsForOptions(): OptionsDoc[] {
     .map(key => ({ option: optionRegistry[key], key }))
     .map(
       ({ option, key }) =>
-        new OptionsDoc(option, key as BeautifierOptionName, beautifiers),
+        new OptionsDoc(option, key as BeautifierOptionName, beautifiers)
     );
 }
 function languagesForBeautifier(beautifier: Beautifier): Language[] {
   const languages = Unibeautify.getLoadedLanguages();
   return languages.filter(
-    lang => Object.keys(beautifier.options).indexOf(lang.name) !== -1,
+    lang => Object.keys(beautifier.options).indexOf(lang.name) !== -1
   );
 }
 async function writeDoc(doc: Doc) {
@@ -61,7 +58,7 @@ async function writeDoc(doc: Doc) {
     __dirname,
     "../../",
     docsPath,
-    doc.fileName,
+    doc.fileName
   );
   await ensureFile(filePath);
   const contents = await doc.contents;
@@ -69,7 +66,7 @@ async function writeDoc(doc: Doc) {
 }
 async function updateSidebars(
   languages: LanguageDoc[],
-  beautifiers: BeautifierDoc[],
+  beautifiers: BeautifierDoc[]
 ) {
   if (!(Array.isArray(languages) && Array.isArray(beautifiers))) {
     return Promise.reject(new Error("Languages or beautifiers missing."));
@@ -99,6 +96,6 @@ function optionsSidebar(): {
   });
   const firstLetterIndex = 7;
   return _.groupBy(optionIds, (optionId, index) =>
-    optionId[firstLetterIndex].toUpperCase(),
+    optionId[firstLetterIndex].toUpperCase()
   );
 }
