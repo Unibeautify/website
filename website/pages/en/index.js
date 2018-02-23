@@ -82,6 +82,7 @@ class HomeSplash extends React.Component {
           <PromoSection>
             <Button href={docUrl('getting-started.html', this.props.language)}>Get Started</Button>
             <Button href={docUrl('options.html', this.props.language)}>Options</Button>
+            <Button href={"https://playground.unibeautify.com/"} target="_blank">Try it out</Button>
             <Button href={docUrl('ci.html', this.props.language)}>Unibeautify CI</Button>
           </PromoSection>
         </div>
