@@ -27,7 +27,7 @@ export function slugify(title: string): string {
       .toLowerCase()
       .replace(/ /g, "-")
       .replace(/\+/g, "-")
-      .replace("#", "sharp"),
+      .replace("#", "sharp")
   );
 }
 export function linkForBeautifier(beautifier: Beautifier): string {
