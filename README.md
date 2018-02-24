@@ -1,5 +1,7 @@
 # Unibeautify Website
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Unibeautify/website.svg)](https://greenkeeper.io/)
+
 ## Contributing
 
 Install dependencies:
