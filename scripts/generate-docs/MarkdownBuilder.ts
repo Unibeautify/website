@@ -33,6 +33,12 @@ export default class MarkdownBuilder {
     this.contents.push(text);
     return this;
   }
+  public editButton(text: string, url: string): MarkdownBuilder {
+    const button = `<a class="edit-page-link button" href="${url}" target="_blank">${text}</a>`;
+    this.append(`<div>${button}</div>`);
+    this.append("");
+    return this;
+  }
   public static createDocLink(text: string, docId: string): string {
     return this.createLink(text, `/docs/${docId}.html`);
   }

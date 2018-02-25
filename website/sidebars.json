@@ -29,7 +29,7 @@
       "language-graphql",
       "language-handlebars",
       "language-html",
-      "language-html%2Berb",
+      "language-html-erb",
       "language-java",
       "language-javascript",
       "language-json",
@@ -81,6 +81,7 @@
       "option-indent-level",
       "option-indent-scripts",
       "option-indent-size",
+      "option-indent-style",
       "option-indent-with-tabs"
     ],
     "J": [

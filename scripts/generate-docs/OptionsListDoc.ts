@@ -14,14 +14,14 @@ export default class OptionsListDoc extends Doc {
     const builder = new MarkdownBuilder();
     builder.append("| Title | Option Key | Description |");
     builder.append("| --- | --- | --- |");
-    const options = this.allOptions;
+    const options: OptionsRegistry = this.allOptions;
     Object.keys(options).forEach(key => {
       const option = options[key];
       let title: string = option.title || "";
       if (!title) {
         title = optionKeyToTitle(key);
       }
-      const optionId = `option-${slugify(title)}`; //.replace(/_/g, "-");  `option-${key.replace(/_/g, "-")}`
+      const optionId = `option-${slugify(title)}`;
       let titleLink: string = MarkdownBuilder.createDocLink(title, optionId);
       let row = `| **${titleLink}** | \`${key}\` | ${option.description.replace(
         /\|/g,
@@ -31,7 +31,10 @@ export default class OptionsListDoc extends Doc {
     });
     return builder.build();
   }
-  public get allOptions(): OptionsRegistry[] {
-    return (Unibeautify as any).options;
+  public get allOptions(): OptionsRegistry {
+    return Unibeautify.loadedOptions;
+  }
+  protected get customEditUrl() {
+    return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
   }
 }

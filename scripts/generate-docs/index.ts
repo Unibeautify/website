@@ -39,7 +39,7 @@ function docsForBeautifiers(beautifiers: Beautifier[]): BeautifierDoc[] {
   );
 }
 function docsForOptions(): OptionsDoc[] {
-  const optionRegistry: OptionsRegistry = (Unibeautify as any).options;
+  const optionRegistry: OptionsRegistry = Unibeautify.loadedOptions;
   return Object.keys(optionRegistry)
     .map(key => ({ option: optionRegistry[key], key }))
     .map(
@@ -87,7 +87,7 @@ async function updateSidebars(
 function optionsSidebar(): {
   [sectionKey: string]: string[];
 } {
-  const optionRegistry = (Unibeautify as any).options;
+  const optionRegistry = Unibeautify.loadedOptions;
   const optionKeys = Object.keys(optionRegistry);
   const optionIds = optionKeys.map(key => {
     const title: string = optionRegistry[key].title || optionKeyToTitle(key);

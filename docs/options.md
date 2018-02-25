@@ -2,6 +2,7 @@
 id: options
 title: Options
 sidebar_label: Options
+custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
 | Title | Option Key | Description |
 | --- | --- | --- |
@@ -21,6 +22,7 @@ sidebar_label: Options
 | **[Indent Level](/docs/option-indent-level.html)** | `indent_level` | Initial indentation level |
 | **[Indent Scripts](/docs/option-indent-scripts.html)** | `indent_scripts` | Indent scripts |
 | **[Indent Size](/docs/option-indent-size.html)** | `indent_size` | Indentation size/length |
+| **[Indent Style](/docs/option-indent-style.html)** | `indent_style` | Indentation style |
 | **[Indent With Tabs](/docs/option-indent-with-tabs.html)** | `indent_with_tabs` | Indentation uses tabs, overrides `Indent Size` and `Indent Char` |
 | **[JSLint Happy](/docs/option-jslint-happy.html)** | `jslint_happy` | Enable jslint-stricter mode |
 | **[JSX Brackets](/docs/option-jsx-brackets.html)** | `jsx_brackets` | Put the > of a multi-line JSX element at the end of the last line |

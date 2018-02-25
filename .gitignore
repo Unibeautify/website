@@ -4,3 +4,8 @@ _site/
 
 node_modules
 npm-debug.log
+
+# Auto-generated docs
+docs/beautifier-*
+docs/language-*
+docs/option-*

@@ -1,5 +1,5 @@
 {
-  "name": "unibeautify.github.io",
+  "name": "website",
   "version": "1.0.0",
   "description": "Webpage for Unibeautifier",
   "private": true,
@@ -8,37 +8,43 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs": "npm run rm-languages && npm run rm-beautifiers && npm run generate-docs",
+    "docs": "npm run clean && npm run generate-docs",
+    "clean": "npm run rm-languages && npm run rm-beautifiers && npm run rm-options",
     "rm-beautifiers": "rimraf 'docs/beautifier-*'",
     "rm-languages": "rimraf 'docs/language-*'",
+    "rm-options": "rimraf 'docs/option-*'",
     "generate-docs": "ts-node scripts/generate-docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Unibeautify/unibeautify.github.io.git"
+    "url": "git+https://github.com/Unibeautify/website.git"
   },
   "keywords": [],
   "author": "Glavin Wiechert",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Unibeautify/unibeautify.github.io/issues"
+    "url": "https://github.com/Unibeautify/website/issues"
   },
-  "homepage": "https://github.com/Unibeautify/unibeautify.github.io#readme",
+  "homepage": "https://github.com/Unibeautify/website#readme",
   "devDependencies": {
     "@types/diff": "^3.2.2",
     "@types/fs-extra": "^5.0.0",
     "@types/lodash": "^4.14.92",
-    "@unibeautify/beautifier-js-beautify": "^0.2.0",
-    "@unibeautify/beautifier-prettier": "^0.5.0",
-    "@unibeautify/beautifier-prettydiff": "^0.3.0",
-    "@unibeautify/beautifier-eslint": "^0.0.1",
+    "@unibeautify/beautifier-eslint": "^0.2.0",
+    "@unibeautify/beautifier-js-beautify": "^0.3.0",
+    "@unibeautify/beautifier-prettier": "^0.6.0",
+    "@unibeautify/beautifier-prettydiff": "^0.4.0",
     "diff": "^3.4.0",
+    "eslint": "^4.17.0",
     "fs-extra": "^5.0.0",
+    "js-beautify": "^1.7.5",
     "lodash": "^4.17.4",
+    "prettier": "^1.10.2",
+    "prettydiff2": "^2.2.7",
     "rimraf": "^2.6.2",
-    "ts-node": "^4.1.0",
+    "ts-node": "^5.0.0",
     "typescript": "^2.6.2",
-    "unibeautify": "^0.4.0"
+    "unibeautify": "^0.8.0"
   }
 }

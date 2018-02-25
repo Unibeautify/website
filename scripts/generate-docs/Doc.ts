@@ -4,7 +4,10 @@ export default abstract class Doc {
     return `${this.prefix}${this.slug}`;
   }
   public get fileName(): string {
-    const title = this.title.toLowerCase().replace(/ /g, "-");
+    const title = this.title
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/\+/g, "-");
     return `${this.prefix}${title}.md`;
   }
   protected abstract get prefix(): string;
@@ -14,6 +17,9 @@ export default abstract class Doc {
   protected abstract get title(): string;
   protected get sidebarLabel(): string | Promise<string> {
     return this.title;
+  }
+  protected get customEditUrl(): string | undefined {
+    return undefined;
   }
   protected abstract get body(): string | Promise<string>;
   public get contents(): Promise<string> {
@@ -29,6 +35,7 @@ export default abstract class Doc {
           `id: ${id}`,
           `title: ${title}`,
           `sidebar_label: ${sidebarLabel}`,
+          this.customEditUrl ? `custom_edit_url: ${this.customEditUrl}` : "",
           "---",
         ].join("\n")
     );
