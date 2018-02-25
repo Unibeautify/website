@@ -66,6 +66,10 @@ export default class OptionsDoc extends Doc {
     const builder = new MarkdownBuilder();
     builder.append(`**Key**: \`${this.optionKey}\`\n`);
     builder.append(`**Description**: ${this.option.description}\n`);
+    if (this.option.deprecated) {
+      builder.append(`**Deprecated since version**: ${this.option.deprecated}\n`);
+    }
+    builder.append(`**Available since version**: ${this.option.since}\n`);
     builder.append(`**Type**: \`${this.type}\`\n`);
     builder.append(`**Default**: \`${JSON.stringify(this.option.default)}\`\n`);
     if (this.option.enum) {
