@@ -112,6 +112,8 @@
     "Indent Scripts": "Indent Scripts",
     "option-indent-size": "Indent Size",
     "Indent Size": "Indent Size",
+    "option-indent-style": "Indent Style",
+    "Indent Style": "Indent Style",
     "option-indent-with-tabs": "Indent With Tabs",
     "Indent With Tabs": "Indent With Tabs",
     "option-jslint-happy": "JSLint Happy",
