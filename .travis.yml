@@ -5,6 +5,6 @@ script:
 - npm run docs
 - git status
 - git diff
-- CHANGED_FILES=$(git diff --name-only | grep -v '^package-lock.json')
+- CHANGED_FILES=$(git diff --name-only | grep -v '^package-lock.json') || true
 - echo "Changed files:\n$CHANGED_FILES"
 - if [[ -z "${CHANGED_FILES// }" ]]; then echo "No changes!"; else exit 1; fi
