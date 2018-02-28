@@ -5,6 +5,6 @@ script:
 - npm run docs
 - git status
 - git diff
-- CHANGED_FILES=$(git diff --name-only | grep -v '^package-lock.json/')
+- CHANGED_FILES=$(git diff --name-only | grep -v '^package-lock.json')
 - echo $CHANGED_FILES
 - echo $CHANGED_FILES | xargs git diff-index --quiet HEAD --
