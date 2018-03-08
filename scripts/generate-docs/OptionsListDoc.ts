@@ -12,6 +12,10 @@ export default class OptionsListDoc extends Doc {
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
+    builder.append(
+      "Click on an option title below for more information including configuration an" +
+        "d examples."
+    );
     builder.append("| Title | Option Key | Description |");
     builder.append("| --- | --- | --- |");
     const options: OptionsRegistry = this.allOptions;

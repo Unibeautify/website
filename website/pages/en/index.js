@@ -132,7 +132,7 @@ const UnibeautifyCi = props => (
   <Block background="light" align="left">
     {[
       {
-        content: 'Automatically beautify your code on each push with [Unibeautify CI](https://goo.gl/jmM4QN)!',
+        content: 'Automatically beautify your code on each push with [Unibeautify CI](docs/ci.html)!',
         image: imgUrl('unibeautify-ci-demo.png'),
         imageAlign: 'right',
         title: 'GitHub Automation',
