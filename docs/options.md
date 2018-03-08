@@ -4,6 +4,7 @@ title: Options
 sidebar_label: Options
 custom_edit_url: https://github.com/unibeautify/unibeautify/edit/master/src/options.ts
 ---
+Click on an option title below for more information including configuration and examples.
 | Title | Option Key | Description |
 | --- | --- | --- |
 | **[Align Assignments](/docs/option-align-assignments.html)** | `align_assignments` | If lists of assignments or properties should be vertically aligned for faster and easier reading. |
