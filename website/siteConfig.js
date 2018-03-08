@@ -32,8 +32,8 @@ const siteConfig = {
     { href: "https://api.unibeautify.com/", label: "API" },
     { href: "https://assistant.unibeautify.com/", label: "Assistant" },
     { href: "https://playground.unibeautify.com/", label: "Playground" },
-    { page: "help", label: "Help" },
-    { blog: true, label: "Blog" },
+    // { page: "help", label: "Help" },
+    // { blog: true, label: "Blog" },
     { search: true },
     { href: GITHUB_URL, label: "GitHub" }
   ],
