@@ -74,6 +74,7 @@
       "option-force-indentation"
     ],
     "I": [
+      "option-indent-chained-methods",
       "option-indent-char",
       "option-indent-comments",
       "option-indent-inner-html",
@@ -119,6 +120,9 @@
       "option-space-before-conditional",
       "option-space-in-empty-paren",
       "option-space-in-paren"
+    ],
+    "T": [
+      "option-typesafe-equality-operators"
     ],
     "U": [
       "option-unescape-strings",
