@@ -1,20 +1,12 @@
 import {
   Option,
-  OptionValues,
   Language,
   Beautifier,
-  BeautifierOptionName,
-  BeautifyOptionTransformSingleFunction,
-  BeautifyOptionTransform,
-  BeautifierLanguageOptionComplex,
-  LanguageOptionValues,
   Unibeautify,
   newUnibeautify,
 } from "unibeautify";
 import * as _ from "lodash";
-import beautifiers from "./beautifiers";
 import MarkdownBuilder from "./MarkdownBuilder";
-import { beautifier } from "@unibeautify/beautifier-js-beautify";
 export function optionKeyToTitle(key: string): string {
   return key
     .split("_")
