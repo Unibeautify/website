@@ -1,5 +1,4 @@
 import Unibeautify, { OptionsRegistry } from "unibeautify";
-import * as _ from "lodash";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 import { optionKeyToTitle, slugify } from "./utils";

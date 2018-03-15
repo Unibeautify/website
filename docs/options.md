@@ -17,6 +17,7 @@ Click on an option title below for more information including configuration and 
 | **[End With Newline](/docs/option-end-with-newline.html)** | `end_with_newline` | End output with newline |
 | **[End With Semicolon](/docs/option-end-with-semicolon.html)** | `end_with_semicolon` | Insert a semicolon at the end of statements |
 | **[Force Indentation](/docs/option-force-indentation.html)** | `force_indentation` | if indentation should be forcefully applied to markup even if it disruptively adds unintended whitespace to the documents rendered output |
+| **[Indent Chained Methods](/docs/option-indent-chained-methods.html)** | `indent_chained_methods` | Indent chained method calls |
 | **[Indent Char](/docs/option-indent-char.html)** | `indent_char` | Indentation character |
 | **[Indent Comments](/docs/option-indent-comments.html)** | `indent_comments` | Determines whether comments should be indented. |
 | **[Indent Inner Html](/docs/option-indent-inner-html.html)** | `indent_inner_html` | Indent <head> and <body> sections. |
@@ -26,7 +27,7 @@ Click on an option title below for more information including configuration and 
 | **[Indent Style](/docs/option-indent-style.html)** | `indent_style` | Indentation style |
 | **[Indent With Tabs](/docs/option-indent-with-tabs.html)** | `indent_with_tabs` | Indentation uses tabs, overrides `Indent Size` and `Indent Char` |
 | **[JSLint Happy](/docs/option-jslint-happy.html)** | `jslint_happy` | Enable jslint-stricter mode |
-| **[JSX Brackets](/docs/option-jsx-brackets.html)** | `jsx_brackets` | Put the > of a multi-line JSX element at the end of the last line |
+| **[JSX Brackets](/docs/option-jsx-brackets.html)** | `jsx_brackets` | Put the `>` of a multi-line JSX element at the end of the last line |
 | **[Keep Array Indentation](/docs/option-keep-array-indentation.html)** | `keep_array_indentation` | Preserve array indentation |
 | **[Max Preserve Newlines](/docs/option-max-preserve-newlines.html)** | `max_preserve_newlines` | Number of line-breaks to be preserved in one chunk |
 | **[Multiline Ternary](/docs/option-multiline-ternary.html)** | `multiline_ternary` | Enforces new lines between the operands of a ternary expression |
@@ -40,10 +41,11 @@ Click on an option title below for more information including configuration and 
 | **[Quotes](/docs/option-quotes.html)** | `quotes` | Convert the quote characters delimiting strings from either double or single quotes to the other. |
 | **[Remove Trailing Whitespace](/docs/option-remove-trailing-whitespace.html)** | `remove_trailing_whitespace` | Remove trailing whitespace |
 | **[Selector Separator Newline](/docs/option-selector-separator-newline.html)** | `selector_separator_newline` | Add a newline between multiple selectors |
-| **[Space After Anon Function](/docs/option-space-after-anon-function.html)** | `space_after_anon_function` | Add a space before an anonymous function's parentheses. ie. function () |
-| **[Space Before Conditional](/docs/option-space-before-conditional.html)** | `space_before_conditional` | Add a space before conditional, "if(true)" vs "if (true)" |
-| **[Space In Empty Paren](/docs/option-space-in-empty-paren.html)** | `space_in_empty_paren` | Add padding spaces within empty parentheses, ie. f( ) |
-| **[Space In Paren](/docs/option-space-in-paren.html)** | `space_in_paren` | Add padding spaces within parentheses, ie. f( a, b ) |
+| **[Space After Anon Function](/docs/option-space-after-anon-function.html)** | `space_after_anon_function` | Add a space before an anonymous function's parentheses. ie. `function ()` |
+| **[Space Before Conditional](/docs/option-space-before-conditional.html)** | `space_before_conditional` | Add a space before conditional, `if(true)` vs `if (true)` |
+| **[Space In Empty Paren](/docs/option-space-in-empty-paren.html)** | `space_in_empty_paren` | Add padding spaces within empty parentheses, ie. `f( )` |
+| **[Space In Paren](/docs/option-space-in-paren.html)** | `space_in_paren` | Add padding spaces within parentheses, ie. `f( a, b )` |
+| **[Typesafe Equality Operators](/docs/option-typesafe-equality-operators.html)** | `typesafe_equality_operators` | Use typesafe equality operators (`===` and `!==` instead of `==` and `!=`) |
 | **[Unescape Strings](/docs/option-unescape-strings.html)** | `unescape_strings` | Decode printable characters encoded in xNN notation |
 | **[Unformatted](/docs/option-unformatted.html)** | `unformatted` | List of tags (defaults to inline) that should not be reformatted |
 | **[Unindent Chained Methods](/docs/option-unindent-chained-methods.html)** | `unindent_chained_methods` | Do not indent chained method calls |

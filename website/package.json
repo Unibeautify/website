@@ -10,6 +10,6 @@
   },
   "devDependencies": {
     "docusaurus": "git+https://github.com/Glavin001/Docusaurus.git",
-    "js-yaml": "^3.10.0"
+    "js-yaml": "^3.11.0"
   }
 }

@@ -2,7 +2,6 @@ import Unibeautify, {
   Language,
   Beautifier,
   OptionsRegistry,
-  BeautifierOptionName,
 } from "unibeautify";
 import * as _ from "lodash";
 import { linkForLanguage, linkForOption, emojis } from "./utils";

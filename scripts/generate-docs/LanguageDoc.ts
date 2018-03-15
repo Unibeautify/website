@@ -7,7 +7,6 @@ import * as _ from "lodash";
 import { slugify, linkForBeautifier, linkForOption, emojis } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
-import OptionsListDoc from "./OptionsListDoc";
 export default class LanguageDoc extends Doc {
   private readonly optionsLookup: OptionsLookup;
   constructor(private language: Language, private beautifiers: Beautifier[]) {

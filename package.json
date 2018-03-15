@@ -29,22 +29,22 @@
   "homepage": "https://github.com/Unibeautify/website#readme",
   "devDependencies": {
     "@types/diff": "^3.2.2",
-    "@types/fs-extra": "^5.0.0",
-    "@types/lodash": "^4.14.92",
-    "@unibeautify/beautifier-eslint": "^0.3.0",
+    "@types/fs-extra": "^5.0.1",
+    "@types/lodash": "^4.14.104",
+    "@unibeautify/beautifier-eslint": "^0.4.0",
     "@unibeautify/beautifier-js-beautify": "^0.3.1",
     "@unibeautify/beautifier-prettier": "^0.7.3",
-    "@unibeautify/beautifier-prettydiff": "^0.5.1",
-    "diff": "^3.4.0",
-    "eslint": "^4.17.0",
+    "@unibeautify/beautifier-prettydiff": "^0.5.2",
+    "diff": "^3.5.0",
+    "eslint": "^4.18.2",
     "fs-extra": "^5.0.0",
     "js-beautify": "^1.7.5",
-    "lodash": "^4.17.4",
-    "prettier": "^1.10.2",
+    "lodash": "^4.17.5",
+    "prettier": "^1.11.1",
     "prettydiff2": "^2.2.7",
     "rimraf": "^2.6.2",
-    "ts-node": "^5.0.0",
-    "typescript": "^2.6.2",
-    "unibeautify": "^0.9.3"
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2",
+    "unibeautify": "^0.10.1"
   }
 }
