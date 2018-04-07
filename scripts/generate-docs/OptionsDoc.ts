@@ -184,10 +184,12 @@ export default class OptionsDoc extends Doc {
           ),
         ).then(beautified => {
           builder.header("Examples", 2);
+          builder.selectList(this.languages, "languages-select");
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
+            builder.append(`<div class="exampleCode hidden" id="example-${language.name.toLowerCase().replace(/ /g,'')}">\n`);
+            builder.header(language.name, 3);
             if (example) {
-              builder.header(language.name, 3);
               builder.editButton(`Edit ${language.name} Example`, this.editExampleButtonUrl(language));
               builder.details("<strong>🚧 Original Code</strong>", builder => {
                 builder.code(example, language.name);
@@ -249,10 +251,10 @@ export default class OptionsDoc extends Doc {
                 );
               }
             } else {
-              builder.header(language.name, 3);
               builder.editButton(`Add ${language.name} Example`, this.addExampleButtonUrl(language));
               builder.append("No example found. Please submit a Pull Request!");
             }
+            builder.append(`</div>`);
           });
         });
       })

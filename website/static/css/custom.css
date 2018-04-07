@@ -13,3 +13,7 @@
 a {
   color: #2e8555;
 }
+
+.hidden {
+  display: none;
+}
