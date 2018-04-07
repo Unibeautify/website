@@ -9,7 +9,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "git+https://github.com/Glavin001/Docusaurus.git",
+    "docusaurus": "^1.0.9",
     "js-yaml": "^3.11.0"
   }
 }
