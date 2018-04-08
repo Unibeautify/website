@@ -184,12 +184,18 @@ export default class OptionsDoc extends Doc {
           ),
         ).then(beautified => {
           builder.header("Examples", 2);
-          builder.selectList(this.languages, "languages-select");
+          const languageMap = new Map();
+          this.languages.forEach(language => {
+            languageMap.set(`example-${language.name.toLowerCase().replace(/ /g,'')}`, language.name);
+          });
+          builder.selectList(languageMap, "languages-select");
+          let defaultDisplay: boolean = true;
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
-            builder.append(`<div class="exampleCode hidden" id="example-${language.name.toLowerCase().replace(/ /g,'')}">\n`);
+            builder.append(`<div class="exampleCode${(example && defaultDisplay) ? '' : ' hidden'}" id="example-${language.name.toLowerCase().replace(/ /g,'')}">\n`);
             builder.header(language.name, 3);
             if (example) {
+              defaultDisplay = false;
               builder.editButton(`Edit ${language.name} Example`, this.editExampleButtonUrl(language));
               builder.details("<strong>🚧 Original Code</strong>", builder => {
                 builder.code(example, language.name);
