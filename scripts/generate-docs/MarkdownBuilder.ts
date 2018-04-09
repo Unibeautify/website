@@ -39,15 +39,6 @@ export default class MarkdownBuilder {
     this.append("");
     return this;
   }
-  public selectList(options: Map<string, string>, id: string) {
-    this.append(`<select id="${id}">`);
-    this.append(`<option default value=""></option>`);
-    options.forEach((option, value) => {
-      this.append(`<option value="${value}">${option}</option>`)
-    });
-    this.append(`</select>`);
-    return this;
-  }
   public static createDocLink(text: string, docId: string): string {
     return this.createLink(text, `/docs/${docId}.html`);
   }

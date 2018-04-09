@@ -184,19 +184,24 @@ export default class OptionsDoc extends Doc {
           ),
         ).then(beautified => {
           builder.header("Examples", 2);
-          const languageMap = new Map();
-          this.languages.forEach(language => {
-            languageMap.set(`example-${language.name.toLowerCase().replace(/ /g,'')}`, language.name);
-          });
           builder.append("<label>Select Language: </label>");
-          builder.selectList(languageMap, "languages-select");
-          let defaultDisplay: boolean = true;
+          builder.append(`<select id="languages-select">`);
+          let defaultDisplay: string;
+          let isDefault: boolean = true;
+          this.languages.forEach(language => {
+            const example = examplesForLanguages[language.name];
+            builder.append(`<option ${(example && isDefault) ? 'selected="selected"' : ''} value="example-${language.name.toLowerCase().replace(/ /g,'')}">${language.name + (example ? ' *' : '')}</option>`);
+            if (example && isDefault) {
+              defaultDisplay = language.name;
+              isDefault = false;
+            }            
+          });
+          builder.append("</select>");
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
-            builder.append(`<div class="exampleCode${(example && defaultDisplay) ? '' : ' hidden'}" id="example-${language.name.toLowerCase().replace(/ /g,'')}">\n`);
+            builder.append(`<div class="exampleCode${(language.name === defaultDisplay) ? '' : ' hidden'}" id="example-${language.name.toLowerCase().replace(/ /g,'')}">\n`);
             builder.header(language.name, 3);
             if (example) {
-              defaultDisplay = false;
               builder.editButton(`Edit ${language.name} Example`, this.editExampleButtonUrl(language));
               builder.details("<strong>🚧 Original Code</strong>", builder => {
                 builder.code(example, language.name);
