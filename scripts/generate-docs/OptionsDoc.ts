@@ -188,6 +188,7 @@ export default class OptionsDoc extends Doc {
           this.languages.forEach(language => {
             languageMap.set(`example-${language.name.toLowerCase().replace(/ /g,'')}`, language.name);
           });
+          builder.append("<label>Select Language: </label>");
           builder.selectList(languageMap, "languages-select");
           let defaultDisplay: boolean = true;
           this.languages.forEach((language, languageIndex) => {
