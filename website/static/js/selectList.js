@@ -7,11 +7,8 @@ window.onload = function() {
 
   // Update the code block and push a state change
   document.getElementById("languages-select").onchange = function() {
-    // const selectedLanguage = document.getElementById("languages-select").value;
     const languageName = getSelectedLanguage();
-
     history.pushState({ language: languageName }, null, `?language=${languageName}`);
-
     updateCodeExample(languageName);
   }
 }
@@ -23,7 +20,6 @@ function loadSelected() {
 
 // Need to update select list AND code block
 window.onpopstate = function(event) {
-  // TODO: Get languageId from event
   const state = event.state || {};
   console.log("location: " + document.location + ", state: " + JSON.stringify(state));
   const { language: selectedLanguage } = state;
