@@ -185,18 +185,18 @@ export default class OptionsDoc extends Doc {
         ).then(beautified => {
           builder.header("Examples", 2);
           builder.append("<label>Select Language: </label>");
-          builder.append(`<select id="languages-select">`);
+          builder.append(`<div class="select"><select id="languages-select">`);
           let defaultDisplay: string;
           let isDefault: boolean = true;
           this.languages.forEach(language => {
             const example = examplesForLanguages[language.name];
-            builder.append(`<option ${(example && isDefault) ? 'selected="selected"' : ''} value="example-${language.name.toLowerCase().replace(/ /g,'')}">${language.name + (example ? ' *' : '')}</option>`);
+            builder.append(`<option ${(example && isDefault) ? 'selected="selected"' : ''} data-text="${language.name}" value="${language.name.toLowerCase().replace(/ /g,'')}">${language.name + (example ? ' *' : '')}</option>`);
             if (example && isDefault) {
               defaultDisplay = language.name;
               isDefault = false;
-            }            
+            }
           });
-          builder.append("</select>");
+          builder.append(`</select><div class="select__arrow"></div></div>`);
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
             builder.append(`<div class="exampleCode${(language.name === defaultDisplay) ? '' : ' hidden'}" id="example-${language.name.toLowerCase().replace(/ /g,'')}">\n`);
