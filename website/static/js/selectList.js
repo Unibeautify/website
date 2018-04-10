@@ -86,14 +86,3 @@ function getDefaultLanguage() {
 function options() {
   return [].map.call(document.getElementById("languages-select").options, (option) => option);
 }
-
-// 73.210.34.54:3000
-
-/* Tasks:
-- [x] Default to first language with example
-- [x] Refresh currently selected language from select list
-- [x] Load from URL on first page load
-- [x] Update URL query parameter to be in sync with currently selected language
-- [x] Browser back/forward buttons change state (check URL and selected language and select list)
-- [x] If no language in parameter, revert to default
-*/
