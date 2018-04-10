@@ -1,4 +1,3 @@
-// FIXME
 let previousSelectedLanguage;
 
 window.onload = function() {
