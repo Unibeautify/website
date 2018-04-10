@@ -5,8 +5,7 @@ window.onload = function() {
 
   loadSelected();
 
-  // Update the code block and push a state change
-  document.getElementById("languages-select").onchange = function() {
+  document.getElementById("languages-select").onchange = function onSelectionChange() {
     const languageName = getSelectedLanguage();
     history.pushState({ language: languageName }, null, `?language=${languageName}`);
     updateCodeExample(languageName);
@@ -18,10 +17,8 @@ function loadSelected() {
   language && updateCodeExample(language);
 }
 
-// Need to update select list AND code block
-window.onpopstate = function(event) {
+window.onpopstate = function onPageChange(event) {
   const state = event.state || {};
-  console.log("location: " + document.location + ", state: " + JSON.stringify(state));
   const { language: selectedLanguage } = state;
   if (selectedLanguage) {
     updateCodeExample(selectedLanguage);
@@ -31,7 +28,6 @@ window.onpopstate = function(event) {
   }
 };
 
-// Updates the code block based on the language
 function updateCodeExample(languageName) {
   if (!languageName) {
     return;
@@ -40,15 +36,12 @@ function updateCodeExample(languageName) {
     return;
   }
 
-  // history.pushState({language: languageId}, null, `?language=${languageId}`);
-
   const selectList = document.querySelectorAll("div.exampleCode");
   [].forEach.call(selectList, id => id.classList.add("hidden"));
   document.getElementById("example-" + languageName).classList.remove("hidden");
 
   previousSelectedLanguage = languageName;
   setSelectedLanguage(languageName);
-
 }
 
 function getLanguageFromUrl() {
@@ -73,13 +66,8 @@ function getSelectedLanguageIndex(selectedLanguage) {
   return options().map(option => option.value).indexOf(selectedLanguage);
 }
 
-// function getDefaultLanguageIndex() {
-//   return options().map(option => option.text).findIndex(option => option.indexOf("*") !== -1);
-// }
-
 function getDefaultLanguage() {
   const element = options().find(option => option.text.indexOf("*") !== -1);
-  // return options().map(option => option.text).findIndex(option => option.indexOf("*") !== -1);
   return element && element.value;
 }
 
