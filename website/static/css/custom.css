@@ -22,8 +22,9 @@ a {
   position: relative;
   display: inline-block;
   margin-bottom: 15px;
-  width: 100%
+  width: 100%;
 }
+
 .select select {
   display: inline-block;
   width: 100%;
@@ -38,18 +39,22 @@ a {
   -moz-appearance: none;
   font-size: 16px;
 }
+
 .select select::-ms-expand {
   display: none;
 }
-.select select:hover,
-.select select:focus {
+
+.select select:focus,
+.select select:hover {
   color: #000;
   background: #ccc;
 }
+
 .select select:disabled {
   opacity: 0.5;
   pointer-events: none;
 }
+
 .select__arrow {
   position: absolute;
   top: 16px;
@@ -61,10 +66,12 @@ a {
   border-width: 8px 5px 0 5px;
   border-color: #000000 transparent transparent transparent;
 }
-.select select:hover ~ .select__arrow,
-.select select:focus ~ .select__arrow {
+
+.select select:focus~.select__arrow,
+.select select:hover~.select__arrow {
   border-top-color: #000;
 }
-.select select:disabled ~ .select__arrow {
+
+.select select:disabled~.select__arrow {
   border-top-color: #ccc;
 }
