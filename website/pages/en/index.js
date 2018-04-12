@@ -85,6 +85,9 @@ class HomeSplash extends React.Component {
             <Button href={"https://playground.unibeautify.com/"} target="_blank">Try it out</Button>
             <Button href={docUrl('ci.html', this.props.language)}>Unibeautify CI</Button>
           </PromoSection>
+          <PromoSection>
+            <div className='prefinery-form-embed'></div>
+          </PromoSection>
         </div>
       </SplashContainer>
     );
