@@ -7,20 +7,17 @@ import Unibeautify, {
   ExecutableDependencyDefinition,
 } from "unibeautify";
 import * as _ from "lodash";
-import { linkForLanguage, linkForOption, emojis } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 import { slugify } from "./utils";
 
 export default class ExecutableDoc extends Doc {
-  private readonly optionsLookup: OptionsLookup;
   constructor(
     private executable: ExecutableDependencyDefinition,
     private beautifier: Beautifier,
     private languages: Language[],
   ) {
     super();
-    this.optionsLookup = this.createOptionsLookup();
   }
   public get prefix(): string {
     return "executable-";
@@ -29,9 +26,7 @@ export default class ExecutableDoc extends Doc {
     return `${this.prefix}${this.slug}`;
   }
   public get title(): string {
-    return `${this.executable.name} Executable for ${
-      this.beautifier.name
-    } Beautifier`;
+    return `${this.executable.name} Executable`;
   }
   protected get slug(): string {
     return slugify(`${this.beautifier.name}-${this.executable.name}`);
@@ -47,30 +42,25 @@ export default class ExecutableDoc extends Doc {
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
-    // this.appendDependenciesSection(builder);
-    this.appendExecutableDependencySection(this.executable, builder);
+
+    builder.append(
+      "Jump to: " +
+        ["Windows", "macOS", "Linux"]
+          .map(os => MarkdownBuilder.createLink(os, `#${os.toLowerCase()}`))
+          .join(", ") +
+        ".",
+    );
+    this.appendAboutSection(builder);
     this.appendUsageSection(builder);
+    this.appendExecutableDependencySection(builder);
     return builder.build();
   }
-  // private appendDependenciesSection(builder: MarkdownBuilder): MarkdownBuilder {
-  //   const { dependencies } = this;
-  //   if (dependencies.length === 0) {
-  //     return builder;
-  //   }
-  //   dependencies
-  //     .filter(dep => dep.type === DependencyType.Executable)
-  //     .forEach((dep: ExecutableDependencyDefinition) =>
-  //       this.appendExecutableDependencySection(dep, builder),
-  //     );
-  //   return builder;
-  // }
-  private appendExecutableDependencySection(
-    dependency: ExecutableDependencyDefinition,
-    builder: MarkdownBuilder,
-  ): MarkdownBuilder {
+
+  private appendAboutSection(builder: MarkdownBuilder): MarkdownBuilder {
+    const dependency = this.executable;
     const beautifierName: string = this.beautifier.name;
     const dependencyName: string = dependency.name;
-    builder.header(`Install ${dependencyName} Executable`, 2);
+    builder.header(`About`, 2);
     const isConfusing =
       beautifierName.toLowerCase() === dependencyName.toLowerCase();
     if (isConfusing) {
@@ -81,7 +71,13 @@ export default class ExecutableDoc extends Doc {
     builder.append(
       `${dependencyName} executable is a third-party program you must install manually and is required for beautification.`,
     );
+    return builder;
+  }
 
+  private appendExecutableDependencySection(
+    builder: MarkdownBuilder,
+  ): MarkdownBuilder {
+    builder.header(`Install`, 2);
     builder.append("");
     builder.append(
       "Below are instructions for each of the supported Operating Systems.",
@@ -91,33 +87,6 @@ export default class ExecutableDoc extends Doc {
     this.appendMacSection(builder);
     this.appendLinuxSection(builder);
 
-    // builder.append(
-    //   "Below are example configuration files for each of the supported languages.",
-    // );
-
-    // this.languages.forEach(lang => {
-    //   builder.details(lang.name, builder => {
-    //     builder.append(
-    //       `A \`.unibeautifyrc.json\` file would look like the following:`,
-    //     );
-    //     builder.code(
-    //       JSON.stringify(
-    //         {
-    //           [lang.name]: {
-    //             [beautifierName]: {
-    //               [dependencyName]: {
-    //                 path: "/path/to/dependency",
-    //               },
-    //             },
-    //           },
-    //         },
-    //         null,
-    //         2,
-    //       ),
-    //       "json",
-    //     );
-    //   });
-    // });
     return builder;
   }
 
@@ -158,8 +127,6 @@ export default class ExecutableDoc extends Doc {
       "text",
     );
 
-    builder.append("Remember this executable path for later.");
-
     builder.append(
       "If `where` fails to return an executable path then you need to fix your `PATH` Environment Variable:",
     );
@@ -167,10 +134,10 @@ export default class ExecutableDoc extends Doc {
       '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/8HK1BsRprt0?start=334" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
     );
     builder.append(
-      `Once you successfully an executable path continue to ${MarkdownBuilder.createLink(
-        "Usage",
-        "#usage",
-      )} section below.`,
+      `Once you successfully an executable path go to the ${MarkdownBuilder.createLink(
+        "Configure",
+        "#Configure",
+      )} section.`,
     );
     builder.append(
       `Replace \`${fakePathForExecutable(
@@ -183,79 +150,113 @@ export default class ExecutableDoc extends Doc {
   private appendMacSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("macOS", 3);
     const dependency = this.executable;
-    builder.append("![mac-terminal](/img/mac/mac-terminal.png)");
-
+    // builder.append("![mac-terminal](/img/mac/mac-terminal.png)");
+    builder.append("Open the Terminal application:");
     builder.append(
       '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/zw7Nd67_aFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
     );
 
     builder.append(
-      '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/aYVEZTmBiuc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+      `\nFind the path to ${this.dependencyName} by running the command:`,
     );
     builder.code(`which ${dependency.program}`, "bash");
+
+    builder.append(
+      "Which will return an absolute path like one of the following:",
+    );
+    const suffixes = ["", ".sh", ".bash"];
+    builder.code(
+      suffixes
+        .map(suffix => `/absolute/path/to/${dependency.program}${suffix}`)
+        .join("\n"),
+      "text",
+    );
+
+    builder.append(
+      "If `which` fails to return an executable path then you need to fix your `PATH` Environment Variable:",
+    );
+
+    builder.append(
+      '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/aYVEZTmBiuc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+    );
+
+    builder.append(
+      `Once you successfully an executable path go to the ${MarkdownBuilder.createLink(
+        "Configure",
+        "#Configure",
+      )} section.`,
+    );
+    builder.append(
+      `Replace \`${fakePathForExecutable(
+        dependency,
+      )}\` with your specific executable path value.`,
+    );
+
     return builder;
   }
 
   private appendLinuxSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("Linux", 3);
     const dependency = this.executable;
+    builder.append("Open the Terminal application:");
+    // builder.append(
+    //   "![linux-terminal](/img/linux/linux-terminal-on-ubuntu.png)",
+    // );
     builder.append(
-      "![linux-terminal](/img/linux/linux-terminal-on-ubuntu.png)",
+      '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/AO0jzD1hpXc?start=28" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+    );
+
+    builder.append(
+      `\nFind the path to ${this.dependencyName} by running the command:`,
     );
     builder.code(`which ${dependency.program}`, "bash");
+
+    builder.append(
+      "Which will return an absolute path like one of the following:",
+    );
+    const suffixes = ["", ".sh", ".bash"];
+    builder.code(
+      suffixes
+        .map(suffix => `/absolute/path/to/${dependency.program}${suffix}`)
+        .join("\n"),
+      "text",
+    );
+
+    builder.append(
+      "If `which` fails to return an executable path then you need to fix your `PATH` Environment Variable:",
+    );
+
+    builder.append(
+      '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/rJMFxIbDe-g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+    );
+
+    builder.append(
+      `Once you successfully an executable path go to the ${MarkdownBuilder.createLink(
+        "Configure",
+        "#Configure",
+      )} section.`,
+    );
+    builder.append(
+      `Replace \`${fakePathForExecutable(
+        dependency,
+      )}\` with your specific executable path value.`,
+    );
     return builder;
   }
 
   private appendUsageSection(builder: MarkdownBuilder): MarkdownBuilder {
-    builder.header("Usage", 2);
-    // builder.append(
-    //   "Below are example configuration files for each of the supported languages.",
-    // );
-
+    builder.header("Configure", 2);
     const beautifierName: string = this.beautifier.name;
-
-    // this.languages.forEach(lang => {
-    //   builder.details(lang.name, builder => {
-    //     builder.append(
-    //       `A \`.unibeautifyrc.json\` file would look like the following:`,
-    //     );
-    //     builder.code(
-    //       JSON.stringify(
-    //         {
-    //           [lang.name]: {
-    //             beautifiers: [beautifierName],
-    //           },
-    //         },
-    //         null,
-    //         2,
-    //       ),
-    //       "json",
-    //     );
-    //   });
-    // });
-
-    const { dependencies } = this;
-    if (dependencies.length === 0) {
-      return builder;
-    }
-    const executableConfig = dependencies
-      .filter(dep => dep.type === DependencyType.Executable)
-      .reduce(
-        (config, dep: ExecutableDependencyDefinition) => ({
-          ...config,
-          [dep.name]: {
-            path: fakePathForExecutable(dep),
-          },
-        }),
-        {},
-      );
+    const dep = this.executable;
+    const executableConfig = {
+      [dep.name]: {
+        path: fakePathForExecutable(dep),
+      },
+    };
 
     const beautifierOptions: any = {
       ...executableConfig,
     };
-    if (this.beautifier.resolveConfig) {
-      beautifierOptions.prefer_beautifier_config = true;
-    }
 
     builder.append(
       `A \`.unibeautifyrc.json\` file would look like the following:`,
@@ -279,46 +280,13 @@ export default class ExecutableDoc extends Doc {
         .map(lang => `\`${lang.name}\``)
         .join(", ")}, etc.`,
     );
-
-    // this.languages.forEach(lang => {
-    //   builder.details(lang.name, builder => {
-    //     builder.append(
-    //       `A \`.unibeautifyrc.json\` file would look like the following:`,
-    //     );
-    //     builder.code(
-    //       JSON.stringify(
-    //         {
-    //           [lang.name]: {
-    //             beautifiers: [beautifierName],
-    //             [beautifierName]: beautifierOptions,
-    //           },
-    //         },
-    //         null,
-    //         2,
-    //       ),
-    //       "json",
-    //     );
-    //   });
-    // });
-
+    builder.append(
+      `See ${MarkdownBuilder.createLink(
+        "Install",
+        "#install",
+      )} section below for how to determine absolute path to the exectuable.`,
+    );
     return builder;
-  }
-  private createOptionsLookup(): OptionsLookup {
-    return this.languages
-      .map(language => ({ language, options: this.options(language) }))
-      .reduce(
-        (lookup, { language, options }) => ({
-          ...lookup,
-          [language.name]: options,
-        }),
-        {},
-      );
-  }
-  private options(language: Language): OptionsRegistry {
-    return Unibeautify.getOptionsSupportedByBeautifierForLanguage({
-      beautifier: this.beautifier,
-      language,
-    });
   }
   private get pkg(): object | undefined {
     return this.beautifier.package;
@@ -326,12 +294,6 @@ export default class ExecutableDoc extends Doc {
   protected get customEditUrl() {
     return _.get(this.pkg, "homepage");
   }
-  private get dependencies(): DependencyDefinition[] {
-    return this.beautifier.dependencies || [];
-  }
-}
-interface OptionsLookup {
-  [languageName: string]: OptionsRegistry;
 }
 
 function fakePathForExecutable(

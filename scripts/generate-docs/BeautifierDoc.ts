@@ -7,9 +7,10 @@ import Unibeautify, {
   ExecutableDependencyDefinition,
 } from "unibeautify";
 import * as _ from "lodash";
-import { linkForLanguage, linkForOption, emojis } from "./utils";
+import { linkForLanguage, linkForOption, emojis, slugify } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
+
 export default class BeautifierDoc extends Doc {
   private readonly optionsLookup: OptionsLookup;
   constructor(private beautifier: Beautifier, private languages: Language[]) {
@@ -73,6 +74,7 @@ export default class BeautifierDoc extends Doc {
     if (!this.pkg) {
       return builder;
     }
+    this.appendDependenciesSection(builder);
     builder.header("Install", 2);
     const packageNames: string[] = [
       ...this.packagePeerDependencies,
@@ -82,149 +84,25 @@ export default class BeautifierDoc extends Doc {
     builder.code(`npm install --save-dev ${packageNames.join(" ")}`, "bash");
     builder.append("Or with [`yarn`](https://yarnpkg.com/):");
     builder.code(`yarn add --dev ${packageNames.join(" ")}`, "bash");
-    return this.appendDependenciesSection(builder);
-  }
-
-  private appendDependenciesSection(builder: MarkdownBuilder): MarkdownBuilder {
-    const { dependencies } = this;
-    if (dependencies.length === 0) {
-      return builder;
-    }
-    dependencies
-      .filter(dep => dep.type === DependencyType.Executable)
-      .forEach((dep: ExecutableDependencyDefinition) =>
-        this.appendExecutableDependencySection(dep, builder),
-      );
     return builder;
   }
 
-  private appendExecutableDependencySection(
-    dependency: ExecutableDependencyDefinition,
-    builder: MarkdownBuilder,
-  ): MarkdownBuilder {
-    const beautifierName: string = this.beautifier.name;
-    const dependencyName: string = dependency.name;
-    builder.header(`Install ${dependencyName} Executable`, 3);
-    const isConfusing =
-      beautifierName.toLowerCase() === dependencyName.toLowerCase();
-    if (isConfusing) {
-      builder.append(
-        `*${dependencyName} executable should not be confused with ${beautifierName} beautifier with the same name.*`,
-      );
+  private appendDependenciesSection(builder: MarkdownBuilder): MarkdownBuilder {
+    const dependencies = this.dependencies.filter(
+      dep => dep.type === DependencyType.Executable,
+    );
+    if (dependencies.length === 0) {
+      return builder;
     }
-    builder.append(
-      `${dependencyName} executable is a third-party program you must install manually and is required for beautification.`,
+    builder.header("Prerequisites", 2);
+    builder.append("Please install the following prerequisites:");
+    const depLinks = dependencies.map((dep: ExecutableDependencyDefinition) =>
+      MarkdownBuilder.createDocLink(
+        dep.name,
+        `executable-${slugify(this.beautifier.name)}-${slugify(dep.name)}`,
+      ),
     );
-
-    builder.append("");
-    builder.append(
-      "Below are instructions for each of the supported Operating Systems.",
-    );
-
-    builder.details("Windows", builder => {
-      builder.append(
-        "[Open the Command Prompt](https://www.lifewire.com/how-to-open-command-prompt-2618089).",
-      );
-
-      builder.append(
-        '\n<p><iframe width="560" height="315" src="https://www.youtube.com/embed/MBBWVgE0ewk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>\n',
-      );
-
-      // builder.append("It looks like the following for Windows 7:");
-      // builder.append(
-      //   "![windows-7-command-prompt](/img/windows/windows-7-command-prompt.png)",
-      // );
-      // builder.append("And this for Windows 10:");
-
-      // builder.append("It looks like the following for Windows 10:");
-      // builder.append(
-      //   "![windows-10-command-prompt](/img/windows/windows-10-command-prompt.png)",
-      // );
-
-      builder.append(
-        `\nFind the path to ${dependencyName} by running the command:`,
-      );
-      builder.code(`where ${dependency.program}`, "batch");
-
-      builder.append(
-        "Which will return an absolute path like one of the following:",
-      );
-      const suffixes = ["", ".exe", ".bat"];
-      builder.code(
-        suffixes
-          .map(
-            suffix => `C:\\absolute\\path\\to\\${dependency.program}${suffix}`,
-          )
-          .join("\n"),
-        "text",
-      );
-
-      builder.append("Remember this executable path for later.");
-
-      builder.append(
-        "If `where` fails to return an executable path then you need to fix your `PATH` Environment Variable:",
-      );
-      builder.append(
-        '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/8HK1BsRprt0?start=334" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
-      );
-      builder.append(
-        `Once you successfully an executable path continue to ${MarkdownBuilder.createLink(
-          "Usage",
-          "#usage",
-        )} section below.`,
-      );
-      builder.append(
-        `Replace \`${fakePathForExecutable(
-          dependency,
-        )}\` with your specific executable path value.`,
-      );
-    });
-    builder.details("macOS", builder => {
-      builder.append("![mac-terminal](/img/mac/mac-terminal.png)");
-
-      builder.append(
-        '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/zw7Nd67_aFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
-      );
-
-      builder.append(
-        '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/aYVEZTmBiuc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
-      );
-      builder.code(`which ${dependency.program}`, "bash");
-    });
-    builder.details("Linux", builder => {
-      builder.append(
-        "![linux-terminal](/img/linux/linux-terminal-on-ubuntu.png)",
-      );
-      builder.code(`which ${dependency.program}`, "bash");
-    });
-
-    // builder.append(
-    //   "Below are example configuration files for each of the supported languages.",
-    // );
-
-    // this.languages.forEach(lang => {
-    //   builder.details(lang.name, builder => {
-    //     builder.append(
-    //       `A \`.unibeautifyrc.json\` file would look like the following:`,
-    //     );
-    //     builder.code(
-    //       JSON.stringify(
-    //         {
-    //           [lang.name]: {
-    //             [beautifierName]: {
-    //               [dependencyName]: {
-    //                 path: "/path/to/dependency",
-    //               },
-    //             },
-    //           },
-    //         },
-    //         null,
-    //         2,
-    //       ),
-    //       "json",
-    //     );
-    //   });
-    // });
+    builder.list(depLinks);
     return builder;
   }
 
@@ -234,31 +112,12 @@ export default class BeautifierDoc extends Doc {
 
   private appendUsageSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("Usage", 2);
-    // builder.append(
-    //   "Below are example configuration files for each of the supported languages.",
-    // );
 
     const beautifierName: string = this.beautifier.name;
 
-    // this.languages.forEach(lang => {
-    //   builder.details(lang.name, builder => {
-    //     builder.append(
-    //       `A \`.unibeautifyrc.json\` file would look like the following:`,
-    //     );
-    //     builder.code(
-    //       JSON.stringify(
-    //         {
-    //           [lang.name]: {
-    //             beautifiers: [beautifierName],
-    //           },
-    //         },
-    //         null,
-    //         2,
-    //       ),
-    //       "json",
-    //     );
-    //   });
-    // });
+    builder.append(
+      `Enable ${beautifierName} beautifier for a language by adding the beautifier's name, \`${beautifierName}\`, to \`beautifiers\` option array.`,
+    );
 
     const { dependencies } = this;
     if (dependencies.length === 0) {
@@ -279,12 +138,14 @@ export default class BeautifierDoc extends Doc {
     const beautifierOptions: any = {
       ...executableConfig,
     };
-    if (this.beautifier.resolveConfig) {
+    const canResolveConfig = !!this.beautifier.resolveConfig;
+    if (canResolveConfig) {
       beautifierOptions.prefer_beautifier_config = true;
     }
 
+    builder.append("");
     builder.append(
-      `A \`.unibeautifyrc.json\` file would look like the following:`,
+      `A \`.unibeautifyrc.json\` file would look like the following, including some more advanced options:`,
     );
     builder.code(
       JSON.stringify(
@@ -302,29 +163,25 @@ export default class BeautifierDoc extends Doc {
     builder.append(
       `**Note**: The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
         .slice(0, 3)
-        .map(lang => `\`${lang.name}\``).join(', ')}, etc.`,
+        .map(lang => `\`${lang.name}\``)
+        .join(", ")}, etc.`,
     );
 
-    // this.languages.forEach(lang => {
-    //   builder.details(lang.name, builder => {
-    //     builder.append(
-    //       `A \`.unibeautifyrc.json\` file would look like the following:`,
-    //     );
-    //     builder.code(
-    //       JSON.stringify(
-    //         {
-    //           [lang.name]: {
-    //             beautifiers: [beautifierName],
-    //             [beautifierName]: beautifierOptions,
-    //           },
-    //         },
-    //         null,
-    //         2,
-    //       ),
-    //       "json",
-    //     );
-    //   });
-    // });
+    if (canResolveConfig) {
+      builder.header("Prefer Beautifier Specific Configuration File", 3);
+      builder.append(
+        `After enabling \`prefer_beautifier_config\` option for the ${
+          this.beautifier.name
+        } beautifier Unibeautify will attempt to find a ${
+          this.beautifier.name
+        } configuration file.`,
+      );
+      builder.append(
+        `If a ${
+          this.beautifier.name
+        } configuration file is found then Unibeautify's own configuration file (e.g. \`.unibeautifyrc\`) will be ignored.`,
+      );
+    }
 
     return builder;
   }

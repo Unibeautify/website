@@ -20,7 +20,7 @@
     "cli": "Command-Line Interface (CLI)",
     "config-file": "Configuration File",
     "editors": "Editor Integration",
-    "executable-php-cs-fixer-php-cs-fixer": "PHP-CS-Fixer Executable for PHP-CS-Fixer Beautifier",
+    "executable-php-cs-fixer-php-cs-fixer": "PHP-CS-Fixer Executable",
     "PHP-CS-Fixer Executable": "PHP-CS-Fixer Executable",
     "getting-started": "Getting Started",
     "language-csharp": "C#",
