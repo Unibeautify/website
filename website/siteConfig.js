@@ -56,6 +56,7 @@ const siteConfig = {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: "default"
   },
+  onPageNav: ["separate"],
   scripts: ["https://buttons.github.io/buttons.js", "../js/selectList.js", "../js/waitlist.js"],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: GITHUB_URL,

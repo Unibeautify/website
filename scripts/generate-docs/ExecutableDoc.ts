@@ -42,14 +42,6 @@ export default class ExecutableDoc extends Doc {
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
-
-    builder.append(
-      "Jump to: " +
-        ["Windows", "macOS", "Linux"]
-          .map(os => MarkdownBuilder.createLink(os, `#${os.toLowerCase()}`))
-          .join(", ") +
-        ".",
-    );
     this.appendAboutSection(builder);
     this.appendUsageSection(builder);
     this.appendExecutableDependencySection(builder);
