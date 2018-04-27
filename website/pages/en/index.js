@@ -81,7 +81,7 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('getting-started.html', this.props.language)}>Get Started</Button>
-            <Button href={docUrl('options.html', this.props.language)}>Options</Button>
+            <Button href={docUrl('options-for-languages.html', this.props.language)}>Options</Button>
             <Button href={"https://playground.unibeautify.com/"} target="_blank">Try it out</Button>
             <Button href={docUrl('ci.html', this.props.language)}>Unibeautify CI</Button>
           </PromoSection>
@@ -107,7 +107,7 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: `Personalize with [40+ configuration options](${docUrl('options.html', props.language)})!`,
+        content: `Personalize with [40+ configuration options](${docUrl('options-for-languages.html', props.language)})!`,
         image: imgUrl('wrench.svg'),
         imageAlign: 'top',
         title: 'Unparalleled Customization',

@@ -116,43 +116,41 @@ export default class BeautifierDoc extends Doc {
     const beautifierName: string = this.beautifier.name;
 
     builder.append(
-      `Enable ${beautifierName} beautifier for a language by adding the beautifier's name, \`${beautifierName}\`, to \`beautifiers\` option array.`,
+      `Add \`${beautifierName}\` to \`beautifiers\` language option.`,
     );
 
-    const { dependencies } = this;
-    if (dependencies.length === 0) {
-      return builder;
-    }
-    const executableConfig = dependencies
-      .filter(dep => dep.type === DependencyType.Executable)
-      .reduce(
-        (config, dep: ExecutableDependencyDefinition) => ({
-          ...config,
-          [dep.name]: {
-            path: fakePathForExecutable(dep),
-          },
-        }),
-        {},
-      );
+    // const { dependencies } = this;
+    // if (dependencies.length === 0) {
+    //   return builder;
+    // }
+    // const executableConfig = dependencies
+    //   .filter(dep => dep.type === DependencyType.Executable)
+    //   .reduce(
+    //     (config, dep: ExecutableDependencyDefinition) => ({
+    //       ...config,
+    //       [dep.name]: {
+    //         path: fakePathForExecutable(dep),
+    //       },
+    //     }),
+    //     {},
+    //   );
 
-    const beautifierOptions: any = {
-      ...executableConfig,
-    };
-    const canResolveConfig = !!this.beautifier.resolveConfig;
-    if (canResolveConfig) {
-      beautifierOptions.prefer_beautifier_config = true;
-    }
+    // const beautifierOptions: any = {
+    //   ...executableConfig,
+    // };
+    // if (this.canResolveConfig) {
+    //   beautifierOptions.prefer_beautifier_config = true;
+    // }
 
-    builder.append("");
     builder.append(
-      `A \`.unibeautifyrc.json\` file would look like the following, including some more advanced options:`,
+      `A \`.unibeautifyrc.json\` file would look like the following:`,
     );
     builder.code(
       JSON.stringify(
         {
           LANGUAGE_NAME: {
             beautifiers: [beautifierName],
-            [beautifierName]: beautifierOptions,
+            // [beautifierName]: beautifierOptions,
           },
         },
         null,
@@ -160,30 +158,36 @@ export default class BeautifierDoc extends Doc {
       ),
       "json",
     );
-    builder.append(
-      `**Note**: The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
+    builder.note(
+      `The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
         .slice(0, 3)
         .map(lang => `\`${lang.name}\``)
         .join(", ")}, etc.`,
     );
 
-    if (canResolveConfig) {
-      builder.header("Prefer Beautifier Specific Configuration File", 3);
+    if (this.beautifierOptionKeys.length > 0) {
+      builder.header("Advanced", 3);
+      builder.append(`The following beautifier option(s) are supported:`);
+      builder.list(this.beautifierOptionKeys.map(key => `\`${key}\``));
       builder.append(
-        `After enabling \`prefer_beautifier_config\` option for the ${
-          this.beautifier.name
-        } beautifier Unibeautify will attempt to find a ${
-          this.beautifier.name
-        } configuration file.`,
-      );
-      builder.append(
-        `If a ${
-          this.beautifier.name
-        } configuration file is found then Unibeautify's own configuration file (e.g. \`.unibeautifyrc\`) will be ignored.`,
+        `See ${MarkdownBuilder.createDocLink(
+          "beautifier options",
+          "options-for-beautifiers",
+        )} docs for more information.`,
       );
     }
 
     return builder;
+  }
+  private get beautifierOptionKeys(): string[] {
+    const keys = [];
+    if (this.canResolveConfig) {
+      keys.push("prefer_beautifier_config");
+    }
+    return keys;
+  }
+  private get canResolveConfig(): boolean {
+    return !!this.beautifier.resolveConfig;
   }
   private appendOptionsTable(builder: MarkdownBuilder): MarkdownBuilder {
     if (!this.hasOptions) {

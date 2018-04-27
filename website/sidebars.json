@@ -11,7 +11,8 @@
     ],
     "Configuring": [
       "config-file",
-      "options"
+      "options-for-languages",
+      "options-for-beautifiers"
     ],
     "Beautifiers": [
       "beautifier-eslint",

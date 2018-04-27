@@ -4,7 +4,10 @@ import MarkdownBuilder from "./MarkdownBuilder";
 import { optionKeyToTitle, slugify } from "./utils";
 export default class OptionsListDoc extends Doc {
   public get title(): string {
-    return "Options";
+    return "Language Options";
+  }
+  protected get id(): string {
+    return "options-for-languages";
   }
   public get prefix(): string {
     return "";

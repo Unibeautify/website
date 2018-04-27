@@ -1,24 +1,31 @@
 let previousSelectedLanguage;
 
 window.onload = function() {
-
   loadSelected();
 
-  document.getElementById("languages-select").onchange = function onSelectionChange() {
+  document.getElementById(
+    "languages-select",
+  ).onchange = function onSelectionChange() {
     const languageName = getSelectedLanguage();
-    history.pushState({ language: languageName }, null, `?language=${languageName}`);
+    history.pushState(
+      { language: languageName },
+      null,
+      `?language=${languageName}`,
+    );
     updateCodeExample(languageName);
-  }
-}
+  };
+};
 
 function loadSelected() {
-  const language = getLanguageFromUrl();
+  const language = getLanguageFromUrlParam(); // || getLanguageFromHash();
   language && updateCodeExample(language);
 }
 
 window.onpopstate = function onPageChange(event) {
   const state = event.state || {};
-  const { language: selectedLanguage } = state;
+  const {
+    language: selectedLanguage, //= getLanguageFromHash()
+  } = state;
   if (selectedLanguage) {
     updateCodeExample(selectedLanguage);
   } else {
@@ -28,6 +35,7 @@ window.onpopstate = function onPageChange(event) {
 };
 
 function updateCodeExample(languageName) {
+  languageName = fixLanguage(languageName);
   if (!languageName) {
     return;
   }
@@ -35,17 +43,30 @@ function updateCodeExample(languageName) {
     return;
   }
 
-  const selectList = document.querySelectorAll("div.exampleCode");
-  [].forEach.call(selectList, id => id.classList.add("hidden"));
-  document.getElementById("example-" + languageName).classList.remove("hidden");
-
-  previousSelectedLanguage = languageName;
-  setSelectedLanguage(languageName);
+  const elId = "example-" + languageName;
+  const selectedElement = document.getElementById(elId);
+  if (selectedElement) {
+    const selectList = document.querySelectorAll("div.exampleCode");
+    [].forEach.call(selectList, element => element.classList.add("hidden"));
+    selectedElement.classList.remove("hidden");
+    previousSelectedLanguage = languageName;
+    setSelectedLanguage(languageName);
+  } else {
+    console.warn("Element with ID " + elId + " was not found.");
+    console.log(selectedElement);
+  }
 }
 
-function getLanguageFromUrl() {
+function getLanguageFromUrlParam() {
   const url = new URL(location.href);
   return url.searchParams.get("language");
+}
+
+function getLanguageFromHash() {
+  const hash = document.location.hash;
+  if (typeof hash === "string") {
+    return hash.slice(1);
+  }
 }
 
 function getSelectedLanguage() {
@@ -62,7 +83,9 @@ function setSelectedLanguageIndex(languageIndex) {
 }
 
 function getSelectedLanguageIndex(selectedLanguage) {
-  return options().map(option => option.value).indexOf(selectedLanguage);
+  return options()
+    .map(option => option.value)
+    .indexOf(selectedLanguage);
 }
 
 function getDefaultLanguage() {
@@ -71,5 +94,19 @@ function getDefaultLanguage() {
 }
 
 function options() {
-  return [].map.call(document.getElementById("languages-select").options, (option) => option);
+  return [].map.call(
+    document.getElementById("languages-select").options,
+    option => option,
+  );
+}
+
+function fixLanguage(rawLanguage) {
+  switch (rawLanguage) {
+    case "html-erb":
+      return "html+erb";
+    case "titanium-style-sheets":
+      return "titaniumstylesheets";
+    default:
+      return rawLanguage;
+  }
 }

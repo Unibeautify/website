@@ -266,8 +266,8 @@ export default class ExecutableDoc extends Doc {
       ),
       "json",
     );
-    builder.append(
-      `**Note**: The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
+    builder.note(
+      `The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
         .slice(0, 3)
         .map(lang => `\`${lang.name}\``)
         .join(", ")}, etc.`,

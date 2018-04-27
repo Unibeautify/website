@@ -76,6 +76,7 @@ a {
   border-top-color: #ccc;
 }
 
+/*
 details {
   margin-top: 1rem;
   margin-left: 1rem;
@@ -83,7 +84,6 @@ details {
 
 details[open] {
   border-left: 4px solid #24292e;
-  /* border-radius: .3em; */
   padding-left: 1rem;
   margin-left: -4px;
 }
@@ -92,7 +92,4 @@ details[open] summary {
   font-weight: bold;
   margin-bottom: 1rem;
 }
-
-table tr th {
-  text-transform: none;
-}
+*/

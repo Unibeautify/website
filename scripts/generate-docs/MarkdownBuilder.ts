@@ -16,7 +16,7 @@ export default class MarkdownBuilder {
   }
   public list(items: string[]): MarkdownBuilder {
     const text = items.map(item => `- ${item}`).join("\n");
-    return this.append(text);
+    return this.append(text + '\n');
   }
   public json(json: object) {
     return this.code(JSON.stringify(json, null, 2), "json");
@@ -31,6 +31,10 @@ export default class MarkdownBuilder {
   }
   public append(text: string): MarkdownBuilder {
     this.contents.push(text);
+    return this;
+  }
+  public note(text: string): MarkdownBuilder {
+    this.append(`> **Note:** ${text}`);
     return this;
   }
   public editButton(text: string, url: string): MarkdownBuilder {
