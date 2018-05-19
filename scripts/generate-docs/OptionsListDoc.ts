@@ -1,7 +1,12 @@
 import Unibeautify, { OptionsRegistry } from "unibeautify";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
-import { optionKeyToTitle, slugify, coreEditUrl, coreOptionsEditUrl } from "./utils";
+import {
+  optionKeyToTitle,
+  slugify,
+  coreEditUrl,
+  coreOptionsEditUrl,
+} from "./utils";
 export default class OptionsListDoc extends Doc {
   public get title(): string {
     return "Language Options";

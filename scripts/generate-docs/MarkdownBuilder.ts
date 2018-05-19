@@ -8,7 +8,7 @@ export default class MarkdownBuilder {
   public header(
     text: string,
     level: number = 1,
-    toc: boolean = false,
+    toc: boolean = false
   ): MarkdownBuilder {
     const prefix = "#".repeat(level);
     if (toc === true) {
@@ -48,12 +48,9 @@ export default class MarkdownBuilder {
   public appendBadges(badges: Badge[]): MarkdownBuilder {
     if (badges.length > 0) {
       // this.append(`| ${badges.map(badge => badge.description).join(" | ")} |`);
-      // this.append(`| ${badges.map(badge => "---").join(" | ")} |`);
-      // this.append(
-      //   `| ${badges
-      //     .map(badge => MarkdownBuilder.createBadge(badge))
-      //     .join(" | ")} |`,
-      // );
+      // this.append(`| ${badges.map(badge => "---").join(" | ")} |`); this.append(
+      // `| ${badges     .map(badge => MarkdownBuilder.createBadge(badge))     .join("
+      // | ")} |`, );
       badges
         .map(badge => MarkdownBuilder.createBadge(badge))
         .forEach(badge => this.append(badge));

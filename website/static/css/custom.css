@@ -86,9 +86,11 @@ details {
   padding-left: 1rem;
   margin-left: -4px;
 } */
+
 details summary {
   color: #2e8555;
 }
+
 details[open] summary {
   font-weight: bold;
   margin-bottom: 1rem;
