@@ -1,3 +1,5 @@
+import { Badge } from "unibeautify";
+
 export default class MarkdownBuilder {
   private contents: string[] = [];
   public build(): string {
@@ -6,7 +8,7 @@ export default class MarkdownBuilder {
   public header(
     text: string,
     level: number = 1,
-    toc: boolean = false
+    toc: boolean = false,
   ): MarkdownBuilder {
     const prefix = "#".repeat(level);
     if (toc === true) {
@@ -16,7 +18,7 @@ export default class MarkdownBuilder {
   }
   public list(items: string[]): MarkdownBuilder {
     const text = items.map(item => `- ${item}`).join("\n");
-    return this.append(text + '\n');
+    return this.append(text + "\n");
   }
   public json(json: object) {
     return this.code(JSON.stringify(json, null, 2), "json");
@@ -43,10 +45,37 @@ export default class MarkdownBuilder {
     this.append("");
     return this;
   }
+  public appendBadges(badges: Badge[]): MarkdownBuilder {
+    if (badges.length > 0) {
+      // this.append(`| ${badges.map(badge => badge.description).join(" | ")} |`);
+      // this.append(`| ${badges.map(badge => "---").join(" | ")} |`);
+      // this.append(
+      //   `| ${badges
+      //     .map(badge => MarkdownBuilder.createBadge(badge))
+      //     .join(" | ")} |`,
+      // );
+      badges
+        .map(badge => MarkdownBuilder.createBadge(badge))
+        .forEach(badge => this.append(badge));
+      this.append("");
+    }
+    return this;
+  }
   public static createDocLink(text: string, docId: string): string {
     return this.createLink(text, `/docs/${docId}.html`);
   }
+  public static createBadge(badge: Badge): string {
+    const { url, href, description } = badge;
+    // return this.createLink(this.createImage(url, description), href);
+    return `<a href="${href}"><img style="display: inline;" src="${url}" alt="${description}"></a>`;
+  }
+  public static createImage(imageUrl: string, altText: string = "image") {
+    return `![${altText}](${imageUrl})`;
+  }
   public static createLink(text: string, dest: string): string {
     return `[${text}](${dest})`;
+  }
+  public static bold(text: string): string {
+    return `**${text}**`;
   }
 }

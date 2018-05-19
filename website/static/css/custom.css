@@ -76,20 +76,20 @@ a {
   border-top-color: #ccc;
 }
 
-/*
 details {
   margin-top: 1rem;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
 }
 
-details[open] {
+/* details[open] {
   border-left: 4px solid #24292e;
   padding-left: 1rem;
   margin-left: -4px;
+} */
+details summary {
+  color: #2e8555;
 }
-
 details[open] summary {
   font-weight: bold;
   margin-bottom: 1rem;
 }
-*/

@@ -14,13 +14,14 @@ import {
   linkForBeautifier,
   unibeautifyWithBeautifier,
   emojis,
+  websiteEditUrl,
+  coreEditUrl,
+  coreOptionsEditUrl,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 
-const siteConfig = require("../../website/siteConfig.js");
-const editUrl = siteConfig.editUrl;
-const editBeautifiersUrl = `${editUrl}../scripts/generate-docs/beautifiers.ts`;
+const editBeautifiersUrl = `${websiteEditUrl}/scripts/generate-docs/beautifiers.ts`;
 
 export default class OptionsDoc extends Doc {
   private readonly languages: Language[];
@@ -55,7 +56,7 @@ export default class OptionsDoc extends Doc {
   }
 
   protected get customEditUrl() {
-    return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
+    return coreOptionsEditUrl;
   }
 
   private get hasSupport(): boolean {
@@ -71,7 +72,12 @@ export default class OptionsDoc extends Doc {
         `**Deprecated since version**: ${this.option.deprecated}\n`,
       );
     }
-    const currentUnibeautifyVersionBadge = '<a href="https://www.npmjs.com/package/unibeautify"><img style="display: inline;" src="https://img.shields.io/npm/v/unibeautify.svg" alt="npm"></a>';
+    // const currentUnibeautifyVersionBadge = '<a href="https://www.npmjs.com/package/unibeautify"><img style="display: inline;" src="https://img.shields.io/npm/v/unibeautify.svg" alt="npm"></a>';
+    const currentUnibeautifyVersionBadge = MarkdownBuilder.createBadge({
+      description: "npm",
+      url: "https://img.shields.io/npm/v/unibeautify.svg",
+      href: "https://www.npmjs.com/package/unibeautify",
+    });
     builder.append(`**Available since version**: ${this.option.since} (**Current:** ${currentUnibeautifyVersionBadge})\n`);
     builder.append(`**Type**: \`${this.type}\`\n`);
     builder.append(`**Default**: \`${JSON.stringify(this.option.default)}\`\n`);
@@ -386,14 +392,14 @@ export default class OptionsDoc extends Doc {
   }
 
   private editExampleButtonUrl(language: Language): string {
-    return `${editUrl}../examples/${language.name}/${this.optionKey}.txt`;
+    return `${websiteEditUrl}/examples/${language.name}/${this.optionKey}.txt`;
   }
 
   private addExampleButtonUrl(language: Language): string {
-    return `${editUrl.replace(
+    return `${websiteEditUrl.replace(
       "/edit/",
       "/new/",
-    )}../examples/${encodeURIComponent(language.name)}/new?filename=${
+    )}/examples/${encodeURIComponent(language.name)}/new?filename=${
       this.optionKey
     }.txt&value=Type%20Example%20Here`;
   }

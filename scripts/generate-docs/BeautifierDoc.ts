@@ -5,9 +5,19 @@ import Unibeautify, {
   DependencyDefinition,
   DependencyType,
   ExecutableDependencyDefinition,
+  Badge,
 } from "unibeautify";
 import * as _ from "lodash";
-import { linkForLanguage, linkForOption, emojis, slugify } from "./utils";
+const getPkgRepo = require("get-pkg-repo");
+
+import {
+  linkForLanguage,
+  linkForOption,
+  emojis,
+  slugify,
+  websiteEditUrl,
+  badgesForRepository,
+} from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 
@@ -23,8 +33,14 @@ export default class BeautifierDoc extends Doc {
   public get id(): string {
     return `${this.prefix}${this.slug}`;
   }
+  protected get slug(): string {
+    return slugify(this.beautifierName);
+  }
   public get title(): string {
-    return this.beautifier.name;
+    return `${this.beautifierName} Beautifier`;
+  }
+  public get sidebarLabel(): string {
+    return this.beautifierName;
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
@@ -39,24 +55,45 @@ export default class BeautifierDoc extends Doc {
     if (!this.pkg) {
       return builder;
     }
+    // builder.append(
+    //   `[![npm](https://img.shields.io/npm/dt/@unibeautify/beautifier-php-cs-fixer.svg?style=for-the-badge)](https://www.npmjs.com/package/@unibeautify/beautifier-php-cs-fixer)`,
+    // );
+
+    builder.appendBadges([
+      {
+        description: "npm downloads",
+        url: `https://img.shields.io/npm/dt/${
+          this.packageName
+        }.svg?style=flat-square`,
+        href: `https://www.npmjs.com/package/${this.packageName}`,
+      },
+      ...this.repoBadges,
+      ...this.badges,
+    ]);
+
+    builder.editButton(
+      `Edit ${this.beautifierName} Beautifier`,
+      this.homepageUrl,
+    );
     builder.header("About", 2);
     builder.append(this.packageDescription);
+
     builder.append("| Package | Docs | Latest |");
     builder.append("| --- | --- | --- |");
-    builder.append(
-      `| **[${this.packageName}](https://www.npmjs.com/package/${
-        this.packageName
-      })** | v${this.getPackageCurrentVersion(
-        this.packageName,
-      )} | [![npm](https://img.shields.io/npm/v/${
-        this.packageName
-      }.svg)](https://www.npmjs.com/package/${this.packageName}) |`,
-    );
-    this.packagePeerDependencies.forEach(dep =>
+    [this.packageName, ...this.packagePeerDependencies].forEach(dep =>
       builder.append(
-        `| **[${dep}](https://www.npmjs.com/package/${dep})** | v${this.getPackageCurrentVersion(
+        `| ${MarkdownBuilder.bold(
+          MarkdownBuilder.createLink(
+            dep,
+            `https://www.npmjs.com/package/${dep}`,
+          ),
+        )} | v${this.getPackageCurrentVersion(
           dep,
-        )} | [![npm](https://img.shields.io/npm/v/${dep}.svg)](https://www.npmjs.com/package/${dep}) |`,
+        )} | ${MarkdownBuilder.createBadge({
+          description: "npm",
+          url: `https://img.shields.io/npm/v/${dep}.svg`,
+          href: `https://www.npmjs.com/package/${dep}`,
+        })} |`,
       ),
     );
     return builder;
@@ -99,7 +136,7 @@ export default class BeautifierDoc extends Doc {
     const depLinks = dependencies.map((dep: ExecutableDependencyDefinition) =>
       MarkdownBuilder.createDocLink(
         dep.name,
-        `executable-${slugify(this.beautifier.name)}-${slugify(dep.name)}`,
+        `executable-${slugify(this.beautifierName)}-${slugify(dep.name)}`,
       ),
     );
     builder.list(depLinks);
@@ -113,7 +150,7 @@ export default class BeautifierDoc extends Doc {
   private appendUsageSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("Usage", 2);
 
-    const beautifierName: string = this.beautifier.name;
+    const { beautifierName } = this;
 
     builder.append(
       `Add \`${beautifierName}\` to \`beautifiers\` language option.`,
@@ -195,10 +232,10 @@ export default class BeautifierDoc extends Doc {
       return builder;
     }
     /*
-    | Option | CSS | Lang 2 |
-    | --- | --- | --- |
-    | Arrow Parens | &#10060; | &#9989; |
-    */
+      | Option | CSS | Lang 2 |
+      | --- | --- | --- |
+      | Arrow Parens | &#10060; | &#9989; |
+      */
     builder.append(
       "| Option |" +
         this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join(""),
@@ -246,11 +283,26 @@ export default class BeautifierDoc extends Doc {
   private get allOptions(): OptionsRegistry {
     return Unibeautify.loadedOptions;
   }
+  private get repoBadges(): Badge[] {
+    return badgesForRepository(this.repository);
+  }
+  private get repository(): { type: string; user: string; project: string } {
+    return getPkgRepo(this.pkg);
+  }
   private get pkg(): object | undefined {
     return this.beautifier.package;
   }
+  private get badges(): Badge[] {
+    return this.beautifier.badges || [];
+  }
   protected get customEditUrl() {
+    return `${websiteEditUrl}/scripts/generate-docs/BeautifierDoc.ts`;
+  }
+  protected get homepageUrl() {
     return _.get(this.pkg, "homepage");
+  }
+  private get beautifierName(): string {
+    return this.beautifier.name;
   }
   private get dependencies(): DependencyDefinition[] {
     return this.beautifier.dependencies || [];
@@ -263,10 +315,4 @@ export default class BeautifierDoc extends Doc {
 }
 interface OptionsLookup {
   [languageName: string]: OptionsRegistry;
-}
-
-function fakePathForExecutable(
-  dependency: ExecutableDependencyDefinition,
-): string {
-  return `/absolute/path/to/${dependency.program}`;
 }

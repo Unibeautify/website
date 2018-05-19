@@ -4,9 +4,17 @@ import {
   Beautifier,
   Unibeautify,
   newUnibeautify,
+  Badge,
 } from "unibeautify";
 import * as _ from "lodash";
 import MarkdownBuilder from "./MarkdownBuilder";
+const siteConfig = require("../../website/siteConfig.js");
+
+export const websiteEditUrl = `${siteConfig.editUrl}../`;
+export const coreEditUrl = `${siteConfig.githubUrl}/edit/master/`;
+export const coreOptionsEditUrl = `${coreEditUrl}/src/options.ts`;
+export const coreLanguagesEditUrl = `${coreEditUrl}/src/languages.json`;
+
 export function optionKeyToTitle(key: string): string {
   return key
     .split("_")
@@ -19,7 +27,7 @@ export function slugify(title: string): string {
       .toLowerCase()
       .replace(/ /g, "-")
       .replace(/\+/g, "-")
-      .replace("#", "sharp")
+      .replace("#", "sharp"),
   );
 }
 export function linkForBeautifier(beautifier: Beautifier): string {
@@ -42,3 +50,35 @@ export const emojis = {
   x: "&#10060;",
   checkmark: "&#9989;",
 };
+
+export function badgesForRepository(repository: {
+  type: string;
+  user: string;
+  project: string;
+}): Badge[] {
+  switch (repository.type) {
+    case "github":
+      return [
+        {
+          description: "GitHub Stars",
+          url: `https://img.shields.io/github/stars/${repository.user}/${
+            repository.project
+          }.svg?style=flat-square`,
+          href: `https://github.com/${repository.user}/${
+            repository.project
+          }/stargazers`,
+        },
+        {
+          description: "GitHub Issues",
+          url: `https://img.shields.io/github/issues/${repository.user}/${
+            repository.project
+          }.svg?style=flat-square`,
+          href: `https://github.com/${repository.user}/${
+            repository.project
+          }/issues`,
+        },
+      ];
+    default:
+      return [];
+  }
+}

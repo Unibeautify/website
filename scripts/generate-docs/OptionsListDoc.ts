@@ -1,7 +1,7 @@
 import Unibeautify, { OptionsRegistry } from "unibeautify";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
-import { optionKeyToTitle, slugify } from "./utils";
+import { optionKeyToTitle, slugify, coreEditUrl, coreOptionsEditUrl } from "./utils";
 export default class OptionsListDoc extends Doc {
   public get title(): string {
     return "Language Options";
@@ -41,6 +41,6 @@ export default class OptionsListDoc extends Doc {
     return Unibeautify.loadedOptions;
   }
   protected get customEditUrl() {
-    return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
+    return coreOptionsEditUrl;
   }
 }

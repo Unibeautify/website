@@ -1,15 +1,13 @@
-import Unibeautify, {
+import {
   Language,
   Beautifier,
-  OptionsRegistry,
-  DependencyDefinition,
-  DependencyType,
   ExecutableDependencyDefinition,
+  Badge,
 } from "unibeautify";
 import * as _ from "lodash";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
-import { slugify } from "./utils";
+import { slugify, websiteEditUrl } from "./utils";
 
 export default class ExecutableDoc extends Doc {
   constructor(
@@ -42,9 +40,11 @@ export default class ExecutableDoc extends Doc {
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
+    builder.appendBadges(this.badges);
     this.appendAboutSection(builder);
-    this.appendUsageSection(builder);
-    this.appendExecutableDependencySection(builder);
+    this.appendInstallSection(builder);
+    this.appendConfigSection(builder);
+    this.appendTroubleshootingSection(builder);
     return builder.build();
   }
 
@@ -52,29 +52,60 @@ export default class ExecutableDoc extends Doc {
     const dependency = this.executable;
     const beautifierName: string = this.beautifier.name;
     const dependencyName: string = dependency.name;
+    builder.editButton(`Edit ${this.beautifierName} Beautifier`, this.beautifierHomepageUrl);
     builder.header(`About`, 2);
     const isConfusing =
       beautifierName.toLowerCase() === dependencyName.toLowerCase();
-    if (isConfusing) {
-      builder.append(
-        `*${dependencyName} executable should not be confused with ${beautifierName} beautifier with the same name.*`,
-      );
-    }
     builder.append(
       `${dependencyName} executable is a third-party program you must install manually and is required for beautification.`,
     );
+    if (this.executableHomepageUrl) {
+      builder.append(
+        `See ${MarkdownBuilder.createLink(
+          this.executableHomepageUrl,
+          this.executableHomepageUrl,
+        )} for more information.`,
+      );
+    }
+    if (isConfusing) {
+      builder.append(
+        `> **${dependencyName} executable** should not be confused with **${beautifierName} beautifier** with the same name.`,
+      );
+    }
     return builder;
   }
 
-  private appendExecutableDependencySection(
+  private appendInstallSection(builder: MarkdownBuilder): MarkdownBuilder {
+    if (this.installationUrl) {
+      builder.header(`Install`, 2);
+      builder.append(
+        `Install ${this.executable.name} (\`${
+          this.executable.program
+        }\`) by following ${MarkdownBuilder.createLink(
+          this.installationUrl,
+          this.installationUrl,
+        )}.`,
+      );
+      if (this.bugsUrl) {
+        builder.append(
+          `If you have questions or want to report a bug, go to ${MarkdownBuilder.createLink(
+            this.bugsUrl,
+            this.bugsUrl,
+          )}.`,
+        );
+      }
+    }
+    return builder;
+  }
+
+  private appendTroubleshootingSection(
     builder: MarkdownBuilder,
   ): MarkdownBuilder {
-    builder.header(`Install`, 2);
+    builder.header(`Troubleshooting`, 2);
     builder.append("");
     builder.append(
       "Below are instructions for each of the supported Operating Systems.",
     );
-
     this.appendWindowsSection(builder);
     this.appendMacSection(builder);
     this.appendLinuxSection(builder);
@@ -88,9 +119,12 @@ export default class ExecutableDoc extends Doc {
       "[Open the Command Prompt](https://www.lifewire.com/how-to-open-command-prompt-2618089).",
     );
 
-    builder.append(
-      '\n<p><iframe width="560" height="315" src="https://www.youtube.com/embed/MBBWVgE0ewk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>\n',
-    );
+    builder.details("Show me how to open the Command Prompt.", builder => {
+      builder.append(
+        '\n<p><iframe width="560" height="315" src="https://www.youtube.com/embed/MBBWVgE0ewk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>\n',
+      );
+    });
+    builder.append("");
 
     // builder.append("It looks like the following for Windows 7:");
     // builder.append(
@@ -104,7 +138,7 @@ export default class ExecutableDoc extends Doc {
     // );
     const dependency = this.executable;
     builder.append(
-      `\nFind the path to ${this.dependencyName} by running the command:`,
+      `Find the path to ${this.dependencyName} by running the command:`,
     );
     builder.code(`where ${dependency.program}`, "batch");
 
@@ -120,20 +154,23 @@ export default class ExecutableDoc extends Doc {
     );
 
     builder.append(
-      "If `where` fails to return an executable path then you need to fix your `PATH` Environment Variable:",
+      "If `where` fails to return an executable path then you need to fix your `PATH` Environment Variable.",
     );
-    builder.append(
-      '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/8HK1BsRprt0?start=334" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+    builder.details(
+      "Show me how to change my `PATH` environment variable.",
+      builder => {
+        builder.append(
+          '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/8HK1BsRprt0?start=334" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+        );
+      },
     );
+    builder.append("");
     builder.append(
-      `Once you successfully an executable path go to the ${MarkdownBuilder.createLink(
+      `If you know the executable path go to the ${MarkdownBuilder.createLink(
         "Configure",
-        "#Configure",
-      )} section.`,
-    );
-    builder.append(
-      `Replace \`${fakePathForExecutable(
-        dependency,
+        "#configure",
+      )} section and replace \`${fakePathForProgram(
+        dependency.program,
       )}\` with your specific executable path value.`,
     );
     return builder;
@@ -143,10 +180,12 @@ export default class ExecutableDoc extends Doc {
     builder.header("macOS", 3);
     const dependency = this.executable;
     // builder.append("![mac-terminal](/img/mac/mac-terminal.png)");
-    builder.append("Open the Terminal application:");
-    builder.append(
-      '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/zw7Nd67_aFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
-    );
+    builder.append("Open the Terminal application.");
+    builder.details("Show me how to open the Terminal.", builder => {
+      builder.append(
+        '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/zw7Nd67_aFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+      );
+    });
 
     builder.append(
       `\nFind the path to ${this.dependencyName} by running the command:`,
@@ -159,7 +198,7 @@ export default class ExecutableDoc extends Doc {
     const suffixes = ["", ".sh", ".bash"];
     builder.code(
       suffixes
-        .map(suffix => `/absolute/path/to/${dependency.program}${suffix}`)
+        .map(suffix => fakePathForProgram(`${dependency.program}${suffix}`))
         .join("\n"),
       "text",
     );
@@ -168,19 +207,21 @@ export default class ExecutableDoc extends Doc {
       "If `which` fails to return an executable path then you need to fix your `PATH` Environment Variable:",
     );
 
-    builder.append(
-      '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/aYVEZTmBiuc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+    builder.details(
+      "Show me how to change my `PATH` environment variable.",
+      builder => {
+        builder.append(
+          '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/aYVEZTmBiuc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+        );
+      },
     );
-
+    builder.append("");
     builder.append(
-      `Once you successfully an executable path go to the ${MarkdownBuilder.createLink(
+      `If you know the executable path go to the ${MarkdownBuilder.createLink(
         "Configure",
-        "#Configure",
-      )} section.`,
-    );
-    builder.append(
-      `Replace \`${fakePathForExecutable(
-        dependency,
+        "#configure",
+      )} section and replace \`${fakePathForProgram(
+        dependency.program,
       )}\` with your specific executable path value.`,
     );
 
@@ -190,13 +231,15 @@ export default class ExecutableDoc extends Doc {
   private appendLinuxSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("Linux", 3);
     const dependency = this.executable;
-    builder.append("Open the Terminal application:");
-    // builder.append(
-    //   "![linux-terminal](/img/linux/linux-terminal-on-ubuntu.png)",
-    // );
-    builder.append(
-      '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/AO0jzD1hpXc?start=28" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
-    );
+    builder.append("Open the Terminal application.");
+    builder.details("Show me how to open the Terminal.", builder => {
+      // builder.append(
+      //   "![linux-terminal](/img/linux/linux-terminal-on-ubuntu.png)",
+      // );
+      builder.append(
+        '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/AO0jzD1hpXc?start=28" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+      );
+    });
 
     builder.append(
       `\nFind the path to ${this.dependencyName} by running the command:`,
@@ -209,87 +252,110 @@ export default class ExecutableDoc extends Doc {
     const suffixes = ["", ".sh", ".bash"];
     builder.code(
       suffixes
-        .map(suffix => `/absolute/path/to/${dependency.program}${suffix}`)
+        .map(suffix => fakePathForProgram(`${dependency.program}${suffix}`))
         .join("\n"),
       "text",
     );
 
     builder.append(
-      "If `which` fails to return an executable path then you need to fix your `PATH` Environment Variable:",
+      "If `which` fails to return an executable path then you need to fix your `PATH` Environment Variable.",
     );
-
-    builder.append(
-      '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/rJMFxIbDe-g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+    builder.details(
+      "Show me how to change my `PATH` environment variable.",
+      builder => {
+        builder.append(
+          '\n<iframe width="560" height="315" src="https://www.youtube.com/embed/rJMFxIbDe-g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>\n',
+        );
+      },
     );
-
+    builder.append("");
     builder.append(
-      `Once you successfully an executable path go to the ${MarkdownBuilder.createLink(
+      `If you know the executable path go to the ${MarkdownBuilder.createLink(
         "Configure",
-        "#Configure",
-      )} section.`,
-    );
-    builder.append(
-      `Replace \`${fakePathForExecutable(
-        dependency,
+        "#configure",
+      )} section replace \`${fakePathForProgram(
+        dependency.program,
       )}\` with your specific executable path value.`,
     );
     return builder;
   }
 
-  private appendUsageSection(builder: MarkdownBuilder): MarkdownBuilder {
+  private appendConfigSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("Configure", 2);
-    const beautifierName: string = this.beautifier.name;
-    const dep = this.executable;
-    const executableConfig = {
-      [dep.name]: {
-        path: fakePathForExecutable(dep),
-      },
-    };
-
-    const beautifierOptions: any = {
-      ...executableConfig,
-    };
-
-    builder.append(
-      `A \`.unibeautifyrc.json\` file would look like the following:`,
-    );
-    builder.code(
-      JSON.stringify(
-        {
-          LANGUAGE_NAME: {
-            beautifiers: [beautifierName],
-            [beautifierName]: beautifierOptions,
-          },
+    builder.append("Choose the configuration method applicable to you.");
+    builder.details("Config File", builder => {
+      const beautifierName: string = this.beautifier.name;
+      const dep = this.executable;
+      const executableConfig = {
+        [dep.name]: {
+          path: fakePathForProgram(dep.program),
         },
-        null,
-        2,
-      ),
-      "json",
-    );
-    builder.note(
-      `The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
-        .slice(0, 3)
-        .map(lang => `\`${lang.name}\``)
-        .join(", ")}, etc.`,
-    );
-    builder.append(
-      `See ${MarkdownBuilder.createLink(
-        "Install",
-        "#install",
-      )} section below for how to determine absolute path to the exectuable.`,
-    );
+      };
+
+      const beautifierOptions: any = {
+        ...executableConfig,
+      };
+
+      builder.append(
+        `A \`.unibeautifyrc.json\` file would look like the following:`,
+      );
+      builder.code(
+        JSON.stringify(
+          {
+            LANGUAGE_NAME: {
+              beautifiers: [beautifierName],
+              [beautifierName]: beautifierOptions,
+            },
+          },
+          null,
+          2,
+        ),
+        "json",
+      );
+      builder.note(
+        `The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
+          .slice(0, 3)
+          .map(lang => `\`${lang.name}\``)
+          .join(", ")}, etc.`,
+      );
+      builder.append(
+        `See ${MarkdownBuilder.createLink(
+          "Install",
+          "#install",
+        )} section below for how to determine absolute path to the exectuable.`,
+      );
+    });
+    builder.details("Atom", builder => {
+      builder.append("Coming soon.");
+    });
+    builder.details("Visual Studio Code", builder => {
+      builder.append("Coming soon.");
+    });
     return builder;
   }
   private get pkg(): object | undefined {
     return this.beautifier.package;
   }
   protected get customEditUrl() {
+    return `${websiteEditUrl}/scripts/generate-docs/ExecutableDoc.ts`;
+  }
+  private get beautifierHomepageUrl() {
     return _.get(this.pkg, "homepage");
+  }
+  private get badges(): Badge[] {
+    return this.executable.badges || [];
+  }
+  private get executableHomepageUrl(): string | undefined {
+    return this.executable.homepageUrl;
+  }
+  private get installationUrl(): string | undefined {
+    return this.executable.installationUrl;
+  }
+  private get bugsUrl(): string | undefined {
+    return this.executable.bugsUrl;
   }
 }
 
-function fakePathForExecutable(
-  dependency: ExecutableDependencyDefinition,
-): string {
-  return `/absolute/path/to/${dependency.program}`;
+function fakePathForProgram(program: string): string {
+  return `/absolute/path/to/${program}`;
 }

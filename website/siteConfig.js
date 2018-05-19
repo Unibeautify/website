@@ -23,8 +23,7 @@ const siteConfig = {
   cname: "unibeautify.com",
   noIndex: false,
   baseUrl: "/" /* base url for your project */,
-  editUrl:
-    "https://github.com/unibeautify/website/edit/master/docs/",
+  editUrl: "https://github.com/unibeautify/website/edit/master/docs/",
   gaTrackingId: "UA-112681254-1",
   headerLinks: [
     { doc: "about", label: "About" },
@@ -35,7 +34,7 @@ const siteConfig = {
     // { page: "help", label: "Help" },
     // { blog: true, label: "Blog" },
     { search: true },
-    { href: GITHUB_URL, label: "GitHub" }
+    { href: GITHUB_URL, label: "GitHub" },
   ],
   users,
   /* path to images for header/footer */
@@ -45,25 +44,30 @@ const siteConfig = {
   /* colors for website */
   colors: {
     primaryColor: "#24292e",
-    secondaryColor: "#205C3B"
+    secondaryColor: "#205C3B",
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  copyright:
-    "Copyright &copy; " + new Date().getFullYear() + " Glavin Wiechert",
+  copyright: `${String.fromCharCode(
+    169,
+  )} ${new Date().getFullYear()} Glavin Wiechert`,
   organizationName: "unibeautify", // or set an env variable ORGANIZATION_NAME
   projectName: "website", // or set an env variable PROJECT_NAME
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: "default"
+    theme: "default",
   },
   onPageNav: ["separate"],
-  scripts: ["https://buttons.github.io/buttons.js", "../js/selectList.js", "../js/waitlist.js"],
+  scripts: [
+    "https://buttons.github.io/buttons.js",
+    "../js/selectList.js",
+    "../js/waitlist.js",
+  ],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: GITHUB_URL,
   algolia: {
     apiKey: "f48f239ca346334bd0b61308ab16f524",
-    indexName: "unibeautify"
-  }
+    indexName: "unibeautify",
+  },
 };
 
 module.exports = siteConfig;

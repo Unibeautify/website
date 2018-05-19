@@ -7,6 +7,8 @@
 
 const React = require('react');
 
+const siteConfig = require(process.cwd() + '/siteConfig.js');
+
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
@@ -85,7 +87,7 @@ class Footer extends React.Component {
         </section>
 
         <section className="copyright">
-          Copyright &copy; {currentYear}
+          {siteConfig.copyright}
         </section>
       </footer>
     );
