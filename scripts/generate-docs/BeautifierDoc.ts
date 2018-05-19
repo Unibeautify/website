@@ -56,7 +56,7 @@ export default class BeautifierDoc extends Doc {
       return builder;
     }
     // builder.append(
-    //   `[![npm](https://img.shields.io/npm/dt/@unibeautify/beautifier-php-cs-fixer.svg?style=for-the-badge)](https://www.npmjs.com/package/@unibeautify/beautifier-php-cs-fixer)`,
+    // `[![npm](https://img.shields.io/npm/dt/@unibeautify/beautifier-php-cs-fixer.svg?style=for-the-badge)](https://www.npmjs.com/package/@unibeautify/beautifier-php-cs-fixer)`,
     // );
 
     builder.appendBadges([
@@ -73,7 +73,7 @@ export default class BeautifierDoc extends Doc {
 
     builder.editButton(
       `Edit ${this.beautifierName} Beautifier`,
-      this.homepageUrl,
+      this.homepageUrl
     );
     builder.header("About", 2);
     builder.append(this.packageDescription);
@@ -85,16 +85,16 @@ export default class BeautifierDoc extends Doc {
         `| ${MarkdownBuilder.bold(
           MarkdownBuilder.createLink(
             dep,
-            `https://www.npmjs.com/package/${dep}`,
-          ),
+            `https://www.npmjs.com/package/${dep}`
+          )
         )} | v${this.getPackageCurrentVersion(
-          dep,
+          dep
         )} | ${MarkdownBuilder.createBadge({
           description: "npm",
           url: `https://img.shields.io/npm/v/${dep}.svg`,
           href: `https://www.npmjs.com/package/${dep}`,
-        })} |`,
-      ),
+        })} |`
+      )
     );
     return builder;
   }
@@ -126,7 +126,7 @@ export default class BeautifierDoc extends Doc {
 
   private appendDependenciesSection(builder: MarkdownBuilder): MarkdownBuilder {
     const dependencies = this.dependencies.filter(
-      dep => dep.type === DependencyType.Executable,
+      dep => dep.type === DependencyType.Executable
     );
     if (dependencies.length === 0) {
       return builder;
@@ -136,8 +136,8 @@ export default class BeautifierDoc extends Doc {
     const depLinks = dependencies.map((dep: ExecutableDependencyDefinition) =>
       MarkdownBuilder.createDocLink(
         dep.name,
-        `executable-${slugify(this.beautifierName)}-${slugify(dep.name)}`,
-      ),
+        `executable-${slugify(this.beautifierName)}-${slugify(dep.name)}`
+      )
     );
     builder.list(depLinks);
     return builder;
@@ -153,53 +153,39 @@ export default class BeautifierDoc extends Doc {
     const { beautifierName } = this;
 
     builder.append(
-      `Add \`${beautifierName}\` to \`beautifiers\` language option.`,
+      `Add \`${beautifierName}\` to \`beautifiers\` language option.`
     );
 
-    // const { dependencies } = this;
-    // if (dependencies.length === 0) {
-    //   return builder;
-    // }
-    // const executableConfig = dependencies
-    //   .filter(dep => dep.type === DependencyType.Executable)
-    //   .reduce(
-    //     (config, dep: ExecutableDependencyDefinition) => ({
-    //       ...config,
-    //       [dep.name]: {
-    //         path: fakePathForExecutable(dep),
-    //       },
-    //     }),
-    //     {},
-    //   );
-
-    // const beautifierOptions: any = {
-    //   ...executableConfig,
-    // };
-    // if (this.canResolveConfig) {
-    //   beautifierOptions.prefer_beautifier_config = true;
-    // }
+    // const { dependencies } = this; if (dependencies.length === 0) {   return
+    // builder; } const executableConfig = dependencies   .filter(dep => dep.type
+    // === DependencyType.Executable)   .reduce(     (config, dep:
+    // ExecutableDependencyDefinition) => ({       ...config,       [dep.name]: {
+    // path: fakePathForExecutable(dep),       },     }),     {},   ); const
+    // beautifierOptions: any = {   ...executableConfig, }; if
+    // (this.canResolveConfig) {   beautifierOptions.prefer_beautifier_config =
+    // true; }
 
     builder.append(
-      `A \`.unibeautifyrc.json\` file would look like the following:`,
+      `A \`.unibeautifyrc.json\` file would look like the following:`
     );
     builder.code(
       JSON.stringify(
         {
           LANGUAGE_NAME: {
             beautifiers: [beautifierName],
-            // [beautifierName]: beautifierOptions,
+            // [beautifierName]: beautifierOptions,,
           },
         },
         null,
-        2,
+        2
       ),
-      "json",
+      "json"
     );
     builder.note(
       `The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
         .slice(0, 3)
         .map(lang => `\`${lang.name}\``)
-        .join(", ")}, etc.`,
+        .join(", ")}, etc.`
     );
 
     if (this.beautifierOptionKeys.length > 0) {
@@ -209,8 +195,8 @@ export default class BeautifierDoc extends Doc {
       builder.append(
         `See ${MarkdownBuilder.createDocLink(
           "beautifier options",
-          "options-for-beautifiers",
-        )} docs for more information.`,
+          "options-for-beautifiers"
+        )} docs for more information.`
       );
     }
 
@@ -238,7 +224,7 @@ export default class BeautifierDoc extends Doc {
       */
     builder.append(
       "| Option |" +
-        this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join(""),
+        this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join("")
     );
     builder.append("| --- |" + this.languages.map(lang => ` --- |`).join(""));
     Object.keys(this.allOptions).forEach(optionKey => {
@@ -249,7 +235,7 @@ export default class BeautifierDoc extends Doc {
         const languageSupportsOption: boolean = _.get(
           this.optionsLookup as any,
           `${language.name}.${optionKey}`,
-          false,
+          false
         );
         const symbol = languageSupportsOption ? emojis.checkmark : emojis.x;
         row += ` ${symbol} |`;
@@ -271,7 +257,7 @@ export default class BeautifierDoc extends Doc {
           ...lookup,
           [language.name]: options,
         }),
-        {},
+        {}
       );
   }
   private options(language: Language): OptionsRegistry {
@@ -286,7 +272,11 @@ export default class BeautifierDoc extends Doc {
   private get repoBadges(): Badge[] {
     return badgesForRepository(this.repository);
   }
-  private get repository(): { type: string; user: string; project: string } {
+  private get repository(): {
+    type: string;
+    user: string;
+    project: string;
+  } {
     return getPkgRepo(this.pkg);
   }
   private get pkg(): object | undefined {
@@ -309,7 +299,7 @@ export default class BeautifierDoc extends Doc {
   }
   private get hasOptions(): boolean {
     return !Object.keys(this.optionsLookup).every(
-      key => Object.keys(this.optionsLookup[key]).length === 0,
+      key => Object.keys(this.optionsLookup[key]).length === 0
     );
   }
 }

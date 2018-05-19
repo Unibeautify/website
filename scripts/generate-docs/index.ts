@@ -42,16 +42,13 @@ updateSidebars({
 function docsForLanguages(languages: Language[]): LanguageDoc[] {
   return languages.map(
     language =>
-      new LanguageDoc(
-        language,
-        Unibeautify.getBeautifiersForLanguage(language),
-      ),
+      new LanguageDoc(language, Unibeautify.getBeautifiersForLanguage(language))
   );
 }
 function docsForBeautifiers(beautifiers: Beautifier[]): BeautifierDoc[] {
   return beautifiers.map(
     beautifier =>
-      new BeautifierDoc(beautifier, languagesForBeautifier(beautifier)),
+      new BeautifierDoc(beautifier, languagesForBeautifier(beautifier))
   );
 }
 function docsForExecutables(beautifiers: Beautifier[]): ExecutableDoc[] {
@@ -62,17 +59,17 @@ function docsForExecutables(beautifiers: Beautifier[]): ExecutableDoc[] {
           new ExecutableDoc(
             executable,
             beautifier,
-            languagesForBeautifier(beautifier),
-          ),
-      ),
-    ),
+            languagesForBeautifier(beautifier)
+          )
+      )
+    )
   );
 }
 function executablesForBeautifier(
-  beautifier: Beautifier,
+  beautifier: Beautifier
 ): ExecutableDependencyDefinition[] {
   return (beautifier.dependencies || []).filter(
-    dep => dep.type === DependencyType.Executable,
+    dep => dep.type === DependencyType.Executable
   ) as ExecutableDependencyDefinition[];
 }
 
@@ -82,13 +79,13 @@ function docsForOptions(): OptionsDoc[] {
     .map(key => ({ option: optionRegistry[key], key }))
     .map(
       ({ option, key }) =>
-        new OptionsDoc(option, key as BeautifierOptionName, beautifiers),
+        new OptionsDoc(option, key as BeautifierOptionName, beautifiers)
     );
 }
 function languagesForBeautifier(beautifier: Beautifier): Language[] {
   const languages = Unibeautify.getLoadedLanguages();
   return languages.filter(
-    lang => Object.keys(beautifier.options).indexOf(lang.name) !== -1,
+    lang => Object.keys(beautifier.options).indexOf(lang.name) !== -1
   );
 }
 async function writeDoc(doc: Doc) {
@@ -96,7 +93,7 @@ async function writeDoc(doc: Doc) {
     __dirname,
     "../../",
     docsPath,
-    doc.fileName,
+    doc.fileName
   );
   await ensureFile(filePath);
   const contents = await doc.contents;
@@ -141,16 +138,18 @@ function optionsSidebar(): {
   });
   const firstLetterIndex = prefix.length;
   return _.groupBy(optionIds, (optionId, index) =>
-    optionId[firstLetterIndex].toUpperCase(),
+    optionId[firstLetterIndex].toUpperCase()
   );
 }
 function executablesSidebar(
-  executables: ExecutableDoc[],
+  executables: ExecutableDoc[]
 ): {
   [sectionKey: string]: string[];
 } {
   return _.chain(executables)
-    .groupBy((executable: ExecutableDoc) => `${executable.beautifierName} Beautifier`)
+    .groupBy(
+      (executable: ExecutableDoc) => `${executable.beautifierName} Beautifier`
+    )
     .mapValues((group: ExecutableDoc[]) => _.map(group, exec => exec.id))
     .value();
 }

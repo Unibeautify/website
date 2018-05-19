@@ -4,7 +4,14 @@ import Unibeautify, {
   OptionsRegistry,
 } from "unibeautify";
 import * as _ from "lodash";
-import { slugify, linkForBeautifier, linkForOption, emojis, coreEditUrl, coreLanguagesEditUrl } from "./utils";
+import {
+  slugify,
+  linkForBeautifier,
+  linkForOption,
+  emojis,
+  coreEditUrl,
+  coreLanguagesEditUrl,
+} from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 export default class LanguageDoc extends Doc {
