@@ -173,7 +173,7 @@ export default class BeautifierDoc extends Doc {
         {
           LANGUAGE_NAME: {
             beautifiers: [beautifierName],
-            // [beautifierName]: beautifierOptions,,
+            // [beautifierName]: beautifierOptions,,,
           },
         },
         null,
