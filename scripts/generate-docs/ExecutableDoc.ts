@@ -122,7 +122,6 @@ export default class ExecutableDoc extends Doc {
       "[Open the Command Prompt](https://www.lifewire.com/how-to-open-command-prompt-" +
         "2618089)."
     );
-
     builder.details("Show me how to open the Command Prompt.", builder => {
       builder.append(
         "\n<p><iframe width='560' height='315' src='https://www.youtube.com/embed/MBBWV" +
@@ -131,19 +130,11 @@ export default class ExecutableDoc extends Doc {
       );
     });
     builder.append("");
-
-    // builder.append("It looks like the following for Windows 7:"); builder.append(
-    // "![windows-7-command-prompt](/img/windows/windows-7-command-prompt.png)", );
-    // builder.append("And this for Windows 10:"); builder.append("It looks like the
-    // following for Windows 10:"); builder.append(
-    // "![windows-10-command-prompt](/img/windows/windows-10-command-prompt.png)",
-    // );
     const dependency = this.executable;
     builder.append(
       `Find the path to ${this.dependencyName} by running the command:`
     );
     builder.code(`where ${dependency.program}`, "batch");
-
     builder.append(
       "Which will return an absolute path like one of the following:"
     );
@@ -154,7 +145,6 @@ export default class ExecutableDoc extends Doc {
         .join("\n"),
       "text"
     );
-
     builder.append(
       "If `where` fails to return an executable path then you need to fix your `PATH`" +
         " Environment Variable."
@@ -184,7 +174,6 @@ export default class ExecutableDoc extends Doc {
   private appendMacSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("macOS", 3);
     const dependency = this.executable;
-    // builder.append("![mac-terminal](/img/mac/mac-terminal.png)");
     builder.append("Open the Terminal application.");
     builder.details("Show me how to open the Terminal.", builder => {
       builder.append(
@@ -193,12 +182,10 @@ export default class ExecutableDoc extends Doc {
           "e>\n"
       );
     });
-
     builder.append(
       `\nFind the path to ${this.dependencyName} by running the command:`
     );
     builder.code(`which ${dependency.program}`, "bash");
-
     builder.append(
       "Which will return an absolute path like one of the following:"
     );
@@ -209,12 +196,10 @@ export default class ExecutableDoc extends Doc {
         .join("\n"),
       "text"
     );
-
     builder.append(
       "If `which` fails to return an executable path then you need to fix your `PATH`" +
         " Environment Variable:"
     );
-
     builder.details(
       "Show me how to change my `PATH` environment variable.",
       builder => {
@@ -234,7 +219,6 @@ export default class ExecutableDoc extends Doc {
         dependency.program
       )}\` with your specific executable path value.`
     );
-
     return builder;
   }
 
@@ -243,20 +227,16 @@ export default class ExecutableDoc extends Doc {
     const dependency = this.executable;
     builder.append("Open the Terminal application.");
     builder.details("Show me how to open the Terminal.", builder => {
-      // builder.append( "![linux-terminal](/img/linux/linux-terminal-on-ubuntu.png)",
-      // );
       builder.append(
         "\n<iframe width='560' height='315' src='https://www.youtube.com/embed/AO0jzD1h" +
           "pXc?start=28' frameborder='0' allow='autoplay; encrypted-media' allowfullscree" +
           "n></iframe>\n"
       );
     });
-
     builder.append(
       `\nFind the path to ${this.dependencyName} by running the command:`
     );
     builder.code(`which ${dependency.program}`, "bash");
-
     builder.append(
       "Which will return an absolute path like one of the following:"
     );
@@ -267,7 +247,6 @@ export default class ExecutableDoc extends Doc {
         .join("\n"),
       "text"
     );
-
     builder.append(
       "If `which` fails to return an executable path then you need to fix your `PATH`" +
         " Environment Variable."
@@ -305,11 +284,9 @@ export default class ExecutableDoc extends Doc {
           path: fakePathForProgram(dep.program),
         },
       };
-
       const beautifierOptions: any = {
         ...executableConfig,
       };
-
       builder.append(
         `A \`.unibeautifyrc.json\` file would look like the following:`
       );

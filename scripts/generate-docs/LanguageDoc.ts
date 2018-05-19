@@ -9,7 +9,6 @@ import {
   linkForBeautifier,
   linkForOption,
   emojis,
-  coreEditUrl,
   coreLanguagesEditUrl,
 } from "./utils";
 import Doc from "./Doc";

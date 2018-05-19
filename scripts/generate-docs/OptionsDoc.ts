@@ -15,7 +15,6 @@ import {
   unibeautifyWithBeautifier,
   emojis,
   websiteEditUrl,
-  coreEditUrl,
   coreOptionsEditUrl,
 } from "./utils";
 import Doc from "./Doc";
@@ -72,7 +71,6 @@ export default class OptionsDoc extends Doc {
         `**Deprecated since version**: ${this.option.deprecated}\n`,
       );
     }
-    // const currentUnibeautifyVersionBadge = '<a href="https://www.npmjs.com/package/unibeautify"><img style="display: inline;" src="https://img.shields.io/npm/v/unibeautify.svg" alt="npm"></a>';
     const currentUnibeautifyVersionBadge = MarkdownBuilder.createBadge({
       description: "npm",
       url: "https://img.shields.io/npm/v/unibeautify.svg",
@@ -331,8 +329,6 @@ export default class OptionsDoc extends Doc {
     try {
       return fs.readFileSync(examplePath).toString();
     } catch (error) {
-      // console.error(error);
-      // console.log(examplePath);
       return undefined;
     }
   }

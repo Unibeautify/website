@@ -4,7 +4,6 @@ import MarkdownBuilder from "./MarkdownBuilder";
 import {
   optionKeyToTitle,
   slugify,
-  coreEditUrl,
   coreOptionsEditUrl,
 } from "./utils";
 export default class OptionsListDoc extends Doc {

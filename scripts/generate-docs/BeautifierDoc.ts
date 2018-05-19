@@ -55,10 +55,6 @@ export default class BeautifierDoc extends Doc {
     if (!this.pkg) {
       return builder;
     }
-    // builder.append(
-    // `[![npm](https://img.shields.io/npm/dt/@unibeautify/beautifier-php-cs-fixer.svg?style=for-the-badge)](https://www.npmjs.com/package/@unibeautify/beautifier-php-cs-fixer)`,
-    // );
-
     builder.appendBadges([
       {
         description: "npm downloads",
@@ -70,7 +66,6 @@ export default class BeautifierDoc extends Doc {
       ...this.repoBadges,
       ...this.badges,
     ]);
-
     builder.editButton(
       `Edit ${this.beautifierName} Beautifier`,
       this.homepageUrl
@@ -149,22 +144,10 @@ export default class BeautifierDoc extends Doc {
 
   private appendUsageSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("Usage", 2);
-
     const { beautifierName } = this;
-
     builder.append(
       `Add \`${beautifierName}\` to \`beautifiers\` language option.`
     );
-
-    // const { dependencies } = this; if (dependencies.length === 0) {   return
-    // builder; } const executableConfig = dependencies   .filter(dep => dep.type
-    // === DependencyType.Executable)   .reduce(     (config, dep:
-    // ExecutableDependencyDefinition) => ({       ...config,       [dep.name]: {
-    // path: fakePathForExecutable(dep),       },     }),     {},   ); const
-    // beautifierOptions: any = {   ...executableConfig, }; if
-    // (this.canResolveConfig) {   beautifierOptions.prefer_beautifier_config =
-    // true; }
-
     builder.append(
       `A \`.unibeautifyrc.json\` file would look like the following:`
     );
