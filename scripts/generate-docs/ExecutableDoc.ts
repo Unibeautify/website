@@ -243,8 +243,8 @@ export default class ExecutableDoc extends Doc {
     const dependency = this.executable;
     builder.append("Open the Terminal application.");
     builder.details("Show me how to open the Terminal.", builder => {
-      // builder.append(
-      // "![linux-terminal](/img/linux/linux-terminal-on-ubuntu.png)", );
+      // builder.append( "![linux-terminal](/img/linux/linux-terminal-on-ubuntu.png)",
+      // );
       builder.append(
         "\n<iframe width='560' height='315' src='https://www.youtube.com/embed/AO0jzD1h" +
           "pXc?start=28' frameborder='0' allow='autoplay; encrypted-media' allowfullscree" +
