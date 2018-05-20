@@ -9,10 +9,11 @@
   },
   "scripts": {
     "docs": "npm run clean && npm run generate-docs",
-    "clean": "npm run rm-languages && npm run rm-beautifiers && npm run rm-options",
+    "clean": "npm run rm-languages && npm run rm-beautifiers && npm run rm-options && npm run rm-executables",
     "rm-beautifiers": "rimraf 'docs/beautifier-*'",
     "rm-languages": "rimraf 'docs/language-*'",
     "rm-options": "rimraf 'docs/option-*'",
+    "rm-executables": "rimraf 'docs/executable-*'",
     "generate-docs": "ts-node scripts/generate-docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,13 +32,16 @@
     "@types/diff": "^3.2.2",
     "@types/fs-extra": "^5.0.1",
     "@types/lodash": "^4.14.106",
-    "@unibeautify/beautifier-eslint": "^0.4.1",
+    "@unibeautify/beautifier-eslint": "^0.5.0",
     "@unibeautify/beautifier-js-beautify": "^0.3.2",
-    "@unibeautify/beautifier-prettier": "^0.7.5",
+    "@unibeautify/beautifier-php-cs-fixer": "^0.3.0",
+    "@unibeautify/beautifier-prettier": "^0.8.0",
     "@unibeautify/beautifier-prettydiff": "^0.5.3",
+    "array-flatten": "^2.1.1",
     "diff": "^3.5.0",
     "eslint": "^4.18.2",
     "fs-extra": "^6.0.0",
+    "get-pkg-repo": "^2.0.0",
     "js-beautify": "^1.7.5",
     "lodash": "^4.17.5",
     "prettier": "^1.11.1",
@@ -45,6 +49,6 @@
     "rimraf": "^2.6.2",
     "ts-node": "^5.0.1",
     "typescript": "^2.8.1",
-    "unibeautify": "^0.13.0"
+    "unibeautify": "^0.15.0"
   }
 }

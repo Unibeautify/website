@@ -10,9 +10,11 @@ This means you can configure Unibeautify via:
 - A `unibeautify.config.js` file that exports an object.
 - A `"unibeautify"` key in your `package.json` file.
 
-The [options](options.md) to the configuration file are grouped by the respective language.
+The [options](options-for-languages.md) to the configuration file are grouped by the respective language.
 
 ## Example
+
+Both YAML and JSON formats are supported. You can use [json2yaml.com](https://www.json2yaml.com/) to convert from one to the other.
 
 ### YAML
 
@@ -20,6 +22,13 @@ The [options](options.md) to the configuration file are grouped by the respectiv
 
 ```yaml
 ---
+PHP: # Language
+  beautifiers: # Enable beautifiers
+  - PHP-CS-Fixer
+  PHP-CS-Fixer: # Beautifier options
+    prefer_beautifier_config: true
+    PHP-CS-Fixer: # Executable options
+      path: "/absolute/path/to/php-cs-fixer"
 TypeScript:
   beautifiers: ["Pretty Diff", "Prettier"]
   align_assignments: false
@@ -41,4 +50,51 @@ CSS:
 HTML:
   indent_char: " "
   indent_size: 2
+```
+
+### JSON
+
+`.unibeautifyrc.json`:
+
+```json
+{
+  "PHP": {
+    "beautifiers": [
+      "PHP-CS-Fixer"
+    ],
+    "PHP-CS-Fixer": {
+      "prefer_beautifier_config": true,
+      "PHP-CS-Fixer": {
+        "path": "/absolute/path/to/php-cs-fixer"
+      }
+    }
+  },
+  "TypeScript": {
+    "beautifiers": [
+      "Pretty Diff",
+      "Prettier"
+    ],
+    "align_assignments": false,
+    "arrow_parens": "as-needed",
+    "break_chained_methods": true,
+    "end_with_comma": true,
+    "end_with_semicolon": true,
+    "indent_char": " ",
+    "indent_size": 2,
+    "jsx_brackets": false,
+    "multiline_ternary": true,
+    "object_curly_spacing": true,
+    "quotes": "double",
+    "space_after_anon_function": false,
+    "wrap_line_length": 80
+  },
+  "CSS": {
+    "indent_char": " ",
+    "indent_size": 2
+  },
+  "HTML": {
+    "indent_char": " ",
+    "indent_size": 2
+  }
+}
 ```

@@ -11,7 +11,7 @@ Setup your development environment with the [Unibeautify's CLI](cli.md), [Editor
 
 ## Configure
 
-Look over the [supported options](options.md), languages, and beautifiers.
+Look over the [supported options](options-for-languages.md), languages, and beautifiers.
 Test out your desired configuration with the [Playground](https://playground.unibeautify.com).
 [Save your configuration in a file](config-file.md).
 

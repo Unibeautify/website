@@ -14,13 +14,13 @@ import {
   linkForBeautifier,
   unibeautifyWithBeautifier,
   emojis,
+  websiteEditUrl,
+  coreOptionsEditUrl,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 
-const siteConfig = require("../../website/siteConfig.js");
-const editUrl = siteConfig.editUrl;
-const editBeautifiersUrl = `${editUrl}../scripts/generate-docs/beautifiers.ts`;
+const editBeautifiersUrl = `${websiteEditUrl}/scripts/generate-docs/beautifiers.ts`;
 
 export default class OptionsDoc extends Doc {
   private readonly languages: Language[];
@@ -55,7 +55,7 @@ export default class OptionsDoc extends Doc {
   }
 
   protected get customEditUrl() {
-    return "https://github.com/unibeautify/unibeautify/edit/master/src/options.ts";
+    return coreOptionsEditUrl;
   }
 
   private get hasSupport(): boolean {
@@ -64,12 +64,19 @@ export default class OptionsDoc extends Doc {
 
   protected get body() {
     const builder = new MarkdownBuilder();
-    builder.append(`**Key**: \`${this.optionKey}\`\n`);
+    builder.append(`**Config Key**: \`${this.optionKey}\`\n`);
     builder.append(`**Description**: ${this.option.description}\n`);
     if (this.option.deprecated) {
-      builder.append(`**Deprecated since version**: ${this.option.deprecated}\n`);
+      builder.append(
+        `**Deprecated since version**: ${this.option.deprecated}\n`,
+      );
     }
-    builder.append(`**Available since version**: ${this.option.since}\n`);
+    const currentUnibeautifyVersionBadge = MarkdownBuilder.createBadge({
+      description: "npm",
+      url: "https://img.shields.io/npm/v/unibeautify.svg",
+      href: "https://www.npmjs.com/package/unibeautify",
+    });
+    builder.append(`**Available since version**: ${this.option.since} (**Current:** ${currentUnibeautifyVersionBadge})\n`);
     builder.append(`**Type**: \`${this.type}\`\n`);
     builder.append(`**Default**: \`${JSON.stringify(this.option.default)}\`\n`);
     if (this.option.enum) {
@@ -190,7 +197,16 @@ export default class OptionsDoc extends Doc {
           let isDefault: boolean = true;
           this.languages.forEach(language => {
             const example = examplesForLanguages[language.name];
-            builder.append(`<option ${(example && isDefault) ? 'selected="selected"' : ''} data-text="${language.name}" value="${language.name.toLowerCase().replace(/ /g,'')}">${language.name + (example ? ' *' : '')}</option>`);
+            builder.append(
+              `<option ${
+                example && isDefault ? 'selected="selected"' : ""
+              } data-text="${
+                language.name
+              }" value="${language.name
+                .toLowerCase()
+                .replace(/ /g, "")}">${language.name +
+                (example ? " *" : "")}</option>`,
+            );
             if (example && isDefault) {
               defaultDisplay = language.name;
               isDefault = false;
@@ -199,59 +215,65 @@ export default class OptionsDoc extends Doc {
           builder.append(`</select><div class="select__arrow"></div></div>`);
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
-            builder.append(`<div class="exampleCode${(language.name === defaultDisplay) ? '' : ' hidden'}" id="example-${language.name.toLowerCase().replace(/ /g,'')}">\n`);
-            builder.header(language.name, 3);
+            builder.append(
+              `<div class="exampleCode${
+                language.name === defaultDisplay ? "" : " hidden"
+              }" id="example-${language.name
+                .toLowerCase()
+                .replace(/ /g, "")}">\n`,
+            );
             if (example) {
-              builder.editButton(`Edit ${language.name} Example`, this.editExampleButtonUrl(language));
-              builder.details("<strong>🚧 Original Code</strong>", builder => {
-                builder.code(example, language.name);
-              });
+              builder.editButton(
+                `Edit ${language.name} Example`,
+                this.editExampleButtonUrl(language),
+              );
+              builder.append("<strong>🚧 Original Code</strong>");
+              builder.code(example, language.name);
               let beautifiedExamplesAreDifferent: boolean = false;
               let lastCode: string | null = null;
               this.exampleValues.forEach((optionValue, valueIndex) => {
-                builder.details(
+                builder.append(
                   `<strong>🔧 \`${JSON.stringify(optionValue)}\`</strong>`,
-                  builder => {
-                    const beautifiedExample: string | null =
-                      beautified[valueIndex][languageIndex];
-                    if (beautifiedExample) {
-                      if (lastCode === null) {
-                        lastCode = beautifiedExample;
-                      } else {
-                        if (lastCode !== beautifiedExample) {
-                          lastCode = beautifiedExample;
-                          beautifiedExamplesAreDifferent = true;
-                        }
-                      }
-
-                      const diff = diffExample(
-                        example,
-                        beautifiedExample,
-                        optionValue,
-                      );
-                      const configForExample = this.createOptionsWithLanguageAndValue(
-                        language,
-                        optionValue,
-                      );
-                      const beautifier = this.beautifierForLanguage(language);
-                      if (beautifier) {
-                        builder.append(
-                          `Using ${linkForBeautifier(beautifier)} beautifier:`,
-                        );
-                      }
-                      builder.code(beautifiedExample, language.name);
-                      builder.details("Configuration", builder => {
-                        builder.append(
-                          `A \`.unibeautify.json\` file would look like the following:`,
-                        );
-                        builder.json(configForExample);
-                      });
-                      builder.details("Difference from original", builder => {
-                        builder.code(diff, "diff");
-                      });
-                    }
-                  },
                 );
+                const beautifiedExample: string | null =
+                  beautified[valueIndex][languageIndex];
+                if (beautifiedExample) {
+                  if (lastCode === null) {
+                    lastCode = beautifiedExample;
+                  } else {
+                    if (lastCode !== beautifiedExample) {
+                      lastCode = beautifiedExample;
+                      beautifiedExamplesAreDifferent = true;
+                    }
+                  }
+
+                  const diff = diffExample(
+                    example,
+                    beautifiedExample,
+                    optionValue,
+                  );
+                  const configForExample = this.createOptionsWithLanguageAndValue(
+                    language,
+                    optionValue,
+                  );
+                  const beautifier = this.beautifierForLanguage(language);
+                  if (beautifier) {
+                    builder.append(
+                      `\nUsing ${linkForBeautifier(beautifier)} beautifier:`,
+                    );
+                  }
+                  builder.code(beautifiedExample, language.name);
+                  builder.details("How to configure", builder => {
+                    builder.append(
+                      `A \`.unibeautify.json\` file would look like the following:`,
+                    );
+                    builder.json(configForExample);
+                  });
+                  builder.details("Difference from original", builder => {
+                    builder.code(diff, "diff");
+                  });
+                  builder.append("");
+                }
               });
 
               if (
@@ -263,7 +285,10 @@ export default class OptionsDoc extends Doc {
                 );
               }
             } else {
-              builder.editButton(`Add ${language.name} Example`, this.addExampleButtonUrl(language));
+              builder.editButton(
+                `Add ${language.name} Example`,
+                this.addExampleButtonUrl(language),
+              );
               builder.append("No example found. Please submit a Pull Request!");
             }
             builder.append(`</div>`);
@@ -304,8 +329,6 @@ export default class OptionsDoc extends Doc {
     try {
       return fs.readFileSync(examplePath).toString();
     } catch (error) {
-      // console.error(error);
-      // console.log(examplePath);
       return undefined;
     }
   }
@@ -365,14 +388,14 @@ export default class OptionsDoc extends Doc {
   }
 
   private editExampleButtonUrl(language: Language): string {
-    return `${editUrl}../examples/${language.name}/${this.optionKey}.txt`;
+    return `${websiteEditUrl}/examples/${language.name}/${this.optionKey}.txt`;
   }
 
   private addExampleButtonUrl(language: Language): string {
-    return `${editUrl.replace(
+    return `${websiteEditUrl.replace(
       "/edit/",
       "/new/",
-    )}../examples/${encodeURIComponent(language.name)}/new?filename=${
+    )}/examples/${encodeURIComponent(language.name)}/new?filename=${
       this.optionKey
     }.txt&value=Type%20Example%20Here`;
   }

@@ -9,3 +9,5 @@ npm-debug.log
 docs/beautifier-*
 docs/language-*
 docs/option-*
+docs/executable-*
+docs/options-for-languages.md

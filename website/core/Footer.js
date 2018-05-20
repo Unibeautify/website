@@ -7,15 +7,17 @@
 
 const React = require('react');
 
+const siteConfig = require(process.cwd() + '/siteConfig.js');
+
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
-    return baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+    return `${baseUrl}docs/${doc}`;
   }
 
   pageUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
-    return baseUrl + (language ? language + '/' : '') + doc;
+    return `${baseUrl}${doc}`;
   }
 
   render() {
@@ -38,7 +40,7 @@ class Footer extends React.Component {
             <a href={this.docUrl('getting-started.html', this.props.language)}>
               Getting Started
             </a>
-            <a href={this.docUrl('options.html', this.props.language)}>
+            <a href={this.docUrl('options-for-languages.html', this.props.language)}>
               Options
             </a>
           </div>
@@ -85,7 +87,7 @@ class Footer extends React.Component {
         </section>
 
         <section className="copyright">
-          Copyright &copy; {currentYear}
+          {siteConfig.copyright}
         </section>
       </footer>
     );

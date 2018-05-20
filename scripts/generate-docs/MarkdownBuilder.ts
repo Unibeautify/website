@@ -1,3 +1,5 @@
+import { Badge } from "unibeautify";
+
 export default class MarkdownBuilder {
   private contents: string[] = [];
   public build(): string {
@@ -16,7 +18,7 @@ export default class MarkdownBuilder {
   }
   public list(items: string[]): MarkdownBuilder {
     const text = items.map(item => `- ${item}`).join("\n");
-    return this.append(text);
+    return this.append(text + "\n");
   }
   public json(json: object) {
     return this.code(JSON.stringify(json, null, 2), "json");
@@ -33,16 +35,39 @@ export default class MarkdownBuilder {
     this.contents.push(text);
     return this;
   }
+  public note(text: string): MarkdownBuilder {
+    this.append(`> **Note:** ${text}`);
+    return this;
+  }
   public editButton(text: string, url: string): MarkdownBuilder {
     const button = `<a class="edit-page-link button" href="${url}" target="_blank">${text}</a>`;
     this.append(`<div>${button}</div>`);
     this.append("");
     return this;
   }
+  public appendBadges(badges: Badge[]): MarkdownBuilder {
+    if (badges.length > 0) {
+      badges
+        .map(badge => MarkdownBuilder.createBadge(badge))
+        .forEach(badge => this.append(badge));
+      this.append("");
+    }
+    return this;
+  }
   public static createDocLink(text: string, docId: string): string {
     return this.createLink(text, `/docs/${docId}.html`);
   }
+  public static createBadge(badge: Badge): string {
+    const { url, href, description } = badge;
+    return `<a href="${href}"><img style="display: inline;" src="${url}" alt="${description}"></a>`;
+  }
+  public static createImage(imageUrl: string, altText: string = "image") {
+    return `![${altText}](${imageUrl})`;
+  }
   public static createLink(text: string, dest: string): string {
     return `[${text}](${dest})`;
+  }
+  public static bold(text: string): string {
+    return `**${text}**`;
   }
 }

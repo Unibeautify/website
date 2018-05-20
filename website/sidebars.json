@@ -11,11 +11,13 @@
     ],
     "Configuring": [
       "config-file",
-      "options"
+      "options-for-languages",
+      "options-for-beautifiers"
     ],
     "Beautifiers": [
       "beautifier-eslint",
       "beautifier-js-beautify",
+      "beautifier-php-cs-fixer",
       "beautifier-prettier",
       "beautifier-pretty-diff"
     ],
@@ -36,6 +38,7 @@
       "language-liquid",
       "language-markdown",
       "language-mustache",
+      "language-php",
       "language-riot",
       "language-sass",
       "language-scss",
@@ -49,6 +52,11 @@
       "language-vue",
       "language-xml",
       "language-xtemplate"
+    ]
+  },
+  "executables": {
+    "PHP-CS-Fixer Beautifier": [
+      "executable-php-cs-fixer-php-cs-fixer"
     ]
   },
   "options": {

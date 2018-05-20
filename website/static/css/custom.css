@@ -75,3 +75,16 @@ a {
 .select select:disabled~.select__arrow {
   border-top-color: #ccc;
 }
+
+details {
+  margin-top: 1rem;
+}
+
+details summary {
+  color: #2e8555;
+}
+
+details[open] summary {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
