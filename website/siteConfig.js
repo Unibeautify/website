@@ -38,13 +38,13 @@ const siteConfig = {
   ],
   users,
   /* path to images for header/footer */
-  headerIcon: "img/unibeautify-white.png",
-  footerIcon: "img/unibeautify.png",
-  favicon: "img/favicon.png",
+  headerIcon: "img/unibeautify-logo.png",
+  footerIcon: "img/unibeautify-logo.png",
+  favicon: "img/favicon.ico",
   /* colors for website */
   colors: {
-    primaryColor: "#24292e",
-    secondaryColor: "#205C3B",
+    primaryColor: "#023e7d",
+    secondaryColor: "#5ebdfb",
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright: `${String.fromCharCode(
