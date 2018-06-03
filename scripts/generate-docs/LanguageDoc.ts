@@ -2,21 +2,26 @@ import Unibeautify, {
   Language,
   Beautifier,
   OptionsRegistry,
+  Badge,
 } from "unibeautify";
 import * as _ from "lodash";
+const getPkgRepo = require("get-pkg-repo");
+
 import {
-  slugify,
   linkForBeautifier,
   linkForOption,
   emojis,
   coreLanguagesEditUrl,
+  badgesForRepository,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
 export default class LanguageDoc extends Doc {
   private readonly optionsLookup: OptionsLookup;
-  constructor(private language: Language, private beautifiers: Beautifier[]) {
+  private readonly beautifiers: Beautifier[];
+  constructor(private language: Language, beautifiers: Beautifier[]) {
     super();
+    this.beautifiers = _.sortBy(beautifiers, "name");
     this.optionsLookup = this.createOptionsLookup();
   }
   public get prefix(): string {
@@ -30,21 +35,42 @@ export default class LanguageDoc extends Doc {
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
-    builder
-      .header("Supported Beautifiers", 2)
-      .list(this.beautifiers.map(this.linkForBeautifier));
-    builder.header("Options", 2);
+    this.appendSupportedBeautifiers(builder);
     this.appendOptionsTable(builder);
     return builder.build();
+  }
+  private appendSupportedBeautifiers(builder: MarkdownBuilder) {
+    builder.header("Supported Beautifiers", 2);
+    builder.append("| Beautifier | Options | Downloads | Stars | Issues |");
+    builder.append("| --- | --- | --- | --- | --- |");
+    this.beautifiers.forEach(beautifier => {
+      const numOfOptions = Object.keys(this.optionsLookup[beautifier.name])
+        .length;
+      const packageName: string = _.get(beautifier.package, "name", "");
+      const downloadsBadge: Badge = {
+        url: `https://img.shields.io/npm/dm/${packageName}.svg?style=flat-square`,
+        href: `https://www.npmjs.com/package/${packageName}`,
+        description: `${packageName} npm downloads`,
+      };
+      const repository = getPkgRepo(beautifier.package);
+      const [starsBadge, issuesBadge] = badgesForRepository(repository);
+      builder.append(
+        `| ${linkForBeautifier(
+          beautifier
+        )} | ${numOfOptions} | ${MarkdownBuilder.createBadge(
+          downloadsBadge
+        )} | ${MarkdownBuilder.createBadge(
+          starsBadge
+        )} | ${MarkdownBuilder.createBadge(issuesBadge)} |`
+      );
+    });
+    return builder;
   }
   protected get customEditUrl() {
     return coreLanguagesEditUrl;
   }
-  private linkForBeautifier = (beautifier: Beautifier): string => {
-    const docId = `beautifier-${slugify(beautifier.name)}`;
-    return MarkdownBuilder.createDocLink(beautifier.name, docId);
-  };
   private appendOptionsTable(builder: MarkdownBuilder): MarkdownBuilder {
+    builder.header("Options", 2);
     builder.append(
       "| Option |" +
         this.beautifiers
