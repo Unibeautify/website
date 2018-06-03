@@ -1,8 +1,10 @@
 ---
-id: ci
-title: "Unibeautify CI: Universal Coding Style Service"
-sidebar_label: Unibeautify CI
+id: integration-github
+title: GitHub Integration
+sidebar_label: GitHub
 ---
+
+> Coming soon! Please sign up below to get early access!
 
 If you want to beautify your code on every commit then look no further!
 Unibeautify CI integrates with [GitHub](https://github.com/) to provide automatic code formatting for each of your repositories with support for a wide variety of languages.

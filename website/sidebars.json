@@ -1,18 +1,29 @@
 {
   "docs": {
     "About": [
-      "about"
+      "about",
+      "ci"
     ],
     "Usage": [
       "getting-started",
       "cli",
-      "editors",
-      "ci"
-    ],
-    "Configuring": [
       "config-file",
       "options-for-languages",
       "options-for-beautifiers"
+    ],
+    "Integrations": [
+      "integration-github",
+      "integration-gitlab",
+      "integration-bitbucket"
+    ],
+    "Editors": [
+      "editor-atom",
+      "editor-emacs",
+      "editor-sublime",
+      "editor-vim",
+      "editor-visual-studio",
+      "editor-vscode",
+      "editor-webstorm"
     ],
     "Beautifiers": [
       "beautifier-eslint",
