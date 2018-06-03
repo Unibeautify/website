@@ -19,25 +19,38 @@ import OptionsDoc from "./OptionsDoc";
 import ExecutableDoc from "./ExecutableDoc";
 import { slugify, optionKeyToTitle } from "./utils";
 import beautifiers from "./beautifiers";
+
 const docsPath = "docs";
 Unibeautify.loadBeautifiers(beautifiers);
+const optionRegistry: OptionsRegistry = _.pickBy(
+  Unibeautify.loadedOptions,
+  (option, optionName: BeautifierOptionName) => {
+    return Unibeautify.getBeautifiersSupportingOption(optionName).length > 0;
+  }
+) as OptionsRegistry;
 const supportedLanguages = Unibeautify.supportedLanguages;
 const languageDocs = docsForLanguages(supportedLanguages);
 const beautifierDocs = docsForBeautifiers(beautifiers);
 const executableDocs = docsForExecutables(beautifiers);
 const optionsDocs = docsForOptions();
-const optionsListDoc = new OptionsListDoc();
+const optionsListDoc = new OptionsListDoc(optionRegistry);
 
-languageDocs.map(writeDoc);
-beautifierDocs.map(writeDoc);
-executableDocs.map(writeDoc);
-optionsDocs.map(writeDoc);
-writeDoc(optionsListDoc);
-updateSidebars({
-  languages: languageDocs,
-  beautifiers: beautifierDocs,
-  executables: executableDocs,
-});
+main();
+
+async function main() {
+  return await Promise.all([
+    writeDocs(languageDocs),
+    writeDocs(beautifierDocs),
+    writeDocs(executableDocs),
+    writeDocs(optionsDocs),
+    writeDoc(optionsListDoc),
+    updateSidebars({
+      languages: languageDocs,
+      beautifiers: beautifierDocs,
+      executables: executableDocs,
+    }),
+  ]).catch(console.error);
+}
 
 function docsForLanguages(languages: Language[]): LanguageDoc[] {
   return languages.map(
@@ -74,7 +87,6 @@ function executablesForBeautifier(
 }
 
 function docsForOptions(): OptionsDoc[] {
-  const optionRegistry: OptionsRegistry = Unibeautify.loadedOptions;
   return Object.keys(optionRegistry)
     .map(key => ({ option: optionRegistry[key], key }))
     .map(
@@ -88,7 +100,10 @@ function languagesForBeautifier(beautifier: Beautifier): Language[] {
     lang => Object.keys(beautifier.options).indexOf(lang.name) !== -1
   );
 }
-async function writeDoc(doc: Doc) {
+async function writeDocs(docs: Doc[]): Promise<any> {
+  return await Promise.all(docs.map(writeDoc));
+}
+async function writeDoc(doc: Doc): Promise<void> {
   const filePath: string = path.resolve(
     __dirname,
     "../../",
@@ -128,7 +143,6 @@ async function updateSidebars({
 function optionsSidebar(): {
   [sectionKey: string]: string[];
 } {
-  const optionRegistry = Unibeautify.loadedOptions;
   const optionKeys = Object.keys(optionRegistry);
   const prefix = "option-";
   const optionIds = optionKeys.map(key => {

@@ -12,7 +12,7 @@
     "clean": "npm run rm-languages && npm run rm-beautifiers && npm run rm-options && npm run rm-executables",
     "rm-beautifiers": "rimraf 'docs/beautifier-*'",
     "rm-languages": "rimraf 'docs/language-*'",
-    "rm-options": "rimraf 'docs/option-*'",
+    "rm-options": "rimraf 'docs/option-*' && rimraf 'docs/options-for-languages.md'",
     "rm-executables": "rimraf 'docs/executable-*'",
     "generate-docs": "ts-node scripts/generate-docs",
     "test": "echo \"Error: no test specified\" && exit 1"

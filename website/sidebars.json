@@ -72,7 +72,6 @@
       "option-comma-first"
     ],
     "E": [
-      "option-end-of-line",
       "option-end-with-comma",
       "option-end-with-newline",
       "option-end-with-semicolon"
@@ -82,14 +81,11 @@
     ],
     "I": [
       "option-indent-chained-methods",
-      "option-indent-char",
       "option-indent-comments",
       "option-indent-inner-html",
-      "option-indent-level",
       "option-indent-scripts",
       "option-indent-size",
-      "option-indent-style",
-      "option-indent-with-tabs"
+      "option-indent-style"
     ],
     "J": [
       "option-jslint-happy",
@@ -127,9 +123,6 @@
       "option-space-before-conditional",
       "option-space-in-empty-paren",
       "option-space-in-paren"
-    ],
-    "T": [
-      "option-typesafe-equality-operators"
     ],
     "U": [
       "option-unescape-strings",
