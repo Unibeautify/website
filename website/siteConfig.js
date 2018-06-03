@@ -38,8 +38,8 @@ const siteConfig = {
   ],
   users,
   /* path to images for header/footer */
-  headerIcon: "img/unibeautify-logo.png",
-  footerIcon: "img/unibeautify-logo.png",
+  headerIcon: "img/unibeautify.png",
+  footerIcon: "img/unibeautify.png",
   favicon: "img/favicon.ico",
   /* colors for website */
   colors: {

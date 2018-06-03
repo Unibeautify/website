@@ -76,17 +76,16 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('unibeautify-logo.png')} />
+        <Logo img_src={imgUrl('unibeautify.png')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('getting-started.html', this.props.language)}>Get Started</Button>
             <Button href={docUrl('options-for-languages.html', this.props.language)}>Options</Button>
             <Button href={"https://playground.unibeautify.com/"} target="_blank">Try it out</Button>
-            <Button href={docUrl('ci.html', this.props.language)}>Unibeautify CI</Button>
           </PromoSection>
           <PromoSection>
-            <div className='prefinery-form-embed'></div>
+            <Button href={docUrl('ci.html', this.props.language)}>Sign up for Unibeautify CI</Button>
           </PromoSection>
         </div>
       </SplashContainer>
