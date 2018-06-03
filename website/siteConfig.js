@@ -28,7 +28,7 @@ const siteConfig = {
   headerLinks: [
     { doc: "about", label: "About" },
     { doc: "getting-started", label: "Usage" },
-    { href: "https://api.unibeautify.com/", label: "API" },
+    // { href: "https://api.unibeautify.com/", label: "API" },
     { href: "https://assistant.unibeautify.com/", label: "Assistant" },
     { href: "https://playground.unibeautify.com/", label: "Playground" },
     // { page: "help", label: "Help" },
