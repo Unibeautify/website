@@ -1,20 +1,32 @@
 {
   "docs": {
     "About": [
-      "about"
+      "about",
+      "ci"
     ],
     "Usage": [
       "getting-started",
       "cli",
-      "editors",
-      "ci"
-    ],
-    "Configuring": [
       "config-file",
       "options-for-languages",
       "options-for-beautifiers"
     ],
+    "Integrations": [
+      "integration-github",
+      "integration-gitlab",
+      "integration-bitbucket"
+    ],
+    "Editors": [
+      "editor-atom",
+      "editor-emacs",
+      "editor-sublime",
+      "editor-vim",
+      "editor-visual-studio",
+      "editor-vscode",
+      "editor-webstorm"
+    ],
     "Beautifiers": [
+      "beautifier-clangformat",
       "beautifier-eslint",
       "beautifier-js-beautify",
       "beautifier-php-cs-fixer",
@@ -22,7 +34,9 @@
       "beautifier-pretty-diff"
     ],
     "Languages": [
+      "language-c",
       "language-coldfusion",
+      "language-cpp",
       "language-csharp",
       "language-css",
       "language-ejs",
@@ -38,6 +52,7 @@
       "language-liquid",
       "language-markdown",
       "language-mustache",
+      "language-objective-c",
       "language-php",
       "language-riot",
       "language-sass",
@@ -57,6 +72,9 @@
   "executables": {
     "PHP-CS-Fixer Beautifier": [
       "executable-php-cs-fixer-php-cs-fixer"
+    ],
+    "ClangFormat Beautifier": [
+      "executable-clangformat-clangformat"
     ]
   },
   "options": {
@@ -72,7 +90,6 @@
       "option-comma-first"
     ],
     "E": [
-      "option-end-of-line",
       "option-end-with-comma",
       "option-end-with-newline",
       "option-end-with-semicolon"
@@ -82,14 +99,11 @@
     ],
     "I": [
       "option-indent-chained-methods",
-      "option-indent-char",
       "option-indent-comments",
       "option-indent-inner-html",
-      "option-indent-level",
       "option-indent-scripts",
       "option-indent-size",
-      "option-indent-style",
-      "option-indent-with-tabs"
+      "option-indent-style"
     ],
     "J": [
       "option-jslint-happy",
@@ -127,9 +141,6 @@
       "option-space-before-conditional",
       "option-space-in-empty-paren",
       "option-space-in-paren"
-    ],
-    "T": [
-      "option-typesafe-equality-operators"
     ],
     "U": [
       "option-unescape-strings",

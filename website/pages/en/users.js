@@ -35,7 +35,7 @@ class Users extends React.Component {
             <a
               href={siteConfig.editUrl.replace("docs/", "website/data/users.yml")}
               className="button">
-              Add your company
+              Add your logo
             </a>
           </div>
         </Container>

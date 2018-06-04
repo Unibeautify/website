@@ -83,10 +83,9 @@ class HomeSplash extends React.Component {
             <Button href={docUrl('getting-started.html', this.props.language)}>Get Started</Button>
             <Button href={docUrl('options-for-languages.html', this.props.language)}>Options</Button>
             <Button href={"https://playground.unibeautify.com/"} target="_blank">Try it out</Button>
-            <Button href={docUrl('ci.html', this.props.language)}>Unibeautify CI</Button>
           </PromoSection>
           <PromoSection>
-            <div className='prefinery-form-embed'></div>
+            <Button href={docUrl('ci.html', this.props.language)}>Sign up for Unibeautify CI</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -104,19 +103,25 @@ const Block = props => (
 );
 
 const Features = props => (
-  <Block layout="fourColumn">
+  <Block background="light" layout="fourColumn">
     {[
       {
-        content: `Personalize with [40+ configuration options](${docUrl('options-for-languages.html', props.language)})!`,
+        content: `Personalize your code style with [40+ configuration options](${docUrl('options-for-languages.html', props.language)}).`,
         image: imgUrl('wrench.svg'),
         imageAlign: 'top',
-        title: 'Unparalleled Customization',
+        title: 'Unparalleled customization',
       },
       {
-        content: 'The one beautifier to rule them all!',
+        content: `Up-to-date documentation with examples are automatically generated from beautifier, language, and option metadata.`,
+        image: imgUrl('book.svg'),
+        imageAlign: 'top',
+        title: 'Diligent documentation',
+      },
+      {
+        content: `Enable multiple beautifiers for each language. For example, easily combine [Prettier](${docUrl('beautifier-prettier.html', props.language)}) with [ESLint](${docUrl('beautifier-eslint.html', props.language)}) by simply changing a couple lines in your config file.`,
         image: imgUrl('connectdevelop.svg'),
         imageAlign: 'top',
-        title: 'Multiple beautifiers in one',
+        title: 'One beautifier to rule them all',
       },
     ]}
   </Block>
@@ -132,10 +137,10 @@ const FeatureCallout = props => (
 );
 
 const UnibeautifyCi = props => (
-  <Block background="light" align="left">
+  <Block align="left">
     {[
       {
-        content: 'Automatically beautify your code on each push with [Unibeautify CI](docs/ci.html)!',
+        content: "Automatically beautify your code on each push with [Unibeautify CI](docs/ci.html)! View a report via [GitHub's Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/) and easily resolve formatting changes by simply merging a branch, allowing you to quickly fix your code without ever leaving GitHub!",
         image: imgUrl('unibeautify-ci-demo.png'),
         imageAlign: 'right',
         title: 'GitHub Automation',
@@ -189,34 +194,66 @@ const Showcase = props => {
     });
 
   return (
-    <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's Using This?"}</h2>
-      <p>This project is used by all these people</p>
+    <div className="productShowcaseSection lightBackground paddingTop paddingBottom">
+      <h2>{"Who's Using Unibeautify?"}</h2>
+      <p>More than 28,000 monthly active Atom-Beautify users in May 2018 and over 122,000,000 files beautified since April 2016.</p>
       <div className="logos">{showcase}</div>
       <div className="more-users">
         <a className="button" href={pageUrl('users.html', props.language)}>
           More {siteConfig.title} Users
+        </a>
+        <a className="button" href={siteConfig.editUrl.replace("docs/", "website/data/users.yml")}>
+          Add your project
         </a>
       </div>
     </div>
   );
 };
 
+const LanguagesShowcase = props => {
+  if ((siteConfig.languages || []).length === 0) {
+    return null;
+  }
+  const showcase = siteConfig.languages
+    .map((language, i) => {
+      return (
+        <a href={language.infoLink} key={i}>
+          <img src={language.image} title={language.name} />
+          <br />
+          {language.name}
+        </a>
+      );
+    });
+
+  return (
+    <div className="productShowcaseSection paddingBottom">
+      <h2>{"Popular Supported Languages"}</h2>
+      {/* <p>This project is used by all these people</p> */}
+      <div className="logos">{showcase}</div>
+      {/*
+      <div className="more-users">
+        <a className="button" href={pageUrl('users.html', props.language)}>
+          More {siteConfig.title} languages
+        </a>
+      </div>
+      */}
+    </div>
+  );
+};
+
 class Index extends React.Component {
   render() {
-    let language = this.props.language || '';
-
+    const language = this.props.language || '';
     return (
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
+          <LanguagesShowcase language={language} />
           <Features language={language} />
-          <FeatureCallout />
+          {/* <FeatureCallout /> */}
           <UnibeautifyCi />
-          {/*
-          <TryOut />
-          <Description />
-          */}
+          {/* <TryOut />
+          <Description /> */}
           <Showcase language={language} />
         </div>
       </div>

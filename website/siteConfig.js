@@ -13,7 +13,7 @@ function loadYaml(fsPath) {
 
 const users = loadYaml("./data/users.yml");
 // const editors = loadYaml("./data/editors.yml");
-// const supportedLanguages = loadYaml("./data/languages.yml");
+const languages = loadYaml("./data/languages.yml");
 
 const siteConfig = {
   title: "Unibeautify" /* title for your website */,
@@ -28,7 +28,7 @@ const siteConfig = {
   headerLinks: [
     { doc: "about", label: "About" },
     { doc: "getting-started", label: "Usage" },
-    { href: "https://api.unibeautify.com/", label: "API" },
+    // { href: "https://api.unibeautify.com/", label: "API" },
     { href: "https://assistant.unibeautify.com/", label: "Assistant" },
     { href: "https://playground.unibeautify.com/", label: "Playground" },
     // { page: "help", label: "Help" },
@@ -37,14 +37,15 @@ const siteConfig = {
     { href: GITHUB_URL, label: "GitHub" },
   ],
   users,
+  languages,
   /* path to images for header/footer */
-  headerIcon: "img/unibeautify-white.png",
+  headerIcon: "img/unibeautify.png",
   footerIcon: "img/unibeautify.png",
-  favicon: "img/favicon.png",
+  favicon: "img/favicon.ico",
   /* colors for website */
   colors: {
-    primaryColor: "#24292e",
-    secondaryColor: "#205C3B",
+    primaryColor: "#023e7d",
+    secondaryColor: "#5ebdfb",
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright: `${String.fromCharCode(
@@ -60,7 +61,6 @@ const siteConfig = {
   scripts: [
     "https://buttons.github.io/buttons.js",
     "../js/selectList.js",
-    "../js/waitlist.js",
     "../js/disqus.js",
   ],
   // You may provide arbitrary config keys to be used as needed by your template.
