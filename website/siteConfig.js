@@ -13,7 +13,7 @@ function loadYaml(fsPath) {
 
 const users = loadYaml("./data/users.yml");
 // const editors = loadYaml("./data/editors.yml");
-// const supportedLanguages = loadYaml("./data/languages.yml");
+const languages = loadYaml("./data/languages.yml");
 
 const siteConfig = {
   title: "Unibeautify" /* title for your website */,
@@ -37,6 +37,7 @@ const siteConfig = {
     { href: GITHUB_URL, label: "GitHub" },
   ],
   users,
+  languages,
   /* path to images for header/footer */
   headerIcon: "img/unibeautify.png",
   footerIcon: "img/unibeautify.png",

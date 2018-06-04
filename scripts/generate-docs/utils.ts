@@ -25,9 +25,10 @@ export function slugify(title: string): string {
   return encodeURIComponent(
     title
       .toLowerCase()
+      .replace("c#", "csharp")
+      .replace("c++", "cpp")
       .replace(/ /g, "-")
       .replace(/\+/g, "-")
-      .replace("#", "sharp")
   );
 }
 export function linkForBeautifier(beautifier: Beautifier): string {

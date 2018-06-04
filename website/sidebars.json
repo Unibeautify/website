@@ -26,6 +26,7 @@
       "editor-webstorm"
     ],
     "Beautifiers": [
+      "beautifier-clangformat",
       "beautifier-eslint",
       "beautifier-js-beautify",
       "beautifier-php-cs-fixer",
@@ -33,7 +34,9 @@
       "beautifier-pretty-diff"
     ],
     "Languages": [
+      "language-c",
       "language-coldfusion",
+      "language-cpp",
       "language-csharp",
       "language-css",
       "language-ejs",
@@ -49,6 +52,7 @@
       "language-liquid",
       "language-markdown",
       "language-mustache",
+      "language-objective-c",
       "language-php",
       "language-riot",
       "language-sass",
@@ -68,6 +72,9 @@
   "executables": {
     "PHP-CS-Fixer Beautifier": [
       "executable-php-cs-fixer-php-cs-fixer"
+    ],
+    "ClangFormat Beautifier": [
+      "executable-clangformat-clangformat"
     ]
   },
   "options": {

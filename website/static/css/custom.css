@@ -88,3 +88,8 @@ details[open] summary {
   font-weight: bold;
   margin-bottom: 1rem;
 }
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
