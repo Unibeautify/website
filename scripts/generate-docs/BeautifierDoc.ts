@@ -197,7 +197,11 @@ export default class BeautifierDoc extends Doc {
   private appendOptionsTable(builder: MarkdownBuilder): MarkdownBuilder {
     if (!this.hasOptions) {
       builder.append("No configuration options are supported.");
-      builder.append(`The following languages are supported without options: ${this.languages.map(lang => `\`${lang.name}\``).join(', ')}.`);
+      builder.append(
+        `The following languages are supported without options: ${this.languages
+          .map(lang => `\`${lang.name}\``)
+          .join(", ")}.`
+      );
       return builder;
     }
     /*
