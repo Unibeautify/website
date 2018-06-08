@@ -1,9 +1,0 @@
-var foo = {
-    bar: "baz",
-    qux: "quux",
-};
-
-var bar = {
-    bar: "baz",
-    qux: "quux"
-};

@@ -28,6 +28,9 @@
     "url": "https://github.com/Unibeautify/website/issues"
   },
   "homepage": "https://github.com/Unibeautify/website#readme",
+  "dependencies": {
+    "ugly-samples": "git+https://github.com/Unibeautify/ugly-samples.git"
+  },
   "devDependencies": {
     "@types/diff": "^3.2.2",
     "@types/fs-extra": "^5.0.1",
