@@ -25,6 +25,7 @@ const editBeautifiersUrl = `${websiteEditUrl}/scripts/generate-docs/beautifiers.
 export default class OptionsDoc extends Doc {
   private readonly languages: Language[];
   private readonly beautifiers: Beautifier[];
+  private readonly languageEditURL: string = "https://github.com/unibeautify/ugly-samples/edit/master";
 
   constructor(
     private option: Option,
@@ -334,7 +335,7 @@ export default class OptionsDoc extends Doc {
   }
 
   private get examplesPath(): string {
-    return path.resolve(__dirname, "../../examples");
+    return path.resolve(require("ugly-samples"));
   }
 
   private createOptionsWithLanguageAndValue(
@@ -388,14 +389,14 @@ export default class OptionsDoc extends Doc {
   }
 
   private editExampleButtonUrl(language: Language): string {
-    return `${websiteEditUrl}/examples/${language.name}/${this.optionKey}.txt`;
+    return `${this.languageEditURL}/samples/${language.name}/${this.optionKey}.txt`;
   }
 
   private addExampleButtonUrl(language: Language): string {
-    return `${websiteEditUrl.replace(
+    return `${this.languageEditURL.replace(
       "/edit/",
       "/new/",
-    )}/examples/${encodeURIComponent(language.name)}/new?filename=${
+    )}/samples/${encodeURIComponent(language.name)}/new?filename=${
       this.optionKey
     }.txt&value=Type%20Example%20Here`;
   }

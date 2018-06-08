@@ -1,2 +1,0 @@
-const val1 = a ? "yes" : "no";
-const val2 = a ? ( b ? "yes" : "no") : "maybe";

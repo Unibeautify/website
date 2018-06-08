@@ -1,6 +1,0 @@
-const fun1 = function(arg1, arg2) {
-}
-const fun2 = function(arg1,arg2) {
-}
-const fun3 = function( arg1, arg2 ) {
-}

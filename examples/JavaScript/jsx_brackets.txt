@@ -1,7 +1,0 @@
-<div
-className="HelloWorld"
-title={`You are visitor number ${num}`}
-onMouseOver={onMouseOver}
->
-    hello world
-</div>
