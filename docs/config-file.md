@@ -14,7 +14,7 @@ The [options](options-for-languages.md) to the configuration file are grouped by
 
 ## Using the Assistant
 
-Use the [Unibeautify assistant](https://assistant.unibeautify.com/) for an interactive setup of your configuration file. Simply select the languages you want, and it will walk you though the options available. At the end simply download or copy to your clipboard your configuration.
+Use the [Unibeautify assistant](https://assistant.unibeautify.com/#/setup) for an interactive setup of your configuration file. Simply select the languages you want, and it will walk you though the options available. At the end simply download or copy to your clipboard your configuration.
 
 ## Example
 
