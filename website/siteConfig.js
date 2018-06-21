@@ -57,7 +57,7 @@ const siteConfig = {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: "default",
   },
-  onPageNav: ["separate"],
+  onPageNav: "separate",
   scripts: [
     "https://buttons.github.io/buttons.js",
     "../js/selectList.js",
