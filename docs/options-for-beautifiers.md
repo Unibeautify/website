@@ -35,4 +35,4 @@ After enabling `prefer_beautifier_config` option for a beautifier Unibeautify wi
 If the beautifier's configuration file is found then Unibeautify's own configuration file (e.g. `.unibeautifyrc`) will be ignored.
 This is useful when Unibeautify does not support an option and you want more control over a specific beautifier.
 
-> Only certain beautifiers support the `prefer_beautifier_config` option. See the `Advanced` section on a beautifier's page to see what beautifier options are supported. For example, see the [PHP-CS-Fixer beautifier](http://localhost:3000/docs/beautifier-php-cs-fixer.html#advanced).
+> Only certain beautifiers support the `prefer_beautifier_config` option. See the `Advanced` section on a beautifier's page to see what beautifier options are supported. For example, see the [PHP-CS-Fixer beautifier](/docs/beautifier-php-cs-fixer.html#advanced).
