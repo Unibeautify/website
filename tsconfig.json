@@ -17,8 +17,7 @@
             "./script/@types"
         ],
         "types": [
-            "node",
-            "beautifier-prettydiff"
+            "node"
         ],
         "module": "commonjs",
         "forceConsistentCasingInFileNames": true,
