@@ -151,9 +151,9 @@ function optionsSidebar(): {
     return `${prefix}${slug}`;
   });
   const firstLetterIndex = prefix.length;
-  return _.groupBy(optionIds, (optionId: string, index: number) =>
+  return _.groupBy(optionIds, (optionId: string) =>
     optionId[firstLetterIndex].toUpperCase()
-  ) as any;
+  );
 }
 function executablesSidebar(
   executables: ExecutableDoc[]
