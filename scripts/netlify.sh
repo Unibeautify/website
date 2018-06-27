@@ -8,10 +8,10 @@ ls -la
 pip install black
 
 # Build docs
-npm install
-npm run docs
+yarn install
+yarn docs
 
 # Build website
 cd website/
-npm install
-npm run build
+yarn install
+yarn build
