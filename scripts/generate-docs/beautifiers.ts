@@ -7,6 +7,7 @@ import phpCsFixer from "@unibeautify/beautifier-php-cs-fixer";
 import clangFormat from "@unibeautify/beautifier-clang-format";
 import phpCodesniffer from "@unibeautify/beautifier-php-codesniffer";
 import black from "@unibeautify/beautifier-black";
+import gofmt from "@unibeautify/beautifier-gofmt";
 
 const beautifiers: Beautifier[] = <any[]>[
   prettier,
@@ -17,6 +18,7 @@ const beautifiers: Beautifier[] = <any[]>[
   clangFormat,
   phpCodesniffer,
   black,
+  gofmt,
 ];
 
 export default beautifiers;

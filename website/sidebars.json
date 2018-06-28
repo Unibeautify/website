@@ -29,6 +29,7 @@
       "beautifier-black",
       "beautifier-clangformat",
       "beautifier-eslint",
+      "beautifier-gofmt",
       "beautifier-js-beautify",
       "beautifier-php-cs-fixer",
       "beautifier-php_codesniffer",
@@ -42,6 +43,7 @@
       "language-csharp",
       "language-css",
       "language-ejs",
+      "language-go",
       "language-graphql",
       "language-handlebars",
       "language-html",
@@ -84,6 +86,9 @@
     ],
     "Black Beautifier": [
       "executable-black-black"
+    ],
+    "Gofmt Beautifier": [
+      "executable-gofmt-gofmt"
     ]
   },
   "options": {
