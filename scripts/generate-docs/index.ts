@@ -49,7 +49,10 @@ async function main() {
       beautifiers: beautifierDocs,
       executables: executableDocs,
     }),
-  ]).catch(console.error);
+  ]).catch(error => {
+    console.error(error);
+    process.exit(1);
+  });
 }
 
 function docsForLanguages(languages: Language[]): LanguageDoc[] {

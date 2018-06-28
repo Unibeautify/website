@@ -26,6 +26,7 @@
       "editor-webstorm"
     ],
     "Beautifiers": [
+      "beautifier-black",
       "beautifier-clangformat",
       "beautifier-eslint",
       "beautifier-js-beautify",
@@ -55,6 +56,7 @@
       "language-mustache",
       "language-objective-c",
       "language-php",
+      "language-python",
       "language-riot",
       "language-sass",
       "language-scss",
@@ -79,6 +81,9 @@
     ],
     "PHP_CodeSniffer Beautifier": [
       "executable-php_codesniffer-phpcbf"
+    ],
+    "Black Beautifier": [
+      "executable-black-black"
     ]
   },
   "options": {
