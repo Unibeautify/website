@@ -8,4 +8,4 @@ WORKDIR $NETLIFY_REPO_URL
 COPY ./ ./
 RUN mkdir -p $NETLIFY_REPO_DIR
 RUN cp -p -r $NETLIFY_REPO_URL/* $NETLIFY_REPO_DIR/
-RUN build "pwd && ./scripts/netlify.sh"
+RUN build ./scripts/netlify.sh
