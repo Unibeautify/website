@@ -40,7 +40,7 @@
   dependencies:
     read-pkg-up "^3.0.0"
 
-"@unibeautify/beautifier-gofmt@^0.1.0":
+"@unibeautify/beautifier-gofmt@0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-gofmt/-/beautifier-gofmt-0.1.0.tgz#eddda132b5c864826f03a303eb62a0826691ae9e"
   dependencies:

@@ -38,7 +38,7 @@
     "@unibeautify/beautifier-black": "0.1.1",
     "@unibeautify/beautifier-clang-format": "0.2.0",
     "@unibeautify/beautifier-eslint": "0.5.0",
-    "@unibeautify/beautifier-gofmt": "^0.1.0",
+    "@unibeautify/beautifier-gofmt": "0.1.0",
     "@unibeautify/beautifier-js-beautify": "0.3.2",
     "@unibeautify/beautifier-php-codesniffer": "0.1.1",
     "@unibeautify/beautifier-php-cs-fixer": "0.3.0",
