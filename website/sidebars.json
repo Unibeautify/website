@@ -26,8 +26,10 @@
       "editor-webstorm"
     ],
     "Beautifiers": [
+      "beautifier-black",
       "beautifier-clangformat",
       "beautifier-eslint",
+      "beautifier-gofmt",
       "beautifier-js-beautify",
       "beautifier-php-cs-fixer",
       "beautifier-php_codesniffer",
@@ -41,6 +43,7 @@
       "language-csharp",
       "language-css",
       "language-ejs",
+      "language-go",
       "language-graphql",
       "language-handlebars",
       "language-html",
@@ -55,6 +58,7 @@
       "language-mustache",
       "language-objective-c",
       "language-php",
+      "language-python",
       "language-riot",
       "language-sass",
       "language-scss",
@@ -79,6 +83,12 @@
     ],
     "PHP_CodeSniffer Beautifier": [
       "executable-php_codesniffer-phpcbf"
+    ],
+    "Black Beautifier": [
+      "executable-black-black"
+    ],
+    "Gofmt Beautifier": [
+      "executable-gofmt-gofmt"
     ]
   },
   "options": {

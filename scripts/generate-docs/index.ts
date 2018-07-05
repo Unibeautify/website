@@ -49,7 +49,10 @@ async function main() {
       beautifiers: beautifierDocs,
       executables: executableDocs,
     }),
-  ]).catch(console.error);
+  ]).catch(error => {
+    console.error(error);
+    process.exit(1);
+  });
 }
 
 function docsForLanguages(languages: Language[]): LanguageDoc[] {
@@ -151,7 +154,7 @@ function optionsSidebar(): {
     return `${prefix}${slug}`;
   });
   const firstLetterIndex = prefix.length;
-  return _.groupBy(optionIds, (optionId, index) =>
+  return _.groupBy(optionIds, (optionId: string) =>
     optionId[firstLetterIndex].toUpperCase()
   );
 }

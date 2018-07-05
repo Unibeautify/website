@@ -102,7 +102,9 @@ export default class OptionsDoc extends Doc {
       builder.details("<strong>Comparison Table</strong>", builder => {
         this.appendTable(builder);
       });
-      return this.appendExamples(builder).then(() => builder.build());
+      return this.appendExamples(builder).then(() =>
+        builder.build()
+      );
     } else {
       builder.editButton("Add Beautifier", editBeautifiersUrl);
       builder.append("No language or beautifier support!");
@@ -178,12 +180,7 @@ export default class OptionsDoc extends Doc {
               languages.map(language => {
                 const example = examplesForLanguages[language.name];
                 if (example) {
-                  return this.beautify(language, optionValue, example).catch(
-                    error => {
-                      console.error(error);
-                      return null;
-                    },
-                  );
+                  return this.beautify(language, optionValue, example);
                 } else {
                   return null;
                 }

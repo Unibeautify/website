@@ -1,0 +1,7 @@
+node_modules/**/*
+website/build/**/*
+website/node_modules/**/*
+Dockerfile
+.dockerignore
+.travis.yml
+.gitignore

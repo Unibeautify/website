@@ -151,25 +151,40 @@ export default class BeautifierDoc extends Doc {
     builder.append(
       `A \`.unibeautifyrc.json\` file would look like the following:`
     );
-    builder.code(
-      JSON.stringify(
-        {
-          LANGUAGE_NAME: {
-            beautifiers: [beautifierName],
+    if (this.languages.length === 1) {
+      const languageName = this.languages[0].name;
+      builder.code(
+        JSON.stringify(
+          {
+            [languageName]: {
+              beautifiers: [beautifierName],
+            },
           },
-        },
-        null,
-        2
-      ),
-      "json"
-    );
-    builder.note(
-      `The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
-        .slice(0, 3)
-        .map(lang => `\`${lang.name}\``)
-        .join(", ")}, etc.`
-    );
-
+          null,
+          2
+        ),
+        "json"
+      );
+    } else {
+      builder.code(
+        JSON.stringify(
+          {
+            LANGUAGE_NAME: {
+              beautifiers: [beautifierName],
+            },
+          },
+          null,
+          2
+        ),
+        "json"
+      );
+      builder.note(
+        `The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
+          .slice(0, 3)
+          .map(lang => `\`${lang.name}\``)
+          .join(", ")}, etc.`
+      );
+    }
     if (this.beautifierOptionKeys.length > 0) {
       builder.header("Advanced", 3);
       builder.append(`The following beautifier option(s) are supported:`);
