@@ -1,0 +1,88 @@
+::selection {
+  background: var(--main);
+
+  /* color: var(--main); */
+}
+
+::-moz-selection {
+  background: var(--main);
+
+  /* color: var(--main); */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+
+  margin: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background: #FFF;
+
+  color: var(--dark);
+
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+iframe,
+img,
+video {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+i,
+em,
+strong,
+a,
+div {
+  font-family: var(--font);
+}
+
+.hidden [hidden] {
+  visibility: hidden;
+
+  opacity: 0;
+
+  text-indent: -999999;
+}
+
+.container {
+  display: flex;
+
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+}
+
+[class*='col'] {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}

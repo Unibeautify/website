@@ -1,0 +1,46 @@
+hero {
+  display: block;
+
+  height: 700px;
+
+  padding-top: 40px;
+
+  background: var(--dark);
+  background-image: url('/img/hero.jpg');
+  background-position: center bottom;
+  background-size: cover;
+
+  color: var(--light);
+
+  text-align: left;
+}
+
+hero .container,
+hero .row {
+  height: 100%;
+}
+
+hero h1 {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  font-size: 60px;
+  font-weight: 700;
+}
+
+hero h2 {
+  margin-top: 0;
+  margin-bottom: 45px;
+
+  opacity: .3;
+
+  font-size: 40px;
+}
+
+hero .logoWrapper {
+  margin-left: 170px;
+}
+
+hero .logoWrapper img {
+  width: 260px;
+}

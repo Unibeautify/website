@@ -1,0 +1,141 @@
+.fixedHeaderContainer {
+  min-height: auto;
+
+  padding: 0;
+
+  transition: background var(--header-transition-duration) ease;
+
+  background: transparent;
+}
+
+.fixedHeaderContainer.sticky {
+  background: rgba(48, 52, 56, .9);
+
+          backdrop-filter: blur(2px);
+
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.fixedHeaderContainer.sticky header {
+  padding-top: 10px;
+}
+
+.fixedHeaderContainer.sticky header > a img {
+  height: 30px;
+}
+
+/* destroy the navPusher */
+
+.navPusher {
+  display: block;
+
+  min-height: auto;
+
+  padding: 0;
+}
+
+.fixedHeaderContainer header {
+  width: 100%;
+
+  padding: 30px 0 10px;
+
+  transition: padding var(--header-transition-duration) linear;
+}
+
+.fixedHeaderContainer header .headerTitleWithLogo {
+  display: none;
+}
+
+.fixedHeaderContainer header > a {
+  flex: 0;
+}
+
+.fixedHeaderContainer header > a img {
+  width: auto;
+  max-width: none;
+  height: 40px;
+
+  transition: height var(--header-transition-duration) ease;
+}
+
+.fixedHeaderContainer header .navigationWrapper {
+  display: flex;
+
+  flex: 0;
+  align-items: flex-end;
+  align-items: center;
+}
+
+.navigationSlider .slidingNav ul li a {
+  display: flex;
+
+  align-items: center;
+
+  margin-right: 5px;
+
+  color: var(--light);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.navigationSlider .slidingNav ul li a:hover {
+  border-bottom: 1px solid var(--light);
+
+  background: transparent;
+}
+
+.navSearchWrapper {
+  position: relative;
+
+  padding-left: 10px;
+}
+
+.navSearchWrapper::before {
+  content: '';
+
+  top: 8px;
+  left: 21px;
+
+  width: 9px;
+  height: 9px;
+
+  transform: none;
+
+  border: 1px solid var(--light);
+}
+
+.navSearchWrapper::after {
+  content: '';
+
+  top: 13px;
+  left: 30px;
+
+  width: 2px;
+  height: 8px;
+
+  transform: rotate(-45deg);
+
+  background: var(--light);
+}
+
+input#search_input_react {
+  width: 170px;
+
+  padding: 6px 6px 7px 32px;
+
+  transition: none;
+
+  border-radius: 25px;
+
+  background-color: rgba(255, 255, 255, .2);
+
+  color: var(--light);
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1;
+}
