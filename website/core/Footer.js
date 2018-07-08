@@ -21,7 +21,6 @@ class Footer extends React.Component {
   }
 
   render() {
-    const currentYear = new Date().getFullYear();
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
@@ -30,8 +29,6 @@ class Footer extends React.Component {
               <img
                 src={this.props.config.baseUrl + this.props.config.footerIcon}
                 alt={this.props.config.title}
-                width="66"
-                height="58"
               />
             )}
           </a>
@@ -39,6 +36,12 @@ class Footer extends React.Component {
             <h5>Docs</h5>
             <a href={this.docUrl('getting-started.html', this.props.language)}>
               Getting Started
+            </a>
+            <a href={this.docUrl('cli.html', this.props.language)}>
+              CLI
+            </a>
+            <a href={this.docUrl('config-file.html', this.props.language)}>
+              Configuration
             </a>
             <a href={this.docUrl('options-for-languages.html', this.props.language)}>
               Options
@@ -54,34 +57,41 @@ class Footer extends React.Component {
               target="_blank">
               Stack Overflow
             </a>
-            <a href="https://unibeautify-slack.glitch.me/" target="_blank">Slack <img src="https://unibeautify-slack.glitch.me/badge.svg" /></a>
             <a href="https://twitter.com/Unibeautify" target="_blank">
               @Unibeautify on Twitter
             </a>
-            <object
-              type="image/svg+xml"
-              data="https://img.shields.io/twitter/follow/unibeautify.svg?label=Follow+Unibeautify&style=social"
-            >
-              <a href="https://twitter.com/intent/follow?screen_name=unibeautify">
-                <img
-                  alt="Follow Unibeautify on Twitter"
-                  src="https://img.shields.io/twitter/follow/unibeautify.png?label=Follow+Unibeautify&style=social"
-                />
-              </a>
-            </object>
+            <a href="https://twitter.com/intent/follow?screen_name=unibeautify" target="_blank">
+              <img
+                alt="Follow Unibeautify on Twitter"
+                src="https://img.shields.io/twitter/follow/unibeautify.png?label=Follow+Unibeautify&style=flat"
+              />
+            </a>
+            <a 
+              href="https://unibeautify-slack.glitch.me/" 
+              target="_blank">
+              <img src="https://unibeautify-slack.glitch.me/badge.svg" />
+            </a>
           </div>
           <div>
             <h5>More</h5>
             <a href="https://github.com/unibeautify">GitHub</a>
-            <a
-              className="github-button"
-              href={this.props.config.repoUrl}
-              data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
-              data-show-count={true}
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
-              Star
+            <a href="https://github.com/Unibeautify/unibeautify/stargazers" target="_blank">
+              <img
+                alt="Star Unibeautify on GitHub"
+                src="https://img.shields.io/github/stars/Unibeautify/unibeautify.svg?style=flat&label=Stars"
+              />
+            </a>
+            <a href="https://github.com/Unibeautify/unibeautify/network" target="_blank">
+              <img
+                alt="Code coverage of Unibeautify"
+                src="https://img.shields.io/github/forks/Unibeautify/unibeautify.svg?style=flat&label=Fork"
+              />
+            </a>
+            <a href="https://github.com/Unibeautify/unibeautify/issues" target="_blank">
+              <img
+                alt="Code coverage of Unibeautify"
+                src="https://img.shields.io/coveralls/github/Unibeautify/unibeautify/master.svg"
+              />
             </a>
           </div>
         </section>
