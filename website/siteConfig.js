@@ -56,7 +56,7 @@ const siteConfig = {
   scrollToTop: true,
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: "default",
+    theme: "atom-one-dark",
   },
   onPageNav: "separate",
   scripts: [
