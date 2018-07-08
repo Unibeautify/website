@@ -1,13 +1,13 @@
 window.onload = function () {
-    const header = $(".fixedHeaderContainer");
+  const header = $(".fixedHeaderContainer");
 
-    window.onscroll = () => {
-        let scrollTop = window.pageYOffset;
+  window.onscroll = () => {
+    let scrollTop = window.pageYOffset;
 
-        if (scrollTop >= 100) {
-            header.addClass("sticky");
-        } else {
-            header.removeClass("sticky");
-        }
-    };
+    if (scrollTop >= 10) {
+      header.addClass("sticky");
+    } else {
+      header.removeClass("sticky");
+    }
+  };
 };
