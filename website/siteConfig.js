@@ -33,19 +33,19 @@ const siteConfig = {
     { href: "https://playground.unibeautify.com/", label: "Playground" },
     // { page: "help", label: "Help" },
     // { blog: true, label: "Blog" },
-    { search: true },
     { href: GITHUB_URL, label: "GitHub" },
+    { search: true },
   ],
   users,
   languages,
   /* path to images for header/footer */
   headerIcon: "img/logo-reversed-white.svg",
-  footerIcon: "img/logo.svg",
+  footerIcon: "img/logo-reversed-white.svg",
   favicon: "img/favicon.ico",
   /* colors for website */
   colors: {
     primaryColor: "#388ede",
-    secondaryColor: "#25282d",
+    secondaryColor: "#303438",
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright: `${String.fromCharCode(
@@ -63,9 +63,10 @@ const siteConfig = {
     "https://buttons.github.io/buttons.js",
     "../js/selectList.js",
     "../js/disqus.js",
+    "../js/header.js",
   ],
   stylesheets: [
-    "https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700"
+    "https://fonts.googleapis.com/css?family=Lato:400,700"
   ],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: GITHUB_URL,
