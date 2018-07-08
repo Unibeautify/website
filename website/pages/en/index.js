@@ -70,8 +70,7 @@ class HomeSplash extends React.Component {
                         Get Started
             </Button>
             <Button href={docUrl('ci.html', language)}>
-                        Sign Up for
-              <b>Unibeautify CI</b>
+              Sign Up for <b>Unibeautify CI</b>
             </Button>
           </ButtonGroup>
         </div>
