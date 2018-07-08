@@ -17,7 +17,7 @@ const languages = loadYaml("./data/languages.yml");
 
 const siteConfig = {
   title: "Unibeautify" /* title for your website */,
-  tagline: "Universal Code Beautifier",
+  tagline: "The Universal Code Beautifier",
   githubUrl: GITHUB_URL,
   url: "https://unibeautify.com/" /* your website url */,
   cname: "unibeautify.com",
@@ -39,13 +39,13 @@ const siteConfig = {
   users,
   languages,
   /* path to images for header/footer */
-  headerIcon: "img/unibeautify.png",
-  footerIcon: "img/unibeautify.png",
+  headerIcon: "img/logo-reversed-white.svg",
+  footerIcon: "img/logo.svg",
   favicon: "img/favicon.ico",
   /* colors for website */
   colors: {
-    primaryColor: "#023e7d",
-    secondaryColor: "#5ebdfb",
+    primaryColor: "#388ede",
+    secondaryColor: "#25282d",
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright: `${String.fromCharCode(
@@ -53,6 +53,7 @@ const siteConfig = {
   )} ${new Date().getFullYear()} Glavin Wiechert`,
   organizationName: "unibeautify", // or set an env variable ORGANIZATION_NAME
   projectName: "website", // or set an env variable PROJECT_NAME
+  scrollToTop: true,
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: "default",
@@ -62,6 +63,9 @@ const siteConfig = {
     "https://buttons.github.io/buttons.js",
     "../js/selectList.js",
     "../js/disqus.js",
+  ],
+  stylesheets: [
+    "https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700"
   ],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: GITHUB_URL,
