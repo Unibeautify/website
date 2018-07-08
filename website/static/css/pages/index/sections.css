@@ -11,10 +11,14 @@
   line-height: inherit;
 }
 
-.productShowcaseSection.languages .logos img {
+.productShowcaseSection .logos img {
   width: auto;
-  height: 70px;
+  height: 100px;
   max-height: none;
+}
+
+.productShowcaseSection.languages .logos img {
+  height: 70px;
 }
 
 .productShowcaseSection .logos a {

@@ -1,12 +1,10 @@
 ::selection {
   background: var(--main);
-
   /* color: var(--main); */
 }
 
 ::-moz-selection {
   background: var(--main);
-
   /* color: var(--main); */
 }
 
@@ -42,18 +40,19 @@ video {
   max-width: 100%;
 }
 
+a,
+b,
+div,
+em,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-b,
 i,
-em,
-strong,
-a,
-div {
+span,
+strong {
   font-family: var(--font);
 }
 
@@ -65,13 +64,13 @@ div {
   text-indent: -999999;
 }
 
-.container {
+body:not(.separateOnPageNav) .container {
   display: flex;
 
   height: 100%;
 }
 
-.wrapper {
+body:not(.separateOnPageNav) .wrapper {
   display: flex;
 
   align-items: center;
@@ -79,7 +78,7 @@ div {
   width: 100%;
 }
 
-[class*='col'] {
+[class^='col'] {
   padding: 0;
 }
 

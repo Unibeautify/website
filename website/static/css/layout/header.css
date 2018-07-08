@@ -16,22 +16,18 @@
   -webkit-backdrop-filter: blur(2px);
 }
 
-.fixedHeaderContainer.sticky header {
+.fixedHeaderContainer.sticky header,
+.separateOnPageNav .fixedHeaderContainer header {
   padding-top: 10px;
 }
 
-.fixedHeaderContainer.sticky header > a img {
+.fixedHeaderContainer.sticky header > a img,
+.separateOnPageNav .fixedHeaderContainer header > a img {
   height: 30px;
 }
 
-/* destroy the navPusher */
-
-.navPusher {
-  display: block;
-
-  min-height: auto;
-
-  padding: 0;
+.separateOnPageNav .fixedHeaderContainer {
+  background: var(--dark);
 }
 
 .fixedHeaderContainer header {
@@ -69,6 +65,8 @@
 .navigationSlider .slidingNav ul li a {
   display: flex;
 
+  position: relative;
+
   align-items: center;
 
   margin-right: 5px;
@@ -81,10 +79,22 @@
   text-transform: uppercase;
 }
 
-.navigationSlider .slidingNav ul li a:hover {
-  border-bottom: 1px solid var(--light);
-
+.navigationSlider .slidingNav ul li a:hover,
+.navigationSlider .slidingNav ul li.siteNavGroupActive a {
   background: transparent;
+}
+
+.navigationSlider .slidingNav ul li a:hover::after,
+.navigationSlider .slidingNav ul li.siteNavGroupActive a::after {
+  content: '';
+
+  position: absolute;
+  bottom: 0;
+
+  width: calc(100% - 20px);
+  height: 2px;
+
+  background: white;
 }
 
 .navSearchWrapper {
@@ -96,7 +106,7 @@
 .navSearchWrapper::before {
   content: '';
 
-  top: 8px;
+  top: 9px;
   left: 21px;
 
   width: 9px;
@@ -110,13 +120,15 @@
 .navSearchWrapper::after {
   content: '';
 
-  top: 13px;
+  top: 15px;
   left: 30px;
 
   width: 2px;
-  height: 8px;
+  height: 6px;
 
   transform: rotate(-45deg);
+
+  border-radius: 6px;
 
   background: var(--light);
 }
