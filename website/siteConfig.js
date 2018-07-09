@@ -18,6 +18,7 @@ const languages = loadYaml("./data/languages.yml");
 const siteConfig = {
   title: "Unibeautify" /* title for your website */,
   tagline: "Universal Code Beautifier",
+  disableHeaderTitle: true,
   githubUrl: GITHUB_URL,
   url: "https://unibeautify.com/" /* your website url */,
   cname: "unibeautify.com",
