@@ -25,6 +25,9 @@ function pageUrl(page, language) {
   return siteConfig.baseUrl + (language ? language + '/' : '') + page;
 }
 
+// ==========================================
+// Elements
+
 class Button extends React.Component {
   render() {
     return (
@@ -42,45 +45,9 @@ Button.defaultProps = {
   target: '_self'
 };
 
-const SplashContainer = props => (<hero>
-  <Container className="align-items-center">{props.children}</Container>
-</hero>);
-
-const Logo = props => (<div className="logoWrapper">
-  <img src={props.img_src}/>
-</div>);
-
-const ProjectTitle = () => (<div>
-  <h1>{siteConfig.title}</h1>
-  <h2>{siteConfig.tagline}</h2>
-</div>);
-
-const ButtonGroup = props => (<div className="button-group">{props.children}</div>);
-
-class HomeSplash extends React.Component {
-  render() {
-    let language = this.props.language || '';
-    
-    return (
-      <SplashContainer>
-        <div className="col-auto">
-          <ProjectTitle/>
-          <ButtonGroup>
-            <Button href={docUrl('getting-started.html', language)}>
-                        Get Started
-            </Button>
-            <Button href={docUrl('ci.html', language)}>
-              Sign Up for <b>Unibeautify CI</b>
-            </Button>
-          </ButtonGroup>
-        </div>
-        <div className="col-auto">
-          <Logo img_src={imgUrl('signet-white.svg')}/>
-        </div>
-      </SplashContainer>
-    );
-  }
-}
+const ButtonGroup = props => (
+  <div className="button-group">{props.children}</div>
+);
 
 const Block = props => (
   <Container 
@@ -92,25 +59,100 @@ const Block = props => (
   </Container>
 );
 
+// ==========================================
+// HomeSplash
+
+const SplashContainer = props => (
+  <hero>
+    <Container className="align-items-center">{props.children}</Container>
+  </hero>
+);
+
+const Logo = props => (
+  <div className="logoWrapper">
+    <img src={props.img_src}/>
+  </div>
+);
+
+const ProjectTitle = () => (
+  <div>
+    <h1>{siteConfig.title}</h1>
+    <h2>{siteConfig.tagline}</h2>
+  </div>
+);
+
+class HomeSplash extends React.Component {
+  render() {
+    let language = this.props.language || '';
+    
+    return (
+      <SplashContainer>
+        <div className="row align-items-center justify-content-between">
+          <div className="col col-lg-auto">
+            <ProjectTitle/>
+            <ButtonGroup>
+              <Button href={docUrl('getting-started.html', language)}>
+                Get Started
+              </Button>
+              <Button href={docUrl('ci.html', language)}>
+                Sign Up for <b>Unibeautify CI</b>
+              </Button>
+            </ButtonGroup>
+          </div>
+          <div className="d-none d-lg-block col-auto">
+            <Logo img_src={imgUrl('signet-white.svg')}/>
+          </div>
+        </div>
+      </SplashContainer>
+    );
+  }
+}
+
+// ==========================================
+// Sections
+
+const LanguagesShowcase = () => {
+  if ((siteConfig.languages || []).length === 0) {
+    return null;
+  }
+  const showcase = siteConfig.languages.map((language, i) => {
+    return (
+      <a href={language.infoLink} key={i}>
+        <img src={language.image} title={language.name}/>
+        <br/> {language.name}
+      </a>
+    );
+  });
+
+  return (
+    // <Container>
+    <div className="productShowcaseSection languages paddingBottom paddingTop">
+      <h2>{'Supported Languages'}</h2>
+      <div className="logos">{showcase}</div>
+    </div>
+    // </Container>
+  );
+};
+
 const Features = props => (
   <Block background="shadow" layout="threeColumn" className="featureSection">
     {
       [
         {
+          title: 'Unparalleled customization',
           content: `Personalize your code style and create a constant style across all maintainers<br> with [40+ configuration options](${docUrl('options-for-languages.html', props.language)}).`,
           image: imgUrl('icons/cog.svg'),
-          imageAlign: 'top',
-          title: 'Unparalleled customization'
+          imageAlign: 'top'
         }, {
+          title: 'Diligent documentation',
           content: 'Up-to-date documentation with examples is automatically generated from beautifier, language, and option metadata.',
           image: imgUrl('icons/book.svg'),
-          imageAlign: 'top',
-          title: 'Diligent documentation'
+          imageAlign: 'top'
         }, {
+          title: 'One to rule them all',
           content: `Enable multiple beautifiers for each language. For example, easily combine [Prettier](${docUrl('beautifier-prettier.html', props.language)}) with [ESLint](${docUrl('beautifier-eslint.html', props.language)}) by simply changing your config file.`,
           image: imgUrl('icons/bag.svg'),
-          imageAlign: 'top',
-          title: 'One to rule them all'
+          imageAlign: 'top'
         }
       ]
     }
@@ -118,14 +160,14 @@ const Features = props => (
 );
 
 const UnibeautifyCi = () => (
-  <Block align="left" className="ubiCISection">
+  <Block align="left" className="featherImage ubiCISection">
     {
       [
         {
+          title: `![](${imgUrl('icons/tasks.svg')}#icon) GitHub Automation`,
           content: 'Automatically beautify your code on each push with [Unibeautify CI](docs/ci.html)! View a report via [GitHub\'s Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/) and easily resolve formatting changes by simply merging a branch, allowing you to quickly fix your code without ever leaving GitHub!',
           image: imgUrl('previews/ubi-ci-demo.png'),
-          imageAlign: 'right',
-          title: 'GitHub Automation'
+          imageAlign: 'right'
         }
       ]
     }
@@ -139,10 +181,12 @@ const Showcase = props => {
   const showcase = siteConfig.users.filter(user => {
     return user.pinned;
   }).map((user, i) => {
-    return (<a href={user.infoLink} key={i}>
-      <img src={user.image} title={user.caption}/>
-      <br/> {user.caption}
-    </a>);
+    return (
+      <a href={user.infoLink} key={i}>
+        <img src={user.image} title={user.caption}/>
+        <br/> {user.caption}
+      </a>
+    );
   });
 
   return (
@@ -165,26 +209,8 @@ const Showcase = props => {
   );
 };
 
-const LanguagesShowcase = () => {
-  if ((siteConfig.languages || []).length === 0) {
-    return null;
-  }
-  const showcase = siteConfig.languages.map((language, i) => {
-    return (
-      <a href={language.infoLink} key={i}>
-        <img src={language.image} title={language.name}/>
-        <br/> {language.name}
-      </a>
-    );
-  });
-
-  return (
-    <div className="productShowcaseSection languages paddingBottom paddingTop">
-      <h2>{'Supported Languages'}</h2>
-      <div className="logos">{showcase}</div>
-    </div>
-  );
-};
+// ==========================================
+// Render page
 
 class Index extends React.Component {
   render() {
