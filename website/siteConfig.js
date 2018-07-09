@@ -16,18 +16,26 @@ const users = loadYaml("./data/users.yml");
 const languages = loadYaml("./data/languages.yml");
 
 const siteConfig = {
-  title: "Unibeautify" /* title for your website */,
+  title: "Unibeautify",
+  organizationName: "unibeautify", // or set an env variable ORGANIZATION_NAME
+  projectName: "website", // or set an env variable PROJECT_NAME
   tagline: "The Universal Code Beautifier",
-  githubUrl: GITHUB_URL,
-  url: "https://unibeautify.com/" /* your website url */,
+  url: "https://unibeautify.com/",
+  baseUrl: "/",
   cname: "unibeautify.com",
+  cleanUrl: true,
+  useEnglishUrl: false,
   noIndex: false,
-  baseUrl: "/" /* base url for your project */,
-  editUrl: "https://github.com/unibeautify/website/edit/master/docs/",
   gaTrackingId: "UA-112681254-1",
+  githubUrl: GITHUB_URL,
+  repoUrl: GITHUB_URL,
+  editUrl: "https://github.com/unibeautify/website/edit/master/docs/",
+  debug: true,
+
+  // Header and footer
   headerLinks: [
+    { doc: "getting-started", label: "Docs" },
     { doc: "about", label: "About" },
-    { doc: "getting-started", label: "Usage" },
     // { href: "https://api.unibeautify.com/", label: "API" },
     { href: "https://assistant.unibeautify.com/", label: "Assistant" },
     { href: "https://playground.unibeautify.com/", label: "Playground" },
@@ -36,44 +44,65 @@ const siteConfig = {
     { href: GITHUB_URL, label: "GitHub" },
     { search: true },
   ],
-  users,
-  languages,
-  /* path to images for header/footer */
+  disableHeaderTitle: true,
   headerIcon: "img/logo-reversed-white.svg",
   footerIcon: "img/logo-reversed-white.svg",
   favicon: "img/favicon.ico",
-  /* colors for website */
+
+  // Import users and languages
+  users,
+  languages,
+
+  // Style specific
+  scrollToTop: true,
+  scrollToTopOptions: {
+    showWhenScrollTopIs: 300,
+  },
+  onPageNav: "separate",
   colors: {
     primaryColor: "#388ede",
     secondaryColor: "#303438",
   },
-  // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  copyright: `${String.fromCharCode(
-    169,
-  )} ${new Date().getFullYear()} Glavin Wiechert`,
-  organizationName: "unibeautify", // or set an env variable ORGANIZATION_NAME
-  projectName: "website", // or set an env variable PROJECT_NAME
-  scrollToTop: true,
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: "atom-one-dark",
   },
-  onPageNav: "separate",
   scripts: [
     "https://buttons.github.io/buttons.js",
+    "../js/jquery-3.3.1.min.js",
+    "../js/featherlight.js",
+    "../js/featherlight.gallery.js",
     "../js/selectList.js",
     "../js/disqus.js",
-    "../js/header.js",
+    "../js/theme.js",
   ],
   stylesheets: [
-    "https://fonts.googleapis.com/css?family=Lato:400,700"
+    "https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Lato:400,700"
   ],
-  // You may provide arbitrary config keys to be used as needed by your template.
-  repoUrl: GITHUB_URL,
+
+  // Addition meta
+  ogImage: 'img/og/facebook-banner.png',
+
+  // Twitter
+  twitter: true,
+  twitterUsername: 'unibeautify',
+  twitterImage: 'img/og/twitter-card.png',
+
+  // Facebook
+  // facebookAppId: '1615782811974223',
+  // facebookComments: true,
+  // facebookPixelId: '352490515235776',
+
+  // Algolia
   algolia: {
     apiKey: "f48f239ca346334bd0b61308ab16f524",
     indexName: "unibeautify",
   },
+  
+  // Copyright used in /core/Footer.js and blog rss/atom feeds.
+  copyright: `${String.fromCharCode(
+    169,
+  )} ${new Date().getFullYear()} Glavin Wiechert`,
 };
 
 module.exports = siteConfig;
