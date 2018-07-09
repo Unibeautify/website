@@ -1,9 +1,9 @@
-body:not(.separateOnPageNav) .navPusher {
-  padding: 0;
+.navPusher {
+  padding-top: 60px;
 }
 
-.navPusher {
-  padding-top: 50px;
+.separateOnPageNav .navPusher {
+  padding-top: 150px;
 }
 
 body:not(.separateOnPageNav) .mainContainer {
@@ -11,7 +11,7 @@ body:not(.separateOnPageNav) .mainContainer {
 }
 
 .mainContainer {
-  padding-top: 46px;
+  padding-top: 40px;
 }
 
 .mainContainer > .paddingTop {
@@ -20,4 +20,13 @@ body:not(.separateOnPageNav) .mainContainer {
 
 .mainContainer > .paddingBottom {
   padding-bottom: 80px;
+}
+
+@media (min-width: 1024px) {
+  body:not(.separateOnPageNav) .navPusher {
+    padding: 0;
+  }
+  .separateOnPageNav .navPusher {
+    padding-top: 60px;
+  }
 }

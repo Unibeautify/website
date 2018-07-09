@@ -9,3 +9,7 @@
     border-left: 1px solid var(--grey);
   }
 }
+
+.onPageNav a.active {
+  font-weight: 700;
+}

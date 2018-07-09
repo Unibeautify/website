@@ -1,7 +1,7 @@
 hero {
   display: block;
 
-  height: 700px;
+  height: 450px;
 
   padding-top: 40px;
 
@@ -37,10 +37,15 @@ hero h2 {
   font-size: 40px;
 }
 
-hero .logoWrapper {
-  margin-left: 170px;
-}
-
 hero .logoWrapper img {
   width: 260px;
+}
+
+@media only screen and (min-width: 1200px) {
+  hero {
+    height: 700px;
+  }
+  hero .logoWrapper {
+    margin-left: 170px;
+  }
 }

@@ -28,6 +28,12 @@
 }
 
 .featureSection {
+  padding: 0 !important;
+}
+
+.featureSection .wrapper {
+  padding: 80px 20px;
+
   border-radius: var(--border-radius);
 
   box-shadow: 0 10px 80px -10px rgb(48, 52, 56, .2);
