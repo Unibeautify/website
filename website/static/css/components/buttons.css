@@ -2,10 +2,13 @@
   display: inline-block;
 
   margin-right: 10px;
+  margin-bottom: 10px;
 
   padding: 10px 28px;
 
-  transition: all 240 linear;
+  transform: translate3d(0, 0, 0);
+
+  transition: all 240 ease-in-out;
 
   border: 1px solid var(--dark);
 
@@ -20,6 +23,8 @@
 }
 
 .button:hover {
+  border-color: var(--dark-light);
+
   background: var(--dark-light);
 }
 

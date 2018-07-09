@@ -79,9 +79,26 @@ body:not(.separateOnPageNav) .wrapper {
 }
 
 [class^='col'] {
-  padding: 0;
+  /* padding: 0; */
 }
 
 .row {
-  margin: 0;
+  width: 100%;
+  /* margin: 0; */
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
 }

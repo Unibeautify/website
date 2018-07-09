@@ -1,14 +1,17 @@
 :root {
   --font: "Lato", sans-serif;
+  --font-mono: "IBM Plex Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --main: #388ede;
   --main-light: #68b1f5;
-  --dark: #303438;
+  --darker: #23252d;
+  --dark: #282c34;
   --light: #fff;
   --light-grey: #fbfbfb;
   --grey: #e8e8e8;
   --mud: #e8e8e8;
   --dark-light: #5b5f63;
   --border-radius: 6px;
+  --icon-size: 23px;
   /* Header */
   --header-transition-duration: 160ms;
 }

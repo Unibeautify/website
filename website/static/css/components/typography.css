@@ -1,0 +1,26 @@
+.postHeaderTitle {
+  margin-bottom: 20px;
+
+  line-height: 1;
+}
+
+p a {
+  text-decoration: underline dotted;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline solid;
+}
+
+b {
+  font-weight: 700;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
