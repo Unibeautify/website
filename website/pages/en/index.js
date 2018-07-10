@@ -52,7 +52,7 @@ const SplashContainer = props => (
 
 const Logo = props => (
   <div className="projectLogo">
-    <img src={props.img_src} />
+    <img src={props.img_src} title="Unibeautify"/>
   </div>
 );
 
@@ -76,7 +76,7 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('unibeautify.png')} />
+        <Logo img_src={imgUrl('unibeautify-signet.svg')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
@@ -154,7 +154,7 @@ const TryOut = props => (
     {[
       {
         content: 'Talk about trying this out',
-        image: imgUrl('unibeautify.png'),
+        image: imgUrl('unibeautify-logo.svg'),
         imageAlign: 'left',
         title: 'Try it Out',
       },
@@ -167,7 +167,7 @@ const Description = props => (
     {[
       {
         content: 'This is another description of how this project is useful',
-        image: imgUrl('unibeautify.png'),
+        image: imgUrl('unibeautify-logo.svg'),
         imageAlign: 'right',
         title: 'Description',
       },

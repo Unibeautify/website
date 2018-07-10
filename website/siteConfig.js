@@ -18,6 +18,7 @@ const languages = loadYaml("./data/languages.yml");
 const siteConfig = {
   title: "Unibeautify" /* title for your website */,
   tagline: "Universal Code Beautifier",
+  disableHeaderTitle: true,
   githubUrl: GITHUB_URL,
   url: "https://unibeautify.com/" /* your website url */,
   cname: "unibeautify.com",
@@ -39,9 +40,9 @@ const siteConfig = {
   users,
   languages,
   /* path to images for header/footer */
-  headerIcon: "img/unibeautify.png",
-  footerIcon: "img/unibeautify.png",
-  favicon: "img/favicon.ico",
+  headerIcon: "img/unibeautify-logo-reversed-white.svg",
+  footerIcon: "img/unibeautify-signet-reversed-white.svg",
+  favicon: "img/unibeautify.ico",
   /* colors for website */
   colors: {
     primaryColor: "#023e7d",
