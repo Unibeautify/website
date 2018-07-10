@@ -4,18 +4,14 @@
 
 .imageAlignRight .blockImage {
   flex: 0 1 100%;
-
   max-width: 100%;
-
   margin-left: 0;
 }
 
 @media (min-width: 992px) {
   .imageAlignRight .blockImage {
     flex: 0 1 350px;
-
     max-width: 350px;
-
     margin-left: 40px;
   }
 }
@@ -23,7 +19,6 @@
 @media (min-width: 1200px) {
   .imageAlignRight .blockImage {
     flex: 0 1 500px;
-
     max-width: 500px;
   }
 }

@@ -9,29 +9,22 @@
 .featherlight-next,
 .featherlight-previous {
   display: flex;
-
   position: absolute;
   top: 50%;
-
   align-items: center;
   justify-content: center;
-
   width: 50px;
   height: 100%;
-
   transform: translateY(-50%);
   /* IE9 hack, otherwise navigation doesn't appear */
-
   background: rgba(0, 0, 0, 0);
-
   cursor: pointer;
-          user-select: none;
-
+  user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-   -khtml-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .featherlight-next {
@@ -45,11 +38,9 @@
 .featherlight-next span,
 .featherlight-previous span {
   color: var(--light);
-
   font-size: 20px;
   font-style: normal;
   font-weight: normal;
-
   line-height: 1;
 }
 
