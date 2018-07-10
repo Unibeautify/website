@@ -4,9 +4,7 @@
     z-index: 100;
     top: 100px;
     left: 0;
-
     width: 100%;
-
     background: var(--grey);
   }
   .docsNavContainer .toc {
@@ -14,24 +12,18 @@
   }
   .docsNavContainer .toc .navBreadcrumb {
     position: relative;
-
     width: calc(100% - 30px);
     height: auto;
-
     margin-bottom: 0;
     margin-left: 20px;
-
     padding: 10px 0;
-
     overflow: visible;
-
     border: 0;
-
     background-color: transparent;
   }
   .docsSliderActive .toc .navBreadcrumb,
   .tocActive .docsNavContainer .toc .navBreadcrumb {
-    border-bottom: 1px solid #D2D2D2;
+    border-bottom: 1px solid #d2d2d2;
   }
   .tocActive .onPageNav {
     position: fixed;
@@ -39,17 +31,13 @@
     right: auto;
     bottom: auto;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     padding: 0;
-
     background: var(--grey);
   }
   .tocActive .onPageNav .toc-headings {
     margin: 0 auto;
-
     padding: 20px;
   }
   @media (min-width: 576px) {
@@ -75,10 +63,8 @@
 
 .toc .toggleNav .navToggle {
   position: relative;
-
   width: 20px;
   height: auto;
-
   margin-right: 10px;
 }
 
@@ -94,22 +80,15 @@
 
 .toc .toggleNav .navToggle i:after,
 .toc .toggleNav .navToggle i:before {
-  content: '';
-
+  content: "";
   top: 50%;
   left: 0;
-
   width: 100%;
   height: 2px;
-
   margin: 0;
-
   transform: translateY(-50%);
-
   border: 0;
-
   border-radius: 25%;
-
   background: var(--dark);
 }
 
@@ -123,12 +102,10 @@
 
 .toggleNav h2 i {
   display: inline-block;
-
   transform: translateY(-1px);
 }
 
 .docsSliderActive .toc section .navGroups {
   margin: 0 20px;
-
   padding: 20px 0;
 }

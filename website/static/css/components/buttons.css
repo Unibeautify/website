@@ -1,86 +1,66 @@
 .button {
   display: inline-block;
-
   margin-right: 10px;
   margin-bottom: 10px;
-
   padding: 10px 28px;
-
   transform: translate3d(0, 0, 0);
-
   transition: all 240 ease-in-out;
-
   border: 1px solid var(--dark);
-
   border-radius: 50px;
-
   background: var(--dark);
-
   color: var(--light);
-
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .button:hover {
   border-color: var(--dark-light);
-
   background: var(--dark-light);
 }
 
 .button.small {
   padding: 8px 18px;
-
   font-size: 13px;
 }
 
 .button.primary {
   border-color: var(--main);
-
   background: var(--main);
 }
 
 .button.primary:hover {
   border-color: var(--main-light);
-
   background: var(--main-light);
 }
 
 .button.light {
   border-color: var(--light);
-
   background: var(--light);
-
   color: var(--dark);
 }
 
 .button.light:hover {
   border-color: var(--grey);
-
   background: var(--grey);
 }
 
 .button.outline {
   background: transparent;
-
   color: var(--dark);
 }
 
 .button.outline:hover {
   background: var(--dark);
-
   color: var(--light);
 }
 
 .button.outline.light {
   border-color: var(--light);
-
   color: var(--light);
 }
 
 .button.outline.light:hover {
   background: var(--light);
-
   color: var(--dark);
 }
 

@@ -1,22 +1,14 @@
 .navSearchWrapper .aa-dropdown-menu {
   top: 130% !important;
-
   padding: 0;
-
   overflow: hidden;
-
   border: 0;
-
   border-radius: var(--border-radius);
-
-  background: #FFF;
-  box-shadow: 0 10px 80px -10px rgb(48, 52, 56, .2);
-
+  background: #fff;
+  box-shadow: 0 10px 80px -10px rgb(48, 52, 56, 0.2);
   color: #303538;
-
   font-size: 14px;
-
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   line-height: 1.8;
 }
 
@@ -41,7 +33,6 @@
 
 .algolia-docsearch-footer {
   padding: 4px 4px 4px 0;
-
   filter: grayscale(100%);
 }
 

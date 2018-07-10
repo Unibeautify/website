@@ -1,13 +1,9 @@
 .productShowcaseSection h2 {
   margin-top: 0;
-
   padding: 0;
   /* opacity: .5; */
-
   color: var(--dark);
-
   font-size: 30px;
-
   line-height: inherit;
 }
 
@@ -23,7 +19,6 @@
 
 .productShowcaseSection .logos a {
   color: var(--dark);
-
   font-size: 12px;
 }
 
@@ -33,10 +28,8 @@
 
 .featureSection .wrapper {
   padding: 80px 20px;
-
   border-radius: var(--border-radius);
-
-  box-shadow: 0 10px 80px -10px rgb(48, 52, 56, .2);
+  box-shadow: 0 10px 80px -10px rgb(48, 52, 56, 0.2);
 }
 
 .darkBackground {
@@ -59,8 +52,6 @@
 
 .ubiCISection .blockImage {
   overflow: hidden;
-
   border: 1px solid var(--grey);
-
   border-radius: var(--border-radius);
 }

@@ -14,22 +14,15 @@ html {
 
 body {
   position: relative;
-
   margin: 0;
-
   overflow-x: hidden;
   overflow-y: auto;
-
-  background: #FFF;
-
+  background: #fff;
   color: var(--dark);
-
   font-family: var(--font);
   font-size: 16px;
   font-weight: 400;
-
   line-height: 1.6;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -58,27 +51,22 @@ strong {
 
 .hidden [hidden] {
   visibility: hidden;
-
   opacity: 0;
-
   text-indent: -999999;
 }
 
 body:not(.separateOnPageNav) .container {
   display: flex;
-
   height: 100%;
 }
 
 body:not(.separateOnPageNav) .wrapper {
   display: flex;
-
   align-items: center;
-
   width: 100%;
 }
 
-[class^='col'] {
+[class^="col"] {
   /* padding: 0; */
 }
 
