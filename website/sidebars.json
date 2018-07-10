@@ -2,7 +2,8 @@
   "docs": {
     "About": [
       "about",
-      "ci"
+      "ci",
+      "credits"
     ],
     "Usage": [
       "getting-started",

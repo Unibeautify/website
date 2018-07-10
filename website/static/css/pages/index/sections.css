@@ -1,0 +1,66 @@
+.productShowcaseSection h2 {
+  margin-top: 0;
+
+  padding: 0;
+  /* opacity: .5; */
+
+  color: var(--dark);
+
+  font-size: 30px;
+
+  line-height: inherit;
+}
+
+.productShowcaseSection .logos img {
+  width: auto;
+  height: 100px;
+  max-height: none;
+}
+
+.productShowcaseSection.languages .logos img {
+  height: 70px;
+}
+
+.productShowcaseSection .logos a {
+  color: var(--dark);
+
+  font-size: 12px;
+}
+
+.featureSection {
+  padding: 0 !important;
+}
+
+.featureSection .wrapper {
+  padding: 80px 20px;
+
+  border-radius: var(--border-radius);
+
+  box-shadow: 0 10px 80px -10px rgb(48, 52, 56, .2);
+}
+
+.darkBackground {
+  background: var(--dark);
+}
+
+.lightBackground {
+  background: var(--light-grey);
+}
+
+.imageAlignTop .blockImage {
+  max-width: none;
+  height: 90px;
+}
+
+.imageAlignTop .blockImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.ubiCISection .blockImage {
+  overflow: hidden;
+
+  border: 1px solid var(--grey);
+
+  border-radius: var(--border-radius);
+}

@@ -1,0 +1,15 @@
+@media only screen and (min-width: 1024px) {
+  .onPageNav {
+    position: sticky;
+    top: 100px;
+  }
+  .onPageNav > .toc-headings {
+    padding: 0 0 0 15px;
+
+    border-left: 1px solid var(--grey);
+  }
+}
+
+.onPageNav a.active {
+  font-weight: 700;
+}

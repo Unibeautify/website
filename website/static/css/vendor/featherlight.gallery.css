@@ -1,0 +1,74 @@
+/**
+ * Featherlight Gallery – an extension for the ultra slim jQuery lightbox
+ * Version 1.7.13 - http://noelboss.github.io/featherlight/
+ *
+ * Copyright 2018, Noël Raoul Bossart (http://www.noelboss.com)
+ * MIT Licensed.
+**/
+
+.featherlight-next,
+.featherlight-previous {
+  display: flex;
+
+  position: absolute;
+  top: 50%;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 100%;
+
+  transform: translateY(-50%);
+  /* IE9 hack, otherwise navigation doesn't appear */
+
+  background: rgba(0, 0, 0, 0);
+
+  cursor: pointer;
+          user-select: none;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+}
+
+.featherlight-next {
+  right: -50px;
+}
+
+.featherlight-previous {
+  left: -50px;
+}
+
+.featherlight-next span,
+.featherlight-previous span {
+  color: var(--light);
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+
+  line-height: 1;
+}
+
+/* Hide navigation while loading */
+
+.featherlight-loading .featherlight-next,
+.featherlight-loading .featherlight-previous {
+  display: none;
+}
+
+/* Hide navigation in case of single image */
+
+.featherlight-first-slide.featherlight-last-slide .featherlight-next,
+.featherlight-first-slide.featherlight-last-slide .featherlight-previous {
+  display: none;
+}
+
+/* handling phones and small screens */
+
+@media only screen and (max-width: 1024px) {
+  /* XYZ */
+}
