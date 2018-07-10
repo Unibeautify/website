@@ -40,9 +40,9 @@ const siteConfig = {
   users,
   languages,
   /* path to images for header/footer */
-  headerIcon: "img/logo-reversed-white.svg",
-  footerIcon: "img/signet-reversed-white.svg",
-  favicon: "img/favicon.ico",
+  headerIcon: "img/unibeautify-logo-reversed-white.svg",
+  footerIcon: "img/unibeautify-signet-reversed-white.svg",
+  favicon: "img/unibeautify.ico",
   /* colors for website */
   colors: {
     primaryColor: "#023e7d",
