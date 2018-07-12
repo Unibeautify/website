@@ -1,17 +1,17 @@
 let previousSelectedLanguage;
 
 window.onload = function() {
+  const langSelectedElement = document.getElementById("languages-select");
+
+  console.log(langSelectedElement);
+
+  if (langSelectedElement.length == 0) return;
+
   loadSelected();
 
-  document.getElementById(
-    "languages-select",
-  ).onchange = function onSelectionChange() {
+  langSelectedElement.onchange = function onSelectionChange() {
     const languageName = getSelectedLanguage();
-    history.pushState(
-      { language: languageName },
-      null,
-      `?language=${languageName}`,
-    );
+    history.pushState({ language: languageName }, null, `?language=${languageName}`);
     updateCodeExample(languageName);
   };
 };
@@ -94,10 +94,7 @@ function getDefaultLanguage() {
 }
 
 function options() {
-  return [].map.call(
-    document.getElementById("languages-select").options,
-    option => option,
-  );
+  return [].map.call(document.getElementById("languages-select").options, option => option);
 }
 
 function fixLanguage(rawLanguage) {
