@@ -1,11 +1,11 @@
 ::selection {
-  background: var(--main);
-  /* color: var(--main); */
+  background: var(--dark);
+  color: var(--light);
 }
 
 ::-moz-selection {
-  background: var(--main);
-  /* color: var(--main); */
+  background: var(--dark);
+  color: var(--light);
 }
 
 html {
@@ -66,13 +66,19 @@ body:not(.separateOnPageNav) .wrapper {
   width: 100%;
 }
 
-[class^="col"] {
-  /* padding: 0; */
+.hidden,
+[hidden] {
+  display: none;
 }
+
+.wrapper {
+  width: 100%;
+}
+
+/* TODO: remove this when bootstrap can load via cdn or node_modules */
 
 .row {
   width: 100%;
-  /* margin: 0; */
 }
 
 .align-right {

@@ -1,0 +1,61 @@
+.featherlight .featherlight-close-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  color: var(--light);
+  font-size: 30px;
+}
+
+.featherlight .featherlight-content {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+.featherlight-next,
+.featherlight-previous {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  left: auto;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 100%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.featherlight-next:hover,
+.featherlight-previous:hover {
+  background: rgba(0, 0, 0, 0);
+}
+
+.featherlight-next {
+  right: -60px;
+}
+
+.featherlight-previous {
+  left: -60px;
+}
+
+.featherlight-next span,
+.featherlight-previous span {
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  margin-top: 0;
+  color: var(--light);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-shadow: none;
+}

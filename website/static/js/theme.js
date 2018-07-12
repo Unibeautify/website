@@ -1,11 +1,11 @@
-$(window).on('load', function(){
+$(window).on("load", function() {
   // =============================================
   // Sticky header
 
   const header = $(".fixedHeaderContainer");
 
-  if ($('.sideNavVisible').length == 0) {
-    $(window).on('scroll', function(){
+  if ($(".sideNavVisible").length == 0) {
+    $(window).on("scroll", function() {
       let scrollTop = window.pageYOffset;
 
       if (scrollTop >= 10) {
@@ -19,18 +19,18 @@ $(window).on('load', function(){
   // =============================================
   // Featherlight
 
-  $('.post img, .featherGallery img').featherlightGallery({
-    targetAttr: 'src',
+  $(".post img, .featherGallery img, img.featherGallery").featherlightGallery({
+    targetAttr: "src",
     persist: true,
-    previousIcon: '&#9664;',
-    nextIcon: '&#9654;',
+    previousIcon: "&#9664;",
+    nextIcon: "&#9654;",
     galleryFadeIn: 200,
-    galleryFadeOut: 200
+    galleryFadeOut: 200,
   });
 
-  $('.featherImage img, img.featherImage').featherlight({
-    targetAttr: 'src',
-    persist: true
+  $(".featherImage img, img.featherImage").featherlight({
+    targetAttr: "src",
+    persist: true,
   });
 
   // =============================================
@@ -44,19 +44,20 @@ $(window).on('load', function(){
   });
 
   function scrollSpy() {
-    var sections = $('.anchor').map(function(){
-      console.log(this);
-      return $(this).attr('id');
+    var sections = $(".anchor").map(function() {
+      return $(this).attr("id");
     });
 
     var current;
     for (var i = 0; i < sections.length; i++) {
-      if ( $('#'+sections[i]).offset().top <= $(window).scrollTop() + offset ) {
+      if ($("#" + sections[i]).offset().top <= $(window).scrollTop() + offset) {
         current = sections[i];
       }
     }
 
-    $(".onPageNav a[href='#"+current+"']").addClass('active');
-    $(".onPageNav a").not("a[href='#"+current+"']").removeClass('active');      
+    $(".onPageNav a[href='#" + current + "']").addClass("active");
+    $(".onPageNav a")
+      .not("a[href='#" + current + "']")
+      .removeClass("active");
   }
 });

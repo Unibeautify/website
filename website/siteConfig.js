@@ -69,24 +69,29 @@ const siteConfig = {
   },
   scripts: [
     "https://buttons.github.io/buttons.js",
-    "../js/jquery-3.3.1.min.js",
-    "../js/featherlight.js",
-    "../js/featherlight.gallery.js",
+    "https://code.jquery.com/jquery-3.3.1.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js",
     "../js/selectList.js",
     "../js/disqus.js",
     "../js/theme.js",
   ],
   stylesheets: [
-    "https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Lato:400,700"
+    "https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Lato:400,700",
+    "https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.css",
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css",
   ],
 
   // Addition meta
-  ogImage: 'img/og/facebook-banner.png',
+  ogImage: "img/og/facebook-banner.png",
 
   // Twitter
   twitter: true,
-  twitterUsername: 'unibeautify',
-  twitterImage: 'img/og/twitter-card.png',
+  twitterUsername: "unibeautify",
+  twitterImage: "img/og/twitter-card.png",
 
   // Facebook
   // facebookAppId: '1615782811974223',
@@ -98,7 +103,7 @@ const siteConfig = {
     apiKey: "f48f239ca346334bd0b61308ab16f524",
     indexName: "unibeautify",
   },
-  
+
   // Copyright used in /core/Footer.js and blog rss/atom feeds.
   copyright: `${String.fromCharCode(
     169,

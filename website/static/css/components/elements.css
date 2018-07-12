@@ -1,3 +1,29 @@
 #back-to-top {
   background: var(--dark);
 }
+
+details {
+  margin-bottom: 5px;
+  padding: 4px 12px 5px;
+  border: 1px solid var(--grey);
+  border-radius: var(--border-radius);
+  background: var(--light-grey);
+  cursor: pointer;
+}
+
+details table:last-of-type {
+  margin-bottom: 0;
+}
+
+.exampleCode {
+  margin-top: 25px;
+}
+
+.edit-page-link {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a[href*="unibeautify"] img {
+  vertical-align: sub;
+}
