@@ -1,0 +1,33 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "amd": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "globals": {
+        "$": true,
+        "jQuery": true
+    },
+    "extends": [
+        "eslint:recommended", "plugin:react/recommended"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            2, {
+                "SwitchCase": 1
+            }
+        ],
+
+        // React specific rules
+        "react/prop-types": [0]
+    }
+}
