@@ -77,7 +77,11 @@ export default class OptionsDoc extends Doc {
       url: "https://img.shields.io/npm/v/unibeautify.svg",
       href: "https://www.npmjs.com/package/unibeautify",
     });
-    builder.append(`**Available since version**: ${this.option.since} (**Current:** ${currentUnibeautifyVersionBadge})\n`);
+    builder.append(
+      `**Available since version**: ${
+        this.option.since
+      } (**Current:** ${currentUnibeautifyVersionBadge})\n`,
+    );
     builder.append(`**Type**: \`${this.type}\`\n`);
     builder.append(`**Default**: \`${JSON.stringify(this.option.default)}\`\n`);
     if (this.option.enum) {
@@ -102,9 +106,7 @@ export default class OptionsDoc extends Doc {
       builder.details("<strong>Comparison Table</strong>", builder => {
         this.appendTable(builder);
       });
-      return this.appendExamples(builder).then(() =>
-        builder.build()
-      );
+      return this.appendExamples(builder).then(() => builder.build());
     } else {
       builder.editButton("Add Beautifier", editBeautifiersUrl);
       builder.append("No language or beautifier support!");
@@ -189,8 +191,15 @@ export default class OptionsDoc extends Doc {
           ),
         ).then(beautified => {
           builder.header("Examples", 2);
-          builder.append("<label>Select Language: </label>");
-          builder.append(`<div class="select"><select id="languages-select">`);
+          builder.append(
+            '<div class="input-group languages-select"><div class="input-group-prepend">',
+          );
+          builder.append(
+            '<label class="input-group-text" for="languages-select">Select Language:</label>',
+          );
+          builder.append(
+            '</div><select class="custom-select" id="languages-select">',
+          );
           let defaultDisplay: string;
           let isDefault: boolean = true;
           this.languages.forEach(language => {
@@ -386,7 +395,9 @@ export default class OptionsDoc extends Doc {
   }
 
   private editExampleButtonUrl(language: Language): string {
-    return `${this.languageEditURL}/samples/${language.name}/${this.optionKey}.txt`;
+    return `${this.languageEditURL}/samples/${language.name}/${
+      this.optionKey
+    }.txt`;
   }
 
   private addExampleButtonUrl(language: Language): string {
