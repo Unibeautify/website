@@ -28,8 +28,9 @@ function maybeLoadDisqus() {
   const postContainer = document.querySelectorAll(".post article")[0];
   const isDocsPage = PAGE_IDENTIFIER.indexOf("/docs") !== -1;
   if (postContainer && isDocsPage) {
-    postContainer.appendChild(hr);
-    postContainer.appendChild(disqusContainer);
+    const wrapperContainer = postContainer.parentElement.parentElement;
+    wrapperContainer.appendChild(hr);
+    wrapperContainer.appendChild(disqusContainer);
     loadDisqus();
   }
 }
