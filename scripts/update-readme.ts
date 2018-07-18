@@ -3,7 +3,7 @@ import * as fs from "fs";
 import * as _ from "lodash";
 
 import beautifiers from "./beautifiers";
-import { Beautifier, DependencyType } from "../node_modules/unibeautify";
+import { Beautifier, DependencyType } from "unibeautify";
 
 const readmePath = path.resolve(__dirname, "../README.md");
 
