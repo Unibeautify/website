@@ -18,7 +18,7 @@ import OptionsListDoc from "./OptionsListDoc";
 import OptionsDoc from "./OptionsDoc";
 import ExecutableDoc from "./ExecutableDoc";
 import { slugify, optionKeyToTitle } from "./utils";
-import beautifiers from "./beautifiers";
+import beautifiers from "../beautifiers";
 
 const docsPath = "docs";
 Unibeautify.loadBeautifiers(beautifiers);

@@ -15,7 +15,8 @@
     "rm-options": "rimraf 'docs/option-*' && rimraf 'docs/options-for-languages.md'",
     "rm-executables": "rimraf 'docs/executable-*'",
     "generate-docs": "ts-node scripts/generate-docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-readme": "ts-node scripts/update-readme"
   },
   "repository": {
     "type": "git",
