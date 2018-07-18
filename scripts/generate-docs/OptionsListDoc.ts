@@ -24,10 +24,10 @@ export default class OptionsListDoc extends Doc {
       "Click on an option title below for more information including configuration an" +
         "d examples."
     );
-    builder.append("| Title | Config Key | Description |");
-    builder.append("| --- | --- | --- |");
+    builder.append("| # | Title | Config Key | Description |");
+    builder.append("| --- | --- | --- | --- |");
     const options: OptionsRegistry = this.allOptions;
-    Object.keys(options).forEach(key => {
+    Object.keys(options).forEach((key, index) => {
       const option = options[key];
       let title: string = option.title || "";
       if (!title) {
@@ -35,7 +35,7 @@ export default class OptionsListDoc extends Doc {
       }
       const optionId = `option-${slugify(title)}`;
       let titleLink: string = MarkdownBuilder.createDocLink(title, optionId);
-      let row = `| **${titleLink}** | ${key} | ${option.description.replace(
+      let row = `| ${index + 1} | **${titleLink}** | ${key} | ${option.description.replace(
         /\|/g,
         "&#124;"
       )} |`;

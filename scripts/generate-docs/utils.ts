@@ -83,3 +83,18 @@ export function badgesForRepository(repository: {
       return [];
   }
 }
+
+export function globsForLanguage(language: Language): string[] {
+  return [
+    ...globsForFileNames(language.fileNames),
+    ...globsForExtensions(language.extensions),
+  ];
+}
+
+function globsForExtensions(extensions: string[] = []): string[] {
+  return extensions.map(ext => `**/*${ext}`);
+}
+
+function globsForFileNames(fileNames: string[] = []): string[] {
+  return fileNames.map(fileName => `**/${fileName}`);
+}

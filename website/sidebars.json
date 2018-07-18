@@ -10,7 +10,8 @@
       "cli",
       "config-file",
       "options-for-languages",
-      "options-for-beautifiers"
+      "options-for-beautifiers",
+      "languages"
     ],
     "Integrations": [
       "integration-github",
@@ -36,43 +37,6 @@
       "beautifier-php_codesniffer",
       "beautifier-prettier",
       "beautifier-pretty-diff"
-    ],
-    "Languages": [
-      "language-c",
-      "language-coldfusion",
-      "language-cpp",
-      "language-csharp",
-      "language-css",
-      "language-ejs",
-      "language-go",
-      "language-graphql",
-      "language-handlebars",
-      "language-html",
-      "language-html-erb",
-      "language-java",
-      "language-javascript",
-      "language-json",
-      "language-jsx",
-      "language-less",
-      "language-liquid",
-      "language-markdown",
-      "language-mustache",
-      "language-objective-c",
-      "language-php",
-      "language-python",
-      "language-riot",
-      "language-sass",
-      "language-scss",
-      "language-spacebars",
-      "language-svg",
-      "language-swig",
-      "language-titanium-style-sheets",
-      "language-twig",
-      "language-typescript",
-      "language-visualforce",
-      "language-vue",
-      "language-xml",
-      "language-xtemplate"
     ]
   },
   "executables": {
@@ -167,6 +131,71 @@
       "option-wrap-attributes-indent-size",
       "option-wrap-line-length",
       "option-wrap-prose"
+    ]
+  },
+  "languages": {
+    "C": [
+      "language-c",
+      "language-coldfusion",
+      "language-cpp",
+      "language-csharp",
+      "language-css"
+    ],
+    "E": [
+      "language-ejs"
+    ],
+    "G": [
+      "language-go",
+      "language-graphql"
+    ],
+    "H": [
+      "language-handlebars",
+      "language-html",
+      "language-html-erb"
+    ],
+    "J": [
+      "language-java",
+      "language-javascript",
+      "language-json",
+      "language-jsx"
+    ],
+    "L": [
+      "language-less",
+      "language-liquid"
+    ],
+    "M": [
+      "language-markdown",
+      "language-mustache"
+    ],
+    "O": [
+      "language-objective-c"
+    ],
+    "P": [
+      "language-php",
+      "language-python"
+    ],
+    "R": [
+      "language-riot"
+    ],
+    "S": [
+      "language-sass",
+      "language-scss",
+      "language-spacebars",
+      "language-svg",
+      "language-swig"
+    ],
+    "T": [
+      "language-titanium-style-sheets",
+      "language-twig",
+      "language-typescript"
+    ],
+    "V": [
+      "language-visualforce",
+      "language-vue"
+    ],
+    "X": [
+      "language-xml",
+      "language-xtemplate"
     ]
   }
 }

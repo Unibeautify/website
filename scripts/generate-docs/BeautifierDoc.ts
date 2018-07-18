@@ -214,7 +214,7 @@ export default class BeautifierDoc extends Doc {
       builder.append("No configuration options are supported.");
       builder.append(
         `The following languages are supported without options: ${this.languages
-          .map(lang => `\`${lang.name}\``)
+          .map(linkForLanguage)
           .join(", ")}.`
       );
       return builder;

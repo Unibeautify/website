@@ -129,6 +129,8 @@
     "XML": "XML",
     "language-xtemplate": "XTemplate",
     "XTemplate": "XTemplate",
+    "languages": "Supported Languages",
+    "Supported Languages": "Supported Languages",
     "option-align-assignments": "Align Assignments",
     "Align Assignments": "Align Assignments",
     "option-arrow-parens": "Arrow Parens",
@@ -222,7 +224,6 @@
     "Integrations": "Integrations",
     "Editors": "Editors",
     "Beautifiers": "Beautifiers",
-    "Languages": "Languages",
     "PHP-CS-Fixer Beautifier": "PHP-CS-Fixer Beautifier",
     "ClangFormat Beautifier": "ClangFormat Beautifier",
     "PHP_CodeSniffer Beautifier": "PHP_CodeSniffer Beautifier",
@@ -243,7 +244,13 @@
     "R": "R",
     "S": "S",
     "U": "U",
-    "W": "W"
+    "W": "W",
+    "G": "G",
+    "H": "H",
+    "L": "L",
+    "T": "T",
+    "V": "V",
+    "X": "X"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
