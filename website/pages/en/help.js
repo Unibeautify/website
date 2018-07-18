@@ -17,7 +17,7 @@ class Help extends React.Component {
   render() {
     const supportLinks = [
       {
-        content: 'Learn more using the [documentation on this site.](/test-site/docs/en/doc1.html)',
+        content: 'Learn more using the [documentation on this site.](/docs/getting-started.html)',
         title: 'Browse Docs',
       },
       {
@@ -32,7 +32,7 @@ class Help extends React.Component {
 
     return (
       <div className="docMainWrapper wrapper">
-        <Container className="mainContainer documentContainer postContainer">
+        <Container className="mainContainer documentContainer postContainer" padding={['top']}>
           <div className="post">
             <header className="postHeader">
               <h2>Need help?</h2>

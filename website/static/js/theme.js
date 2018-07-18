@@ -2,6 +2,11 @@ $(window).on("load", function() {
   // =============================================
   // Sticky header
 
+  const hasHero = $('.navPusher hero').length > 0;
+  if (hasHero) {
+    $('body').addClass('heroVisible');
+  }
+
   const header = $(".fixedHeaderContainer");
 
   if ($(".sideNavVisible").length == 0) {

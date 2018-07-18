@@ -150,7 +150,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .fixedHeaderContainer {
+  .heroVisible .fixedHeaderContainer {
     background: transparent;
   }
   .fixedHeaderContainer.sticky {

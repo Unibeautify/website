@@ -198,7 +198,7 @@ const Showcase = props => {
       <div className="logos">{showcase}</div>
       <div className="more-users button-group">
         <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title}
+          More {siteConfig.title}&nbsp;
           Users
         </a>
         <a className="button primary" href={siteConfig.editUrl.replace('docs/', 'website/data/users.yml')}>
