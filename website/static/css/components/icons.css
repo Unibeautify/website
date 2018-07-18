@@ -1,0 +1,7 @@
+img[src$="#icon"] {
+  display: inline-block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin: auto 2px -2px;
+  vertical-align: baseline;
+}

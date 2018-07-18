@@ -1,8 +1,12 @@
 - caption: "Unibeautify"
-  image: "img/unibeautify.png"
+  image: "img/signet.svg"
   infoLink: "https://github.com/Unibeautify"
   pinned: true
 - caption: "Atom-Beautify"
-  image: "img/logo/atom-128px.png"
+  image: "img/logos/atom-logo.svg"
   infoLink: "https://github.com/Glavin001/atom-beautify"
+  pinned: true
+- caption: "VSCode-Unibeautify"
+  image: "img/logos/vscode-logo.svg"
+  infoLink: "https://github.com/Unibeautify/vscode"
   pinned: true

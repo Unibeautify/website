@@ -1,0 +1,98 @@
+::selection {
+  background: var(--dark);
+  color: var(--light);
+}
+
+::-moz-selection {
+  background: var(--dark);
+  color: var(--light);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  color: var(--dark);
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+iframe,
+img,
+video {
+  max-width: 100%;
+}
+
+a,
+b,
+div,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+span,
+strong {
+  font-family: var(--font);
+}
+
+.hidden [hidden] {
+  visibility: hidden;
+  opacity: 0;
+  text-indent: -999999;
+}
+
+body:not(.separateOnPageNav) .container {
+  display: flex;
+  height: 100%;
+}
+
+body:not(.separateOnPageNav) .wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.hidden,
+[hidden] {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+/* TODO: remove this when bootstrap can load via cdn or node_modules */
+
+.row {
+  width: 100%;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}

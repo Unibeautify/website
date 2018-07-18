@@ -6,15 +6,15 @@
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/@types/diff/-/diff-3.5.1.tgz#30253f6e177564ad7da707b1ebe46d3eade71706"
 
-"@types/fs-extra@5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.0.3.tgz#feb31d55eeae3ccd5f92dbce806344a6c777a713"
+"@types/fs-extra@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.0.4.tgz#b971134d162cc0497d221adde3dbb67502225599"
   dependencies:
     "@types/node" "*"
 
-"@types/lodash@4.14.110":
-  version "4.14.110"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.110.tgz#fb07498f84152947f30ea09d89207ca07123461e"
+"@types/lodash@4.14.112":
+  version "4.14.112"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.112.tgz#4a8d8e5716b97a1ac01fe1931ad1e4cba719de5a"
 
 "@types/node@*":
   version "10.3.6"
