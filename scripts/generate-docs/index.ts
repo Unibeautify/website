@@ -16,6 +16,7 @@ import LanguageDoc from "./LanguageDoc";
 import BeautifierDoc from "./BeautifierDoc";
 import OptionsListDoc from "./OptionsListDoc";
 import OptionsDoc from "./OptionsDoc";
+import LanguagesListDoc from "./LanguagesListDoc";
 import ExecutableDoc from "./ExecutableDoc";
 import { slugify, optionKeyToTitle } from "./utils";
 import beautifiers from "../beautifiers";
@@ -34,6 +35,7 @@ const beautifierDocs = docsForBeautifiers(beautifiers);
 const executableDocs = docsForExecutables(beautifiers);
 const optionsDocs = docsForOptions();
 const optionsListDoc = new OptionsListDoc(optionRegistry);
+const languagesListDoc = new LanguagesListDoc(supportedLanguages);
 
 main();
 
@@ -44,6 +46,7 @@ async function main() {
     writeDocs(executableDocs),
     writeDocs(optionsDocs),
     writeDoc(optionsListDoc),
+    writeDoc(languagesListDoc),
     updateSidebars({
       languages: languageDocs,
       beautifiers: beautifierDocs,
@@ -136,12 +139,24 @@ async function updateSidebars({
     docs: {
       ...sidebars.docs,
       Beautifiers: beautifiers.map(beautifier => beautifier.id).sort(),
-      Languages: languages.map(lang => lang.id).sort(),
     },
     options: optionsSidebar(),
+    languages: languagesSidebar(languages),
     executables: executablesSidebar(executables),
   };
   return await writeFile(sidebarsPath, JSON.stringify(newSidebars, null, 2));
+}
+function languagesSidebar(
+  languages: LanguageDoc[]
+): {
+  [sectionKey: string]: string[];
+} {
+  const prefix = "language-";
+  const languageIds = languages.map(language => language.id).sort();
+  const firstLetterIndex = prefix.length;
+  return _.groupBy(languageIds, (languageId: string) =>
+    languageId[firstLetterIndex].toUpperCase()
+  );
 }
 function optionsSidebar(): {
   [sectionKey: string]: string[];

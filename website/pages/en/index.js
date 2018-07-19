@@ -125,12 +125,17 @@ const LanguagesShowcase = () => {
   });
 
   return (
-    // <Container>
     <div className="productShowcaseSection languages paddingBottom paddingTop">
-      <h2>{'Supported Languages'}</h2>
-      <div className="logos">{showcase}</div>
+      <h2>{"Supported Languages"}</h2>
+      <div className="logos">
+          {showcase}
+          <a href={"/docs/languages.html"}>
+              <img src={imgUrl("font-awesome/plus-square-regular.svg")} title={"And more..."}/>
+              <br/>
+              And more...
+          </a>
+      </div>
     </div>
-    // </Container>
   );
 };
 
