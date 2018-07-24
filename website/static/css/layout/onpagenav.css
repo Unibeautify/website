@@ -3,18 +3,15 @@
     position: sticky;
     top: 100px;
   }
-
-  .onPageNav > .toc-headings {
+  .onPageNav>.toc-headings {
     padding: 0;
     border-left: 1px solid var(--grey);
   }
-
   .onPageNav a {
     margin-left: -1px;
     padding-left: 15px;
     border-left: 1px solid transparent;
   }
-
   .onPageNav a.active {
     border-left-color: var(--dark);
   }
