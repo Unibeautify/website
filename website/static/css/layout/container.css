@@ -10,11 +10,11 @@
   padding-top: 40px;
 }
 
-.mainContainer > .paddingTop {
+.mainContainer>.paddingTop {
   padding-top: 80px;
 }
 
-.mainContainer > .paddingBottom {
+.mainContainer>.paddingBottom {
   padding-bottom: 80px;
 }
 
