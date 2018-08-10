@@ -770,7 +770,7 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
-lodash@4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
+lodash@4.17.10, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.3.0:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
@@ -1101,7 +1101,7 @@ require-uncached@^1.0.3:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
 
-requireg@^0.1.7:
+requireg@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/requireg/-/requireg-0.1.8.tgz#75c1d495294fa5ddfd51e4fcca4965c44f1ed8b1"
   dependencies:
@@ -1343,13 +1343,13 @@ typescript@3.0.1:
   version "0.0.1"
   resolved "git+https://github.com/Unibeautify/ugly-samples.git#d204499132fef56885d4b8bb089a74058b6f4dc2"
 
-unibeautify@0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/unibeautify/-/unibeautify-0.15.0.tgz#deb7e07fb6187e918a1ce9937f804fbc37d0612d"
+unibeautify@0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/unibeautify/-/unibeautify-0.16.0.tgz#f0fceb2fd11f3bd9ecebeb9ed7674483b8954e1d"
   dependencies:
     diff "^3.5.0"
-    lodash "^4.17.5"
-    requireg "^0.1.7"
+    lodash "^4.17.10"
+    requireg "^0.1.8"
     semver "^5.5.0"
 
 universalify@^0.1.0:

@@ -57,6 +57,6 @@
     "rimraf": "2.6.2",
     "ts-node": "7.0.0",
     "typescript": "3.0.1",
-    "unibeautify": "0.15.0"
+    "unibeautify": "0.16.0"
   }
 }
