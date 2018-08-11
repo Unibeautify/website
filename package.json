@@ -55,7 +55,7 @@
     "prettier": "1.14.2",
     "prettydiff2": "2.2.7",
     "rimraf": "2.6.2",
-    "ts-node": "7.0.0",
+    "ts-node": "7.0.1",
     "typescript": "3.0.1",
     "unibeautify": "0.16.0"
   }
