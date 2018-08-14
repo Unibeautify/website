@@ -2,3 +2,16 @@
 .edit-page-link {
   margin-right: 0;
 }
+
+.docs-prevnext {
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .docs-prevnext .docs-prev.button {
+    width: 100%;
+  }
+  .docs-prevnext .docs-next.button {
+    width: 100%;
+  }
+}
