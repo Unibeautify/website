@@ -1,0 +1,28 @@
+.navPusher {
+  padding-top: 60px;
+}
+
+.separateOnPageNav .navPusher {
+  padding-top: 150px;
+}
+
+.mainContainer {
+  padding-top: 40px;
+}
+
+.mainContainer>.paddingTop {
+  padding-top: 80px;
+}
+
+.mainContainer>.paddingBottom {
+  padding-bottom: 80px;
+}
+
+@media (min-width: 1024px) {
+  body:not(.separateOnPageNav) .navPusher {
+    padding: 0;
+  }
+  .separateOnPageNav .navPusher {
+    padding-top: 60px;
+  }
+}

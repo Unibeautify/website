@@ -13,6 +13,7 @@ import {
   emojis,
   coreLanguagesEditUrl,
   badgesForRepository,
+  globsForLanguage,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -35,9 +36,40 @@ export default class LanguageDoc extends Doc {
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
+    this.appendSelectorInfo(builder);
     this.appendSupportedBeautifiers(builder);
     this.appendOptionsTable(builder);
     return builder.build();
+  }
+  private appendSelectorInfo(builder: MarkdownBuilder) {
+    const {
+      atomGrammars = [],
+      vscodeLanguages = [],
+      sublimeSyntaxes = [],
+    } = this.language;
+    if (atomGrammars.length) {
+      builder.append(
+        `**[Atom](https://atom.io/) Grammars**: ${atomGrammars.join(", ")}\n`
+      );
+    }
+    if (vscodeLanguages.length) {
+      builder.append(
+        `**[VSCode](https://code.visualstudio.com/) Languages**: ${vscodeLanguages.join(
+          ", "
+        )}\n`
+      );
+    }
+    if (sublimeSyntaxes.length) {
+      builder.append(
+        `**[Sublime Text](https://www.sublimetext.com/) Syntaxes**: ${sublimeSyntaxes.join(
+          ", "
+        )}\n`
+      );
+    }
+    const globs = globsForLanguage(this.language);
+    const patterns = globs.map(glob => `\`${glob}\``).join(", ");
+    builder.append(`**File Patterns**: ${patterns}\n`);
+    return builder;
   }
   private appendSupportedBeautifiers(builder: MarkdownBuilder) {
     builder.header("Supported Beautifiers", 2);
@@ -72,17 +104,17 @@ export default class LanguageDoc extends Doc {
   private appendOptionsTable(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("Options", 2);
     builder.append(
-      "| Option |" +
+      "| # | Option |" +
         this.beautifiers
           .map(beautifier => ` ${linkForBeautifier(beautifier)} |`)
           .join("")
     );
     builder.append(
-      "| --- |" + this.beautifiers.map(beautifier => ` --- |`).join("")
+      "| --- | --- |" + this.beautifiers.map(beautifier => ` --- |`).join("")
     );
-    Object.keys(this.allOptions).forEach(optionKey => {
+    Object.keys(this.allOptions).reduce((count, optionKey) => {
       const option = this.allOptions[optionKey];
-      let row = `| ${linkForOption(optionKey, option)} |`;
+      let row = `| ${count} | ${linkForOption(optionKey, option)} |`;
       let isSupported = false;
       this.beautifiers.forEach(beautifier => {
         const beautifierSupportsOption: boolean = _.get(
@@ -98,8 +130,10 @@ export default class LanguageDoc extends Doc {
       });
       if (isSupported) {
         builder.append(row);
+        return count + 1;
       }
-    });
+      return count;
+    }, 1);
     return builder;
   }
   private createOptionsLookup(): OptionsLookup {

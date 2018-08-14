@@ -1,0 +1,29 @@
+.input-group-text {
+  padding: 6px 15px;
+  border-radius: var(--border-radius);
+  border-color: var(--grey);
+  background: var(--light-grey);
+  font-size: 12px;
+  line-height: inherit;
+}
+
+.custom-select {
+  height: auto;
+  padding: 6px 15px;
+  border-color: var(--grey);
+}
+
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:last-child) {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.languages-select .custom-select,
+.languages-select .input-group-text {
+  border-color: var(--main);
+}
+
+.languages-select .input-group-text {
+  background: #cee8ff;
+}
