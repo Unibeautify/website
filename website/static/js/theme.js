@@ -24,7 +24,7 @@ $(window).on("load", function() {
   // =============================================
   // Featherlight
 
-  $(".post img, .featherGallery img, img.featherGallery").featherlightGallery({
+  $(".post img:not(.badge), .featherGallery img, img.featherGallery").featherlightGallery({
     targetAttr: "src",
     persist: true,
     previousIcon: "&#9664;",
