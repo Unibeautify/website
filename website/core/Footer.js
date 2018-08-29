@@ -109,7 +109,7 @@ class Footer extends React.Component {
               <div className="col">
                 {siteConfig.copyright}
               </div>
-              <div className="col-auto align-right">        
+              <div className="col-auto align-self-end">        
                 <a href={this.docUrl('credits.html', this.props.language)}>Credits</a>
               </div>
             </div>
