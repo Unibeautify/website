@@ -1114,9 +1114,9 @@ require-uncached@^1.0.3:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
 
-requireg@^0.1.8:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/requireg/-/requireg-0.1.8.tgz#75c1d495294fa5ddfd51e4fcca4965c44f1ed8b1"
+requireg@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/requireg/-/requireg-0.2.1.tgz#f8822f38181b73211d631b5842507dbde4baecdf"
   dependencies:
     nested-error-stacks "~2.0.1"
     rc "~1.2.7"
@@ -1360,13 +1360,13 @@ typescript@3.0.3:
   version "0.0.1"
   resolved "git+https://github.com/Unibeautify/ugly-samples.git#d204499132fef56885d4b8bb089a74058b6f4dc2"
 
-unibeautify@0.16.0:
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/unibeautify/-/unibeautify-0.16.0.tgz#f0fceb2fd11f3bd9ecebeb9ed7674483b8954e1d"
+unibeautify@0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/unibeautify/-/unibeautify-0.17.0.tgz#990287dae1dff657c835e03c8d6ae4cfb445b8d3"
   dependencies:
     diff "^3.5.0"
     lodash "^4.17.10"
-    requireg "^0.1.8"
+    requireg "^0.2.0"
     semver "^5.5.0"
 
 universalify@^0.1.0:
