@@ -706,9 +706,9 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
 
-js-beautify@1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.8.1.tgz#ba70dd46da48b13c36140253f9471b8bb76bd3ee"
+js-beautify@1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.8.3.tgz#c6a9614c6dd01fa8db72ca5db143fddfe1b83565"
   dependencies:
     config-chain "~1.1.5"
     editorconfig "^0.15.0"
