@@ -36,7 +36,8 @@
       "beautifier-php-cs-fixer",
       "beautifier-php_codesniffer",
       "beautifier-prettier",
-      "beautifier-pretty-diff"
+      "beautifier-pretty-diff",
+      "beautifier-sqlformat"
     ]
   },
   "executables": {
@@ -54,6 +55,9 @@
     ],
     "Gofmt Beautifier": [
       "executable-gofmt-gofmt"
+    ],
+    "sqlformat Beautifier": [
+      "executable-sqlformat-sqlformat"
     ]
   },
   "options": {
@@ -77,6 +81,7 @@
       "option-force-indentation"
     ],
     "I": [
+      "option-identifier-case",
       "option-indent-chained-methods",
       "option-indent-comments",
       "option-indent-inner-html",
@@ -89,7 +94,8 @@
       "option-jsx-brackets"
     ],
     "K": [
-      "option-keep-array-indentation"
+      "option-keep-array-indentation",
+      "option-keyword-case"
     ],
     "M": [
       "option-max-preserve-newlines",
@@ -181,6 +187,7 @@
       "language-sass",
       "language-scss",
       "language-spacebars",
+      "language-sql",
       "language-svg",
       "language-swig"
     ],

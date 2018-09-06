@@ -6,6 +6,7 @@ ls -la
 
 # Install beautifiers
 pip install black
+pip install --upgrade sqlparse
 
 # Build docs
 yarn install

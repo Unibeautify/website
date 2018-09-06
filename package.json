@@ -45,6 +45,7 @@
     "@unibeautify/beautifier-php-cs-fixer": "0.3.0",
     "@unibeautify/beautifier-prettier": "0.8.0",
     "@unibeautify/beautifier-prettydiff": "0.5.3",
+    "@unibeautify/beautifier-sqlformat": "0.0.1",
     "array-flatten": "2.1.1",
     "diff": "3.5.0",
     "eslint": "4.19.1",
