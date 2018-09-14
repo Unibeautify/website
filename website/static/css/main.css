@@ -75,24 +75,6 @@ body:not(.separateOnPageNav) .wrapper {
   width: 100%;
 }
 
-/* TODO: remove this when bootstrap can load via cdn or node_modules */
-
 .row {
   width: 100%;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.float-right {
-  float: right;
-}
-
-.float-left {
-  float: left;
 }

@@ -59,7 +59,7 @@ export default class MarkdownBuilder {
   }
   public static createBadge(badge: Badge): string {
     const { url, href, description } = badge;
-    return `<a href="${href}"><img style="display: inline;" src="${url}" alt="${description}"></a>`;
+    return `<a href="${href}"><img class="badge" style="display: inline;" src="${url}" alt="${description}"></a>`;
   }
   public static createImage(imageUrl: string, altText: string = "image") {
     return `![${altText}](${imageUrl})`;

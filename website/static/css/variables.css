@@ -1,6 +1,7 @@
 :root {
   --font: "Lato", sans-serif;
-  --font-mono: "IBM Plex Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: "IBM Plex Mono", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --main: #388ede;
   --main-light: #68b1f5;
   --darker: #23252d;
