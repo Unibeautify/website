@@ -57,7 +57,7 @@
 .navigationSlider .slidingNav {
   top: 50px;
 
-  border-top: 1px dashed #4A4A4A;
+  border-top: 1px dashed #4a4a4a;
 
   background: var(--dark);
 }
@@ -100,7 +100,7 @@
 
 .navigationSlider .slidingNav ul li a:hover::after,
 .navigationSlider .slidingNav ul li.siteNavItemActive a::after {
-  content: '';
+  content: "";
 
   position: absolute;
   right: 0;
@@ -122,7 +122,7 @@
 }
 
 .navSearchWrapper::before {
-  content: '';
+  content: "";
 
   top: 8px;
   left: 21px;
@@ -136,7 +136,7 @@
 }
 
 .navSearchWrapper::after {
-  content: '';
+  content: "";
 
   top: 14px;
   left: 30px;
@@ -161,7 +161,7 @@
 
   border-radius: 25px;
 
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, 0.2);
 
   color: var(--light);
 
@@ -175,7 +175,7 @@
 .reactNavSearchWrapper input#search_input_react:focus {
   width: 220px;
 
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: 576px) {
@@ -200,23 +200,28 @@
   .heroVisible .fixedHeaderContainer {
     background: transparent;
   }
-  .fixedHeaderContainer.sticky {
-    background: rgba(48, 52, 56, .9);
 
-            backdrop-filter: blur(2px);
+  .fixedHeaderContainer.sticky {
+    background: rgba(48, 52, 56, 0.9);
+
+    backdrop-filter: blur(2px);
 
     -webkit-backdrop-filter: blur(2px);
   }
+
   .navSearchWrapper {
     position: relative;
     top: 0;
   }
+
   .navigationSlider .slidingNav {
     border-top: 0;
   }
+
   .fixedHeaderContainer header > a img {
     height: 40px;
   }
+
   .fixedHeaderContainer header {
     padding: 30px 0 10px;
   }
