@@ -153,21 +153,26 @@
   .heroVisible .fixedHeaderContainer {
     background: transparent;
   }
+
   .fixedHeaderContainer.sticky {
     background: rgba(48, 52, 56, 0.9);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
   }
+
   .navSearchWrapper {
     position: relative;
     top: 0;
   }
+
   .navigationSlider .slidingNav {
     border-top: 0;
   }
+
   .fixedHeaderContainer header>a img {
     height: 40px;
   }
+
   .fixedHeaderContainer header {
     padding: 30px 0 10px;
   }
