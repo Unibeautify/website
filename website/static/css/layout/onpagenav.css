@@ -4,7 +4,7 @@
     top: 100px;
   }
 
-  .onPageNav>.toc-headings {
+  .onPageNav > .toc-headings {
     padding: 0;
     border-left: 1px solid var(--grey);
   }

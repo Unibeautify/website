@@ -16,7 +16,9 @@
   color: var(--main);
 }
 
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion--category-header {
+.navSearchWrapper
+  .aa-dropdown-menu
+  .algolia-docsearch-suggestion--category-header {
   background: var(--dark);
 }
 
