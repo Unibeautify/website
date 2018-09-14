@@ -6,7 +6,7 @@ hero {
   padding: 80px 0 40px;
 
   background: var(--dark);
-  background-image: url('/img/hero.jpg');
+  background-image: url("/img/hero.jpg");
   background-position: center bottom;
   background-size: cover;
 
@@ -32,7 +32,7 @@ hero h2 {
   margin-top: 0;
   margin-bottom: 20px;
 
-  opacity: .3;
+  opacity: 0.3;
 
   font-size: 25px;
 }
@@ -47,9 +47,11 @@ hero .logoWrapper img {
 
     padding: 40px 0 0;
   }
+
   hero h1 {
     font-size: 60px;
   }
+
   hero h2 {
     margin-bottom: 45px;
 
@@ -61,6 +63,7 @@ hero .logoWrapper img {
   hero {
     height: 700px;
   }
+
   hero .logoWrapper {
     margin-left: 170px;
   }
