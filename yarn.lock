@@ -50,6 +50,12 @@
   dependencies:
     read-pkg-up "^3.0.0"
 
+"@unibeautify/beautifier-file@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-file/-/beautifier-file-0.1.0.tgz#3b924a5990381a6c244c6c1b67ff683af6aa806c"
+  dependencies:
+    read-pkg-up "^3.0.0"
+
 "@unibeautify/beautifier-gofmt@0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-gofmt/-/beautifier-gofmt-0.1.0.tgz#eddda132b5c864826f03a303eb62a0826691ae9e"
