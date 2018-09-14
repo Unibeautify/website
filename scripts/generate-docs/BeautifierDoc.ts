@@ -236,7 +236,7 @@ export default class BeautifierDoc extends Doc {
       this.languages.forEach(language => {
         const languageSupportsOption: boolean = _.get(
           this.optionsLookup as any,
-          `${language.name}.${optionKey}`,
+          [language.name, optionKey],
           false
         );
         const symbol = languageSupportsOption ? emojis.checkmark : emojis.x;
