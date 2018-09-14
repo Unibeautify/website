@@ -10,12 +10,12 @@
   padding-top: 40px;
 }
 
-.mainContainer>.paddingTop {
-  padding-top: 80px;
+.mainContainer > .paddingTop {
+  padding-top: 20px;
 }
 
-.mainContainer>.paddingBottom {
-  padding-bottom: 80px;
+.mainContainer > .paddingBottom {
+  padding-bottom: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -25,5 +25,11 @@
 
   .separateOnPageNav .navPusher {
     padding-top: 60px;
+  }
+  .mainContainer > .paddingTop {
+    padding-top: 80px;
+  }
+  .mainContainer > .paddingBottom {
+    padding-bottom: 80px;
   }
 }

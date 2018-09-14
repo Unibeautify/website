@@ -22,6 +22,7 @@ JavaScript:
   ESLint:
     prefer_beautifier_config: true
 CSS:
+  beautifiers: ["JS-Beautify", "Pretty Diff", "Prettier"]
   indent_char: " "
   indent_size: 2
 HTML:
