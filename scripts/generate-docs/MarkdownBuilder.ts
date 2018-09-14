@@ -31,8 +31,8 @@ export default class MarkdownBuilder {
     details(this);
     this.append(`</details>`);
   }
-  public append(text: string): MarkdownBuilder {
-    this.contents.push(text);
+  public append(...texts: string[]): MarkdownBuilder {
+    this.contents.push(...texts);
     return this;
   }
   public note(text: string): MarkdownBuilder {

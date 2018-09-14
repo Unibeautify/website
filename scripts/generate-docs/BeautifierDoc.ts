@@ -224,11 +224,29 @@ export default class BeautifierDoc extends Doc {
       | --- | --- | --- |
       | Arrow Parens | &#10060; | &#9989; |
       */
+    const optionRows = this.optionRows;
+    const optionsCount: number = this.optionRows.length;
+    const languagesCount: number = this.languages.length;
+    const allLanguagesCount: number = Unibeautify.getLoadedLanguages().length;
+    const doesSupportAllLanguages: boolean =
+      this.languages.length === allLanguagesCount;
+    builder.append(
+      `Supports ${optionsCount} option${optionsCount === 1 ? "" : "s"} across ${
+        doesSupportAllLanguages
+          ? "all " + languagesCount
+          : languagesCount + " of the " + allLanguagesCount
+      } supported languages.`
+    );
     builder.append(
       "| Option |" +
         this.languages.map(lang => ` ${linkForLanguage(lang)} |`).join("")
     );
     builder.append("| --- |" + this.languages.map(lang => ` --- |`).join(""));
+    builder.append(...optionRows);
+    return builder;
+  }
+  private get optionRows(): string[] {
+    const rows: string[] = [];
     Object.keys(this.allOptions).forEach(optionKey => {
       const option = this.allOptions[optionKey];
       let row = `| ${linkForOption(optionKey, option)} |`;
@@ -246,10 +264,10 @@ export default class BeautifierDoc extends Doc {
         }
       });
       if (isSupported) {
-        builder.append(row);
+        rows.push(row);
       }
     });
-    return builder;
+    return rows;
   }
   private createOptionsLookup(): OptionsLookup {
     return this.languages
