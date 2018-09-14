@@ -341,7 +341,7 @@ export default class OptionsDoc extends Doc {
   }
 
   private get examplesPath(): string {
-    return path.resolve(require("ugly-samples"));
+    return path.resolve(require("@unibeautify/ugly-samples"));
   }
 
   private createOptionsWithLanguageAndValue(

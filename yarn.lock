@@ -95,6 +95,10 @@
     read-pkg-up "^4.0.0"
     tmp "0.0.33"
 
+"@unibeautify/ugly-samples@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@unibeautify/ugly-samples/-/ugly-samples-0.1.0.tgz#65b0472cf053c5e93aff455708ed7918532e362c"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -1402,10 +1406,6 @@ typedarray@^0.0.6:
 typescript@3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.0.3.tgz#4853b3e275ecdaa27f78fda46dc273a7eb7fc1c8"
-
-"ugly-samples@git+https://github.com/Unibeautify/ugly-samples.git":
-  version "0.0.1"
-  resolved "git+https://github.com/Unibeautify/ugly-samples.git#d204499132fef56885d4b8bb089a74058b6f4dc2"
 
 unibeautify@0.17.0:
   version "0.17.0"
