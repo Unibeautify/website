@@ -13,6 +13,9 @@
       "options-for-beautifiers",
       "languages"
     ],
+    "Contributing": [
+      "contributing-examples"
+    ],
     "Integrations": [
       "integration-github",
       "integration-gitlab",
