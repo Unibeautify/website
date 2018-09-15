@@ -29,9 +29,7 @@
     "url": "https://github.com/Unibeautify/website/issues"
   },
   "homepage": "https://github.com/Unibeautify/website#readme",
-  "dependencies": {
-    "ugly-samples": "git+https://github.com/Unibeautify/ugly-samples.git"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/diff": "3.5.1",
     "@types/fs-extra": "5.0.4",
@@ -47,6 +45,7 @@
     "@unibeautify/beautifier-prettier": "0.8.0",
     "@unibeautify/beautifier-prettydiff": "0.5.3",
     "@unibeautify/beautifier-sqlformat": "0.0.1",
+    "@unibeautify/ugly-samples": "^0.1.0",
     "array-flatten": "2.1.1",
     "diff": "3.5.0",
     "eslint": "4.19.1",
