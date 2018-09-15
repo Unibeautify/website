@@ -70,7 +70,7 @@ export default class ContributingExamplesDoc extends Doc {
     builder.append("| --- | --- | --- | --- |");
     builder.append(
       `| ${MarkdownBuilder.createProgressBar({
-        value: Math.floor(optionsWithExamples / totalOptions * 100),
+        value: Math.floor((optionsWithExamples / totalOptions) * 100),
       })} | ${optionsWithExamples} | ${totalOptions -
         optionsWithExamples} | ${totalOptions} |`
     );
@@ -90,7 +90,7 @@ export default class ContributingExamplesDoc extends Doc {
         (sum, key) => (optionsProgress[key] ? sum + 1 : sum),
         0
       );
-      const perc = total ? Math.floor(count / total * 100) : 100;
+      const perc = total ? Math.floor((count / total) * 100) : 100;
       builder.append(
         `| ${index + 1} | ${linkForLanguage({
           name: languageName,
