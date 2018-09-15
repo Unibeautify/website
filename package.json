@@ -8,7 +8,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs": "npm run clean && npm run generate-docs",
+    "docs": "npm run clean && npm run generate-docs && npm run update-readme",
     "clean": "npm run rm-languages && npm run rm-beautifiers && npm run rm-options && npm run rm-executables",
     "rm-beautifiers": "rimraf 'docs/beautifier-*'",
     "rm-languages": "rimraf 'docs/language-*'",
