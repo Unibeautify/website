@@ -75,6 +75,23 @@ export default class MarkdownBuilder {
   public static createLink(text: string, dest: string): string {
     return `[${text}](${dest})`;
   }
+  public static createProgressBar(options: {
+    value: number;
+    scale?: number;
+    title?: string;
+    suffix?: string;
+  }): string {
+    const baseUrl = "http://progressed.io/bar/";
+    const queryParams: string[] = Object.keys(options).reduce((query, key) => {
+      if (key === "value") {
+        return query;
+      }
+      const val = options[key];
+      return val !== undefined ? [...query, `${key}=${val}`] : query;
+    }, []);
+
+    return `![progress](${baseUrl}${options.value}?${queryParams.join("&")})`;
+  }
   public static bold(text: string): string {
     return `**${text}**`;
   }
