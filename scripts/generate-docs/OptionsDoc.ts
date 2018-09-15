@@ -4,8 +4,6 @@ import GlobalUnibeautify, {
   Beautifier,
   BeautifierOptionName,
 } from "unibeautify";
-import * as path from "path";
-import * as fs from "fs";
 import * as JsDiff from "diff";
 
 import {
@@ -16,6 +14,9 @@ import {
   emojis,
   websiteEditUrl,
   coreOptionsEditUrl,
+  readExample,
+  editExampleUrl,
+  addExampleUrl,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -25,7 +26,6 @@ const editBeautifiersUrl = `${websiteEditUrl}/scripts/generate-docs/beautifiers.
 export default class OptionsDoc extends Doc {
   private readonly languages: Language[];
   private readonly beautifiers: Beautifier[];
-  private readonly languageEditURL: string = "https://github.com/unibeautify/ugly-samples/edit/master";
 
   constructor(
     private option: Option,
@@ -327,21 +327,10 @@ export default class OptionsDoc extends Doc {
   }
 
   private readExample(language: Language): string | undefined {
-    const exampleExtension = ".txt";
-    const examplePath = path.join(
-      this.examplesPath,
-      language.name,
-      `${this.optionKey}${exampleExtension}`,
-    );
-    try {
-      return fs.readFileSync(examplePath).toString();
-    } catch (error) {
-      return undefined;
-    }
-  }
-
-  private get examplesPath(): string {
-    return path.resolve(require("@unibeautify/ugly-samples"));
+    return readExample({
+      language: language.name,
+      optionKey: this.optionKey,
+    });
   }
 
   private createOptionsWithLanguageAndValue(
@@ -395,18 +384,17 @@ export default class OptionsDoc extends Doc {
   }
 
   private editExampleButtonUrl(language: Language): string {
-    return `${this.languageEditURL}/samples/${language.name}/${
-      this.optionKey
-    }.txt`;
+    return editExampleUrl({
+      languageName: language.name,
+      optionKey: this.optionKey,
+    });
   }
 
   private addExampleButtonUrl(language: Language): string {
-    return `${this.languageEditURL.replace(
-      "/edit/",
-      "/new/",
-    )}/samples/${encodeURIComponent(language.name)}/new?filename=${
-      this.optionKey
-    }.txt&value=Type%20Example%20Here`;
+    return addExampleUrl({
+      languageName: language.name,
+      optionKey: this.optionKey,
+    });
   }
 }
 
