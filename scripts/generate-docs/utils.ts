@@ -5,6 +5,7 @@ import {
   Unibeautify,
   newUnibeautify,
   Badge,
+  BeautifierOptionName,
 } from "unibeautify";
 import * as _ from "lodash";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -13,6 +14,7 @@ import * as path from "path";
 import * as fs from "fs";
 const examplesBasePath = path.resolve(require("@unibeautify/ugly-samples"));
 
+const { samplesEditUrl } = siteConfig;
 export const websiteEditUrl = `${siteConfig.editUrl}../`;
 export const coreEditUrl = `${siteConfig.githubUrl}/edit/master/`;
 export const coreOptionsEditUrl = `${coreEditUrl}/src/options.ts`;
@@ -134,4 +136,29 @@ export function readExample({
   } catch (error) {
     return undefined;
   }
+}
+
+export function editExampleUrl({
+  languageName,
+  optionKey,
+}: {
+  languageName: string;
+  optionKey: BeautifierOptionName;
+}): string {
+  return `${samplesEditUrl}/samples/${languageName}/${optionKey}.txt`;
+}
+
+export function addExampleUrl({
+  languageName,
+  optionKey,
+}: {
+  languageName: string;
+  optionKey: BeautifierOptionName;
+}): string {
+  return `${samplesEditUrl.replace(
+    "/edit/",
+    "/new/"
+  )}/samples/${encodeURIComponent(
+    languageName
+  )}/new?filename=${optionKey}.txt&value=Type%20Example%20Here`;
 }

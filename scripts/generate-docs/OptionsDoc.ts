@@ -15,6 +15,8 @@ import {
   websiteEditUrl,
   coreOptionsEditUrl,
   readExample,
+  editExampleUrl,
+  addExampleUrl,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -24,7 +26,6 @@ const editBeautifiersUrl = `${websiteEditUrl}/scripts/generate-docs/beautifiers.
 export default class OptionsDoc extends Doc {
   private readonly languages: Language[];
   private readonly beautifiers: Beautifier[];
-  private readonly languageEditURL: string = "https://github.com/unibeautify/ugly-samples/edit/master";
 
   constructor(
     private option: Option,
@@ -383,18 +384,17 @@ export default class OptionsDoc extends Doc {
   }
 
   private editExampleButtonUrl(language: Language): string {
-    return `${this.languageEditURL}/samples/${language.name}/${
-      this.optionKey
-    }.txt`;
+    return editExampleUrl({
+      languageName: language.name,
+      optionKey: this.optionKey,
+    });
   }
 
   private addExampleButtonUrl(language: Language): string {
-    return `${this.languageEditURL.replace(
-      "/edit/",
-      "/new/",
-    )}/samples/${encodeURIComponent(language.name)}/new?filename=${
-      this.optionKey
-    }.txt&value=Type%20Example%20Here`;
+    return addExampleUrl({
+      languageName: language.name,
+      optionKey: this.optionKey,
+    });
   }
 }
 

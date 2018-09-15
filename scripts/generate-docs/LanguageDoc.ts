@@ -114,7 +114,11 @@ export default class LanguageDoc extends Doc {
     );
     Object.keys(this.allOptions).reduce((count, optionKey) => {
       const option = this.allOptions[optionKey];
-      let row = `| ${count} | ${linkForOption(optionKey, option)} |`;
+      let row = `| ${count} | ${linkForOption(
+        optionKey,
+        option,
+        this.language.name
+      )} |`;
       let isSupported = false;
       this.beautifiers.forEach(beautifier => {
         const beautifierSupportsOption: boolean = _.get(

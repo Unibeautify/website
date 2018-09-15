@@ -5,9 +5,6 @@
       "ci",
       "credits"
     ],
-    "Contributing": [
-      "contributing-examples"
-    ],
     "Usage": [
       "getting-started",
       "cli",
@@ -15,6 +12,9 @@
       "options-for-languages",
       "options-for-beautifiers",
       "languages"
+    ],
+    "Contributing": [
+      "contributing-examples"
     ],
     "Integrations": [
       "integration-github",
