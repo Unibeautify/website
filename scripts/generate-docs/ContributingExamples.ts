@@ -43,40 +43,63 @@ export default class ContributingExamplesDoc extends Doc {
         " the &#9998; icon below to add/edit an example."
     );
     builder.append("\n");
-    builder.append(
-      "| # | Language | Progress | # of Examples | # of Options |"
-    );
-    builder.append("| --- | --- | --- | --- | --- |");
     const progress: Progress = {};
+    let totalOptions: number = 0;
+    let optionsWithExamples: number = 0;
     this.languages.forEach(language => {
       const options = Unibeautify.getOptionsSupportedForLanguage(language);
       const optionsProgress: Progress[string] = Object.keys(options).reduce(
         (final, optionKey) => {
-          final[optionKey] = !!readExample({
+          const hasExample = !!readExample({
             language: language.name,
             optionKey,
           });
+          final[optionKey] = hasExample;
+          totalOptions++;
+          optionsWithExamples += hasExample ? 1 : 0;
           return final;
         },
         {}
       );
       progress[language.name] = optionsProgress;
     });
-    Object.keys(progress).forEach((languageName, index) => {
+
+    builder.append(
+      "| Progress | # of Examples Completed | # of Examples Missing | # of Examples |"
+    );
+    builder.append("| --- | --- | --- | --- |");
+    builder.append(
+      `| ${MarkdownBuilder.createProgressBar({
+        value: Math.floor(optionsWithExamples / totalOptions * 100),
+      })} | ${optionsWithExamples} | ${totalOptions -
+        optionsWithExamples} | ${totalOptions} |`
+    );
+    builder.append("\n");
+
+    builder.append(
+      "| # | Language | Progress | # of Examples | # of Options |"
+    );
+    builder.append("| --- | --- | --- | --- | --- |");
+
+    const languageNames: string[] = Object.keys(progress);
+    languageNames.forEach((languageName, index) => {
       const optionsProgress: Progress[string] = progress[languageName];
-      const total = Object.keys(optionsProgress).length;
-      const count = Object.keys(optionsProgress).reduce(
+      const optionKeys: string[] = Object.keys(optionsProgress);
+      const total = optionKeys.length;
+      const count = optionKeys.reduce(
         (sum, key) => (optionsProgress[key] ? sum + 1 : sum),
         0
       );
-      const perc = total ? Math.floor((count / total) * 100) : 0;
+      const perc = total ? Math.floor(count / total * 100) : 100;
       builder.append(
         `| ${index + 1} | ${linkForLanguage({
           name: languageName,
-        })} | ![progress](http://progressed.io/bar/${perc}) | ${count} | ${total} |`
+        })} | ${MarkdownBuilder.createProgressBar({
+          value: perc,
+        })} | ${count} | ${total} |`
       );
     });
-    Object.keys(progress).forEach(languageName => {
+    languageNames.forEach(languageName => {
       builder.header(languageName, 2);
       builder.append("\n");
       builder.append("| # | Option | Example | Edit |");
