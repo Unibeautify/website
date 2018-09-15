@@ -59,7 +59,7 @@ export default class ContributingExamplesDoc extends Doc {
         (sum, key) => (optionsProgress[key] ? sum + 1 : sum),
         0
       );
-      const perc = total ? Math.floor(count / total * 100) : 0;
+      const perc = total ? Math.floor((count / total) * 100) : 0;
       builder.append(
         `| ${index + 1} | ${linkForLanguage({
           name: languageName,

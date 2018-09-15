@@ -54,7 +54,11 @@ export default class MarkdownBuilder {
     }
     return this;
   }
-  public static createDocLink(text: string, docId: string, queryParam?: string): string {
+  public static createDocLink(
+    text: string,
+    docId: string,
+    queryParam?: string
+  ): string {
     let dest: string = `/docs/${docId}.html`;
     if (queryParam) {
       dest += `?${queryParam}`;
