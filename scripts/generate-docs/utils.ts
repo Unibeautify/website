@@ -38,7 +38,13 @@ export function linkForBeautifier(beautifier: Beautifier): string {
   const docId = `beautifier-${slugify(beautifier.name)}`;
   return MarkdownBuilder.createDocLink(beautifier.name, docId);
 }
-export function linkForLanguage(language: Language | { name: string; }): string {
+export function linkForLanguage(
+  language:
+    | Language
+    | {
+        name: string;
+      }
+): string {
   const docId = `language-${slugify(language.name)}`;
   return MarkdownBuilder.createDocLink(language.name, docId);
 }
