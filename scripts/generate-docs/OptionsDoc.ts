@@ -4,8 +4,6 @@ import GlobalUnibeautify, {
   Beautifier,
   BeautifierOptionName,
 } from "unibeautify";
-import * as path from "path";
-import * as fs from "fs";
 import * as JsDiff from "diff";
 
 import {
@@ -16,6 +14,7 @@ import {
   emojis,
   websiteEditUrl,
   coreOptionsEditUrl,
+  readExample,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -327,21 +326,10 @@ export default class OptionsDoc extends Doc {
   }
 
   private readExample(language: Language): string | undefined {
-    const exampleExtension = ".txt";
-    const examplePath = path.join(
-      this.examplesPath,
-      language.name,
-      `${this.optionKey}${exampleExtension}`,
-    );
-    try {
-      return fs.readFileSync(examplePath).toString();
-    } catch (error) {
-      return undefined;
-    }
-  }
-
-  private get examplesPath(): string {
-    return path.resolve(require("@unibeautify/ugly-samples"));
+    return readExample({
+      language: language.name,
+      optionKey: this.optionKey,
+    });
   }
 
   private createOptionsWithLanguageAndValue(

@@ -54,8 +54,12 @@ export default class MarkdownBuilder {
     }
     return this;
   }
-  public static createDocLink(text: string, docId: string): string {
-    return this.createLink(text, `/docs/${docId}.html`);
+  public static createDocLink(text: string, docId: string, queryParam?: string): string {
+    let dest: string = `/docs/${docId}.html`;
+    if (queryParam) {
+      dest += `?${queryParam}`;
+    }
+    return this.createLink(text, dest);
   }
   public static createBadge(badge: Badge): string {
     const { url, href, description } = badge;
