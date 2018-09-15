@@ -1,5 +1,10 @@
 sudo: required
 services:
   - docker
+language: node_js
+before_script:
+  - npm run update-readme
 script:
+  - git diff README.md
+  - git diff --exit-code --name-only README.md
   - docker-compose build
