@@ -82,11 +82,11 @@
   dependencies:
     read-pkg-up "^4.0.0"
 
-"@unibeautify/beautifier-prettydiff@0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-prettydiff/-/beautifier-prettydiff-0.5.3.tgz#a6d9eaf16141eb611bea1394edd805cedbe70e4a"
+"@unibeautify/beautifier-prettydiff@0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-prettydiff/-/beautifier-prettydiff-0.6.0.tgz#43eb44c0d3ce59b143caeb18750b5c4de1fd715a"
   dependencies:
-    read-pkg-up "^3.0.0"
+    read-pkg-up "^4.0.0"
 
 "@unibeautify/beautifier-sqlformat@0.0.1":
   version "0.0.1"
