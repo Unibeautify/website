@@ -56,11 +56,11 @@
   dependencies:
     read-pkg-up "^3.0.0"
 
-"@unibeautify/beautifier-js-beautify@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-js-beautify/-/beautifier-js-beautify-0.3.2.tgz#949158a774d2148e10601045e6f45fd0a2eab0ab"
+"@unibeautify/beautifier-js-beautify@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-js-beautify/-/beautifier-js-beautify-0.4.0.tgz#43b199d780e6f0fb6d2fe2479e2eef77b5ea4961"
   dependencies:
-    read-pkg-up "^3.0.0"
+    read-pkg-up "^4.0.0"
 
 "@unibeautify/beautifier-php-codesniffer@0.1.1":
   version "0.1.1"
