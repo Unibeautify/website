@@ -3,6 +3,7 @@ import GlobalUnibeautify, {
   Language,
   Beautifier,
   BeautifierOptionName,
+  OptionValues,
 } from "unibeautify";
 import * as JsDiff from "diff";
 
@@ -20,6 +21,7 @@ import {
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
+import _ = require("lodash");
 
 const editBeautifiersUrl = `${websiteEditUrl}/scripts/generate-docs/beautifiers.ts`;
 
@@ -268,6 +270,7 @@ export default class OptionsDoc extends Doc {
                     builder.append(
                       `\nUsing ${linkForBeautifier(beautifier)} beautifier:`,
                     );
+                    (configForExample[language.name] as any).beautifiers = [beautifier.name];
                   }
                   builder.code(beautifiedExample, language.name);
                   builder.details("How to configure", builder => {
@@ -288,7 +291,7 @@ export default class OptionsDoc extends Doc {
                 !beautifiedExamplesAreDifferent
               ) {
                 console.log(
-                  `${this.optionKey} - ${language.name} - BAD EXAMPLES`,
+                  `BAD EXAMPLE: ${language.name} - ${this.optionKey}`,
                 );
               }
             } else {
@@ -316,7 +319,13 @@ export default class OptionsDoc extends Doc {
       case "integer": {
         const min = option.minimum || 0;
         const max = option.maximum || option.default * 2;
-        return [option.default, min, max].sort();
+        const defaultVal = option.default || max || min;
+        const lower = Math.floor((defaultVal - min) / 2) + min;
+        const higher = Math.ceil((max - defaultVal) / 2) + defaultVal;
+        return _.uniq([defaultVal, min, lower, higher, max])
+          .map(v => parseInt(v))
+          .filter(v => typeof v === "number")
+          .sort((a, b) => a - b);
       }
       case "array": {
         return [[], option.default];
@@ -342,12 +351,16 @@ export default class OptionsDoc extends Doc {
     };
   }
 
-  private createOptionValues(optionValue: any) {
-    return {
+  private createOptionValues(optionValue: any): OptionValues {
+    const optionValues: OptionValues = {
       indent_size: 2,
       indent_char: " ",
       [this.optionKey]: optionValue,
     };
+    if (this.optionKey === "wrap_line_length") {
+      optionValues["wrap_prose"] = "always";
+    }
+    return optionValues;
   }
 
   private beautify(
@@ -366,7 +379,13 @@ export default class OptionsDoc extends Doc {
         languageName: language.name,
         options: configForExample,
         text,
-      });
+      })
+        .catch((error) => {
+          console.info(`Error beautifying: ${language.name} - ${this.optionKey}`);
+          console.error(error);
+          return Promise.reject(error);
+        })
+      ;
     }
     return Promise.reject(
       new Error(`No beautifier supports option ${this.optionKey}.`),
