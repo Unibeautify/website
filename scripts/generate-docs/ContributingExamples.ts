@@ -105,7 +105,7 @@ export default class ContributingExamplesDoc extends Doc {
       builder.append("| # | Option | Example | Edit |");
       builder.append("| --- | --- | --- | --- |");
       const optionsProgress: Progress[string] = progress[languageName];
-      Object.keys(optionsProgress).forEach(
+      Object.keys(optionsProgress).sort().forEach(
         (optionKey: BeautifierOptionName, index) => {
           const hasExample = optionsProgress[optionKey];
           const option = Unibeautify.loadedOptions[optionKey];
