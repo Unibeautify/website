@@ -105,8 +105,9 @@ export default class ContributingExamplesDoc extends Doc {
       builder.append("| # | Option | Example | Edit |");
       builder.append("| --- | --- | --- | --- |");
       const optionsProgress: Progress[string] = progress[languageName];
-      Object.keys(optionsProgress).forEach(
-        (optionKey: BeautifierOptionName, index) => {
+      Object.keys(optionsProgress)
+        .sort()
+        .forEach((optionKey: BeautifierOptionName, index) => {
           const hasExample = optionsProgress[optionKey];
           const option = Unibeautify.loadedOptions[optionKey];
           const editUrl: string = hasExample
@@ -121,8 +122,7 @@ export default class ContributingExamplesDoc extends Doc {
               hasExample ? "&#9989;" : "&#10060;"
             } | [&#9998;](${editUrl}) |`
           );
-        }
-      );
+        });
       builder.append("\n");
     });
     return builder.build();

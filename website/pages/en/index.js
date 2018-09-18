@@ -150,7 +150,7 @@ const Features = props => (
           imageAlign: 'top'
         }, {
           title: 'Diligent documentation',
-          content: 'Up-to-date documentation with examples is automatically generated from beautifier, language, and option metadata.',
+          content: `Up-to-date documentation with [hundreds of examples](${docUrl('contributing-examples.html')}) is automatically generated from beautifier, language, and option metadata.`,
           image: imgUrl('icons/book.svg'),
           imageAlign: 'top'
         }, {

@@ -134,8 +134,7 @@
     ],
     "U": [
       "option-unescape-strings",
-      "option-unformatted",
-      "option-unindent-chained-methods"
+      "option-unformatted"
     ],
     "W": [
       "option-wrap-attributes",

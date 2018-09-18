@@ -145,7 +145,9 @@ export function editExampleUrl({
   languageName: string;
   optionKey: BeautifierOptionName;
 }): string {
-  return `${samplesEditUrl}/samples/${languageName}/${optionKey}.txt`;
+  return `${samplesEditUrl}/samples/${encodeURIComponent(
+    languageName
+  )}/${optionKey}.txt`;
 }
 
 export function addExampleUrl({

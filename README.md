@@ -10,13 +10,14 @@ See https://github.com/Unibeautify/website/blob/master/scripts/beautifiers.ts fo
 | 1 | Black | :warning: | https://unibeautify.com/docs/beautifier-black.html |
 | 2 | ClangFormat | :warning: | https://unibeautify.com/docs/beautifier-clangformat.html |
 | 3 | ESLint | :white_check_mark: | https://unibeautify.com/docs/beautifier-eslint.html |
-| 4 | Gofmt | :warning: | https://unibeautify.com/docs/beautifier-gofmt.html |
-| 5 | JS-Beautify | :white_check_mark: | https://unibeautify.com/docs/beautifier-js-beautify.html |
-| 6 | PHP-CS-Fixer | :warning: | https://unibeautify.com/docs/beautifier-php-cs-fixer.html |
-| 7 | PHP_CodeSniffer | :warning: | https://unibeautify.com/docs/beautifier-php_codesniffer.html |
-| 8 | Prettier | :white_check_mark: | https://unibeautify.com/docs/beautifier-prettier.html |
-| 9 | Pretty Diff | :white_check_mark: | https://unibeautify.com/docs/beautifier-pretty-diff.html |
-| 10 | sqlformat | :warning: | https://unibeautify.com/docs/beautifier-sqlformat.html |
+| 4 | File | :white_check_mark: | https://unibeautify.com/docs/beautifier-file.html |
+| 5 | Gofmt | :warning: | https://unibeautify.com/docs/beautifier-gofmt.html |
+| 6 | JS-Beautify | :white_check_mark: | https://unibeautify.com/docs/beautifier-js-beautify.html |
+| 7 | PHP-CS-Fixer | :warning: | https://unibeautify.com/docs/beautifier-php-cs-fixer.html |
+| 8 | PHP_CodeSniffer | :warning: | https://unibeautify.com/docs/beautifier-php_codesniffer.html |
+| 9 | Prettier | :white_check_mark: | https://unibeautify.com/docs/beautifier-prettier.html |
+| 10 | Pretty Diff | :white_check_mark: | https://unibeautify.com/docs/beautifier-pretty-diff.html |
+| 11 | sqlformat | :warning: | https://unibeautify.com/docs/beautifier-sqlformat.html |
 <!--END:SUPPORT-TABLE-->
 
 ## Contributing
