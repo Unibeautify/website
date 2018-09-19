@@ -4,265 +4,502 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "The Universal Code Beautifier",
-    "about": "What is Unibeautify",
-    "beautifier-black": "Black Beautifier",
-    "Black": "Black",
-    "beautifier-clangformat": "ClangFormat Beautifier",
-    "ClangFormat": "ClangFormat",
-    "beautifier-eslint": "ESLint Beautifier",
-    "ESLint": "ESLint",
-    "beautifier-gofmt": "Gofmt Beautifier",
-    "Gofmt": "Gofmt",
-    "beautifier-js-beautify": "JS-Beautify Beautifier",
-    "JS-Beautify": "JS-Beautify",
-    "beautifier-php_codesniffer": "PHP_CodeSniffer Beautifier",
-    "PHP_CodeSniffer": "PHP_CodeSniffer",
-    "beautifier-php-cs-fixer": "PHP-CS-Fixer Beautifier",
-    "PHP-CS-Fixer": "PHP-CS-Fixer",
-    "beautifier-prettier": "Prettier Beautifier",
-    "Prettier": "Prettier",
-    "beautifier-pretty-diff": "Pretty Diff Beautifier",
-    "Pretty Diff": "Pretty Diff",
-    "beautifier-sqlformat": "sqlformat Beautifier",
-    "sqlformat": "sqlformat",
-    "ci": "Unibeautify CI: Universal Coding Style Service",
-    "Unibeautify CI": "Unibeautify CI",
-    "cli": "Command-Line Interface (CLI)",
-    "config-file": "Configuration File",
-    "contributing-examples": "Contributing Examples",
-    "Examples": "Examples",
-    "credits": "Credits",
-    "editor-atom": "Atom-Beautify",
-    "Atom": "Atom",
-    "editor-emacs": "Emacs",
-    "Emacs": "Emacs",
-    "editor-sublime": "Sublime Text",
-    "Sublime Text": "Sublime Text",
-    "editor-vim": "Vim",
-    "Vim": "Vim",
-    "editor-visual-studio": "Visual Studio",
-    "Visual Studio": "Visual Studio",
-    "editor-vscode": "VSCode",
-    "Visual Studio Code": "Visual Studio Code",
-    "editor-webstorm": "WebStorm",
-    "WebStorm": "WebStorm",
-    "executable-black-black": "Black Executable",
-    "Black Executable": "Black Executable",
-    "executable-clangformat-clangformat": "ClangFormat Executable",
-    "ClangFormat Executable": "ClangFormat Executable",
-    "executable-gofmt-gofmt": "Gofmt Executable",
-    "Gofmt Executable": "Gofmt Executable",
-    "executable-php-cs-fixer-php-cs-fixer": "PHP-CS-Fixer Executable",
-    "PHP-CS-Fixer Executable": "PHP-CS-Fixer Executable",
-    "executable-php_codesniffer-phpcbf": "PHPCBF Executable",
-    "PHPCBF Executable": "PHPCBF Executable",
-    "executable-sqlformat-sqlformat": "sqlformat Executable",
-    "sqlformat Executable": "sqlformat Executable",
-    "getting-started": "Getting Started",
-    "integration-bitbucket": "Atlassian Bitbucket Integration",
-    "Bitbucket": "Bitbucket",
-    "integration-github": "GitHub Integration",
-    "GitHub": "GitHub",
-    "integration-gitlab": "GitLab Integration",
-    "GitLab": "GitLab",
-    "language-cpp": "C++",
-    "C++": "C++",
-    "language-c": "C",
-    "C": "C",
-    "language-csharp": "C#",
-    "C#": "C#",
-    "language-coldfusion": "ColdFusion",
-    "ColdFusion": "ColdFusion",
-    "language-css": "CSS",
-    "CSS": "CSS",
-    "language-ejs": "EJS",
-    "EJS": "EJS",
-    "language-go": "Go",
-    "Go": "Go",
-    "language-graphql": "GraphQL",
-    "GraphQL": "GraphQL",
-    "language-handlebars": "Handlebars",
-    "Handlebars": "Handlebars",
-    "language-html-erb": "HTML+ERB",
-    "HTML+ERB": "HTML+ERB",
-    "language-html": "HTML",
-    "HTML": "HTML",
-    "language-java": "Java",
-    "Java": "Java",
-    "language-javascript": "JavaScript",
-    "JavaScript": "JavaScript",
-    "language-json": "JSON",
-    "JSON": "JSON",
-    "language-json5": "JSON5",
-    "JSON5": "JSON5",
-    "language-jsx": "JSX",
-    "JSX": "JSX",
-    "language-less": "Less",
-    "Less": "Less",
-    "language-liquid": "Liquid",
-    "Liquid": "Liquid",
-    "language-markdown": "Markdown",
-    "Markdown": "Markdown",
-    "language-mustache": "Mustache",
-    "Mustache": "Mustache",
-    "language-objective-c": "Objective-C",
-    "Objective-C": "Objective-C",
-    "language-php": "PHP",
-    "PHP": "PHP",
-    "language-python": "Python",
-    "Python": "Python",
-    "language-riot": "Riot",
-    "Riot": "Riot",
-    "language-scss": "SCSS",
-    "SCSS": "SCSS",
-    "language-spacebars": "Spacebars",
-    "Spacebars": "Spacebars",
-    "language-sql": "SQL",
-    "SQL": "SQL",
-    "language-svg": "SVG",
-    "SVG": "SVG",
-    "language-swig": "Swig",
-    "Swig": "Swig",
-    "language-titanium-style-sheets": "Titanium Style Sheets",
-    "Titanium Style Sheets": "Titanium Style Sheets",
-    "language-twig": "Twig",
-    "Twig": "Twig",
-    "language-typescript": "TypeScript",
-    "TypeScript": "TypeScript",
-    "language-visualforce": "Visualforce",
-    "Visualforce": "Visualforce",
-    "language-vue": "Vue",
-    "Vue": "Vue",
-    "language-xml": "XML",
-    "XML": "XML",
-    "language-xtemplate": "XTemplate",
-    "XTemplate": "XTemplate",
-    "languages": "Supported Languages",
-    "Supported Languages": "Supported Languages",
-    "option-align-assignments": "Align Assignments",
-    "Align Assignments": "Align Assignments",
-    "option-arrow-parens": "Arrow Parens",
-    "Arrow Parens": "Arrow Parens",
-    "option-brace-style": "Brace Style",
-    "Brace Style": "Brace Style",
-    "option-break-chained-methods": "Break Chained Methods",
-    "Break Chained Methods": "Break Chained Methods",
-    "option-comma-first": "Comma First",
-    "Comma First": "Comma First",
-    "option-end-with-comma": "End With Comma",
-    "End With Comma": "End With Comma",
-    "option-end-with-newline": "End With Newline",
-    "End With Newline": "End With Newline",
-    "option-end-with-semicolon": "End With Semicolon",
-    "End With Semicolon": "End With Semicolon",
-    "option-force-indentation": "Force Indentation",
-    "Force Indentation": "Force Indentation",
-    "option-identifier-case": "Identifier Case",
-    "Identifier Case": "Identifier Case",
-    "option-indent-chained-methods": "Indent Chained Methods",
-    "Indent Chained Methods": "Indent Chained Methods",
-    "option-indent-comments": "Indent Comments",
-    "Indent Comments": "Indent Comments",
-    "option-indent-inner-html": "Indent Inner Html",
-    "Indent Inner Html": "Indent Inner Html",
-    "option-indent-scripts": "Indent Scripts",
-    "Indent Scripts": "Indent Scripts",
-    "option-indent-size": "Indent Size",
-    "Indent Size": "Indent Size",
-    "option-indent-style": "Indent Style",
-    "Indent Style": "Indent Style",
-    "option-jslint-happy": "JSLint Happy",
-    "JSLint Happy": "JSLint Happy",
-    "option-jsx-brackets": "JSX Brackets",
-    "JSX Brackets": "JSX Brackets",
-    "option-keep-array-indentation": "Keep Array Indentation",
-    "Keep Array Indentation": "Keep Array Indentation",
-    "option-keyword-case": "Keyword Case",
-    "Keyword Case": "Keyword Case",
-    "option-max-preserve-newlines": "Max Preserve Newlines",
-    "Max Preserve Newlines": "Max Preserve Newlines",
-    "option-multiline-ternary": "Multiline Ternary",
-    "Multiline Ternary": "Multiline Ternary",
-    "option-newline-before-tags": "Newline Before Tags",
-    "Newline Before Tags": "Newline Before Tags",
-    "option-newline-between-rules": "Newline Between Rules",
-    "Newline Between Rules": "Newline Between Rules",
-    "option-no-leading-zero": "No Leading Zero",
-    "No Leading Zero": "No Leading Zero",
-    "option-object-curly-spacing": "Object Curly Spacing",
-    "Object Curly Spacing": "Object Curly Spacing",
-    "option-pragma-insert": "Pragma Insert",
-    "Pragma Insert": "Pragma Insert",
-    "option-pragma-require": "Pragma Require",
-    "Pragma Require": "Pragma Require",
-    "option-preserve-newlines": "Preserve Newlines",
-    "Preserve Newlines": "Preserve Newlines",
-    "option-quotes": "Quotes",
-    "Quotes": "Quotes",
-    "option-remove-trailing-whitespace": "Remove Trailing Whitespace",
-    "Remove Trailing Whitespace": "Remove Trailing Whitespace",
-    "option-selector-separator-newline": "Selector Separator Newline",
-    "Selector Separator Newline": "Selector Separator Newline",
-    "option-space-after-anon-function": "Space After Anon Function",
-    "Space After Anon Function": "Space After Anon Function",
-    "option-space-before-conditional": "Space Before Conditional",
-    "Space Before Conditional": "Space Before Conditional",
-    "option-space-in-empty-paren": "Space In Empty Paren",
-    "Space In Empty Paren": "Space In Empty Paren",
-    "option-space-in-paren": "Space In Paren",
-    "Space In Paren": "Space In Paren",
-    "option-unescape-strings": "Unescape Strings",
-    "Unescape Strings": "Unescape Strings",
-    "option-unformatted": "Unformatted",
-    "Unformatted": "Unformatted",
-    "option-wrap-attributes-indent-size": "Wrap Attributes Indent Size",
-    "Wrap Attributes Indent Size": "Wrap Attributes Indent Size",
-    "option-wrap-attributes": "Wrap Attributes",
-    "Wrap Attributes": "Wrap Attributes",
-    "option-wrap-line-length": "Wrap Line Length",
-    "Wrap Line Length": "Wrap Line Length",
-    "option-wrap-prose": "Wrap Prose",
-    "Wrap Prose": "Wrap Prose",
-    "options-for-beautifiers": "Beautifier Options",
-    "options-for-languages": "Language Options",
-    "Language Options": "Language Options",
-    "Docs": "Docs",
-    "About": "About",
-    "Assistant": "Assistant",
-    "Playground": "Playground",
-    "Usage": "Usage",
-    "Contributing": "Contributing",
-    "Integrations": "Integrations",
-    "Editors": "Editors",
-    "Beautifiers": "Beautifiers",
-    "PHP-CS-Fixer Beautifier": "PHP-CS-Fixer Beautifier",
-    "ClangFormat Beautifier": "ClangFormat Beautifier",
-    "PHP_CodeSniffer Beautifier": "PHP_CodeSniffer Beautifier",
-    "Black Beautifier": "Black Beautifier",
-    "Gofmt Beautifier": "Gofmt Beautifier",
-    "sqlformat Beautifier": "sqlformat Beautifier",
-    "A": "A",
-    "B": "B",
-    "E": "E",
-    "F": "F",
-    "I": "I",
-    "J": "J",
-    "K": "K",
-    "M": "M",
-    "N": "N",
-    "O": "O",
-    "P": "P",
-    "Q": "Q",
-    "R": "R",
-    "S": "S",
-    "U": "U",
-    "W": "W",
-    "G": "G",
-    "H": "H",
-    "L": "L",
-    "T": "T",
-    "V": "V",
-    "X": "X"
+    "docs": {
+      "about": {
+        "title": "What is Unibeautify"
+      },
+      "beautifier-black": {
+        "title": "Black Beautifier",
+        "sidebar_label": "Black"
+      },
+      "beautifier-clangformat": {
+        "title": "ClangFormat Beautifier",
+        "sidebar_label": "ClangFormat"
+      },
+      "beautifier-eslint": {
+        "title": "ESLint Beautifier",
+        "sidebar_label": "ESLint"
+      },
+      "beautifier-gofmt": {
+        "title": "Gofmt Beautifier",
+        "sidebar_label": "Gofmt"
+      },
+      "beautifier-js-beautify": {
+        "title": "JS-Beautify Beautifier",
+        "sidebar_label": "JS-Beautify"
+      },
+      "beautifier-php_codesniffer": {
+        "title": "PHP_CodeSniffer Beautifier",
+        "sidebar_label": "PHP_CodeSniffer"
+      },
+      "beautifier-php-cs-fixer": {
+        "title": "PHP-CS-Fixer Beautifier",
+        "sidebar_label": "PHP-CS-Fixer"
+      },
+      "beautifier-prettier": {
+        "title": "Prettier Beautifier",
+        "sidebar_label": "Prettier"
+      },
+      "beautifier-pretty-diff": {
+        "title": "Pretty Diff Beautifier",
+        "sidebar_label": "Pretty Diff"
+      },
+      "beautifier-sqlformat": {
+        "title": "sqlformat Beautifier",
+        "sidebar_label": "sqlformat"
+      },
+      "ci": {
+        "title": "Unibeautify CI: Universal Coding Style Service",
+        "sidebar_label": "Unibeautify CI"
+      },
+      "cli": {
+        "title": "Command-Line Interface (CLI)"
+      },
+      "config-file": {
+        "title": "Configuration File"
+      },
+      "contributing-examples": {
+        "title": "Contributing Examples",
+        "sidebar_label": "Examples"
+      },
+      "credits": {
+        "title": "Credits"
+      },
+      "editor-atom": {
+        "title": "Atom-Beautify",
+        "sidebar_label": "Atom"
+      },
+      "editor-emacs": {
+        "title": "Emacs",
+        "sidebar_label": "Emacs"
+      },
+      "editor-sublime": {
+        "title": "Sublime Text",
+        "sidebar_label": "Sublime Text"
+      },
+      "editor-vim": {
+        "title": "Vim",
+        "sidebar_label": "Vim"
+      },
+      "editor-visual-studio": {
+        "title": "Visual Studio",
+        "sidebar_label": "Visual Studio"
+      },
+      "editor-vscode": {
+        "title": "VSCode",
+        "sidebar_label": "Visual Studio Code"
+      },
+      "editor-webstorm": {
+        "title": "WebStorm",
+        "sidebar_label": "WebStorm"
+      },
+      "executable-black-black": {
+        "title": "Black Executable",
+        "sidebar_label": "Black Executable"
+      },
+      "executable-clangformat-clangformat": {
+        "title": "ClangFormat Executable",
+        "sidebar_label": "ClangFormat Executable"
+      },
+      "executable-gofmt-gofmt": {
+        "title": "Gofmt Executable",
+        "sidebar_label": "Gofmt Executable"
+      },
+      "executable-php-cs-fixer-php-cs-fixer": {
+        "title": "PHP-CS-Fixer Executable",
+        "sidebar_label": "PHP-CS-Fixer Executable"
+      },
+      "executable-php_codesniffer-phpcbf": {
+        "title": "PHPCBF Executable",
+        "sidebar_label": "PHPCBF Executable"
+      },
+      "executable-sqlformat-sqlformat": {
+        "title": "sqlformat Executable",
+        "sidebar_label": "sqlformat Executable"
+      },
+      "getting-started": {
+        "title": "Getting Started"
+      },
+      "integration-bitbucket": {
+        "title": "Atlassian Bitbucket Integration",
+        "sidebar_label": "Bitbucket"
+      },
+      "integration-github": {
+        "title": "GitHub Integration",
+        "sidebar_label": "GitHub"
+      },
+      "integration-gitlab": {
+        "title": "GitLab Integration",
+        "sidebar_label": "GitLab"
+      },
+      "language-cpp": {
+        "title": "C++",
+        "sidebar_label": "C++"
+      },
+      "language-c": {
+        "title": "C",
+        "sidebar_label": "C"
+      },
+      "language-csharp": {
+        "title": "C#",
+        "sidebar_label": "C#"
+      },
+      "language-coldfusion": {
+        "title": "ColdFusion",
+        "sidebar_label": "ColdFusion"
+      },
+      "language-css": {
+        "title": "CSS",
+        "sidebar_label": "CSS"
+      },
+      "language-ejs": {
+        "title": "EJS",
+        "sidebar_label": "EJS"
+      },
+      "language-go": {
+        "title": "Go",
+        "sidebar_label": "Go"
+      },
+      "language-graphql": {
+        "title": "GraphQL",
+        "sidebar_label": "GraphQL"
+      },
+      "language-handlebars": {
+        "title": "Handlebars",
+        "sidebar_label": "Handlebars"
+      },
+      "language-html-erb": {
+        "title": "HTML+ERB",
+        "sidebar_label": "HTML+ERB"
+      },
+      "language-html": {
+        "title": "HTML",
+        "sidebar_label": "HTML"
+      },
+      "language-java": {
+        "title": "Java",
+        "sidebar_label": "Java"
+      },
+      "language-javascript": {
+        "title": "JavaScript",
+        "sidebar_label": "JavaScript"
+      },
+      "language-json": {
+        "title": "JSON",
+        "sidebar_label": "JSON"
+      },
+      "language-json5": {
+        "title": "JSON5",
+        "sidebar_label": "JSON5"
+      },
+      "language-jsx": {
+        "title": "JSX",
+        "sidebar_label": "JSX"
+      },
+      "language-less": {
+        "title": "Less",
+        "sidebar_label": "Less"
+      },
+      "language-liquid": {
+        "title": "Liquid",
+        "sidebar_label": "Liquid"
+      },
+      "language-markdown": {
+        "title": "Markdown",
+        "sidebar_label": "Markdown"
+      },
+      "language-mustache": {
+        "title": "Mustache",
+        "sidebar_label": "Mustache"
+      },
+      "language-objective-c": {
+        "title": "Objective-C",
+        "sidebar_label": "Objective-C"
+      },
+      "language-php": {
+        "title": "PHP",
+        "sidebar_label": "PHP"
+      },
+      "language-python": {
+        "title": "Python",
+        "sidebar_label": "Python"
+      },
+      "language-riot": {
+        "title": "Riot",
+        "sidebar_label": "Riot"
+      },
+      "language-scss": {
+        "title": "SCSS",
+        "sidebar_label": "SCSS"
+      },
+      "language-spacebars": {
+        "title": "Spacebars",
+        "sidebar_label": "Spacebars"
+      },
+      "language-sql": {
+        "title": "SQL",
+        "sidebar_label": "SQL"
+      },
+      "language-svg": {
+        "title": "SVG",
+        "sidebar_label": "SVG"
+      },
+      "language-swig": {
+        "title": "Swig",
+        "sidebar_label": "Swig"
+      },
+      "language-titanium-style-sheets": {
+        "title": "Titanium Style Sheets",
+        "sidebar_label": "Titanium Style Sheets"
+      },
+      "language-twig": {
+        "title": "Twig",
+        "sidebar_label": "Twig"
+      },
+      "language-typescript": {
+        "title": "TypeScript",
+        "sidebar_label": "TypeScript"
+      },
+      "language-visualforce": {
+        "title": "Visualforce",
+        "sidebar_label": "Visualforce"
+      },
+      "language-vue": {
+        "title": "Vue",
+        "sidebar_label": "Vue"
+      },
+      "language-xml": {
+        "title": "XML",
+        "sidebar_label": "XML"
+      },
+      "language-xtemplate": {
+        "title": "XTemplate",
+        "sidebar_label": "XTemplate"
+      },
+      "languages": {
+        "title": "Supported Languages",
+        "sidebar_label": "Supported Languages"
+      },
+      "option-align-assignments": {
+        "title": "Align Assignments",
+        "sidebar_label": "Align Assignments"
+      },
+      "option-arrow-parens": {
+        "title": "Arrow Parens",
+        "sidebar_label": "Arrow Parens"
+      },
+      "option-brace-style": {
+        "title": "Brace Style",
+        "sidebar_label": "Brace Style"
+      },
+      "option-break-chained-methods": {
+        "title": "Break Chained Methods",
+        "sidebar_label": "Break Chained Methods"
+      },
+      "option-comma-first": {
+        "title": "Comma First",
+        "sidebar_label": "Comma First"
+      },
+      "option-end-with-comma": {
+        "title": "End With Comma",
+        "sidebar_label": "End With Comma"
+      },
+      "option-end-with-newline": {
+        "title": "End With Newline",
+        "sidebar_label": "End With Newline"
+      },
+      "option-end-with-semicolon": {
+        "title": "End With Semicolon",
+        "sidebar_label": "End With Semicolon"
+      },
+      "option-force-indentation": {
+        "title": "Force Indentation",
+        "sidebar_label": "Force Indentation"
+      },
+      "option-identifier-case": {
+        "title": "Identifier Case",
+        "sidebar_label": "Identifier Case"
+      },
+      "option-indent-chained-methods": {
+        "title": "Indent Chained Methods",
+        "sidebar_label": "Indent Chained Methods"
+      },
+      "option-indent-comments": {
+        "title": "Indent Comments",
+        "sidebar_label": "Indent Comments"
+      },
+      "option-indent-inner-html": {
+        "title": "Indent Inner Html",
+        "sidebar_label": "Indent Inner Html"
+      },
+      "option-indent-scripts": {
+        "title": "Indent Scripts",
+        "sidebar_label": "Indent Scripts"
+      },
+      "option-indent-size": {
+        "title": "Indent Size",
+        "sidebar_label": "Indent Size"
+      },
+      "option-indent-style": {
+        "title": "Indent Style",
+        "sidebar_label": "Indent Style"
+      },
+      "option-jslint-happy": {
+        "title": "JSLint Happy",
+        "sidebar_label": "JSLint Happy"
+      },
+      "option-jsx-brackets": {
+        "title": "JSX Brackets",
+        "sidebar_label": "JSX Brackets"
+      },
+      "option-keep-array-indentation": {
+        "title": "Keep Array Indentation",
+        "sidebar_label": "Keep Array Indentation"
+      },
+      "option-keyword-case": {
+        "title": "Keyword Case",
+        "sidebar_label": "Keyword Case"
+      },
+      "option-max-preserve-newlines": {
+        "title": "Max Preserve Newlines",
+        "sidebar_label": "Max Preserve Newlines"
+      },
+      "option-multiline-ternary": {
+        "title": "Multiline Ternary",
+        "sidebar_label": "Multiline Ternary"
+      },
+      "option-newline-before-tags": {
+        "title": "Newline Before Tags",
+        "sidebar_label": "Newline Before Tags"
+      },
+      "option-newline-between-rules": {
+        "title": "Newline Between Rules",
+        "sidebar_label": "Newline Between Rules"
+      },
+      "option-no-leading-zero": {
+        "title": "No Leading Zero",
+        "sidebar_label": "No Leading Zero"
+      },
+      "option-object-curly-spacing": {
+        "title": "Object Curly Spacing",
+        "sidebar_label": "Object Curly Spacing"
+      },
+      "option-pragma-insert": {
+        "title": "Pragma Insert",
+        "sidebar_label": "Pragma Insert"
+      },
+      "option-pragma-require": {
+        "title": "Pragma Require",
+        "sidebar_label": "Pragma Require"
+      },
+      "option-preserve-newlines": {
+        "title": "Preserve Newlines",
+        "sidebar_label": "Preserve Newlines"
+      },
+      "option-quotes": {
+        "title": "Quotes",
+        "sidebar_label": "Quotes"
+      },
+      "option-remove-trailing-whitespace": {
+        "title": "Remove Trailing Whitespace",
+        "sidebar_label": "Remove Trailing Whitespace"
+      },
+      "option-selector-separator-newline": {
+        "title": "Selector Separator Newline",
+        "sidebar_label": "Selector Separator Newline"
+      },
+      "option-space-after-anon-function": {
+        "title": "Space After Anon Function",
+        "sidebar_label": "Space After Anon Function"
+      },
+      "option-space-before-conditional": {
+        "title": "Space Before Conditional",
+        "sidebar_label": "Space Before Conditional"
+      },
+      "option-space-in-empty-paren": {
+        "title": "Space In Empty Paren",
+        "sidebar_label": "Space In Empty Paren"
+      },
+      "option-space-in-paren": {
+        "title": "Space In Paren",
+        "sidebar_label": "Space In Paren"
+      },
+      "option-unescape-strings": {
+        "title": "Unescape Strings",
+        "sidebar_label": "Unescape Strings"
+      },
+      "option-unformatted": {
+        "title": "Unformatted",
+        "sidebar_label": "Unformatted"
+      },
+      "option-wrap-attributes-indent-size": {
+        "title": "Wrap Attributes Indent Size",
+        "sidebar_label": "Wrap Attributes Indent Size"
+      },
+      "option-wrap-attributes": {
+        "title": "Wrap Attributes",
+        "sidebar_label": "Wrap Attributes"
+      },
+      "option-wrap-line-length": {
+        "title": "Wrap Line Length",
+        "sidebar_label": "Wrap Line Length"
+      },
+      "option-wrap-prose": {
+        "title": "Wrap Prose",
+        "sidebar_label": "Wrap Prose"
+      },
+      "options-for-beautifiers": {
+        "title": "Beautifier Options"
+      },
+      "options-for-languages": {
+        "title": "Language Options",
+        "sidebar_label": "Language Options"
+      }
+    },
+    "links": {
+      "Docs": "Docs",
+      "About": "About",
+      "Assistant": "Assistant",
+      "Playground": "Playground",
+      "GitHub": "GitHub"
+    },
+    "categories": {
+      "About": "About",
+      "Usage": "Usage",
+      "Contributing": "Contributing",
+      "Integrations": "Integrations",
+      "Editors": "Editors",
+      "Beautifiers": "Beautifiers",
+      "PHP-CS-Fixer Beautifier": "PHP-CS-Fixer Beautifier",
+      "ClangFormat Beautifier": "ClangFormat Beautifier",
+      "PHP_CodeSniffer Beautifier": "PHP_CodeSniffer Beautifier",
+      "Black Beautifier": "Black Beautifier",
+      "Gofmt Beautifier": "Gofmt Beautifier",
+      "sqlformat Beautifier": "sqlformat Beautifier",
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "E": "E",
+      "F": "F",
+      "I": "I",
+      "J": "J",
+      "K": "K",
+      "M": "M",
+      "N": "N",
+      "O": "O",
+      "P": "P",
+      "Q": "Q",
+      "R": "R",
+      "S": "S",
+      "U": "U",
+      "W": "W",
+      "G": "G",
+      "H": "H",
+      "L": "L",
+      "T": "T",
+      "V": "V",
+      "X": "X"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
