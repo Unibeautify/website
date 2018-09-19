@@ -18,6 +18,7 @@ import OptionsListDoc from "./OptionsListDoc";
 import OptionsDoc from "./OptionsDoc";
 import LanguagesListDoc from "./LanguagesListDoc";
 import ExecutableDoc from "./ExecutableDoc";
+import ContributingExamplesDoc from "./ContributingExamples";
 import { slugify, optionKeyToTitle } from "./utils";
 import beautifiers from "../beautifiers";
 
@@ -36,6 +37,7 @@ const executableDocs = docsForExecutables(beautifiers);
 const optionsDocs = docsForOptions();
 const optionsListDoc = new OptionsListDoc(optionRegistry);
 const languagesListDoc = new LanguagesListDoc(supportedLanguages);
+const contributingExamplesDoc = new ContributingExamplesDoc(supportedLanguages);
 
 main();
 
@@ -47,6 +49,7 @@ async function main() {
     writeDocs(optionsDocs),
     writeDoc(optionsListDoc),
     writeDoc(languagesListDoc),
+    writeDoc(contributingExamplesDoc),
     updateSidebars({
       languages: languageDocs,
       beautifiers: beautifierDocs,

@@ -54,8 +54,16 @@ export default class MarkdownBuilder {
     }
     return this;
   }
-  public static createDocLink(text: string, docId: string): string {
-    return this.createLink(text, `/docs/${docId}.html`);
+  public static createDocLink(
+    text: string,
+    docId: string,
+    queryParam?: string
+  ): string {
+    let dest: string = `/docs/${docId}.html`;
+    if (queryParam) {
+      dest += `?${queryParam}`;
+    }
+    return this.createLink(text, dest);
   }
   public static createBadge(badge: Badge): string {
     const { url, href, description } = badge;
@@ -66,6 +74,23 @@ export default class MarkdownBuilder {
   }
   public static createLink(text: string, dest: string): string {
     return `[${text}](${dest})`;
+  }
+  public static createProgressBar(options: {
+    value: number;
+    scale?: number;
+    title?: string;
+    suffix?: string;
+  }): string {
+    const baseUrl = "http://progressed.io/bar/";
+    const queryParams: string[] = Object.keys(options).reduce((query, key) => {
+      if (key === "value") {
+        return query;
+      }
+      const val = options[key];
+      return val !== undefined ? [...query, `${key}=${val}`] : query;
+    }, []);
+
+    return `![progress](${baseUrl}${options.value}?${queryParams.join("&")})`;
   }
   public static bold(text: string): string {
     return `**${text}**`;

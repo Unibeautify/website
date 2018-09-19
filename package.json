@@ -8,7 +8,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs": "npm run clean && npm run generate-docs",
+    "docs": "npm run clean && npm run generate-docs && npm run update-readme",
     "clean": "npm run rm-languages && npm run rm-beautifiers && npm run rm-options && npm run rm-executables",
     "rm-beautifiers": "rimraf 'docs/beautifier-*'",
     "rm-languages": "rimraf 'docs/language-*'",
@@ -29,9 +29,7 @@
     "url": "https://github.com/Unibeautify/website/issues"
   },
   "homepage": "https://github.com/Unibeautify/website#readme",
-  "dependencies": {
-    "ugly-samples": "git+https://github.com/Unibeautify/ugly-samples.git"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/diff": "3.5.1",
     "@types/fs-extra": "5.0.4",
@@ -40,12 +38,13 @@
     "@unibeautify/beautifier-clang-format": "0.2.0",
     "@unibeautify/beautifier-eslint": "0.5.0",
     "@unibeautify/beautifier-gofmt": "0.1.0",
-    "@unibeautify/beautifier-js-beautify": "0.3.2",
+    "@unibeautify/beautifier-js-beautify": "0.4.0",
     "@unibeautify/beautifier-php-codesniffer": "0.1.1",
     "@unibeautify/beautifier-php-cs-fixer": "0.3.0",
-    "@unibeautify/beautifier-prettier": "0.8.0",
-    "@unibeautify/beautifier-prettydiff": "0.5.3",
+    "@unibeautify/beautifier-prettier": "0.9.0",
+    "@unibeautify/beautifier-prettydiff": "0.6.0",
     "@unibeautify/beautifier-sqlformat": "0.0.1",
+    "@unibeautify/ugly-samples": "0.2.2",
     "array-flatten": "2.1.1",
     "diff": "3.5.0",
     "eslint": "4.19.1",
@@ -53,7 +52,7 @@
     "get-pkg-repo": "2.0.0",
     "js-beautify": "1.8.6",
     "lodash": "4.17.11",
-    "prettier": "1.14.2",
+    "prettier": "1.14.3",
     "prettydiff2": "2.2.7",
     "rimraf": "2.6.2",
     "ts-node": "7.0.1",

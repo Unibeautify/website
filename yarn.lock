@@ -56,11 +56,11 @@
   dependencies:
     read-pkg-up "^3.0.0"
 
-"@unibeautify/beautifier-js-beautify@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-js-beautify/-/beautifier-js-beautify-0.3.2.tgz#949158a774d2148e10601045e6f45fd0a2eab0ab"
+"@unibeautify/beautifier-js-beautify@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-js-beautify/-/beautifier-js-beautify-0.4.0.tgz#43b199d780e6f0fb6d2fe2479e2eef77b5ea4961"
   dependencies:
-    read-pkg-up "^3.0.0"
+    read-pkg-up "^4.0.0"
 
 "@unibeautify/beautifier-php-codesniffer@0.1.1":
   version "0.1.1"
@@ -76,17 +76,17 @@
     read-pkg-up "^3.0.0"
     tmp "0.0.33"
 
-"@unibeautify/beautifier-prettier@0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-prettier/-/beautifier-prettier-0.8.0.tgz#e89c0c7485aebb02ea69660c6b27bbf2744c8cd6"
+"@unibeautify/beautifier-prettier@0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-prettier/-/beautifier-prettier-0.9.0.tgz#d461677352d59b2d14e8ff24479598126b10722c"
   dependencies:
-    read-pkg-up "^3.0.0"
+    read-pkg-up "^4.0.0"
 
-"@unibeautify/beautifier-prettydiff@0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-prettydiff/-/beautifier-prettydiff-0.5.3.tgz#a6d9eaf16141eb611bea1394edd805cedbe70e4a"
+"@unibeautify/beautifier-prettydiff@0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-prettydiff/-/beautifier-prettydiff-0.6.0.tgz#43eb44c0d3ce59b143caeb18750b5c4de1fd715a"
   dependencies:
-    read-pkg-up "^3.0.0"
+    read-pkg-up "^4.0.0"
 
 "@unibeautify/beautifier-sqlformat@0.0.1":
   version "0.0.1"
@@ -94,6 +94,10 @@
   dependencies:
     read-pkg-up "^4.0.0"
     tmp "0.0.33"
+
+"@unibeautify/ugly-samples@0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@unibeautify/ugly-samples/-/ugly-samples-0.2.2.tgz#c3127a9cb8d36194274039c33cbe2bba46f67b20"
 
 abbrev@1:
   version "1.1.1"
@@ -1055,9 +1059,9 @@ prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
 
-prettier@1.14.2:
-  version "1.14.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.2.tgz#0ac1c6e1a90baa22a62925f41963c841983282f9"
+prettier@1.14.3:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.3.tgz#90238dd4c0684b7edce5f83b0fb7328e48bd0895"
 
 prettydiff2@2.2.7:
   version "2.2.7"
@@ -1402,10 +1406,6 @@ typedarray@^0.0.6:
 typescript@3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.0.3.tgz#4853b3e275ecdaa27f78fda46dc273a7eb7fc1c8"
-
-"ugly-samples@git+https://github.com/Unibeautify/ugly-samples.git":
-  version "0.0.1"
-  resolved "git+https://github.com/Unibeautify/ugly-samples.git#d204499132fef56885d4b8bb089a74058b6f4dc2"
 
 unibeautify@0.17.0:
   version "0.17.0"

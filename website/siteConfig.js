@@ -30,6 +30,7 @@ const siteConfig = {
   githubUrl: GITHUB_URL,
   repoUrl: GITHUB_URL,
   editUrl: "https://github.com/unibeautify/website/edit/master/docs/",
+  samplesEditUrl: "https://github.com/unibeautify/ugly-samples/edit/master",
   debug: false, // debugging only for theme
 
   // Header and footer

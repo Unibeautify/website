@@ -3,9 +3,8 @@ import GlobalUnibeautify, {
   Language,
   Beautifier,
   BeautifierOptionName,
+  OptionValues,
 } from "unibeautify";
-import * as path from "path";
-import * as fs from "fs";
 import * as JsDiff from "diff";
 
 import {
@@ -16,16 +15,19 @@ import {
   emojis,
   websiteEditUrl,
   coreOptionsEditUrl,
+  readExample,
+  editExampleUrl,
+  addExampleUrl,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
+import _ = require("lodash");
 
 const editBeautifiersUrl = `${websiteEditUrl}/scripts/generate-docs/beautifiers.ts`;
 
 export default class OptionsDoc extends Doc {
   private readonly languages: Language[];
   private readonly beautifiers: Beautifier[];
-  private readonly languageEditURL: string = "https://github.com/unibeautify/ugly-samples/edit/master";
 
   constructor(
     private option: Option,
@@ -268,6 +270,7 @@ export default class OptionsDoc extends Doc {
                     builder.append(
                       `\nUsing ${linkForBeautifier(beautifier)} beautifier:`,
                     );
+                    (configForExample[language.name] as any).beautifiers = [beautifier.name];
                   }
                   builder.code(beautifiedExample, language.name);
                   builder.details("How to configure", builder => {
@@ -288,7 +291,7 @@ export default class OptionsDoc extends Doc {
                 !beautifiedExamplesAreDifferent
               ) {
                 console.log(
-                  `${this.optionKey} - ${language.name} - BAD EXAMPLES`,
+                  `BAD EXAMPLE: ${language.name} - ${this.optionKey}`,
                 );
               }
             } else {
@@ -316,7 +319,13 @@ export default class OptionsDoc extends Doc {
       case "integer": {
         const min = option.minimum || 0;
         const max = option.maximum || option.default * 2;
-        return [option.default, min, max].sort();
+        const defaultVal = option.default || max || min;
+        const lower = Math.floor((defaultVal - min) / 2) + min;
+        const higher = Math.ceil((max - defaultVal) / 2) + defaultVal;
+        return _.uniq([defaultVal, min, lower, higher, max])
+          .map(v => parseInt(v))
+          .filter(v => typeof v === "number")
+          .sort((a, b) => a - b);
       }
       case "array": {
         return [[], option.default];
@@ -327,21 +336,10 @@ export default class OptionsDoc extends Doc {
   }
 
   private readExample(language: Language): string | undefined {
-    const exampleExtension = ".txt";
-    const examplePath = path.join(
-      this.examplesPath,
-      language.name,
-      `${this.optionKey}${exampleExtension}`,
-    );
-    try {
-      return fs.readFileSync(examplePath).toString();
-    } catch (error) {
-      return undefined;
-    }
-  }
-
-  private get examplesPath(): string {
-    return path.resolve(require("ugly-samples"));
+    return readExample({
+      language: language.name,
+      optionKey: this.optionKey,
+    });
   }
 
   private createOptionsWithLanguageAndValue(
@@ -353,12 +351,16 @@ export default class OptionsDoc extends Doc {
     };
   }
 
-  private createOptionValues(optionValue: any) {
-    return {
+  private createOptionValues(optionValue: any): OptionValues {
+    const optionValues: OptionValues = {
       indent_size: 2,
       indent_char: " ",
       [this.optionKey]: optionValue,
     };
+    if (this.optionKey === "wrap_line_length") {
+      optionValues["wrap_prose"] = "always";
+    }
+    return optionValues;
   }
 
   private beautify(
@@ -377,7 +379,13 @@ export default class OptionsDoc extends Doc {
         languageName: language.name,
         options: configForExample,
         text,
-      });
+      })
+        .catch((error) => {
+          console.info(`Error beautifying: ${language.name} - ${this.optionKey}`);
+          console.error(error);
+          return Promise.reject(error);
+        })
+      ;
     }
     return Promise.reject(
       new Error(`No beautifier supports option ${this.optionKey}.`),
@@ -395,18 +403,17 @@ export default class OptionsDoc extends Doc {
   }
 
   private editExampleButtonUrl(language: Language): string {
-    return `${this.languageEditURL}/samples/${language.name}/${
-      this.optionKey
-    }.txt`;
+    return editExampleUrl({
+      languageName: language.name,
+      optionKey: this.optionKey,
+    });
   }
 
   private addExampleButtonUrl(language: Language): string {
-    return `${this.languageEditURL.replace(
-      "/edit/",
-      "/new/",
-    )}/samples/${encodeURIComponent(language.name)}/new?filename=${
-      this.optionKey
-    }.txt&value=Type%20Example%20Here`;
+    return addExampleUrl({
+      languageName: language.name,
+      optionKey: this.optionKey,
+    });
   }
 }
 
