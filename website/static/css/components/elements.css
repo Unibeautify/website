@@ -8,6 +8,9 @@ details {
   border: 1px solid var(--grey);
   border-radius: var(--border-radius);
   background: var(--light-grey);
+}
+
+details summary {
   cursor: pointer;
 }
 
