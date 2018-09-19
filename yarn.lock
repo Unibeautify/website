@@ -44,11 +44,11 @@
     read-pkg-up "^3.0.0"
     tmp "0.0.33"
 
-"@unibeautify/beautifier-eslint@0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-eslint/-/beautifier-eslint-0.5.0.tgz#261e2323cdca4c942f496f978d0d79d0a0cbddf8"
+"@unibeautify/beautifier-eslint@0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-eslint/-/beautifier-eslint-0.6.0.tgz#46caf51284dca5dc60c42755286f781af925a3da"
   dependencies:
-    read-pkg-up "^3.0.0"
+    read-pkg-up "^4.0.0"
 
 "@unibeautify/beautifier-gofmt@0.1.0":
   version "0.1.0"
