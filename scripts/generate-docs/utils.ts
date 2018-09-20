@@ -177,7 +177,7 @@ export function showInvisibles(text: string): string {
       // Replace Newlines
       .replace(
         /(?:\r\n)/g,
-        `${invisiblesMap.carriage_return}${invisiblesMap.line_feed}\n`,
+        `${invisiblesMap.carriage_return}${invisiblesMap.line_feed}\n`
       )
       .replace(/(?:\r)/g, `${invisiblesMap.carriage_return}\n`)
       .replace(/(?:\n)/g, `${invisiblesMap.line_feed}\n`)
