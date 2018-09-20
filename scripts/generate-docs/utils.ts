@@ -164,3 +164,26 @@ export function addExampleUrl({
     languageName
   )}/new?filename=${optionKey}.txt&value=Type%20Example%20Here`;
 }
+
+export const invisiblesMap = {
+  carriage_return: "␍", // \r
+  line_feed: "␊", // \n
+  tab: "⇥", // \t
+  whitespace: "·",
+};
+export function showInvisibles(text: string): string {
+  return (
+    text
+      // Replace Newlines
+      .replace(
+        /(?:\r\n)/g,
+        `${invisiblesMap.carriage_return}${invisiblesMap.line_feed}\n`
+      )
+      .replace(/(?:\r)/g, `${invisiblesMap.carriage_return}\n`)
+      .replace(/(?:\n)/g, `${invisiblesMap.line_feed}\n`)
+      // Replace tabs
+      .replace(/(?:\t)/g, `${invisiblesMap.tab}\t`)
+      // Replace spaces
+      .replace(/(?:\ )/g, invisiblesMap.whitespace)
+  );
+}

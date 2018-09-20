@@ -18,6 +18,8 @@ import {
   readExample,
   editExampleUrl,
   addExampleUrl,
+  showInvisibles,
+  invisiblesMap,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -222,6 +224,11 @@ export default class OptionsDoc extends Doc {
             }
           });
           builder.append(`</select><div class="select__arrow"></div></div>`);
+          builder.append("Invisible characters are shown with the following symbols:\n");
+          builder.append(Object.keys(invisiblesMap).map(invisibleName => {
+            const visibleChar = invisiblesMap[invisibleName];
+            return (`<kbd>${optionKeyToTitle(invisibleName)}</kbd> = <kbd>${visibleChar}</kbd>`);
+          }).join('; ') + '.');
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
             builder.append(
@@ -237,7 +244,7 @@ export default class OptionsDoc extends Doc {
                 this.editExampleButtonUrl(language),
               );
               builder.append("<strong>🚧 Original Code</strong>");
-              builder.code(example, language.name);
+              builder.code(showInvisibles(example));
               let beautifiedExamplesAreDifferent: boolean = false;
               let lastCode: string | null = null;
               this.exampleValues.forEach((optionValue, valueIndex) => {
@@ -272,7 +279,7 @@ export default class OptionsDoc extends Doc {
                     );
                     (configForExample[language.name] as any).beautifiers = [beautifier.name];
                   }
-                  builder.code(beautifiedExample, language.name);
+                  builder.code(showInvisibles(beautifiedExample));
                   builder.details("How to configure", builder => {
                     builder.append(
                       `A \`.unibeautify.json\` file would look like the following:`,
@@ -430,28 +437,5 @@ function diffExample(
     showInvisibles(beautifiedText),
     oldHeader,
     newHeader,
-  );
-}
-
-const invisibles = {
-  carriageReturn: "␍", // \r
-  newLine: "␊", // \n
-  tab: "↹", // \t
-  whitespace: "␣",
-};
-function showInvisibles(text: string): string {
-  return (
-    text
-      // Replace Newlines
-      .replace(
-        /(?:\r\n)/g,
-        `${invisibles.carriageReturn}${invisibles.newLine}\n`,
-      )
-      .replace(/(?:\r)/g, `${invisibles.carriageReturn}\n`)
-      .replace(/(?:\n)/g, `${invisibles.newLine}\n`)
-      // Replace tabs
-      .replace(/(?:\t)/g, "↹")
-      // Replace spaces
-      .replace(/(?:\ )/g, "␣")
   );
 }
