@@ -44,7 +44,7 @@
     read-pkg-up "^3.0.0"
     tmp "0.0.33"
 
-"@unibeautify/beautifier-eslint@^0.6.0":
+"@unibeautify/beautifier-eslint@0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-eslint/-/beautifier-eslint-0.6.0.tgz#46caf51284dca5dc60c42755286f781af925a3da"
   dependencies:
@@ -69,11 +69,11 @@
     read-pkg-up "^3.0.0"
     tmp "0.0.33"
 
-"@unibeautify/beautifier-php-cs-fixer@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-php-cs-fixer/-/beautifier-php-cs-fixer-0.3.0.tgz#18cf9fde8d2d0a17b5d9b98aebec5745b705a66a"
+"@unibeautify/beautifier-php-cs-fixer@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-php-cs-fixer/-/beautifier-php-cs-fixer-0.4.0.tgz#eca4f06bef8dd4298b61b3d392bafd666ae7dc96"
   dependencies:
-    read-pkg-up "^3.0.0"
+    read-pkg-up "^4.0.0"
     tmp "0.0.33"
 
 "@unibeautify/beautifier-prettier@0.9.0":
@@ -420,7 +420,7 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-plugin-react@^7.11.1:
+eslint-plugin-react@7.11.1:
   version "7.11.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.11.1.tgz#c01a7af6f17519457d6116aa94fc6d2ccad5443c"
   dependencies:
