@@ -41,6 +41,7 @@
       "beautifier-prettier",
       "beautifier-pretty-diff",
       "beautifier-sqlformat",
+      "beautifier-tslint",
       "beautifier-yapf"
     ]
   },
