@@ -9,6 +9,7 @@ import phpCodesniffer from "@unibeautify/beautifier-php-codesniffer";
 import black from "@unibeautify/beautifier-black";
 import gofmt from "@unibeautify/beautifier-gofmt";
 import sqlformat from "@unibeautify/beautifier-sqlformat";
+import yapf from "@unibeautify/beautifier-yapf";
 
 const beautifiers: Beautifier[] = <any[]>[
   prettier,
@@ -21,6 +22,7 @@ const beautifiers: Beautifier[] = <any[]>[
   black,
   gofmt,
   sqlformat,
+  yapf,
 ];
 
 export default beautifiers;

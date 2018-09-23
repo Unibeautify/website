@@ -40,7 +40,8 @@
       "beautifier-php_codesniffer",
       "beautifier-prettier",
       "beautifier-pretty-diff",
-      "beautifier-sqlformat"
+      "beautifier-sqlformat",
+      "beautifier-yapf"
     ]
   },
   "executables": {
@@ -61,6 +62,9 @@
     ],
     "sqlformat Beautifier": [
       "executable-sqlformat-sqlformat"
+    ],
+    "YAPF Beautifier": [
+      "executable-yapf-yapf"
     ]
   },
   "options": {
