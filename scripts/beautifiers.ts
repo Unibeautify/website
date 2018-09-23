@@ -11,6 +11,7 @@ import gofmt from "@unibeautify/beautifier-gofmt";
 import sqlformat from "@unibeautify/beautifier-sqlformat";
 import yapf from "@unibeautify/beautifier-yapf";
 import tslint from "@unibeautify/beautifier-tslint";
+import csscomb from "@unibeautify/beautifier-csscomb";
 
 const beautifiers: Beautifier[] = <any[]>[
   prettier,
@@ -25,6 +26,7 @@ const beautifiers: Beautifier[] = <any[]>[
   sqlformat,
   yapf,
   tslint,
+  csscomb,
 ];
 
 export default beautifiers;
