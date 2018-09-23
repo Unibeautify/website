@@ -25,6 +25,8 @@
     "Pretty Diff": "Pretty Diff",
     "beautifier-sqlformat": "sqlformat Beautifier",
     "sqlformat": "sqlformat",
+    "beautifier-tslint": "TSLint Beautifier",
+    "TSLint": "TSLint",
     "beautifier-yapf": "YAPF Beautifier",
     "YAPF": "YAPF",
     "ci": "Unibeautify CI: Universal Coding Style Service",

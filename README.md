@@ -16,8 +16,9 @@ See https://github.com/Unibeautify/website/blob/master/scripts/beautifiers.ts fo
 | 7 | PHP_CodeSniffer | :warning: | https://unibeautify.com/docs/beautifier-php_codesniffer.html |
 | 8 | Prettier | :white_check_mark: | https://unibeautify.com/docs/beautifier-prettier.html |
 | 9 | Pretty Diff | :white_check_mark: | https://unibeautify.com/docs/beautifier-pretty-diff.html |
-| 10 | YAPF | :warning: | https://unibeautify.com/docs/beautifier-yapf.html |
-| 11 | sqlformat | :warning: | https://unibeautify.com/docs/beautifier-sqlformat.html |
+| 10 | TSLint | :white_check_mark: | https://unibeautify.com/docs/beautifier-tslint.html |
+| 11 | YAPF | :warning: | https://unibeautify.com/docs/beautifier-yapf.html |
+| 12 | sqlformat | :warning: | https://unibeautify.com/docs/beautifier-sqlformat.html |
 <!--END:SUPPORT-TABLE-->
 
 ## Contributing
