@@ -115,9 +115,9 @@
     read-pkg-up "^4.0.0"
     tmp "0.0.33"
 
-"@unibeautify/ugly-samples@0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@unibeautify/ugly-samples/-/ugly-samples-0.2.2.tgz#c3127a9cb8d36194274039c33cbe2bba46f67b20"
+"@unibeautify/ugly-samples@0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@unibeautify/ugly-samples/-/ugly-samples-0.2.3.tgz#5a728e67c56123872ff52849aa2b7505d2f92e72"
 
 abbrev@1:
   version "1.1.1"
