@@ -33,6 +33,7 @@
     "Beautifiers": [
       "beautifier-black",
       "beautifier-clangformat",
+      "beautifier-csscomb",
       "beautifier-eslint",
       "beautifier-gofmt",
       "beautifier-js-beautify",
@@ -192,6 +193,7 @@
       "language-riot"
     ],
     "S": [
+      "language-sass",
       "language-scss",
       "language-spacebars",
       "language-sql",
