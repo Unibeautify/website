@@ -33,6 +33,7 @@
     "Beautifiers": [
       "beautifier-black",
       "beautifier-clangformat",
+      "beautifier-csscomb",
       "beautifier-eslint",
       "beautifier-file",
       "beautifier-gofmt",
@@ -41,7 +42,9 @@
       "beautifier-php_codesniffer",
       "beautifier-prettier",
       "beautifier-pretty-diff",
-      "beautifier-sqlformat"
+      "beautifier-sqlformat",
+      "beautifier-tslint",
+      "beautifier-yapf"
     ]
   },
   "executables": {
@@ -62,6 +65,9 @@
     ],
     "sqlformat Beautifier": [
       "executable-sqlformat-sqlformat"
+    ],
+    "YAPF Beautifier": [
+      "executable-yapf-yapf"
     ]
   },
   "options": {
