@@ -91,11 +91,11 @@ class HomeSplash extends React.Component {
           <div className="col col-lg-auto">
             <ProjectTitle/>
             <ButtonGroup>
-              <Button href={docUrl('getting-started.html', language)}>
-                Get Started
+              <Button href={"https://github.com/apps/unibeautify-ci"} target="_blank">
+                Install
               </Button>
-              <Button href={docUrl('ci.html', language)}>
-                Sign Up for <b>Unibeautify CI</b>
+              <Button href={docUrl('getting-started.html', language)}>
+                Documentation
               </Button>
             </ButtonGroup>
           </div>
