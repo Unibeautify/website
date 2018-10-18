@@ -651,9 +651,9 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
 
-get-pkg-repo@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/get-pkg-repo/-/get-pkg-repo-2.0.0.tgz#afe80c3370b2576bbe69aa78aedbfb96d2d025f1"
+get-pkg-repo@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/get-pkg-repo/-/get-pkg-repo-3.0.0.tgz#91a027f1ba3a95c42068726079b250e70b8ac643"
   dependencies:
     hosted-git-info "^2.1.4"
     meow "^3.3.0"
