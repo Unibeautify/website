@@ -1900,6 +1900,7 @@ typedarray@^0.0.6:
 typescript@3.1.5:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.1.5.tgz#93d8b6864375325a91177372cb370ae0ae3a0703"
+  integrity sha512-muYNWV9j5+3mXoKD6oPONKuGUmYiFX14gfo9lWm9ZXRHOqVDQiB4q1CzFPbF4QLV2E9TZXH6oK55oQ94rn3PpA==
 
 unibeautify@0.17.0:
   version "0.17.0"
