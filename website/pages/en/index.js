@@ -31,9 +31,9 @@ function pageUrl(page, language) {
 class Button extends React.Component {
   render() {
     return (
-      <a 
-        className="button outline light" 
-        href={this.props.href} 
+      <a
+        className="button outline light"
+        href={this.props.href}
         target={this.props.target}>
         {this.props.children}
       </a>
@@ -50,10 +50,10 @@ const ButtonGroup = props => (
 );
 
 const Block = props => (
-  <Container 
+  <Container
     padding={['bottom', 'top']}
-    id={props.id} 
-    className={props.className} 
+    id={props.id}
+    className={props.className}
     background={props.background}>
     <GridBlock align={props.align || 'center'} contents={props.children} layout={props.layout}/>
   </Container>
@@ -84,7 +84,7 @@ const ProjectTitle = () => (
 class HomeSplash extends React.Component {
   render() {
     let language = this.props.language || '';
-    
+
     return (
       <SplashContainer>
         <div className="row align-items-center justify-content-between">
@@ -130,7 +130,7 @@ const LanguagesShowcase = () => {
       <div className="logos">
           {showcase}
           <a href={"/docs/languages.html"}>
-              <img src={imgUrl("font-awesome/plus-square-regular.svg")} title={"And more..."}/>
+              <img src={imgUrl("languages/more.png")} title={"And more..."}/>
               <br/>
               And more...
           </a>
@@ -220,7 +220,7 @@ const Showcase = props => {
 class Index extends React.Component {
   render() {
     const language = this.props.language || '';
-    
+
     return (
       <main>
         <HomeSplash language={language}/>
