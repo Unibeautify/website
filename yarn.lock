@@ -14,10 +14,10 @@
   dependencies:
     commander "*"
 
-"@types/diff@3.5.1":
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@types/diff/-/diff-3.5.1.tgz#30253f6e177564ad7da707b1ebe46d3eade71706"
-  integrity sha512-nkT7bd/YM6QRDQjww8PYf0kOj1MvwxQ/WaCinj2Hm1HlL+JqGTm4cDoQeROfiWX/B3SNI1nyLLhLAQpp5sE3hw==
+"@types/diff@3.5.2":
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/@types/diff/-/diff-3.5.2.tgz#bd92300d32675bbe9f7853480730250aa859a90a"
+  integrity sha512-T1y8ed2DipuUGqgzWzBDUMlJM1bD1CG73ETOi08VURsGArjRfC4nqfeC5owrV7SFvgbeKDbonI/Es4vQgJ2IKA==
 
 "@types/fs-extra@5.0.4":
   version "5.0.4"
@@ -1900,6 +1900,7 @@ typedarray@^0.0.6:
 typescript@3.1.6:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.1.6.tgz#b6543a83cfc8c2befb3f4c8fba6896f5b0c9be68"
+  integrity sha512-tDMYfVtvpb96msS1lDX9MEdHrW4yOuZ4Kdc4Him9oU796XldPYF/t2+uKoX0BBa0hXXwDlqYQbXY5Rzjzc5hBA==
 
 unibeautify@0.17.0:
   version "0.17.0"

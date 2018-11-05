@@ -31,7 +31,7 @@
   "homepage": "https://github.com/Unibeautify/website#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/diff": "3.5.1",
+    "@types/diff": "3.5.2",
     "@types/fs-extra": "5.0.4",
     "@types/lodash": "4.14.117",
     "@unibeautify/beautifier-black": "0.1.1",
