@@ -48,7 +48,7 @@
     "@unibeautify/beautifier-tslint": "0.1.0",
     "@unibeautify/beautifier-yapf": "0.3.0",
     "@unibeautify/ugly-samples": "0.2.3",
-    "array-flatten": "2.1.1",
+    "array-flatten": "2.1.2",
     "csscomb": "4.2.0",
     "diff": "3.5.0",
     "eslint": "4.19.1",
