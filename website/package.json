@@ -16,7 +16,7 @@
     "stylelint-order": "2.0.0"
   },
   "dependencies": {
-    "bootstrap": "4.3.0",
+    "bootstrap": "4.3.1",
     "featherlight": "1.7.13",
     "jquery": "3.3.1"
   }
