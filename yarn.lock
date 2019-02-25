@@ -1437,10 +1437,10 @@ prettier@1.16.4:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
   integrity sha512-ZzWuos7TI5CKUeQAtFd6Zhm2s6EpAD/ZLApIhsF9pRvRtM1RFo61dM/4MSRUA0SuLugA/zgrZD8m0BaY46Og7g==
 
-prettydiff2@2.2.7:
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/prettydiff2/-/prettydiff2-2.2.7.tgz#1d4f4f5333911c20a3951fee0a34a3540ddf13ff"
-  integrity sha1-HU9PUzORHCCjlR/uCjSjVA3fE/8=
+prettydiff2@2.2.8:
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/prettydiff2/-/prettydiff2-2.2.8.tgz#a85a29a9a3142bb000eb224e919ba05054025f63"
+  integrity sha512-FWakOZGkSA2VG8ScuSMVGVTgu6jryajAmJ7ZJnkZPCIKrAAz2ox9IbeffGxd5sQRqUHTvLwihQgiFmrzv+OCMw==
 
 process-nextick-args@~2.0.0:
   version "2.0.0"
