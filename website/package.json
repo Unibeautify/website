@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "docusaurus": "1.7.2",
-    "js-yaml": "3.12.1",
+    "js-yaml": "3.12.2",
     "stylelint": "9.10.1",
     "stylelint-config-standard": "18.2.0",
     "stylelint-order": "2.0.0"
