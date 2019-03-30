@@ -9,7 +9,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "1.7.3",
+    "docusaurus": "1.8.0",
     "js-yaml": "3.13.0",
     "stylelint": "9.10.1",
     "stylelint-config-standard": "18.2.0",
