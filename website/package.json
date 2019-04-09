@@ -13,7 +13,7 @@
     "js-yaml": "3.13.1",
     "stylelint": "9.10.1",
     "stylelint-config-standard": "18.2.0",
-    "stylelint-order": "2.2.0"
+    "stylelint-order": "2.2.1"
   },
   "dependencies": {
     "bootstrap": "4.3.1",
