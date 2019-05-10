@@ -1,17 +1,18 @@
 let previousSelectedLanguage;
 
 window.onload = function() {
-  const langSelectedElement = document.getElementById("languages-select");
+  const langSelectedElement = document.querySelectorAll('.nav-link');
 
   if (langSelectedElement.length == 0) return;
 
   loadSelected();
-
-  langSelectedElement.onchange = function onSelectionChange() {
-    const languageName = getSelectedLanguage();
-    history.pushState({ language: languageName }, null, `?language=${languageName}`);
-    updateCodeExample(languageName);
-  };
+  
+  langSelectedElement.forEach(function(tab) {
+    tab.addEventListener('click', function(e) {
+      const languageName = e.target.innerHTML;
+      history.pushState({ language: languageName }, null, `?language=${languageName}`);
+    })
+  });
 };
 
 function loadSelected() {
@@ -34,6 +35,7 @@ window.onpopstate = function onPageChange(event) {
 
 function updateCodeExample(languageName) {
   languageName = fixLanguage(languageName);
+  element = [...document.querySelectorAll(".nav-tabs .nav-link")].filter(text => text.textContent === languageName);
   if (!languageName) {
     return;
   }
