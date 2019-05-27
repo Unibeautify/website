@@ -47,7 +47,7 @@
     "@unibeautify/beautifier-sqlformat": "0.0.1",
     "@unibeautify/beautifier-tslint": "0.1.0",
     "@unibeautify/beautifier-yapf": "0.3.0",
-    "@unibeautify/ugly-samples": "0.2.3",
+    "@unibeautify/ugly-samples": "0.2.4",
     "array-flatten": "2.1.2",
     "csscomb": "4.3.0",
     "diff": "4.0.1",
