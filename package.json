@@ -60,7 +60,7 @@
     "prettier": "1.19.1",
     "prettydiff2": "2.2.8",
     "rimraf": "3.0.0",
-    "ts-node": "8.5.0",
+    "ts-node": "8.5.2",
     "tslint": "5.20.1",
     "typescript": "3.7.2",
     "unibeautify": "0.17.0"
