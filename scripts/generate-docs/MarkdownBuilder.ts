@@ -81,7 +81,9 @@ export default class MarkdownBuilder {
     title?: string;
     suffix?: string;
   }): string {
-    return `<progress value="${options.value}" max="100"> ${options.value}% </progress>`;
+    return `<progress value="${options.value}" max="100"> ${
+      options.value
+    }% </progress>`;
   }
   public static bold(text: string): string {
     return `**${text}**`;
