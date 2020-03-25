@@ -81,16 +81,7 @@ export default class MarkdownBuilder {
     title?: string;
     suffix?: string;
   }): string {
-    const baseUrl = "http://progressed.io/bar/";
-    const queryParams: string[] = Object.keys(options).reduce((query, key) => {
-      if (key === "value") {
-        return query;
-      }
-      const val = options[key];
-      return val !== undefined ? [...query, `${key}=${val}`] : query;
-    }, []);
-
-    return `![progress](${baseUrl}${options.value}?${queryParams.join("&")})`;
+    return `<progress value="${options.value}" max="100"> ${options.value}% </progress>`;
   }
   public static bold(text: string): string {
     return `**${text}**`;
