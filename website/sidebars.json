@@ -11,7 +11,8 @@
       "config-file",
       "options-for-languages",
       "options-for-beautifiers",
-      "languages"
+      "languages",
+      "editors"
     ],
     "Contributing": [
       "contributing-examples"
@@ -20,15 +21,6 @@
       "integration-github",
       "integration-gitlab",
       "integration-bitbucket"
-    ],
-    "Editors": [
-      "editor-atom",
-      "editor-emacs",
-      "editor-sublime",
-      "editor-vim",
-      "editor-visual-studio",
-      "editor-vscode",
-      "editor-webstorm"
     ],
     "Beautifiers": [
       "beautifier-black",
