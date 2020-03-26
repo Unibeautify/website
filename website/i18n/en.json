@@ -77,33 +77,8 @@
       "credits": {
         "title": "Credits"
       },
-      "editor-atom": {
-        "title": "Atom-Beautify",
-        "sidebar_label": "Atom"
-      },
-      "editor-emacs": {
-        "title": "Emacs",
-        "sidebar_label": "Emacs"
-      },
-      "editor-sublime": {
-        "title": "Sublime Text",
-        "sidebar_label": "Sublime Text"
-      },
-      "editor-vim": {
-        "title": "Vim",
-        "sidebar_label": "Vim"
-      },
-      "editor-visual-studio": {
-        "title": "Visual Studio",
-        "sidebar_label": "Visual Studio"
-      },
-      "editor-vscode": {
-        "title": "VSCode",
-        "sidebar_label": "Visual Studio Code"
-      },
-      "editor-webstorm": {
-        "title": "WebStorm",
-        "sidebar_label": "WebStorm"
+      "editors": {
+        "title": "Editor Integration"
       },
       "executable-black-black": {
         "title": "Black Executable",
@@ -488,7 +463,6 @@
       "Usage": "Usage",
       "Contributing": "Contributing",
       "Integrations": "Integrations",
-      "Editors": "Editors",
       "Beautifiers": "Beautifiers",
       "PHP-CS-Fixer Beautifier": "PHP-CS-Fixer Beautifier",
       "ClangFormat Beautifier": "ClangFormat Beautifier",
