@@ -87,6 +87,10 @@ const siteConfig = {
     "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css",
   ],
 
+  markdownOptions: {
+    html: true,
+  },
+
   // Addition meta
   ogImage: "img/og/facebook-banner.png",
 
