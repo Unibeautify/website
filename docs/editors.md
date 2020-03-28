@@ -1,6 +1,7 @@
 ---
 id: editors
 title: Editor Integration
+description: Unibeautify formats code with Atom and Visual Studio Code (VSCode) editors.
 ---
 
 ## Atom
@@ -46,7 +47,6 @@ See [Keymaps In-Depth](https://flight-manual.atom.io/behind-atom/sections/keymap
 ```
 
 ## Emacs
-
 
 ### What is Emacs?
 
@@ -102,7 +102,7 @@ Visual Studio extension is not yet implemented. Please help us by contributing! 
 
 See https://github.com/Unibeautify/vscode for installation instructions.
 
-Open the Command Palette (<kbd>Ctrl + Shift + P</kbd> or <kbd>Command + Shift + P</kbd> on Mac) and search for format:
+Open the Command Palette (<kbd>Ctrl + Shift + P</kbd> on Windows or <kbd>Command + Shift + P</kbd> on Mac) and search for format:
 
 - <kbd>Format Document</kbd> - Formats the entire editor document.
 - <kbd>Format Selection</kbd> - Formats only the selection. Only appears when text selected.
@@ -111,7 +111,7 @@ Open the Command Palette (<kbd>Ctrl + Shift + P</kbd> or <kbd>Command + Shift + 
 
 ### How to format on save in Visual Studio Code?
 
-You can turn on format on save for all languages:
+You can turn on format on save for all languages with the [VSCode setting](https://code.visualstudio.com/docs/getstarted/settings):
 
 ```javascript
 "editor.formatOnSave": false,
@@ -144,3 +144,58 @@ See https://code.visualstudio.com/updates/v1_6#_format-on-save for more details.
 
 WebStorm is not yet supported. Please help us by contributing! Thanks in advance!
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Editor Integration FAQ",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to format code in Atom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<a href=\"https://atom.io/\">Download and install Atom editor</a>. Install <a href=\"https://atom.io/packages/atom-beautify\">Atom Package</a> by running <strong>apm install atom-beautify</strong> in your Terminal shell or in Atom editor go to <strong>Settings/Preferences ➔ Install ➔ Search for atom-beautify</strong>. Open the <a href=\"https://github.com/atom/command-palette\">Command Palette</a>, type <strong>Beautify</strong>, and run <strong>Beautify Editor</strong>."
+      }
+    }, {
+      "@type": "Question",
+      "name": "How to format on save in Atom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In <a href=\"https://github.com/Glavin001/atom-beautify\">Atom-Beautify</a>, format/beautify on save can be enabled or disabled for each language individually. For example, for language <a href=\"https://unibeautify.com/docs/language-html.html\">HTML</a> go into Atom-Beautify's package settings (<strong>Atom ➔ Preferences ➔ Search for atom-beautify</strong>), find <a href=\"https://unibeautify.com/docs/language-html.html\">HTML</a>, and toggle the <strong>Beautify On Save</strong> option."
+      }
+    }, {
+      "@type": "Question",
+      "name": "What is the keyboard shortcut in Atom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can also type <strong>Ctrl-Alt-B</strong> as a shortcut or click <strong>Packages > Beautify</strong> in the menu.<br/>See <a href=\"https://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/\">Keymaps In-Depth</a> for more details on how to customize."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to format code in Visual Studio Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Install <a href=\"https://marketplace.visualstudio.com/items?itemName=Glavin001.unibeautify-vscode\">Unibeautify extension for VSCode</a>. Open the <a href=\"https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette\">Command Palette</a> (<strong>Ctrl + Shift + P</strong> on Windows or <strong>Command + Shift + P</strong> on Mac) and search for your desired format action:<br/><ul><li><strong>Format Document</strong> - Formats the entire editor document.</li><li><strong>Format Selection</strong> - Formats only the selection. Only appears when text selected.</li></ul><br/>See <a href=\"https://code.visualstudio.com/docs/editor/codebasics#_formatting\">VSCode documentation</a> for more details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to format on save in Visual Studio Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can turn on format on save for all languages with the <a href=\"https://code.visualstudio.com/docs/getstarted/settings\">VSCode setting</a>:<br/><strong>\"editor.formatOnSave\": false,</strong><br/>Or enable only for specific langauges:<br/><strong>\"editor.formatOnSave\": false, \"[javascript]\": { \"editor.formatOnSave\": true }</strong><br/>See <a href=\"https://code.visualstudio.com/updates/v1_6#_format-on-save\">VSCode's format-on-save documentation</a> for more details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the keyboard shortcut in Visual Studio Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<ul><li>Windows: <em>Shift + Alt + F</em></li><li>Mac: <em>Shift + Option + F</em></li><li>Ubuntu: <em>Ctrl + Shift + I</em></li></ul>"
+      }
+    }
+  ]
+}
+</script>
