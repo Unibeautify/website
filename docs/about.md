@@ -1,6 +1,7 @@
 ---
 id: about
 title: What is Unibeautify
+description: "Unibeautify is a universal code beautifier which joins multiple code formatters into one unified experience
 ---
 
 **Unibeautify is a universal code beautifier.**

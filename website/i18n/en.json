@@ -80,34 +80,6 @@
       "editors": {
         "title": "Editor Integration"
       },
-      "executable-black-black": {
-        "title": "Black Executable",
-        "sidebar_label": "Black Executable"
-      },
-      "executable-clangformat-clangformat": {
-        "title": "ClangFormat Executable",
-        "sidebar_label": "ClangFormat Executable"
-      },
-      "executable-gofmt-gofmt": {
-        "title": "Gofmt Executable",
-        "sidebar_label": "Gofmt Executable"
-      },
-      "executable-php-cs-fixer-php-cs-fixer": {
-        "title": "PHP-CS-Fixer Executable",
-        "sidebar_label": "PHP-CS-Fixer Executable"
-      },
-      "executable-php_codesniffer-phpcbf": {
-        "title": "PHPCBF Executable",
-        "sidebar_label": "PHPCBF Executable"
-      },
-      "executable-sqlformat-sqlformat": {
-        "title": "sqlformat Executable",
-        "sidebar_label": "sqlformat Executable"
-      },
-      "executable-yapf-yapf": {
-        "title": "YAPF Executable",
-        "sidebar_label": "YAPF Executable"
-      },
       "getting-started": {
         "title": "Getting Started"
       },

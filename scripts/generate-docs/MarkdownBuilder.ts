@@ -88,4 +88,7 @@ export default class MarkdownBuilder {
   public static bold(text: string): string {
     return `**${text}**`;
   }
+  public static indent(text: string): string {
+    return text.replace(new RegExp("^(#+ .+)$", "gm"), "#$1");
+  }
 }

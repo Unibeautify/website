@@ -101,7 +101,7 @@ export default class ExecutableDoc extends Doc {
     return builder;
   }
 
-  private appendTroubleshootingSection(
+  public appendTroubleshootingSection(
     builder: MarkdownBuilder
   ): MarkdownBuilder {
     builder.header(`Troubleshooting`, 2);
