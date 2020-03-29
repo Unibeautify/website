@@ -51,7 +51,6 @@ export default class BeautifierDoc extends Doc {
     this.appendOptionsTable(builder);
     this.appendFaqSection(builder);
     this.appendTroubleshootingSection(builder);
-    // this.appendExecutablesSection(builder);
     return builder.build();
   }
   private appendAboutSection(builder: MarkdownBuilder): MarkdownBuilder {
@@ -131,53 +130,13 @@ export default class BeautifierDoc extends Doc {
     }
     builder.header("Prerequisites", 2);
     builder.append("Please install the following prerequisites.");
-
-    /*
-    const depLinks = dependencies.map((dep: ExecutableDependencyDefinition) =>
-      MarkdownBuilder.createDocLink(
-        dep.name,
-        `executable-${slugify(this.beautifierName)}-${slugify(dep.name)}`
-      )
-    );
-    builder.list(depLinks);
-    */
-
     this.appendExecutablesSection(builder);
-
     return builder;
   }
 
   private appendExecutablesSection(builder: MarkdownBuilder): MarkdownBuilder {
-    /*
-    const dependencies = this.dependencies.filter(
-      dep => dep.type === DependencyType.Executable
-    );
-    if (dependencies.length === 0) {
-      return builder;
-    }
-    */
-
-    // builder.header("Executables", 2);
-    // builder.append("Please install the following prerequisites:");
-    // dependencies.forEach(async (dep: ExecutableDependencyDefinition) => {
-
     this.executables.forEach((dep: ExecutableDependencyDefinition) => {
-      /*
-      MarkdownBuilder.createDocLink(
-        dep.name,
-        `executable-${slugify(this.beautifierName)}-${slugify(dep.name)}`
-      )
-      */
-
-      /*
-      builder.header(`${dep.name} Executable`, 2);
-      const contents = new ExecutableDoc(dep, this.beautifier, this.languages).body;
-      const indentedContents = contents.replace(new RegExp("^(#+ .+)$","gm"),"#$1")
-      builder.append(indentedContents);
-      */
-
       this.appendExecutableSection(dep, builder);
-      // "### Hello world".replace(new RegExp("^(#+ .+)$","gm"),"#$1")
     });
     return builder;
   }
@@ -189,36 +148,11 @@ export default class BeautifierDoc extends Doc {
   }
 
   private appendTroubleshootingSection(builder: MarkdownBuilder): MarkdownBuilder {
-    // const dependencies: ExecutableDependencyDefinition[] = this.dependencies.filter(
-    //   dep => dep.type === DependencyType.Executable
-    // );
     if (this.executables.length === 0) {
       return builder;
     }
-
-    new ExecutableDoc(this.executables[0], this.beautifier, this.languages).appendTroubleshootingSection(builder);
-
-    /*
-    // builder.header("Executables", 2);
-    // builder.append("Please install the following prerequisites:");
-    dependencies.forEach(async (dep: ExecutableDependencyDefinition) => {
-      MarkdownBuilder.createDocLink(
-        dep.name,
-        `executable-${slugify(this.beautifierName)}-${slugify(dep.name)}`
-      )
-
-      builder.header(`${dep.name} Executable`, 2);
-      const nestedBuilder = new MarkdownBuilder();
-      // const contents = new ExecutableDoc(dep, this.beautifier, this.languages).body;
-      new ExecutableDoc(dep, this.beautifier, this.languages).appendTroubleshootingSection(nestedBuilder);
-      builder.append(MarkdownBuilder.indent(nestedBuilder.build()));
-
-      new ExecutableDoc(dep, this.beautifier, this.languages).appendTroubleshootingSection(builder);
-
-      // this.appendExecutableSection(dep, builder);
-      // "### Hello world".replace(new RegExp("^(#+ .+)$","gm"),"#$1")
-    });
-    */
+    new ExecutableDoc(this.executables[0], this.beautifier, this.languages)
+      .appendTroubleshootingSection(builder);
     return builder;
   }
 
@@ -249,7 +183,6 @@ export default class BeautifierDoc extends Doc {
     }
 
     if (installationUrl) {
-      // builder.header(`Install ${executable.name} executable`, 3);
       builder.append(
         `Install ${executable.name} (\`${
           executable.program
@@ -267,47 +200,6 @@ export default class BeautifierDoc extends Doc {
         );
       }
     }
-
-    /*
-    const dep = executable;
-    const executableConfig = {
-      [dep.name]: {
-        path: fakePathForProgram(dep.program),
-      },
-    };
-    const beautifierOptions: any = {
-      ...executableConfig,
-    };
-    builder.append(
-      `A \`.unibeautifyrc.json\` file would look like the following:`
-    );
-    builder.code(
-      JSON.stringify(
-        {
-          LANGUAGE_NAME: {
-            beautifiers: [beautifierName],
-            [beautifierName]: beautifierOptions,
-          },
-        },
-        null,
-        2
-      ),
-      "json"
-    );
-    builder.note(
-      `The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
-        .slice(0, 3)
-        .map(lang => `\`${lang.name}\``)
-        .join(", ")}, etc.`
-    );
-    */
-    // builder.append(
-    //   `See ${MarkdownBuilder.createLink(
-    //     "Install",
-    //     "#install"
-    //   )} section below for how to determine absolute path to the exectuable.`
-    // );
-
     return builder;
   }
 
@@ -349,43 +241,6 @@ export default class BeautifierDoc extends Doc {
       );
     }
 
-    /*
-    if (this.languages.length === 1) {
-      const languageName = this.languages[0].name;
-      builder.code(
-        JSON.stringify(
-          {
-            [languageName]: {
-              beautifiers: [beautifierName],
-            },
-          },
-          null,
-          2
-        ),
-        "json"
-      );
-    } else {
-      builder.code(
-        JSON.stringify(
-          {
-            LANGUAGE_NAME: {
-              beautifiers: [beautifierName],
-            },
-          },
-          null,
-          2
-        ),
-        "json"
-      );
-      builder.note(
-        `The \`LANGUAGE_NAME\` should be replaced with your desired supported language name, such as ${this.languages
-          .slice(0, 3)
-          .map(lang => `\`${lang.name}\``)
-          .join(", ")}, etc.`
-      );
-    }
-    */
-
     const hasBeautifierOptions = this.beautifierOptionKeys.length > 0;
     const hasExecutables = this.executables.length > 0;
     if (hasBeautifierOptions || hasExecutables) {
@@ -402,10 +257,6 @@ export default class BeautifierDoc extends Doc {
       }
 
       builder.append('Example advanced configuration:');
-      // prefer_beautifier_config
-      // const beautifierOptions: any = {
-      //   // ...executableConfig,
-      // };
       const beautifierOptions: any = this.beautifierOptionKeys.reduce(
         (options, key) => ({
           ...options,
@@ -420,9 +271,6 @@ export default class BeautifierDoc extends Doc {
             path: fakePathForProgram(dep.program),
           },
         };
-        // const beautifierOptions: any = {
-        //   ...executableConfig,
-        // };
         Object.assign(beautifierOptions, executableConfig);
       });
 
@@ -519,9 +367,6 @@ export default class BeautifierDoc extends Doc {
 
   private appendFaqSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("FAQ", 2);
-
-    // builder.header(`Should I use ${this.beautifierName}?`, 3);
-    // builder.append(`${this.beautifierName} `);
 
     builder.header(`How to use ${this.beautifierName} in Atom, VSCode, and other editors?`, 3);
     builder.append(`See the ${MarkdownBuilder.createDocLink(
