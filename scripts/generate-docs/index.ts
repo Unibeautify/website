@@ -3,13 +3,13 @@ import Unibeautify, {
   Language,
   OptionsRegistry,
   BeautifierOptionName,
-  ExecutableDependencyDefinition,
-  DependencyType,
+  // ExecutableDependencyDefinition,
+  // DependencyType,
 } from "unibeautify";
 import { ensureFile, writeFile } from "fs-extra";
 import * as path from "path";
 import * as _ from "lodash";
-const flattenArray = require("array-flatten");
+// const flattenArray = require("array-flatten");
 
 import Doc from "./Doc";
 import LanguageDoc from "./LanguageDoc";
@@ -17,7 +17,7 @@ import BeautifierDoc from "./BeautifierDoc";
 import OptionsListDoc from "./OptionsListDoc";
 import OptionsDoc from "./OptionsDoc";
 import LanguagesListDoc from "./LanguagesListDoc";
-import ExecutableDoc from "./ExecutableDoc";
+// import ExecutableDoc from "./ExecutableDoc";
 import ContributingExamplesDoc from "./ContributingExamples";
 import { slugify, optionKeyToTitle } from "./utils";
 import beautifiers from "../beautifiers";
@@ -33,7 +33,7 @@ const optionRegistry: OptionsRegistry = _.pickBy(
 const supportedLanguages = Unibeautify.supportedLanguages;
 const languageDocs = docsForLanguages(supportedLanguages);
 const beautifierDocs = docsForBeautifiers(beautifiers);
-const executableDocs = docsForExecutables(beautifiers);
+// const executableDocs = docsForExecutables(beautifiers);
 const optionsDocs = docsForOptions();
 const optionsListDoc = new OptionsListDoc(optionRegistry);
 const languagesListDoc = new LanguagesListDoc(supportedLanguages);
@@ -45,7 +45,7 @@ async function main() {
   return await Promise.all([
     writeDocs(languageDocs),
     writeDocs(beautifierDocs),
-    writeDocs(executableDocs),
+    // writeDocs(executableDocs),
     writeDocs(optionsDocs),
     writeDoc(optionsListDoc),
     writeDoc(languagesListDoc),
@@ -53,7 +53,7 @@ async function main() {
     updateSidebars({
       languages: languageDocs,
       beautifiers: beautifierDocs,
-      executables: executableDocs,
+      // executables: executableDocs,
     }),
   ]).catch(error => {
     console.error(error);
@@ -73,6 +73,7 @@ function docsForBeautifiers(beautifiers: Beautifier[]): BeautifierDoc[] {
       new BeautifierDoc(beautifier, languagesForBeautifier(beautifier))
   );
 }
+/*
 function docsForExecutables(beautifiers: Beautifier[]): ExecutableDoc[] {
   return flattenArray(
     beautifiers.map(beautifier =>
@@ -87,6 +88,8 @@ function docsForExecutables(beautifiers: Beautifier[]): ExecutableDoc[] {
     )
   );
 }
+*/
+/*
 function executablesForBeautifier(
   beautifier: Beautifier
 ): ExecutableDependencyDefinition[] {
@@ -94,7 +97,7 @@ function executablesForBeautifier(
     dep => dep.type === DependencyType.Executable
   ) as ExecutableDependencyDefinition[];
 }
-
+*/
 function docsForOptions(): OptionsDoc[] {
   return Object.keys(optionRegistry)
     .map(key => ({ option: optionRegistry[key], key }))
@@ -126,11 +129,11 @@ async function writeDoc(doc: Doc): Promise<void> {
 async function updateSidebars({
   languages,
   beautifiers,
-  executables,
+  // executables,
 }: {
   languages: LanguageDoc[];
   beautifiers: BeautifierDoc[];
-  executables: ExecutableDoc[];
+  // executables: ExecutableDoc[];
 }) {
   if (!(Array.isArray(languages) && Array.isArray(beautifiers))) {
     return Promise.reject(new Error("Languages or beautifiers missing."));
@@ -145,7 +148,7 @@ async function updateSidebars({
     },
     options: optionsSidebar(),
     languages: languagesSidebar(languages),
-    executables: executablesSidebar(executables),
+    // executables: executablesSidebar(executables),
   };
   return await writeFile(sidebarsPath, JSON.stringify(newSidebars, null, 2));
 }
@@ -176,6 +179,7 @@ function optionsSidebar(): {
     optionId[firstLetterIndex].toUpperCase()
   );
 }
+/*
 function executablesSidebar(
   executables: ExecutableDoc[]
 ): {
@@ -188,3 +192,4 @@ function executablesSidebar(
     .mapValues((group: ExecutableDoc[]) => _.map(group, exec => exec.id))
     .value();
 }
+*/
