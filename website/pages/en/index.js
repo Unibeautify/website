@@ -214,6 +214,45 @@ const Showcase = props => {
   );
 };
 
+const StructuredData = () => (
+  <script type="application/ld+json" dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": siteConfig.name,
+      "description": siteConfig.tagline,
+      "keywords": `${siteConfig.languages.map(language => language.name + ' code formatter').join(', ')}`,
+      "creator": {
+        "@type": "Person",
+        "name": "Glavin Wiechert",
+        "url": "https://www.linkedin.com/in/glavin/"
+      },
+      "operatingSystem": "Windows, Mac OSX, Linux",
+      "applicationCategory": "DeveloperApplication",
+      "installUrl": "https://marketplace.visualstudio.com/items?itemName=Glavin001.unibeautify-vscode",
+      "featureList": [
+        `Code formatting for ${siteConfig.languages.length} languages: ${siteConfig.languages.map(language => language.name).join(', ')}`
+      ],
+      "softwareRequirements": "Atom or Visual Studio Code editors or GitHub code hosting.",
+      "screenshot": `${siteConfig.url}img/previews/ubi-ci-demo.png`,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "itemReviewed": "SoftwareApplication",
+        "ratingValue": "4.5",
+        "ratingCount": "8",
+        "ratingExplanation": "From Unibeautify VSCode extension reviews",
+        "url": "https://marketplace.visualstudio.com/items?itemName=Glavin001.unibeautify-vscode&ssr=false#review-details"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD",
+      }
+    }, null, 2)
+  }}>
+  </script>
+);
+
 // ==========================================
 // Render page
 
@@ -223,6 +262,7 @@ class Index extends React.Component {
 
     return (
       <main>
+        <StructuredData />
         <HomeSplash language={language}/>
         <div className="mainContainer">
           <LanguagesShowcase language={language}/>
