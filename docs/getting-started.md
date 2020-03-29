@@ -7,7 +7,7 @@ See the [about](about.md) page to learn more about what Unibeautify does and how
 
 ## 1. Install
 
-Setup your development environment with the [Unibeautify's CLI](cli.md), editor integrations (e.g. [VSCode](editor-vscode.md)), and/or [Unibeautify CI service](ci.md) (e.g. [GitHub](integration-github.md)).
+Setup your development environment with the [Unibeautify's CLI](cli.md), editor integrations (e.g. [Atom, Visual Studio Code](editors.md)), and/or [Unibeautify CI service](ci.md) (e.g. [GitHub](integration-github.md)).
 
 ## 2. Configure
 
