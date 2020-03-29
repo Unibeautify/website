@@ -195,49 +195,15 @@ export default class OptionsDoc extends Doc {
           ),
         ).then(beautified => {
           builder.header("Examples", 2);
-          builder.append(
-            '<div class="input-group languages-select"><div class="input-group-prepend">',
-          );
-          builder.append(
-            '<label class="input-group-text" for="languages-select">Select Language:</label>',
-          );
-          builder.append(
-            '</div><select class="custom-select" id="languages-select">',
-          );
-          let defaultDisplay: string;
-          let isDefault: boolean = true;
-          this.languages.forEach(language => {
-            const example = examplesForLanguages[language.name];
-            builder.append(
-              `<option ${
-                example && isDefault ? 'selected="selected"' : ""
-              } data-text="${
-                language.name
-              }" value="${language.name
-                .toLowerCase()
-                .replace(/ /g, "")}">${language.name +
-                (example ? " *" : "")}</option>`,
-            );
-            if (example && isDefault) {
-              defaultDisplay = language.name;
-              isDefault = false;
-            }
-          });
-          builder.append(`</select><div class="select__arrow"></div></div>`);
           builder.append("Invisible characters are shown with the following symbols:\n");
           builder.append(Object.keys(invisiblesMap).map(invisibleName => {
             const visibleChar = invisiblesMap[invisibleName];
             return (`<kbd>${optionKeyToTitle(invisibleName)}</kbd> = <kbd>${visibleChar}</kbd>`);
           }).join('; ') + '.');
+          builder.append('<!--DOCUSAURUS_CODE_TABS-->',);
           this.languages.forEach((language, languageIndex) => {
             const example = examplesForLanguages[language.name];
-            builder.append(
-              `<div class="exampleCode${
-                language.name === defaultDisplay ? "" : " hidden"
-              }" id="example-${language.name
-                .toLowerCase()
-                .replace(/ /g, "")}">\n`,
-            );
+            builder.append(`<!--${language.name}-->`);
             if (example) {
               builder.editButton(
                 `Edit ${language.name} Example`,
@@ -292,7 +258,6 @@ export default class OptionsDoc extends Doc {
                   builder.append("");
                 }
               });
-
               if (
                 this.exampleValues.length > 1 &&
                 !beautifiedExamplesAreDifferent
@@ -308,8 +273,8 @@ export default class OptionsDoc extends Doc {
               );
               builder.append("No example found. Please submit a Pull Request!");
             }
-            builder.append(`</div>`);
           });
+          builder.append('<!--END_DOCUSAURUS_CODE_TABS-->');
         });
       })
       .then(() => builder);
