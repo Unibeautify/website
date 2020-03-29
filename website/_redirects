@@ -5,3 +5,10 @@
 /docs/editor-visual-studio   /docs/editors
 /docs/editor-vscode          /docs/editors
 /docs/editor-webstorm        /docs/editors
+/docs/executable-black-black                /docs/beautifier-black
+/docs/executable-clangformat-clangformat    /docs/beautifier-clangformat
+/docs/executable-gofmt-gofmt                /docs/beautifier-gofmt
+/docs/executable-php-cs-fixer-php-cs-fixer  /docs/beautifier-php-cs-fixer
+/docs/executable-php_codesniffer-phpcbf     /docs/beautifier-php_codesniffer
+/docs/executable-sqlformat-sqlformat        /docs/beautifier-sqlformat
+/docs/executable-yapf-yapf                  /docs/beautifier-yapf
