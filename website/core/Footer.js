@@ -61,11 +61,6 @@ class Footer extends React.Component {
                         src="https://img.shields.io/twitter/follow/unibeautify.png?label=Follow+Unibeautify&style=flat"
                       />
                     </a>
-                    <a 
-                      href="https://unibeautify-slack.glitch.me/" 
-                      target="_blank">
-                      <img src="https://unibeautify-slack.glitch.me/badge.svg" />
-                    </a>
                   </span>
                 ) : (
                   <span></span>

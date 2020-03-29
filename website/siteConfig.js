@@ -20,7 +20,7 @@ const siteConfig = {
   organizationName: "unibeautify", // or set an env variable ORGANIZATION_NAME
   projectName: "website", // or set an env variable PROJECT_NAME
   tagline: "The Universal Code Beautifier",
-  url: "https://unibeautify.com/",
+  url: "https://unibeautify.com",
   baseUrl: "/",
   cname: "unibeautify.com",
   cleanUrl: true,
