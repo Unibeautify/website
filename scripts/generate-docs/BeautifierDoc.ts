@@ -147,16 +147,24 @@ export default class BeautifierDoc extends Doc {
     ) as any[];
   }
 
-  private appendTroubleshootingSection(builder: MarkdownBuilder): MarkdownBuilder {
+  private appendTroubleshootingSection(
+    builder: MarkdownBuilder
+  ): MarkdownBuilder {
     if (this.executables.length === 0) {
       return builder;
     }
-    new ExecutableDoc(this.executables[0], this.beautifier, this.languages)
-      .appendTroubleshootingSection(builder);
+    new ExecutableDoc(
+      this.executables[0],
+      this.beautifier,
+      this.languages
+    ).appendTroubleshootingSection(builder);
     return builder;
   }
 
-  private appendExecutableSection(executable: ExecutableDependencyDefinition, builder: MarkdownBuilder): MarkdownBuilder {
+  private appendExecutableSection(
+    executable: ExecutableDependencyDefinition,
+    builder: MarkdownBuilder
+  ): MarkdownBuilder {
     const { installationUrl, bugsUrl } = executable;
     const dependency = executable;
     const beautifierName: string = this.beautifier.name;
@@ -217,7 +225,9 @@ export default class BeautifierDoc extends Doc {
       `A \`.unibeautifyrc.json\` file would look like the following:`
     );
     const hasOnly1Language = this.languages.length === 1;
-    const languageKey = hasOnly1Language ? this.languages[0].name : "LANGUAGE_NAME";
+    const languageKey = hasOnly1Language
+      ? this.languages[0].name
+      : "LANGUAGE_NAME";
 
     builder.code(
       JSON.stringify(
@@ -251,12 +261,12 @@ export default class BeautifierDoc extends Doc {
         builder.append(
           `See ${MarkdownBuilder.createDocLink(
             "beautifier options",
-          "options-for-beautifiers"
+            "options-for-beautifiers"
           )} docs for more information.\n`
         );
       }
 
-      builder.append('Example advanced configuration:');
+      builder.append("Example advanced configuration:");
       const beautifierOptions: any = this.beautifierOptionKeys.reduce(
         (options, key) => ({
           ...options,
@@ -368,55 +378,85 @@ export default class BeautifierDoc extends Doc {
   private appendFaqSection(builder: MarkdownBuilder): MarkdownBuilder {
     builder.header("FAQ", 2);
 
-    builder.header(`How to use ${this.beautifierName} in Atom, VSCode, and other editors?`, 3);
-    builder.append(`See the ${MarkdownBuilder.createDocLink(
-      "editor integration",
-      "editors"
-    )} documentation for installation instructions for your editor of choice.`);
+    builder.header(
+      `How to use ${this.beautifierName} in Atom, VSCode, and other editors?`,
+      3
+    );
+    builder.append(
+      `See the ${MarkdownBuilder.createDocLink(
+        "editor integration",
+        "editors"
+      )} documentation for installation instructions for your editor of choice.`
+    );
 
     if (this.canResolveConfig) {
-      builder.header(`How to use ${this.beautifierName} configuration file?`, 3);
-      builder.append(`You can override Unibeautify configuration and use ${this.beautifierName}'s own configuration file instead with \`prefer_beautifier_config\` beautifier option.`);
+      builder.header(
+        `How to use ${this.beautifierName} configuration file?`,
+        3
+      );
+      builder.append(
+        `You can override Unibeautify configuration and use ${
+          this.beautifierName
+        }'s own configuration file instead with \`prefer_beautifier_config\` beautifier option.`
+      );
       builder.code(
         JSON.stringify(
           {
             LANGUAGE_NAME: {
-            beautifiers: [this.beautifierName],
-            [this.beautifierName]: {
-              prefer_beautifier_config: `path/to/${this.beautifierName}/config/file`
+              beautifiers: [this.beautifierName],
+              [this.beautifierName]: {
+                prefer_beautifier_config: `path/to/${
+                  this.beautifierName
+                }/config/file`,
+              },
             },
           },
-        },
-        null,
-        2
+          null,
+          2
         ),
         "json"
       );
       builder.append(
         `See ${MarkdownBuilder.createDocLink(
           "beautifier options",
-        "options-for-beautifiers"
+          "options-for-beautifiers"
         )} docs for more information.\n`
       );
     }
 
-    builder.header(`How to enable ${this.beautifierName} to format on save?`, 3);
-    builder.append(`See the ${MarkdownBuilder.createDocLink(
-      "editor integration",
-      "editors"
-    )} documentation for format on save instructions for your editor of choice.`);
+    builder.header(
+      `How to enable ${this.beautifierName} to format on save?`,
+      3
+    );
+    builder.append(
+      `See the ${MarkdownBuilder.createDocLink(
+        "editor integration",
+        "editors"
+      )} documentation for format on save instructions for your editor of choice.`
+    );
 
     builder.header(`How to run ${this.beautifierName} on all files?`, 3);
-    builder.append(`You can run ${this.beautifierName} on all of your files for every commit with ${MarkdownBuilder.createLink(
-      'Unibeautify CI',
-      'https://github.com/apps/unibeautify-ci',
-    )}.`);
+    builder.append(
+      `You can run ${
+        this.beautifierName
+      } on all of your files for every commit with ${MarkdownBuilder.createLink(
+        "Unibeautify CI",
+        "https://github.com/apps/unibeautify-ci"
+      )}.`
+    );
 
-    builder.header(`Is there a ${this.beautifierName} sandbox or playground?`, 3);
-    builder.append(`You can quickly try ${this.beautifierName} online with ${MarkdownBuilder.createLink(
-      'Unibeautify Playground',
-      'https://playground.unibeautify.com/'
-    )}.`);
+    builder.header(
+      `Is there a ${this.beautifierName} sandbox or playground?`,
+      3
+    );
+    builder.append(
+      `You can quickly try ${
+        this.beautifierName
+      } online with ${MarkdownBuilder.createLink(
+        "Unibeautify Playground",
+        "https://playground.unibeautify.com/"
+      )}.`
+    );
 
     return builder;
   }

@@ -89,6 +89,6 @@ export default class MarkdownBuilder {
     return `**${text}**`;
   }
   public static indent(text: string): string {
-    return text.replace(new RegExp("^(#+ .+)$","gm"),"#$1");
+    return text.replace(new RegExp("^(#+ .+)$", "gm"), "#$1");
   }
 }

@@ -44,10 +44,7 @@ async function main() {
     writeDoc(optionsListDoc),
     writeDoc(languagesListDoc),
     writeDoc(contributingExamplesDoc),
-    updateSidebars({
-      languages: languageDocs,
-      beautifiers: beautifierDocs,
-    }),
+    updateSidebars({ languages: languageDocs, beautifiers: beautifierDocs }),
   ]).catch(error => {
     console.error(error);
     process.exit(1);
