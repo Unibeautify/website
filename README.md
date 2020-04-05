@@ -7,19 +7,19 @@ See https://github.com/Unibeautify/website/blob/master/scripts/beautifiers.ts fo
 <!--START:SUPPORT-TABLE-->
 | # | Beautifier | Preinstalled | Documentation |
 | --- | --- | --- | --- |
-| 1 | Black | :warning: | https://unibeautify.com/docs/beautifier-black.html |
-| 2 | CSScomb | :white_check_mark: | https://unibeautify.com/docs/beautifier-csscomb.html |
-| 3 | ClangFormat | :warning: | https://unibeautify.com/docs/beautifier-clangformat.html |
-| 4 | ESLint | :white_check_mark: | https://unibeautify.com/docs/beautifier-eslint.html |
-| 5 | Gofmt | :warning: | https://unibeautify.com/docs/beautifier-gofmt.html |
-| 6 | JS-Beautify | :white_check_mark: | https://unibeautify.com/docs/beautifier-js-beautify.html |
-| 7 | PHP-CS-Fixer | :warning: | https://unibeautify.com/docs/beautifier-php-cs-fixer.html |
-| 8 | PHP_CodeSniffer | :warning: | https://unibeautify.com/docs/beautifier-php_codesniffer.html |
-| 9 | Prettier | :white_check_mark: | https://unibeautify.com/docs/beautifier-prettier.html |
-| 10 | Pretty Diff | :white_check_mark: | https://unibeautify.com/docs/beautifier-pretty-diff.html |
-| 11 | TSLint | :white_check_mark: | https://unibeautify.com/docs/beautifier-tslint.html |
-| 12 | YAPF | :warning: | https://unibeautify.com/docs/beautifier-yapf.html |
-| 13 | sqlformat | :warning: | https://unibeautify.com/docs/beautifier-sqlformat.html |
+| 1 | Black | :warning: | https://unibeautify.com/docs/beautifier-black |
+| 2 | CSScomb | :white_check_mark: | https://unibeautify.com/docs/beautifier-csscomb |
+| 3 | ClangFormat | :warning: | https://unibeautify.com/docs/beautifier-clangformat |
+| 4 | ESLint | :white_check_mark: | https://unibeautify.com/docs/beautifier-eslint |
+| 5 | Gofmt | :warning: | https://unibeautify.com/docs/beautifier-gofmt |
+| 6 | JS-Beautify | :white_check_mark: | https://unibeautify.com/docs/beautifier-js-beautify |
+| 7 | PHP-CS-Fixer | :warning: | https://unibeautify.com/docs/beautifier-php-cs-fixer |
+| 8 | PHP_CodeSniffer | :warning: | https://unibeautify.com/docs/beautifier-php_codesniffer |
+| 9 | Prettier | :white_check_mark: | https://unibeautify.com/docs/beautifier-prettier |
+| 10 | Pretty Diff | :white_check_mark: | https://unibeautify.com/docs/beautifier-pretty-diff |
+| 11 | TSLint | :white_check_mark: | https://unibeautify.com/docs/beautifier-tslint |
+| 12 | YAPF | :warning: | https://unibeautify.com/docs/beautifier-yapf |
+| 13 | sqlformat | :warning: | https://unibeautify.com/docs/beautifier-sqlformat |
 <!--END:SUPPORT-TABLE-->
 
 ## Contributing

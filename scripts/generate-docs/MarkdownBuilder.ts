@@ -59,7 +59,7 @@ export default class MarkdownBuilder {
     docId: string,
     queryParam?: string
   ): string {
-    let dest: string = `/docs/${docId}.html`;
+    let dest: string = `/docs/${docId}`;
     if (queryParam) {
       dest += `?${queryParam}`;
     }

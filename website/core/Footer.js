@@ -39,14 +39,14 @@ class Footer extends React.Component {
               </div>
               <div className="col-6 col-sm-4 col-lg-2">
                 <h5>Docs</h5>
-                <a href={this.docUrl('getting-started.html', this.props.language)}>Getting Started</a>
-                <a href={this.docUrl('cli.html', this.props.language)}>CLI</a>
-                <a href={this.docUrl('config-file.html', this.props.language)}>Configuration</a>
-                <a href={this.docUrl('options-for-languages.html', this.props.language)}>Options</a>
+                <a href={this.docUrl('getting-started', this.props.language)}>Getting Started</a>
+                <a href={this.docUrl('cli', this.props.language)}>CLI</a>
+                <a href={this.docUrl('config-file', this.props.language)}>Configuration</a>
+                <a href={this.docUrl('options-for-languages', this.props.language)}>Options</a>
               </div>
               <div className="col-6 col-sm-4 col-lg-2">
                 <h5>Community</h5>
-                <a href={this.pageUrl('users.html', this.props.language)}>User Showcase</a>
+                <a href={this.pageUrl('users', this.props.language)}>User Showcase</a>
                 <a
                   href="http://stackoverflow.com/questions/tagged/unibeautify"
                   target="_blank">
@@ -104,8 +104,8 @@ class Footer extends React.Component {
               <div className="col">
                 {siteConfig.copyright}
               </div>
-              <div className="col-auto align-self-end">        
-                <a href={this.docUrl('credits.html', this.props.language)}>Credits</a>
+              <div className="col-auto align-self-end">
+                <a href={this.docUrl('credits', this.props.language)}>Credits</a>
               </div>
             </div>
           </div>

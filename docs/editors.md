@@ -162,7 +162,7 @@ WebStorm is not yet supported. Please help us by contributing! Thanks in advance
       "name": "How to format on save in Atom?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In <a href=\"https://github.com/Glavin001/atom-beautify\">Atom-Beautify</a>, format/beautify on save can be enabled or disabled for each language individually. For example, for language <a href=\"https://unibeautify.com/docs/language-html.html\">HTML</a> go into Atom-Beautify's package settings (<strong>Atom ➔ Preferences ➔ Search for atom-beautify</strong>), find <a href=\"https://unibeautify.com/docs/language-html.html\">HTML</a>, and toggle the <strong>Beautify On Save</strong> option."
+        "text": "In <a href=\"https://github.com/Glavin001/atom-beautify\">Atom-Beautify</a>, format/beautify on save can be enabled or disabled for each language individually. For example, for language <a href=\"https://unibeautify.com/docs/language-html\">HTML</a> go into Atom-Beautify's package settings (<strong>Atom ➔ Preferences ➔ Search for atom-beautify</strong>), find <a href=\"https://unibeautify.com/docs/language-html\">HTML</a>, and toggle the <strong>Beautify On Save</strong> option."
       }
     }, {
       "@type": "Question",
