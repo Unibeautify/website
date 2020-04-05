@@ -16,7 +16,7 @@ LANGUAGE_NAME: # Language
       path: "/absolute/path/to/executable"
 ```
 
-For example, consider the [PHP-CS-Fixer beautifier](/docs/beautifier-php-cs-fixer.html):
+For example, consider the [PHP-CS-Fixer beautifier](/docs/beautifier-php-cs-fixer):
 
 ```yaml
 ---
@@ -35,7 +35,7 @@ After enabling `prefer_beautifier_config` option for a beautifier Unibeautify wi
 If the beautifier's configuration file is found then Unibeautify's own configuration file (e.g. `.unibeautifyrc`) will be ignored.
 This is useful when Unibeautify does not support an option and you want more control over a specific beautifier.
 
-> Only certain beautifiers support the `prefer_beautifier_config` option. See the `Advanced` section on a beautifier's page to see what beautifier options are supported. For example, see the [PHP-CS-Fixer beautifier](/docs/beautifier-php-cs-fixer.html#advanced).
+> Only certain beautifiers support the `prefer_beautifier_config` option. See the `Advanced` section on a beautifier's page to see what beautifier options are supported. For example, see the [PHP-CS-Fixer beautifier](/docs/beautifier-php-cs-fixer#advanced).
 
 ### Config File Path
 You can also specify the absolute path to the beautifier's config file by putting a string in the `prefer_beautifier_config` option. It will otherwise look in the directory of the file being beautified, and if it doesn't find it there, will go to the parent directory.

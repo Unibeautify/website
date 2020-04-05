@@ -79,7 +79,7 @@ class SupportTableReplacer extends SectionReplacer {
 function docUrl(beautifierName: string): string {
   return `https://unibeautify.com/docs/beautifier-${slugify(
     beautifierName
-  )}.html`;
+  )}`;
 }
 
 function slugify(beautifierName: string): string {

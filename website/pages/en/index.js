@@ -94,7 +94,7 @@ class HomeSplash extends React.Component {
               <Button href={"https://github.com/apps/unibeautify-ci"} target="_blank">
                 Install
               </Button>
-              <Button href={docUrl('getting-started.html', language)}>
+              <Button href={docUrl('getting-started', language)}>
                 Documentation
               </Button>
             </ButtonGroup>
@@ -129,7 +129,7 @@ const LanguagesShowcase = () => {
       <h2>{"Supported Languages"}</h2>
       <div className="logos">
           {showcase}
-          <a href={"/docs/languages.html"}>
+          <a href={"/docs/languages"}>
               <img src={imgUrl("languages/more.png")} title={"And more..."}/>
               <br/>
               And more...
@@ -145,17 +145,17 @@ const Features = props => (
       [
         {
           title: 'Unparalleled customization',
-          content: `Personalize your code style and create a constant style across all maintainers<br> with [40+ configuration options](${docUrl('options-for-languages.html', props.language)}).`,
+          content: `Personalize your code style and create a constant style across all maintainers<br> with [40+ configuration options](${docUrl('options-for-languages', props.language)}).`,
           image: imgUrl('icons/cog.svg'),
           imageAlign: 'top'
         }, {
           title: 'Diligent documentation',
-          content: `Up-to-date documentation with [hundreds of examples](${docUrl('contributing-examples.html')}) is automatically generated from beautifier, language, and option metadata.`,
+          content: `Up-to-date documentation with [hundreds of examples](${docUrl('contributing-examples')}) is automatically generated from beautifier, language, and option metadata.`,
           image: imgUrl('icons/book.svg'),
           imageAlign: 'top'
         }, {
           title: 'One to rule them all',
-          content: `Enable multiple beautifiers for each language. For example, easily combine [Prettier](${docUrl('beautifier-prettier.html', props.language)}) with [ESLint](${docUrl('beautifier-eslint.html', props.language)}) by simply changing your config file.`,
+          content: `Enable multiple beautifiers for each language. For example, easily combine [Prettier](${docUrl('beautifier-prettier', props.language)}) with [ESLint](${docUrl('beautifier-eslint', props.language)}) by simply changing your config file.`,
           image: imgUrl('icons/bag.svg'),
           imageAlign: 'top'
         }
@@ -170,7 +170,7 @@ const UnibeautifyCi = () => (
       [
         {
           title: `![](${imgUrl('icons/tasks.svg')}#icon) GitHub Automation`,
-          content: 'Automatically beautify your code on each push with [Unibeautify CI](docs/ci.html)! View a report via [GitHub\'s Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/) and easily resolve formatting changes by simply merging a branch, allowing you to quickly fix your code without ever leaving GitHub!',
+          content: 'Automatically beautify your code on each push with [Unibeautify CI](docs/ci)! View a report via [GitHub\'s Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/) and easily resolve formatting changes by simply merging a branch, allowing you to quickly fix your code without ever leaving GitHub!',
           image: imgUrl('previews/ubi-ci-demo.png'),
           imageAlign: 'right'
         }
@@ -202,7 +202,7 @@ const Showcase = props => {
       </p>
       <div className="logos">{showcase}</div>
       <div className="more-users button-group">
-        <a className="button" href={pageUrl('users.html', props.language)}>
+        <a className="button" href={pageUrl('users', props.language)}>
           More {siteConfig.title}&nbsp;
           Users
         </a>
