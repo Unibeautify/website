@@ -11,8 +11,7 @@ import {
 const siteConfig = require("../../website/siteConfig");
 const topLanguages: Array<{
   name: string;
-}> =
-  siteConfig.languages;
+}> = siteConfig.languages;
 
 export default class LanguagesListDoc extends Doc {
   constructor(private languages: Language[]) {
