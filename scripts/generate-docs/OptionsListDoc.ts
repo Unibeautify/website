@@ -9,6 +9,11 @@ export default class OptionsListDoc extends Doc {
   public get title(): string {
     return "Language Options";
   }
+  protected get description(): string {
+    return `Unibeautify supports ${
+      Object.keys(this.allOptions).length
+    } configuration options. Click on an option title below for more information including how to configure and examples.`;
+  }
   protected get id(): string {
     return "options-for-languages";
   }
@@ -21,8 +26,8 @@ export default class OptionsListDoc extends Doc {
   protected get body(): string {
     const builder = new MarkdownBuilder();
     builder.append(
-      "Click on an option title below for more information including configuration an" +
-        "d examples."
+      "Click on an option title below for more information including how to configure" +
+        " and examples."
     );
     builder.append("| # | Title | Config Key | Description |");
     builder.append("| --- | --- | --- | --- |");

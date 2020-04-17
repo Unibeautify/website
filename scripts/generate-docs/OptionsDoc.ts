@@ -59,6 +59,12 @@ export default class OptionsDoc extends Doc {
     return title;
   }
 
+  protected get description(): string {
+    return `${this.option.description}. Configuration option for beautifiers ${this.beautifiers
+      .map(beautifier => beautifier.name)
+      .join(", ")} and languages ${this.languages.map(lang => lang.name).join(', ')}`;
+  }
+
   protected get customEditUrl() {
     return coreOptionsEditUrl;
   }

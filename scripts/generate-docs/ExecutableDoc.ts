@@ -26,6 +26,9 @@ export default class ExecutableDoc extends Doc {
   public get title(): string {
     return `${this.executable.name} Executable`;
   }
+  protected get description() {
+    return undefined;
+  }
   protected get slug(): string {
     return slugify(`${this.beautifier.name}-${this.executable.name}`);
   }

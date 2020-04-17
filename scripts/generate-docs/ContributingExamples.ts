@@ -16,6 +16,9 @@ export default class ContributingExamplesDoc extends Doc {
   public get title(): string {
     return "Contributing Examples";
   }
+  protected get description() {
+    return undefined;
+  }
   public get sidebarLabel(): string {
     return "Examples";
   }

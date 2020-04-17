@@ -15,6 +15,7 @@ export default abstract class Doc {
     return slugify(this.title);
   }
   protected abstract get title(): string;
+  protected abstract get description(): string | undefined;
   protected get sidebarLabel(): string | Promise<string> {
     return this.title;
   }
@@ -28,16 +29,19 @@ export default abstract class Doc {
     );
   }
   protected get frontMatter(): Promise<string> {
-    return Promise.all([this.id, this.title, this.sidebarLabel]).then(
-      ([id, title, sidebarLabel]) =>
+    return Promise.all([this.id, this.title, this.description, this.sidebarLabel]).then(
+      ([id, title, description, sidebarLabel]) =>
         [
           "---",
           `id: ${id}`,
           `title: ${title}`,
+          description ? `description: ${description}` : '',
           `sidebar_label: ${sidebarLabel}`,
           this.customEditUrl ? `custom_edit_url: ${this.customEditUrl}` : "",
           "---",
-        ].join("\n")
+        ]
+          .filter(Boolean)
+          .join("\n")
     );
   }
 }

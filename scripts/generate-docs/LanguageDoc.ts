@@ -14,6 +14,7 @@ import {
   coreLanguagesEditUrl,
   badgesForRepository,
   globsForLanguage,
+  optionKeyToTitle,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -33,6 +34,19 @@ export default class LanguageDoc extends Doc {
   }
   public get title(): string {
     return this.language.name;
+  }
+  protected get description(): string {
+    const { supportedOptions } = this;
+    return `${this.language.name} language supports ${
+      this.beautifiers.length
+    } beautifiers ${this.beautifiers
+      .map(beautifier => beautifier.name)
+      .join(", ")} and ${
+      supportedOptions.length
+    } options including ${supportedOptions
+      .map(op => op.title)
+      .slice(0, 3)
+      .join(", ")}`;
   }
   protected get body(): string {
     const builder = new MarkdownBuilder();
@@ -139,6 +153,22 @@ export default class LanguageDoc extends Doc {
       return count;
     }, 1);
     return builder;
+  }
+
+  private get supportedOptions() {
+    return _.uniqBy(
+      Object.keys(this.optionsLookup).reduce(
+        (options, langKey) => [
+          ...options,
+          ...Object.keys(this.optionsLookup[langKey]).map(key => ({
+            title: optionKeyToTitle(key),
+            ...this.optionsLookup[langKey][key],
+          })),
+        ],
+        []
+      ),
+      op => op.title
+    );
   }
   private createOptionsLookup(): OptionsLookup {
     return this.beautifiers
