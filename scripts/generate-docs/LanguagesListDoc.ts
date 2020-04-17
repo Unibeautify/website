@@ -7,12 +7,23 @@ import {
   linkForBeautifier,
   linkForLanguage,
 } from "./utils";
+
+const siteConfig = require("../../website/siteConfig");
+const topLanguages: Array<{
+  name: string;
+}> = siteConfig.languages;
+
 export default class LanguagesListDoc extends Doc {
   constructor(private languages: Language[]) {
     super();
   }
   public get title(): string {
     return "Supported Languages";
+  }
+  protected get description(): string {
+    return `Unibeautify supports ${
+      this.languages.length
+    } languages including ${topLanguages.map(lang => lang.name).join(", ")}.`;
   }
   protected get id(): string {
     return "languages";

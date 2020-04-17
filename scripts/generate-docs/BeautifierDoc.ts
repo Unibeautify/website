@@ -17,6 +17,7 @@ import {
   slugify,
   websiteEditUrl,
   badgesForRepository,
+  optionKeyToTitle,
 } from "./utils";
 import Doc from "./Doc";
 import MarkdownBuilder from "./MarkdownBuilder";
@@ -39,6 +40,20 @@ export default class BeautifierDoc extends Doc {
   }
   public get title(): string {
     return `${this.beautifierName} Beautifier`;
+  }
+  protected get description(): string {
+    const { supportedOptions } = this;
+    return `${this.beautifierName} supports ${
+      this.languages.length
+    } languages (e.g. ${this.languages
+      .map(lang => lang.name)
+      .slice(0, 3)
+      .join(", ")}) and ${
+      supportedOptions.length
+    } configuration options (e.g. ${supportedOptions
+      .map(op => op.title)
+      .slice(0, 3)
+      .join(", ")}).`;
   }
   public get sidebarLabel(): string {
     return this.beautifierName;
@@ -353,6 +368,21 @@ export default class BeautifierDoc extends Doc {
       }
     });
     return builder;
+  }
+  private get supportedOptions() {
+    return _.uniqBy(
+      Object.keys(this.optionsLookup).reduce(
+        (options, langKey) => [
+          ...options,
+          ...Object.keys(this.optionsLookup[langKey]).map(key => ({
+            title: optionKeyToTitle(key),
+            ...this.optionsLookup[langKey][key],
+          })),
+        ],
+        []
+      ),
+      op => op.title
+    );
   }
   private createOptionsLookup(): OptionsLookup {
     return this.languages
