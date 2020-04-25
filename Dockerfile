@@ -1,4 +1,4 @@
-FROM netlify/build:8e315e54bc4032a32e73290be556cde4f8348c12
+FROM netlify/build:8fc44e0ab784ee707cf60288cdad6361ffc5eb69
 
 ENV NETLIFY_REPO_URL="/opt/repo"
 ENV NETLIFY_BUILD_BASE="/opt/buildhome"
