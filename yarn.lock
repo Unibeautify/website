@@ -410,10 +410,10 @@
     read-pkg-up "^4.0.0"
     tmp "0.0.33"
 
-"@unibeautify/ugly-samples@0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@unibeautify/ugly-samples/-/ugly-samples-0.2.6.tgz#ec52057038790bdb151fedaf8d1a04e0fcbf50ba"
-  integrity sha512-8VR2JV2PaRckpbCoFg8abskjXuY1L5rN71rH2AYDFk3Of+f6yOlqdf5LEWuCQM4GRSVnVCuofOfII+SqtD7OlA==
+"@unibeautify/ugly-samples@0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@unibeautify/ugly-samples/-/ugly-samples-0.2.9.tgz#06d89f76c7370642a672a932ed2790e96341ed2d"
+  integrity sha512-77/V5xmP66CqmbOOJT/voWfMCRwMJjqHG+x0m7zLqK/eXN2XLbp+X0NWymnjBSqT9KEI/7Sdf8ibwA7I/pGXbg==
 
 abbrev@1:
   version "1.1.1"
