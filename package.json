@@ -56,7 +56,7 @@
     "eslint-plugin-react": "7.19.0",
     "fs-extra": "8.1.0",
     "get-pkg-repo": "4.1.0",
-    "js-beautify": "1.10.3",
+    "js-beautify": "1.11.0",
     "lodash": "4.17.15",
     "prettier": "1.19.1",
     "prettydiff2": "2.2.8",
