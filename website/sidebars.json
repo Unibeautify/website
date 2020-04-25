@@ -34,6 +34,7 @@
       "beautifier-prettier",
       "beautifier-pretty-diff",
       "beautifier-sqlformat",
+      "beautifier-stylelint",
       "beautifier-tslint",
       "beautifier-yapf"
     ]
@@ -189,6 +190,7 @@
       "language-scss",
       "language-spacebars",
       "language-sql",
+      "language-sugarss",
       "language-svg",
       "language-swig"
     ],

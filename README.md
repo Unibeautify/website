@@ -20,6 +20,7 @@ See https://github.com/Unibeautify/website/blob/master/scripts/beautifiers.ts fo
 | 11 | TSLint | :white_check_mark: | https://unibeautify.com/docs/beautifier-tslint |
 | 12 | YAPF | :warning: | https://unibeautify.com/docs/beautifier-yapf |
 | 13 | sqlformat | :warning: | https://unibeautify.com/docs/beautifier-sqlformat |
+| 14 | stylelint | :white_check_mark: | https://unibeautify.com/docs/beautifier-stylelint |
 <!--END:SUPPORT-TABLE-->
 
 ## Contributing

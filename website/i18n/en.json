@@ -52,6 +52,10 @@
         "title": "sqlformat Beautifier",
         "sidebar_label": "sqlformat"
       },
+      "beautifier-stylelint": {
+        "title": "stylelint Beautifier",
+        "sidebar_label": "stylelint"
+      },
       "beautifier-tslint": {
         "title": "TSLint Beautifier",
         "sidebar_label": "TSLint"
@@ -206,6 +210,10 @@
       "language-sql": {
         "title": "SQL",
         "sidebar_label": "SQL"
+      },
+      "language-sugarss": {
+        "title": "SugarSS",
+        "sidebar_label": "SugarSS"
       },
       "language-svg": {
         "title": "SVG",
