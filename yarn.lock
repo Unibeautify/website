@@ -386,7 +386,7 @@
     read-pkg-up "^4.0.0"
     tmp "0.0.33"
 
-"@unibeautify/beautifier-stylelint@^0.0.1":
+"@unibeautify/beautifier-stylelint@0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-stylelint/-/beautifier-stylelint-0.0.1.tgz#26ca5fb5db2669ea21984066153d0b02edb09e0d"
   integrity sha512-einW5CkIPVtgG++prt+ug2EGPptIJSJuGJUISkNMzY6Ktl6Y000e3sWkPW3RKaASxhuInYMNP+57SrAfr/9r7A==
@@ -3347,7 +3347,7 @@ style-search@^0.1.0:
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
   integrity sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=
 
-stylelint@^13.3.3:
+stylelint@13.3.3:
   version "13.3.3"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-13.3.3.tgz#e267a628ebfc1adad6f5a1fe818724c34171402b"
   integrity sha512-j8Oio2T1YNiJc6iXDaPYd74Jg4zOa1bByNm/g9/Nvnq4tDPsIjMi46jhRZyPPktGPwjJ5FwcmCqIRlH6PVP8mA==
