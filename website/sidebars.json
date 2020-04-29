@@ -24,6 +24,7 @@
     ],
     "Beautifiers": [
       "beautifier-black",
+      "beautifier-brittany",
       "beautifier-clangformat",
       "beautifier-csscomb",
       "beautifier-eslint",
@@ -157,6 +158,7 @@
     ],
     "H": [
       "language-handlebars",
+      "language-haskell",
       "language-html",
       "language-html-erb"
     ],
