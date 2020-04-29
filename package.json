@@ -35,7 +35,7 @@
     "@types/fs-extra": "8.1.0",
     "@types/lodash": "4.14.150",
     "@unibeautify/beautifier-black": "0.1.1",
-    "@unibeautify/beautifier-brittany": "^0.0.1",
+    "@unibeautify/beautifier-brittany": "0.0.1",
     "@unibeautify/beautifier-clang-format": "0.2.0",
     "@unibeautify/beautifier-csscomb": "0.1.0",
     "@unibeautify/beautifier-eslint": "0.6.0",

@@ -311,7 +311,7 @@
   dependencies:
     read-pkg-up "^3.0.0"
 
-"@unibeautify/beautifier-brittany@^0.0.1":
+"@unibeautify/beautifier-brittany@0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-brittany/-/beautifier-brittany-0.0.1.tgz#f8f84872e6a0c4d7b452ae99adc76a67d4344373"
   integrity sha512-uRwIm19b4a4ZmwQR0pG5Rvb2wVk7zj7V3w8a5e1TeFb0vG+milwHWqpuTHKZRhXlvCqQDAb2gBm1y4DWd5hEKw==
