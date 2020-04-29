@@ -13,6 +13,7 @@ import yapf from "@unibeautify/beautifier-yapf";
 import tslint from "@unibeautify/beautifier-tslint";
 import csscomb from "@unibeautify/beautifier-csscomb";
 import stylelint from "@unibeautify/beautifier-stylelint";
+import brittany from "@unibeautify/beautifier-brittany";
 
 const beautifiers: Beautifier[] = <any[]>[
   prettier,
@@ -29,6 +30,7 @@ const beautifiers: Beautifier[] = <any[]>[
   tslint,
   csscomb,
   stylelint,
+  brittany,
 ];
 
 export default beautifiers;

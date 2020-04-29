@@ -311,6 +311,14 @@
   dependencies:
     read-pkg-up "^3.0.0"
 
+"@unibeautify/beautifier-brittany@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-brittany/-/beautifier-brittany-0.0.1.tgz#f8f84872e6a0c4d7b452ae99adc76a67d4344373"
+  integrity sha512-uRwIm19b4a4ZmwQR0pG5Rvb2wVk7zj7V3w8a5e1TeFb0vG+milwHWqpuTHKZRhXlvCqQDAb2gBm1y4DWd5hEKw==
+  dependencies:
+    read-pkg-up "^4.0.0"
+    ts "0.0.0"
+
 "@unibeautify/beautifier-clang-format@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-clang-format/-/beautifier-clang-format-0.2.0.tgz#e91d508126a62fce77a96fbb28c33294ea2953f2"
@@ -3177,6 +3185,11 @@ source-map@^0.6.0, source-map@^0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
+span@~0.0.5:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/span/-/span-0.0.6.tgz#cbd224c4f9494243cd244ef2f41e4dfdbf0c21d6"
+  integrity sha1-y9IkxPlJQkPNJE7y9B5N/b8MIdY=
+
 spdx-correct@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.0.0.tgz#05a5b4d7153a195bc92c3c425b69f3b2a9524c82"
@@ -3538,6 +3551,13 @@ ts-node@8.9.1:
     make-error "^1.1.1"
     source-map-support "^0.5.17"
     yn "3.1.1"
+
+ts@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/ts/-/ts-0.0.0.tgz#6748589177dbbd7d80dede54b5da779d526346c0"
+  integrity sha1-Z0hYkXfbvX2A3t5Utdp3nVJjRsA=
+  dependencies:
+    span "~0.0.5"
 
 tslib@^1.8.0, tslib@^1.8.1:
   version "1.9.3"

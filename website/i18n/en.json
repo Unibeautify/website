@@ -12,6 +12,10 @@
         "title": "Black Beautifier",
         "sidebar_label": "Black"
       },
+      "beautifier-brittany": {
+        "title": "Brittany Beautifier",
+        "sidebar_label": "Brittany"
+      },
       "beautifier-clangformat": {
         "title": "ClangFormat Beautifier",
         "sidebar_label": "ClangFormat"
@@ -134,6 +138,10 @@
       "language-handlebars": {
         "title": "Handlebars",
         "sidebar_label": "Handlebars"
+      },
+      "language-haskell": {
+        "title": "Haskell",
+        "sidebar_label": "Haskell"
       },
       "language-html-erb": {
         "title": "HTML+ERB",
