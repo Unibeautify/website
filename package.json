@@ -63,7 +63,7 @@
     "prettydiff2": "2.2.8",
     "rimraf": "3.0.2",
     "stylelint": "13.3.3",
-    "ts-node": "8.9.1",
+    "ts-node": "8.10.0",
     "tslint": "5.20.1",
     "typescript": "3.8.3",
     "unibeautify": "0.17.0"
