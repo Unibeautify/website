@@ -3,13 +3,18 @@ let previousSelectedLanguage;
 window.onload = function() {
   const langSelectedElement = document.getElementById("languages-select");
 
-  if (langSelectedElement.length == 0) return;
+  if (!langSelectedElement) return;
 
   loadSelected();
 
   langSelectedElement.onchange = function onSelectionChange() {
     const languageName = getSelectedLanguage();
     history.pushState({ language: languageName }, null, `?language=${languageName}`);
+    window.sendGAEvent({
+      category: `Page: ${location.pathname}`,
+      action: 'Select',
+      label: languageName,
+    });
     updateCodeExample(languageName);
   };
 };
@@ -92,7 +97,11 @@ function getDefaultLanguage() {
 }
 
 function options() {
-  return [].map.call(document.getElementById("languages-select").options, option => option);
+  const select = document.getElementById("languages-select");
+  if (!select) {
+    return [];
+  }
+  return [].map.call(select.options, option => option);
 }
 
 function fixLanguage(rawLanguage) {
