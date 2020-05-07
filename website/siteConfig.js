@@ -76,6 +76,7 @@ const siteConfig = {
     "https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
     "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js",
+    "../js/analytics.js",
     "../js/selectList.js",
     "../js/disqus.js",
     "../js/theme.js",
