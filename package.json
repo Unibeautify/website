@@ -50,7 +50,7 @@
     "@unibeautify/beautifier-tslint": "0.1.0",
     "@unibeautify/beautifier-yapf": "0.3.0",
     "@unibeautify/ugly-samples": "0.2.10",
-    "array-flatten": "2.1.2",
+    "array-flatten": "3.0.0",
     "csscomb": "4.3.0",
     "diff": "4.0.2",
     "eslint": "4.19.1",
