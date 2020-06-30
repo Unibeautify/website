@@ -21,7 +21,10 @@ export const coreOptionsEditUrl = `${coreEditUrl}/src/options.ts`;
 export const coreLanguagesEditUrl = `${coreEditUrl}/src/languages.json`;
 
 export function optionKeyToTitle(key: string): string {
-  return key.split("_").map(_.capitalize).join(" ");
+  return key
+    .split("_")
+    .map(_.capitalize)
+    .join(" ");
 }
 export function slugify(title: string): string {
   return encodeURIComponent(
@@ -78,13 +81,21 @@ export function badgesForRepository(repository: {
       return [
         {
           description: "GitHub Stars",
-          url: `https://img.shields.io/github/stars/${repository.user}/${repository.project}.svg?style=flat-square`,
-          href: `https://github.com/${repository.user}/${repository.project}/stargazers`,
+          url: `https://img.shields.io/github/stars/${repository.user}/${
+            repository.project
+          }.svg?style=flat-square`,
+          href: `https://github.com/${repository.user}/${
+            repository.project
+          }/stargazers`,
         },
         {
           description: "GitHub Issues",
-          url: `https://img.shields.io/github/issues/${repository.user}/${repository.project}.svg?style=flat-square`,
-          href: `https://github.com/${repository.user}/${repository.project}/issues`,
+          url: `https://img.shields.io/github/issues/${repository.user}/${
+            repository.project
+          }.svg?style=flat-square`,
+          href: `https://github.com/${repository.user}/${
+            repository.project
+          }/issues`,
         },
       ];
     default:

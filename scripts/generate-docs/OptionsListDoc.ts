@@ -40,9 +40,8 @@ export default class OptionsListDoc extends Doc {
       }
       const optionId = `option-${slugify(title)}`;
       let titleLink: string = MarkdownBuilder.createDocLink(title, optionId);
-      let row = `| ${
-        index + 1
-      } | **${titleLink}** | ${key} | ${option.description.replace(
+      let row = `| ${index +
+        1} | **${titleLink}** | ${key} | ${option.description.replace(
         /\|/g,
         "&#124;"
       )} |`;
