@@ -75,7 +75,9 @@ export default class BeautifierDoc extends Doc {
     builder.appendBadges([
       {
         description: "npm downloads",
-        url: `https://img.shields.io/npm/dt/${this.packageName}.svg?style=flat-square`,
+        url: `https://img.shields.io/npm/dt/${
+          this.packageName
+        }.svg?style=flat-square`,
         href: `https://www.npmjs.com/package/${this.packageName}`,
       },
       ...this.repoBadges,
@@ -423,7 +425,9 @@ export default class BeautifierDoc extends Doc {
         3
       );
       builder.append(
-        `You can override Unibeautify configuration and use ${this.beautifierName}'s own configuration file instead with \`prefer_beautifier_config\` beautifier option.`
+        `You can override Unibeautify configuration and use ${
+          this.beautifierName
+        }'s own configuration file instead with \`prefer_beautifier_config\` beautifier option.`
       );
       builder.code(
         JSON.stringify(
@@ -431,7 +435,9 @@ export default class BeautifierDoc extends Doc {
             LANGUAGE_NAME: {
               beautifiers: [this.beautifierName],
               [this.beautifierName]: {
-                prefer_beautifier_config: `path/to/${this.beautifierName}/config/file`,
+                prefer_beautifier_config: `path/to/${
+                  this.beautifierName
+                }/config/file`,
               },
             },
           },
