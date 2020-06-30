@@ -74,8 +74,9 @@ export default class ContributingExamplesDoc extends Doc {
     builder.append(
       `| ${MarkdownBuilder.createProgressBar({
         value: Math.floor((optionsWithExamples / totalOptions) * 100),
-      })} | ${optionsWithExamples} | ${totalOptions -
-        optionsWithExamples} | ${totalOptions} |`
+      })} | ${optionsWithExamples} | ${
+        totalOptions - optionsWithExamples
+      } | ${totalOptions} |`
     );
     builder.append("\n");
 
