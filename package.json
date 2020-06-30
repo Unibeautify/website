@@ -32,7 +32,7 @@
   "dependencies": {},
   "devDependencies": {
     "@types/diff": "4.0.2",
-    "@types/fs-extra": "8.1.0",
+    "@types/fs-extra": "9.0.1",
     "@types/lodash": "4.14.157",
     "@unibeautify/beautifier-black": "0.1.1",
     "@unibeautify/beautifier-brittany": "0.0.1",
@@ -55,7 +55,7 @@
     "diff": "4.0.2",
     "eslint": "4.19.1",
     "eslint-plugin-react": "7.20.3",
-    "fs-extra": "8.1.0",
+    "fs-extra": "9.0.1",
     "get-pkg-repo": "4.1.1",
     "js-beautify": "1.11.0",
     "lodash": "4.17.15",
