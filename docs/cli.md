@@ -8,24 +8,24 @@ Install [Unibeautify's CLI](https://github.com/Unibeautify/unibeautify-cli):
 
 ```bash
 # Locally
-npm install --save-dev unibeautify-cli
+npm install --save-dev @unibeautify/cli
 # Or globally
-npm install --global unibeautify-cli
+npm install --global @unibeautify/cli
 ```
 
 And then install your beautifiers along with any prerequisites and [`peerDependencies`](https://docs.npmjs.com/files/package.json#peerdependencies).
 
 ```bash
 # Locally
-npm install --save-dev beautifier-CHANGEME
+npm install --save-dev @unibeautify/beautifier-CHANGEME
 # Or globally
-npm install --global beautifier-CHANGEME
+npm install --global @unibeautify/beautifier-CHANGEME
 ```
 
 For example, locally installing [`beautifier-prettier`](https://yarnpkg.com/en/package/@unibeautify/beautifier-prettier):
 
 ```bash
-npm install --save-dev beautifier-prettier
+npm install --save-dev @unibeautify/beautifier-prettier
 ```
 
 And [`prettier`](https://yarnpkg.com/en/package/prettier) is a peer dependency:
