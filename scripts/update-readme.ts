@@ -81,7 +81,10 @@ function docUrl(beautifierName: string): string {
 }
 
 function slugify(beautifierName: string): string {
-  return beautifierName.split(" ").join("-").toLocaleLowerCase();
+  return beautifierName
+    .split(" ")
+    .join("-")
+    .toLocaleLowerCase();
 }
 
 function replaceSupportTable(original: string): string {
