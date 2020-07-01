@@ -4,6 +4,13 @@ title: Command-Line Interface (CLI)
 description: Install Unibeautify's command-line interface (CLI) to format code for many languages
 ---
 
+First install the [Unibeautify](https://www.npmjs.com/package/unibeautify) dependency.
+
+```bash
+# Globally
+npm install --global unibeautify
+```
+
 Install [Unibeautify's CLI](https://github.com/Unibeautify/unibeautify-cli):
 
 ```bash
