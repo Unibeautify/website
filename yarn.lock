@@ -994,11 +994,6 @@ diff@4.0.2:
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
 
-diff@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
-  integrity sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==
-
 diff@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.1.tgz#0c667cb467ebbb5cea7f14f135cc2dba7780a8ff"
@@ -2041,7 +2036,7 @@ lodash@4.17.15, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
-lodash@^4.17.10, lodash@^4.17.4, lodash@^4.3.0:
+lodash@^4.17.4, lodash@^4.3.0:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
   integrity sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg==
@@ -2907,10 +2902,10 @@ require-uncached@^1.0.3:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
 
-requireg@^0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/requireg/-/requireg-0.2.1.tgz#f8822f38181b73211d631b5842507dbde4baecdf"
-  integrity sha512-bbNOK9MAyAGe4Q9/0skx6bzkFVRvVuHerXZthc3jmf2/cO7gthKM7GpnhW522Vx3/uCLA9RXXpQaqdXHRrZVxQ==
+requireg@^0.2.1:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/requireg/-/requireg-0.2.2.tgz#437e77a5316a54c9bcdbbf5d1f755fe093089830"
+  integrity sha512-nYzyjnFcPNGR3lx9lwPPPnuQxv6JWEZd2Ci0u9opN7N5zUEPIhY/GbL3vMGOr2UXwEg9WwSyV9X9Y/kLFgPsOg==
   dependencies:
     nested-error-stacks "~2.0.1"
     rc "~1.2.7"
@@ -3037,7 +3032,7 @@ safe-buffer@~5.2.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-"semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.5.0:
+"semver@2 || 3 || 4 || 5", semver@^5.3.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
   integrity sha512-4SJ3dm0WAwWy/NVeioZh5AntkdJoWKxHxcmyP622fOkgHa4z3R0TdBJICINyaSDE6uNwVc8gZr+ZinwZAH4xIA==
@@ -3051,6 +3046,11 @@ semver@^5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
   integrity sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
+
+semver@^6.0.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
+  integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
 shebang-command@^1.2.0:
   version "1.2.0"
@@ -3586,15 +3586,15 @@ unherit@^1.0.4:
     inherits "^2.0.0"
     xtend "^4.0.0"
 
-unibeautify@0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/unibeautify/-/unibeautify-0.17.0.tgz#990287dae1dff657c835e03c8d6ae4cfb445b8d3"
-  integrity sha512-ush+UKnFFW2E3aZbeXlpTzSDV3fqQ9wjamqYO9wS1zG2k7oK7Gr0SJtSIcym7Ny98aJKzFkAWM9f+zQMQqOLzQ==
+unibeautify@0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/unibeautify/-/unibeautify-0.17.1.tgz#56179afe356cb5084742664e5f6664e2b391f229"
+  integrity sha512-7cVUgfESS4j5PfYbJ5c4oCGXW5Cs68iiayJbexkPmqAZ7MQ7xIRYnPY7w21ZmhR6r/YePG4S75SoL3/4TIAIVA==
   dependencies:
-    diff "^3.5.0"
-    lodash "^4.17.10"
-    requireg "^0.2.0"
-    semver "^5.5.0"
+    diff "^4.0.1"
+    lodash "^4.17.11"
+    requireg "^0.2.1"
+    semver "^6.0.0"
 
 unified@^9.0.0:
   version "9.0.0"
