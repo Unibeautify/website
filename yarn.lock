@@ -348,13 +348,13 @@
   dependencies:
     read-pkg-up "^4.0.0"
 
-"@unibeautify/beautifier-php-codesniffer@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-php-codesniffer/-/beautifier-php-codesniffer-0.1.1.tgz#48aa25257a107b20762324181f6342e3d9c5bbf7"
-  integrity sha512-2BwIIovRFZcWGijp5xQiCSNp2aQjwvXJHhrFjMJNOXHyp1I5ONr6MuHbB2oAsP1SGYaUmFpWulgwgvh7vn1A/Q==
+"@unibeautify/beautifier-php-codesniffer@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-php-codesniffer/-/beautifier-php-codesniffer-0.1.2.tgz#d87dc2984ccdc8d022abcff7b079b58d2933e8af"
+  integrity sha512-ehF35vicFzUGe4a1KEdnyNy9ebsUujFiCfZHnCAqF/gj2Dcm76HcACqGAskinAUXQzSHG/Vj6UpBh4RWuxbPew==
   dependencies:
-    read-pkg-up "^3.0.0"
-    tmp "0.0.33"
+    read-pkg-up "^7.0.0"
+    tmp "0.1.0"
 
 "@unibeautify/beautifier-php-cs-fixer@0.4.0":
   version "0.4.0"
@@ -2991,6 +2991,13 @@ rimraf@^2.2.8:
   dependencies:
     glob "^7.0.5"
 
+rimraf@^2.6.3:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.7.1.tgz#35797f13a7fdadc566142c29d4f07ccad483e3ec"
+  integrity sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==
+  dependencies:
+    glob "^7.1.3"
+
 run-async@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"
@@ -3443,6 +3450,13 @@ tmp@0.0.33, tmp@^0.0.33:
   integrity sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==
   dependencies:
     os-tmpdir "~1.0.2"
+
+tmp@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.1.0.tgz#ee434a4e22543082e294ba6201dcc6eafefa2877"
+  integrity sha512-J7Z2K08jbGcdA1kkQpJSqLF6T0tdQqpR2pnSUXsIchbPdTI9v3e85cLW0d6WDhwuAleOV71j2xWs8qMPfK7nKw==
+  dependencies:
+    rimraf "^2.6.3"
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
