@@ -296,10 +296,10 @@
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
   integrity sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==
 
-"@unibeautify/beautifier-black@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-black/-/beautifier-black-0.1.1.tgz#24f0719faae59dba5690aec126e3ca10d9b45520"
-  integrity sha512-bgfL3Nk11c070NE44aV06Ye6Gw5+JhMDLB5E5eUYc6hhxNMg8zp/QdppWxD/1qyYaYGpTw6eZtgtqH/DPvHCHw==
+"@unibeautify/beautifier-black@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@unibeautify/beautifier-black/-/beautifier-black-0.1.2.tgz#64d4988c1f6ea4723b61e667ca15607b16de6d06"
+  integrity sha512-Ig0HMAPVinxV4oK3D72xXRZ1LLH8OkJ76huwRzcAuxlLp5GDV3qIS1GregNgoeb5OElheEZDXRgFuEEoWaBCsQ==
   dependencies:
     read-pkg-up "^3.0.0"
 
