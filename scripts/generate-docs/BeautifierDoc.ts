@@ -465,7 +465,7 @@ export default class BeautifierDoc extends Doc {
         this.beautifierName
       } on all of your files for every commit with ${MarkdownBuilder.createLink(
         "Unibeautify CI",
-        "https://github.com/apps/unibeautify-ci"
+        "https://github.com/marketplace/unibeautify-ci"
       )}.`
     );
 
