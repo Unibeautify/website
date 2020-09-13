@@ -91,7 +91,7 @@ class HomeSplash extends React.Component {
           <div className="col col-lg-auto">
             <ProjectTitle/>
             <ButtonGroup>
-              <Button href={"https://github.com/apps/unibeautify-ci"} target="_blank">
+              <Button href={"https://github.com/marketplace/unibeautify-ci"} target="_blank">
                 Install
               </Button>
               <Button href={docUrl('getting-started', language)}>

@@ -35,7 +35,7 @@ const siteConfig = {
 
   // Header and footer
   headerLinks: [
-    { href: "https://github.com/apps/unibeautify-ci", label: "Install" },
+    { href: "https://github.com/marketplace/unibeautify-ci", label: "Install" },
     { doc: "getting-started", label: "Docs" },
     // { doc: "about", label: "About" },
     // { href: "https://api.unibeautify.com/", label: "API" },

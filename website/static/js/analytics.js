@@ -2,6 +2,8 @@ function main() {
     Array.from(document.querySelectorAll('a[href]'))
         .forEach(enhanceLink)
         ;
+
+    trackInstall();
 }
 
 function enhanceLink(link) {
@@ -27,6 +29,19 @@ function enhanceLink(link) {
     };
     link.onclick = newOnClick;
     return link;
+}
+
+function trackInstall() {
+    const params = new URLSearchParams(window.location.search);
+    const installationId = params.get('installation_id');
+    if (installationId) {
+        const setupAction = params.get('setup_action');
+        sendGAEvent({
+            category: `Page: ${location.pathname}`,
+            action: `GitHub Setup Callback`,
+            label: `setup_action: ${setupAction}`,
+        });
+    }
 }
 
 function elapsedSinceLoad() {
