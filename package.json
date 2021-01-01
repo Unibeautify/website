@@ -33,7 +33,7 @@
   "devDependencies": {
     "@types/diff": "4.0.2",
     "@types/fs-extra": "8.1.0",
-    "@types/lodash": "4.14.166",
+    "@types/lodash": "4.14.167",
     "@unibeautify/beautifier-black": "0.1.2",
     "@unibeautify/beautifier-brittany": "0.0.1",
     "@unibeautify/beautifier-clang-format": "0.2.0",
