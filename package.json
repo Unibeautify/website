@@ -58,7 +58,7 @@
     "fs-extra": "8.1.0",
     "get-pkg-repo": "4.1.1",
     "js-beautify": "1.13.5",
-    "lodash": "4.17.20",
+    "lodash": "4.17.21",
     "prettier": "1.19.1",
     "prettydiff2": "2.2.8",
     "rimraf": "3.0.2",
