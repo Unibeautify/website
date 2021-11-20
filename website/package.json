@@ -19,6 +19,6 @@
   "dependencies": {
     "bootstrap": "4.3.1",
     "featherlight": "1.7.14",
-    "jquery": "3.4.1"
+    "jquery": "3.5.0"
   }
 }
