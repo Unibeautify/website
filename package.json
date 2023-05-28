@@ -59,7 +59,7 @@
     "get-pkg-repo": "4.2.1",
     "js-beautify": "1.14.0",
     "lodash": "4.17.21",
-    "prettier": "1.19.1",
+    "prettier": "2.8.8",
     "prettydiff2": "2.2.8",
     "rimraf": "3.0.2",
     "stylelint": "13.13.1",
