@@ -32,7 +32,7 @@
   "dependencies": {},
   "devDependencies": {
     "@types/diff": "4.0.2",
-    "@types/fs-extra": "8.1.2",
+    "@types/fs-extra": "8.1.5",
     "@types/lodash": "4.17.0",
     "@unibeautify/beautifier-black": "0.1.2",
     "@unibeautify/beautifier-brittany": "0.0.1",
