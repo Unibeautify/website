@@ -16,6 +16,10 @@ The [options](options-for-languages.md) to the configuration file are grouped by
 
 Use the [Unibeautify assistant](https://assistant.unibeautify.com/#/setup) for an interactive setup of your configuration file. Simply select the languages you want, and it will walk you though the options available. At the end simply download or copy to your clipboard your configuration.
 
+## Where to put the configuration file
+
+Whether you create the configuration file content with the Assistant or otherwise, you would next place the configuration [where Unibeautify would expect to find it](/docs/options-for-beautifiers#config-file-path).
+
 ## Example
 
 Both YAML and JSON formats are supported. You can use [json2yaml.com](https://www.json2yaml.com/) to convert from one to the other.
