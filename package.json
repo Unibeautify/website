@@ -31,7 +31,7 @@
   "homepage": "https://github.com/Unibeautify/website#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/diff": "4.0.2",
+    "@types/diff": "7.0.2",
     "@types/fs-extra": "8.1.5",
     "@types/lodash": "4.17.15",
     "@unibeautify/beautifier-black": "0.1.2",
@@ -52,7 +52,7 @@
     "@unibeautify/ugly-samples": "0.2.10",
     "array-flatten": "2.1.2",
     "csscomb": "4.3.0",
-    "diff": "4.0.2",
+    "diff": "7.0.0",
     "eslint": "4.19.1",
     "eslint-plugin-react": "7.37.4",
     "fs-extra": "8.1.0",
