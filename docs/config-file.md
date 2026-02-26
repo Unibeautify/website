@@ -1,9 +1,11 @@
+imgbot
 ---
 id: config-file
 title: Configuration File
 ---
 
-Unibeautify uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for configuration file support.
+Unibeautify uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig 
+) for configuration file support.
 This means you can configure Unibeautify via:
 
 - A `.unibeautifyrc` file, written in YAML or JSON, with optional extensions: `.yaml/.yml/.json/.js`.
